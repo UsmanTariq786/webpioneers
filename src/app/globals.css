@@ -24,3 +24,21 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.gradient-section {
+  background: 
+    linear-gradient(180deg, rgba(248, 248, 248, 0.02) 0%, rgba(248, 248, 248, 0.0002) 100%),
+    linear-gradient(123.8deg, rgba(248, 248, 248, 0.03) 0%, rgba(248, 248, 248, 0) 46.5%);
+
+  border: 1px solid transparent;
+  border-radius: 40px;
+
+  border-image-source: linear-gradient(
+    158.39deg,
+    rgba(255, 255, 255, 0.06) 14.19%,
+    rgba(255, 255, 255, 0.000015) 50.59%,
+    rgba(255, 255, 255, 0.000015) 68.79%,
+    rgba(255, 255, 255, 0.015) 105.18%
+  );
+  border-image-slice: 1;
+}
