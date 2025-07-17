@@ -8,27 +8,29 @@ const GridLayout = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     const grid = gridRef.current;
     if (grid) {
-      const handleResize = () => {
-        // Ensure grid lines adapt to container size (optional dynamic adjustment)
-        grid.style.backgroundSize = "50px 50px"; // Adjust grid size as needed
-      };
-      handleResize();
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
+      grid.style.backgroundSize = "50px 50px";
     }
   }, []);
 
   return (
     <div
       ref={gridRef}
-      className="min-h-screen bg-dark-bg text-white relative overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(to right, ${"#33333333"} 1px, transparent 1px), 
-                          linear-gradient(to bottom, ${"#33333333"} 1px, transparent 1px)`,
-        backgroundSize: "50px 50px",
+        minHeight: "100vh",
+        backgroundColor: "#1A1A1A",
+        color: "#FFFFFF",
+        position: "relative",
+        overflow: "hidden",
+        backgroundImage: `linear-gradient(to right, rgba(51, 51, 51, 0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(51, 51, 51, 0.2) 1px, transparent 1px)`,
       }}
     >
-      <div className="container mx-auto p-6">
+      <div
+        style={{
+          marginLeft: "auto",
+          marginRight: "auto",
+          padding: "1.5rem",
+        }}
+      >
         {children}
       </div>
     </div>
