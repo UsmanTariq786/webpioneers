@@ -1,9 +1,9 @@
 "use client";
 
 interface FolderProps {
-  image1Url: string;
-  image2Url: string;
-  image3Url: string;
+  image1Url: any;
+  image2Url: any;
+  image3Url: any;
 }
 
 const FolderWorkDesignComp = ({ image1Url, image2Url, image3Url }: FolderProps) => {

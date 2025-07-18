@@ -4,7 +4,10 @@ import Chip from '../CustomChip'
 const WorkWeDoChips = ({setSelectedChip, selectedChip}:any) => {
 
     const handleChipSelect = (value: string) => {
-        setSelectedChip(value === selectedChip ? null : value);
+      if(value === selectedChip){
+        return 
+      }
+        setSelectedChip(value);
         console.log("Selected chip:", value);
       };
 

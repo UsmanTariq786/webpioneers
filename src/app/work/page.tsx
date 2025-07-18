@@ -12,10 +12,10 @@ export default function Home() {
 
 
   return (
-    <GridLayout>
+    <div>
        <WorkPageHeading/>
        <WorkWeDoChips selectedChip={selectedChip} setSelectedChip={setSelectedChip}/>
        <MapProjects selectedChip={selectedChip}/>
-    </GridLayout>
+    </div>
   );
 }
