@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@theme {
+  --color-themeOrange-500: #D4541DF2;
+  --color-themeWhite-500: #F8F8F8F2;
+  
+}

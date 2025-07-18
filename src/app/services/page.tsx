@@ -12,22 +12,22 @@ const ServicesPage = () => {
         <span>{Box[0].boxhead}</span>
         <h1>{Box[0].boxdes}</h1>
       </div>
-      
-      <CardData/>
+
+      <CardData />
       <div>
         <span>{Box[1].boxhead}</span>
         <h1>{Box[1].boxdes}</h1>
       </div>
-      <TableData/>
-      <SmallCardData/>
+      <TableData />
+      <SmallCardData />
       <div>
-        
+
         <div>
           <div>
             {
-              Array.from({ length: 10 }, (_,index) => (
+              Array.from({ length: 10 }, (_, index) => (
                 <div key={index}>
-                    <span>* * * * * * * * * * * * * * * * * * * * * * * * * * *</span>
+                  <span>* * * * * * * * * * * * * * * * * * * * * * * * * * *</span>
                 </div>
               ))
             }
@@ -35,8 +35,8 @@ const ServicesPage = () => {
           <div >
             {
               <div>
-              <span>{Box[2].boxhead}</span>
-              <h1>{Box[2].boxdes}</h1>
+                <span>{Box[2].boxhead}</span>
+                <h1>{Box[2].boxdes}</h1>
               </div>
             }
           </div>
