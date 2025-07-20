@@ -3,10 +3,10 @@ import smallCard from '@/app/Data/SmallCardData'
 function SmallCardData() {
   return (
     <div>
-      <div>
+      <div >
           {
             smallCard.map((card, index) => (
-              <div key={index} style={{ background: "purple", marginTop: "10px" }}>
+              <div key={index}>
                 <span>{card.id}</span>
                 <h2>{card.heading}</h2>
                 <p>{card.description}</p>
