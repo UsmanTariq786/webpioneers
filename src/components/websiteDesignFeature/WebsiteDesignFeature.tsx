@@ -25,7 +25,7 @@ const WebsiteDesignFeature = () => {
         bg-gradient-to-br from-white/5 via-white/0 to-white/5
         flex flex-col sm:flex-col md:flex-row items-center md:items-start gap-10"
     >
-      {/* === LEFT SECTION (Hidden only on very small devices) === */}
+      {/*  LEFT SECTION (Hidden only on very small devices)  */}
       <div className="hidden sm:flex flex-col justify-between h-[320px]">
         <Image
           src="/main-container-content.png"

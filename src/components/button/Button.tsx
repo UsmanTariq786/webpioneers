@@ -15,8 +15,8 @@ const Button = ({ title }: ButtonProps) => {
         px-5 
         py-4 
         rounded-full 
-        hover:bg-[#e64900] 
-        active:bg-[#cc4000]
+        bg-[#D4541D]/90
+       
       "
       style={{
         background: `linear-gradient(0deg, var(--neutral-neutral-440, rgba(18, 18, 18, 0.4)), var(--neutral-neutral-440, rgba(18, 18, 18, 0.4))),

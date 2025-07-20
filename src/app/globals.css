@@ -1,15 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* new theme block */
 @theme {
   --font-display: "Rubik", sans-serif;
   --color-accent-orange: #D4541DF2;
-  --color-dark-gray: #4A4A4A;
-  --color-text-light: #B0B0B0;
-  --color-white: #FFFFFF;
-  --gradient-start: #F28C38;
-  --gradient-end: #FF6B35;
 }
+
+/* Existing theme inline block */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Urbanist, Helvetica, sans-serif;
+}
+
 .gradient-section {
-  background: 
+  background:
     linear-gradient(180deg, rgba(248, 248, 248, 0.02) 0%, rgba(248, 248, 248, 0.0002) 100%),
     linear-gradient(123.8deg, rgba(248, 248, 248, 0.03) 0%, rgba(248, 248, 248, 0) 46.5%);
 
@@ -24,4 +53,13 @@
     rgba(255, 255, 255, 0.015) 105.18%
   );
   border-image-slice: 1;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
 }
