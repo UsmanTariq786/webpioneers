@@ -48,7 +48,7 @@ export const FAQAccordion = () => {
 
   return (
     <section className=" min-h-screen py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl ml-8 sm:ml-12 lg:ml-16">
+      <div className="ml-8 sm:ml-12 lg:ml-16">
         {/* Heading */}
         <div className="mb-10 space-y-2.5">
         <button className="font-rubik text-xs uppercase tracking-wider py-2 px-3 font-semibold text-white/80 border border-white/10 rounded-full">
@@ -65,9 +65,9 @@ export const FAQAccordion = () => {
         <div className="space-y-0">
           {faqs.map((faq, index) => (
             <div key={faq.id} className={`py-6 sm:py-8 ${index !== faqs.length - 1 ? "border-b border-gray-700" : ""}`}>
-              <div button
+              <div
                 onClick={() => toggleAccordion(faq.id)}
-                className="flex justify-between items-start w-full text-left group"
+                className="flex justify-between items-start w-full text-left group cursor-pointer"
                 aria-expanded={activeId === faq.id}
                 aria-controls={`faq-content-${faq.id}`}
               >

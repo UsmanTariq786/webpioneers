@@ -15,13 +15,14 @@ const Button = ({ title }: ButtonProps) => {
         px-5 
         py-4 
         rounded-full 
-        bg-[#D4541D]/90
+        bg-[var(--color-accent-orange)]
+        cursor-pointer
        
       "
-      style={{
-        background: `linear-gradient(0deg, var(--neutral-neutral-440, rgba(18, 18, 18, 0.4)), var(--neutral-neutral-440, rgba(18, 18, 18, 0.4))),
-                     linear-gradient(0deg, rgba(212, 84, 29, 0.95), rgba(212, 84, 29, 0.95))`
-      }}
+      // style={{
+      //   background: `linear-gradient(0deg, var(--neutral-neutral-440, rgba(18, 18, 18, 0.4)), var(--neutral-neutral-440, rgba(18, 18, 18, 0.4))),
+      //                linear-gradient(0deg, rgba(212, 84, 29, 0.95), rgba(212, 84, 29, 0.95))`
+      // }}
     >
       {title}
     </button>

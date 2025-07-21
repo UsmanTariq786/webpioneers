@@ -2,11 +2,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #202020; /* Updated to fixed #202020 */
   --foreground: #171717;
 }
 
-/* new theme block */
+/* New theme block */
 @theme {
   --font-display: "Rubik", sans-serif;
   --color-accent-orange: #D4541DF2;
@@ -16,17 +16,11 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-display);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Removed dark mode override since background is now fixed */
 html, body {
   overflow-x: hidden;
 }
@@ -34,7 +28,7 @@ html, body {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Urbanist, Helvetica, sans-serif;
+  font-family: var(--font-rubik), Arial, Helvetica, sans-serif;
 }
 
 .gradient-section {
@@ -60,6 +54,6 @@ body {
 }
 
 .hide-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

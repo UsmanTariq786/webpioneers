@@ -4,10 +4,16 @@ interface FolderProps {
   image1Url: any;
   image2Url: any;
   image3Url: any;
+  projectName:any;
+  description:any;
+  superCategory:any
 }
 
-const FolderWorkDesignComp = ({ image1Url, image2Url, image3Url }: FolderProps) => {
+
+const FolderWorkDesignComp = ({ image1Url, image2Url, image3Url, projectName, description, superCategory }: FolderProps) => {
   return (
+    <div className="flex flex-col mb:2">
+    
     <div className="relative w-full h-[250px] md:w-[350px] md:h-[350px]">
       {/* First Layer (Base with Clip-Path and Gradient) */}
       <div
@@ -43,6 +49,11 @@ const FolderWorkDesignComp = ({ image1Url, image2Url, image3Url }: FolderProps) 
         alt="Folder Icon"
         className="absolute top-[-10px] right-[-10px] w-10 h-10 z-50 md:top-[-15px] md:right-[-15px] md:w-12 md:h-12"
       />
+    </div>
+<div className="text-white">
+  <h3 className="text-xl font-semibold mb-2">{projectName}</h3>
+  <p className="text-sm">{description}</p>
+</div>
     </div>
   );
 };

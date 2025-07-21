@@ -21,6 +21,9 @@ const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
           image1Url={project.image1}
           image2Url={project.image2}
           image3Url={project.image3}
+          projectName={project.projectName}
+          description={project.description}
+          superCategory={project.superCategory}
         />
       ))}
     </div>

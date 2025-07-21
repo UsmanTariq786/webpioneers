@@ -1,6 +1,6 @@
 import BrandIdentity from "@/components/brandIdentity/BrandIdentity";
 import Button from "@/components/button/Button";
-import Header from "@/components/header/Header";
+// import Header from "@/components/header/Header";
 import Hero from "@/components/hero/Hero";
 import PartnersSection from "@/components/partnersSection/PartnersSection";
 import ProcessStepsSection from "@/components/processStepsSection/ProcessStepsSection";
@@ -12,18 +12,18 @@ import serviceCards, { buttonData } from "../constData/data";
 import ServicesCard from "@/components/serviceCard/ServicesCard";
 import Image from "next/image";
 import ReuseAbleBtn from "@/components/ui/ReuseAbleBtn";
-import Testimonials from "@/components/testiminals/Testimonials";
-import PioneerDetail from "@/components/pioneerDetail/PioneerDetail";
-import ServiceExcellenceGrid from "@/components/ServiceExcellenceGrid/ServiceExcellenceGrid";
-import { HeroStatement } from "@/components/HeroStatement/HeroStatement";
-import { FAQAccordion } from "@/components/fAQAccordion/FAQAccordion";
-import ContactForm from "@/components/contactForm/ContactForm";
-import Footer from "@/components/footer/Footer";
+// import Testimonials from "@/components/testiminals/Testimonials";
+// import PioneerDetail from "@/components/pioneerDetail/PioneerDetail";
+// import ServiceExcellenceGrid from "@/components/ServiceExcellenceGrid/ServiceExcellenceGrid";
+// import { HeroStatement } from "@/components/HeroStatement/HeroStatement";
+// import { FAQAccordion } from "@/components/fAQAccordion/FAQAccordion";
+// import ContactForm from "@/components/contactForm/ContactForm";
+// import Footer from "@/components/footer/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black">
-      <Header />
+    <div className="min-h-screen">
+      {/* <Header /> */}
       <Hero />
       <PartnersSection />
 
@@ -106,13 +106,13 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <Testimonials/>
-      <PioneerDetail/>
-      <ServiceExcellenceGrid/>
-      <FAQAccordion/>
-      <HeroStatement/>
-      <ContactForm/>
-      <Footer/>
+      {/* <Testimonials/> */}
+      {/* <PioneerDetail/> */}
+      {/* <ServiceExcellenceGrid/> */}
+      {/* <FAQAccordion/> */}
+      {/* <HeroStatement/> */}
+      {/* <ContactForm/> */}
+      {/* <Footer/> */}
     </div>
   );
 }
