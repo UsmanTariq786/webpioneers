@@ -3,7 +3,7 @@ import React from 'react'
 function Button1() {
   return (
     <div>
-        <button style={{background:"orange"}}>Get Started to </button>
+        <button>Get Started to </button>
     </div> 
   )
 }

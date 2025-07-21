@@ -13,28 +13,28 @@ type card =
                 id : "01",
                 image : "",
                 title : "UX/UI Design",
-                description : "We craft smooth, inituitive experiencesnthat fast natural and make users stick around "
+                description : "We craft smooth, intuitive experiences that fast natural and make users stick around. "
 
             },
              {
                 id : "02",
                 image : "",
                 title : "Website Design",
-                description : "We design websites that luck sharp, fast right and guides people exactly where they need to go"
+                description : "We design websites that look sharp, feel right and guide people exactly where they need to go."
 
             },
              {
                 id : "03",
                 image : "",
                 title : "Mobile App Design",
-                description : "We design apps that are easy to use, fun to explore and built for humans on the gap"
+                description : "We design apps that are easy to use, fun to explore and built for real humans on the go."
 
             },
             {
                 id : "04",
                 image : "",
                 title : "Market Design",
-                description : "From scroll shoping ads to pitch dacks that win , we design visuals that actually to the tasking"
+                description : "From scroll shoping ads to pitch decks that win, we design visuals that actually to the talking."
 
             },
             {

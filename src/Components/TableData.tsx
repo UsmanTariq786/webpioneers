@@ -10,11 +10,11 @@ function TableData() {
 
             <div key={index}>
               <br /><br />
-              <div style={{ background: "red" }}>
+              <div>
                 {card.image}
                 <h1>{card.heading}</h1>
               </div>
-              <div style={{ background: "green" }}>
+              <div>
                 <div>
                   <span>{card.sub1}</span>
                 </div>
@@ -31,7 +31,7 @@ function TableData() {
                   <ol>
                   {card.des1 && <li>{card.des1}</li>}  
                   {card.des2 && <li>{card.des2}</li>}  
-                  {card.des3 &&  <li>{card.des3}</li>} 
+                  {card.des3 && <li>{card.des3}</li>} 
                   {card.des4 && <li>{card.des4}</li>}  
                   {card.des5 && <li>{card.des5}</li>} 
                   {card.des6 && <li>{card.des6}</li> } 

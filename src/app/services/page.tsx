@@ -6,16 +6,14 @@ import SmallCardData from '@/Components/SmallCardData';
 const ServicesPage = () => {
   return (
     <div>
-
-      Services Page
-      <div>
-        <span>{Box[0].boxhead}</span>
-        <h1>{Box[0].boxdes}</h1>
+      <div className='pl-15 pt-8'>
+        <span className='text-xs border-2 rounded'>{Box[0].boxhead}</span>
+        <h1 className='text-4xl'>{Box[0].boxdes}</h1>
       </div>
 
       <CardData />
       <div>
-        <span>{Box[1].boxhead}</span>
+        <span className=''>{Box[1].boxhead}</span>
         <h1>{Box[1].boxdes}</h1>
       </div>
       <TableData />

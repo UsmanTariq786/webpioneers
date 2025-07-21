@@ -6,7 +6,7 @@ type box ={
 const Box:box[] =[
     {
         boxhead:"WHAT WE OFFER",
-        boxdes:"Service that actually move the needle"
+        boxdes:"Services that actually move the needle"
     },
     {
         boxhead:"WHY CHOOSE US",

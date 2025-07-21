@@ -5,7 +5,7 @@ function CardData() {
         <div>
             <div >
                 {cardsData.map((card) => (
-                    <div key={card.id} style={{ background: "tan", marginTop: "10px", paddingRight: '10px' }}>
+                    <div key={card.id}>
                         <span>{card.id}</span>
                         <span>{card.image}</span>
                         <h3>{card.title}</h3>
