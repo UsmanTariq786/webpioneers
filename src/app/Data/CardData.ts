@@ -1,7 +1,7 @@
 type card = 
 
     {
-          id:string,
+         id:string,
          image:string,
          title : string,
          description: string
@@ -48,21 +48,21 @@ type card =
                 id : "06",
                 image : "",
                 title : "MVP Design",
-                description : "We help you launch smart adn simple with just what you need till test, learns adn grass"
+                description : "We help you launch smart and simple, with just what you need to test, learn and grow."
 
             },
             {
                 id : "07",
                 image : "",
                 title : "Saas Product Design",
-                description : "We turn complex tools into clear, simple interfaces your users will actually enjoy using"
+                description : "We turn complex tools into clean, simple interfaces your users will actually enjoy using."
 
             },
             {
                 id : "08",
                 image : "",
                 title : "Branding",
-                description : "We help hou discover your device then bring it to life with a brand that's clear and totally you"
+                description : "We help you discover your vibe, then bring it to life with a brand that's clear and totally you."
 
             }
             
