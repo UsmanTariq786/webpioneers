@@ -1,5 +1,5 @@
 import React from 'react'
-import Chip from '../CustomChip'
+import Chip from '@/components/CustomChip';
 
 const WorkWeDoChips = ({setSelectedChip, selectedChip}:any) => {
 

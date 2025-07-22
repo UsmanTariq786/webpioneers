@@ -21,7 +21,10 @@ const Hero = () => {
       </div>
 
       <div className="absolute left-40 top-[40%] hidden sm:flex items-center gap-1">
-        <p className="px-4 py-1.5 text-sm font-medium rounded-full text-white bg-[linear-gradient(0deg,var(--neutral-neutral-440,rgba(18,18,18,0.4)),var(--neutral-neutral-440,rgba(18,18,18,0.4))),linear-gradient(0deg,rgba(212,84,29,0.95),rgba(212,84,29,0.95))]">
+        <p className="px-4 py-1.5 text-sm font-medium rounded-full text-white 
+         
+        bg-[var(--color-accent-orange)]
+        ">
           You
         </p>
         <Image
