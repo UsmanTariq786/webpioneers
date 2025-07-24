@@ -5,10 +5,10 @@ import TableData from '@/Components/TableData';
 import SmallCardData from '@/Components/SmallCardData';
 const ServicesPage = () => {
   return (
-    <div>
+    <div className='text-white'>
       <div className='pl-15 pt-8'>
         <span className='text-xs border-2 rounded'>{Box[0].boxhead}</span>
-        <h1 className='text-4xl'>{Box[0].boxdes}</h1>
+        <h1 className='text-4xl w-100'>{Box[0].boxdes}</h1>
       </div>
 
       <CardData />

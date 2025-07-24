@@ -7,14 +7,14 @@ type Design ={
     des1:string,
     des2:string,
     des3:string,
-    des4:string,
+    des4?:string,
     des5?:string,
     des6?:string,
 }
 
 const tableData:Design[] = [
     {
-        image: "Branding image",
+        image: "/services_img/branding.png",
         heading : "Branding",
         sub1:"Benefit",
         description1:"We help you discover your vibe. then bring it to life with a brand that's clear and totally you.",
@@ -27,7 +27,7 @@ const tableData:Design[] = [
         des6:"Pitch decks"        
     },
     {
-        image: "Branding image",
+        image: "/services_img/webdesign.png",
         heading : "Website Design",
         sub1:"Benefit",
         description1:"We design engaging, effective websites that convert visitors into customers and drive results",
@@ -40,19 +40,19 @@ const tableData:Design[] = [
         des6:"SaaS website design"        
     },
     {
-        image: "Branding image",
-        heading : "Mobiel App Design",
+        image: "/services_img/mobileapp.png",
+        heading : "Mobile App Design",
         sub1:"Benefit",
         description1:"We design apps that are easy to use.fun to explore. and built for real humans on the go.",
         sub2:"Services",
         des1:"Mobile app MVP",
         des2:"IOS & android app design",
         des3:"Hybrid app design  ",
-        des4:"App prototyping",
+        des4:"App prototyping"
                
     },
     {
-        image: "Branding image",
+        image: "/services_img/saas.png",
         heading : "SaaS Product Design",
         sub1:"Benefit",
         description1:"We turn complex tools into clean. simple interfaces your users will actullay enjoy using.",
@@ -60,10 +60,10 @@ const tableData:Design[] = [
         des1:"SaaS Product design",
         des2:"SaaS Audit",
         des3:"B2B SaaS ",
-        des4:"Product Redesign",        
+        des4:"Product Redesign"      
     },
     {
-        image: "Branding image",
+        image: "/services_img/webdev.png",
         heading : "Website Development",
         sub1:"Benefit",
         description1:"We build fast, reliable websites that just work-across all devices, without the headaches",

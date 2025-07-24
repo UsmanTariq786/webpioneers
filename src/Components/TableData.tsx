@@ -4,17 +4,16 @@ import Button1 from './Button1'
 function TableData() {
   return (
     <div>
-      <div>
+      <div className='m-8'>
         {
           tableData.map((card, index) => (
 
             <div key={index}>
               <div className='flex flex-col items-center justify-center h-50 border-1'>
-                <p>{card.image} </p>
+                <img src={card.image} alt="" className='w-15' />
                 <br /><h1 className='text-4xl'>{card.heading}</h1>
               </div>
               <div className='flex flex-wrap  border-1'>
-
                 <div className='w-1/2 '>
                   <div className='border-1 pl-5'>
                     <span className=' m-3'>{card.sub1}</span> 
