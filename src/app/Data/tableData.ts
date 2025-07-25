@@ -10,6 +10,7 @@ type Design ={
     des4?:string,
     des5?:string,
     des6?:string,
+    img:string
 }
 
 const tableData:Design[] = [
@@ -24,7 +25,8 @@ const tableData:Design[] = [
         des3:"Creative direction",
         des4:"Identity design",
         des5:"Logo design",
-        des6:"Pitch decks"        
+        des6:"Pitch decks" ,
+        img:"/services_img/frame1.png"       
     },
     {
         image: "/services_img/webdesign.png",
@@ -37,7 +39,8 @@ const tableData:Design[] = [
         des3:"Responsive web design ",
         des4:"Web app design",
         des5:"Ecommerce design",
-        des6:"SaaS website design"        
+        des6:"SaaS website design",
+        img:"/services_img/frame1.png"       
     },
     {
         image: "/services_img/mobileapp.png",
@@ -48,7 +51,8 @@ const tableData:Design[] = [
         des1:"Mobile app MVP",
         des2:"IOS & android app design",
         des3:"Hybrid app design  ",
-        des4:"App prototyping"
+        des4:"App prototyping",
+        img:"/services_img/frame1.png"
                
     },
     {
@@ -60,7 +64,8 @@ const tableData:Design[] = [
         des1:"SaaS Product design",
         des2:"SaaS Audit",
         des3:"B2B SaaS ",
-        des4:"Product Redesign"      
+        des4:"Product Redesign",
+        img:"/services_img/frame1.png"      
     },
     {
         image: "/services_img/webdev.png",
@@ -72,7 +77,8 @@ const tableData:Design[] = [
         des2:"Framer Development",
         des3:"Shopify Development",
         des4:"Custome Code integrations",
-        des5:"WordPress Development"        
+        des5:"WordPress Development",
+        img:"/services_img/frame1.png"       
     }
      
 ]

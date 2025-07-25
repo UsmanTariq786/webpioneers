@@ -36,9 +36,11 @@ function TableData() {
                       {card.des5 && <li className='border-1 p-3'>{card.des5}</li>}
                       {card.des6 && <li className='border-1 p-3'>{card.des6}</li>}
                     </ol>
-
                   </div>
                 </div> <br />
+                <div className='m-20'>
+                  <img src={card.img} alt="" />
+                </div>
               </div>
             </div>
 
