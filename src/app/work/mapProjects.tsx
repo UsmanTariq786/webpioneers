@@ -1,6 +1,6 @@
 import FolderWorkDesignComp from '@/Components/FolderWorkDesignComp';
 import React from 'react';
-import projectsData from '@/app/data/projects.json';
+import projectsData from '@/app/Data/projects.json';
 
 const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
   console.log('projectsData', projectsData);
