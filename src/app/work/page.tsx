@@ -11,10 +11,10 @@ export default function Home() {
 
 
   return (
-    <div className="container px-50 mt-22">
-       <WorkPageHeading/>
-       <WorkWeDoChips selectedChip={selectedChip} setSelectedChip={setSelectedChip}/>
-       <MapProjects selectedChip={selectedChip}/>
-    </div>
+    <div className="container mx-auto px-4 mt-6 sm:px-6 sm:mt-8 md:px-8 md:mt-10 lg:px-12 lg:mt-12 max-w-screen-xl">
+  <WorkPageHeading />
+  <WorkWeDoChips selectedChip={selectedChip} setSelectedChip={setSelectedChip} />
+  <MapProjects selectedChip={selectedChip} />
+</div>
   );
 }
