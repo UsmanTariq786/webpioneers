@@ -1,22 +1,22 @@
 'use client'
 
-import BrandIdentity from "@/components/brandIdentity/BrandIdentity";
-import Button from "@/components/button/Button";
-// import Header from "@/components/header/Header";
-import Hero from "@/components/hero/Hero";
-import PartnersSection from "@/components/partnersSection/PartnersSection";
-import ProcessStepsSection from "@/components/processStepsSection/ProcessStepsSection";
-import Logo from "@/components/ui/Logo";
-import Reuse from "@/components/ui/Reuse";
-import WebsiteDesignFeature from "@/components/websiteDesignFeature/WebsiteDesignFeature";
-import WebsiteDevelopment from "@/components/websiteDevelopment/WebsiteDevelopment";
+import BrandIdentity from "@/Components/brandIdentity/BrandIdentity";
+import Button from "@/Components/button/Button";
+// import Header from "@/Components/header/Header";
+import Hero from "@/Components/hero/Hero";
+import PartnersSection from "@/Components/partnersSection/PartnersSection";
+import ProcessStepsSection from "@/Components/processStepsSection/ProcessStepsSection";
+import Logo from "@/Components/ui/Logo";
+import Reuse from "@/Components/ui/Reuse";
+import WebsiteDesignFeature from "@/Components/websiteDesignFeature/WebsiteDesignFeature";
+import WebsiteDevelopment from "@/Components/websiteDevelopment/WebsiteDevelopment";
 import serviceCards from "./constData/data";
-import ServicesCard from "@/components/serviceCard/ServicesCard";
+import ServicesCard from "@/Components/serviceCard/ServicesCard";
 import Image from "next/image";
-import ReuseAbleBtn from "@/components/ui/ReuseAbleBtn";
-import WorkWeDoChips from "@/components/workWeDoChips";
+import ReuseAbleBtn from "@/Components/ui/ReuseAbleBtn";
+import WorkWeDoChips from "@/Components/workWeDoChips";
 import { useState } from "react";
-import WorkSlider from "@/components/workSlider";
+import WorkSlider from "@/Components/workSlider";
 
 
 export default function Home() {

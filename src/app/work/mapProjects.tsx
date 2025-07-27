@@ -1,4 +1,4 @@
-import FolderWorkDesignComp from '@/components/FolderWorkDesignComp';
+import FolderWorkDesignComp from '@/Components/FolderWorkDesignComp';
 import React from 'react';
 import projectsData from '@/app/data/projects.json';
 

@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import rubik from "./fonts"; // Import Rubik font
 import "./globals.css";
-import Testimonials from "@/components/testiminals/Testimonials";
-import PioneerDetail from "@/components/pioneerDetail/PioneerDetail";
-import ServiceExcellenceGrid from "@/components/ServiceExcellenceGrid/ServiceExcellenceGrid";
-import { HeroStatement } from "@/components/HeroStatement/HeroStatement";
-import { FAQAccordion } from "@/components/fAQAccordion/FAQAccordion";
-import ContactForm from "@/components/contactForm/ContactForm";
-import Footer from "@/components/footer/Footer";
-import Header from "@/components/header/Header";
+import Testimonials from "@/Components/testiminals/Testimonials";
+import PioneerDetail from "@/Components/pioneerDetail/PioneerDetail";
+import ServiceExcellenceGrid from "@/Components/ServiceExcellenceGrid/ServiceExcellenceGrid";
+import { HeroStatement } from "@/Components/HeroStatement/HeroStatement";
+import { FAQAccordion } from "@/Components/fAQAccordion/FAQAccordion";
+import ContactForm from "@/Components/contactForm/ContactForm";
+import Footer from "@/Components/footer/Footer";
+import Header from "@/Components/header/Header";
 
 export const metadata: Metadata = {
   title: "webpioneers",
