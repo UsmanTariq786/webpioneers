@@ -1,0 +1,102 @@
+[
+    {
+      "projectName": "Art of Mondays",
+      "description": "Get matched with founders",
+      "superCategory": "mobile",
+      "image1":"/threePicSets/art_of_monday/image1.svg",
+      "image2":"/threePicSets/art_of_monday/image2.svg",
+      "image3":"/threePicSets/art_of_monday/image3.svg"
+    },
+    {
+      "projectName": "Headshots.dk",
+      "description": "Professional AI headshots",
+      "superCategory": "web",
+      "image1":"/threePicSets/headshots_dk/image1.svg",
+      "image2":"/threePicSets/headshots_dk/image2.svg",
+      "image3":"/threePicSets/headshots_dk/image3.svg"
+    },
+    {
+      "projectName": "Sync Thy Self",
+      "description": "Digital lifestyle products",
+      "superCategory": "web"
+    },
+    {
+      "projectName": "Fundex",
+      "description": "Simplifying finance for everyone",
+      "superCategory": "branding",
+      "image1":"/threePicSets/fundex/image1.svg",
+      "image2":"/threePicSets/fundex/image2.svg",
+      "image3":"/threePicSets/fundex/image3.svg"
+      
+    },
+    {
+      "projectName": "Jellice",
+      "description": "Products that go beyond skincare",
+      "superCategory": "web",
+      "image1":"/threePicSets/jellice/image1.svg",
+      "image2":"/threePicSets/jellice/image2.svg",
+      "image3":"/threePicSets/jellice/image3.svg"
+    },
+    {
+      "projectName": "Radex",
+      "description": "Power of innovation",
+      "superCategory": "branding",
+      "image1":"/threePicSets/radex/image1.svg",
+      "image2":"/threePicSets/radex/image2.svg",
+      "image3":"/threePicSets/radex/image3.svg"
+    },
+    {
+      "projectName": "Pixel & Paper",
+      "description": "Creative design agency",
+      "superCategory": "web"
+    },
+    {
+      "projectName": "Zenith",
+      "description": "Boosting your business with SEO",
+      "superCategory": "web"
+    },
+    {
+      "projectName": "Daxo",
+      "description": "Manage your events",
+      "superCategory": "mobile"
+    },
+    {
+      "projectName": "Aero",
+      "description": "HR Made Effortless",
+      "superCategory": "saas",
+      "image1":"/threePicSets/aero/image1.svg",
+      "image2":"/threePicSets/aero/image2.svg",
+      "image3":"/threePicSets/aero/image3.svg"
+    },
+    {
+      "projectName": "Nolux",
+      "description": "Future of Business",
+      "superCategory": "branding",
+      "image1":"/threePicSets/nolux/image1.svg",
+      "image2":"/threePicSets/nolux/image2.svg",
+      "image3":"/threePicSets/nolux/image3.svg"
+    },
+    {
+      "projectName": "Onyx",
+      "description": "Manage your finances",
+      "superCategory": "web"
+    },
+    {
+      "projectName": "MairE NoEl",
+      "description": "Glow. Define. Embrace.",
+      "superCategory": "web"
+    },
+    {
+      "projectName": "Stockly AI",
+      "description": "Smart Shopping, Effortless Living",
+      "superCategory": "mobile"
+    },
+    {
+      "projectName": "Orbit",
+      "description": "Managing Projects, Simplified.",
+      "superCategory": "saas",
+      "image1":"/threePicSets/orbit/image1.svg",
+      "image2":"/threePicSets/orbit/image2.svg",
+      "image3":"/threePicSets/orbit/image3.svg"
+    }
+  ]
