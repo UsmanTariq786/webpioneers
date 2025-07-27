@@ -63,12 +63,18 @@
     {
       "projectName": "Aero",
       "description": "HR Made Effortless",
-      "superCategory": "saas"
+      "superCategory": "saas",
+      "image1":"/threePicSets/aero/image1.svg",
+      "image2":"/threePicSets/aero/image2.svg",
+      "image3":"/threePicSets/aero/image3.svg"
     },
     {
       "projectName": "Nolux",
       "description": "Future of Business",
-      "superCategory": "branding"
+      "superCategory": "branding",
+      "image1":"/threePicSets/nolux/image1.svg",
+      "image2":"/threePicSets/nolux/image2.svg",
+      "image3":"/threePicSets/nolux/image3.svg"
     },
     {
       "projectName": "Onyx",
@@ -88,6 +94,9 @@
     {
       "projectName": "Orbit",
       "description": "Managing Projects, Simplified.",
-      "superCategory": "saas"
+      "superCategory": "saas",
+      "image1":"/threePicSets/orbit/image1.svg",
+      "image2":"/threePicSets/orbit/image2.svg",
+      "image3":"/threePicSets/orbit/image3.svg"
     }
   ]

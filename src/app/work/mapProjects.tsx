@@ -15,7 +15,7 @@ const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
 
   return (
     <div className="px-4 py-6 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+      <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
         {filteredProjects.map((project, index) => (
           <FolderWorkDesignComp
             key={index}
