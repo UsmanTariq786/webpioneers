@@ -1,6 +1,7 @@
 "use client";
 
 import rubik from "@/app/fonts";
+import Button from "@/components/button/Button";
 
 interface ChipProps {
   label: string;
@@ -15,6 +16,7 @@ const Chip = ({ label, value, isSelected, onSelect }: ChipProps) => {
   };
 
   return (
+    // <button
     <button
       onClick={handleClick}
       className={`${rubik.className} px-[0.7rem] py-[0.8rem] rounded-full text-[0.875rem] font-[600] cursor-pointer text-nowrap      transition-colors duration-200 ${

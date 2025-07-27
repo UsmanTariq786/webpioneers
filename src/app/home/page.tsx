@@ -1,3 +1,5 @@
+'use client'
+
 import BrandIdentity from "@/components/brandIdentity/BrandIdentity";
 import Button from "@/components/button/Button";
 // import Header from "@/components/header/Header";
@@ -12,15 +14,13 @@ import serviceCards, { buttonData } from "../constData/data";
 import ServicesCard from "@/components/serviceCard/ServicesCard";
 import Image from "next/image";
 import ReuseAbleBtn from "@/components/ui/ReuseAbleBtn";
-// import Testimonials from "@/components/testiminals/Testimonials";
-// import PioneerDetail from "@/components/pioneerDetail/PioneerDetail";
-// import ServiceExcellenceGrid from "@/components/ServiceExcellenceGrid/ServiceExcellenceGrid";
-// import { HeroStatement } from "@/components/HeroStatement/HeroStatement";
-// import { FAQAccordion } from "@/components/fAQAccordion/FAQAccordion";
-// import ContactForm from "@/components/contactForm/ContactForm";
-// import Footer from "@/components/footer/Footer";
+import WorkWeDoChips from "@/components/workWeDoChips";
+import { useState } from "react";
+import WorkSlider from "./workSlider";
+
 
 export default function Home() {
+  const [selectedChip, setSelectedChip] = useState<string | null>('all');
   return (
     <div className="min-h-screen">
       {/* <Header /> */}
@@ -42,16 +42,23 @@ export default function Home() {
         <Reuse title="Stuff We've Made" text="A peek at our work" />
       </div>
 
+     
+
 {/* desktop Slider */}
- <div className="sm:flex sm:ml-34 gap-3 hidden">
-  <Button title="All design" />
+ <div className="sm:flex sm:ml-34 gap-3">
+ <WorkWeDoChips selectedChip={selectedChip} setSelectedChip={setSelectedChip} />
+ </div>
+  {/* <Button title="All design" />
   {buttonData.slice(0, 4).map((item) => (
     <ReuseAbleBtn key={item.id} text={item.text} />
-  ))}
-</div>
+  ))} */}
+   <div className="sm:flex sm:ml-34 gap-3">
+   <WorkSlider selectedChip={selectedChip}/>
+ </div>
+  
 
 {/* Mobile Slider */}
-<div className="flex sm:hidden overflow-x-auto gap-3 px-2 scroll-smooth snap-x snap-mandatory">
+{/* <div className="flex sm:hidden overflow-x-auto gap-3 px-2 scroll-smooth snap-x snap-mandatory">
   {[{ id: 0, text: 'All design' }, ...buttonData.slice(0, 4)].map((item) => (
     <div key={item.id} className="flex-shrink-0 snap-center">
       {item.id === 0 ? (
@@ -61,31 +68,8 @@ export default function Home() {
       )}
     </div>
   ))}
-</div>
+</div> */}
 
-     <div className="flex flex-col md:flex-row w-full max-w-5xl mx-auto items-start justify-start gap-4 px-4 py-6">
-  {/* Left Image */}
-  <div className="w-full md:flex-1 h-auto">
-    <Image
-      src="/leftImage.svg"
-      alt="Left Image"
-      className="w-full h-auto object-contain"
-      width={600}
-      height={340}
-    />
-  </div>
-
-  {/* Right Image */}
-  <div className="w-full md:w-[320px] h-auto">
-    <Image
-      src="/rightImage.svg"
-      alt="Right Image"
-      className="w-full h-auto object-contain"
-      width={320}
-      height={340}
-    />
-  </div>
-</div>
 
 
       <div className="sm:ml-20 mt-10 mb-12 max-w-md">
@@ -106,13 +90,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-      {/* <Testimonials/> */}
-      {/* <PioneerDetail/> */}
-      {/* <ServiceExcellenceGrid/> */}
-      {/* <FAQAccordion/> */}
-      {/* <HeroStatement/> */}
-      {/* <ContactForm/> */}
-      {/* <Footer/> */}
     </div>
   );
 }
