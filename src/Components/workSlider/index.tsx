@@ -86,8 +86,8 @@ const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
     autoplaySpeed: 1500, // Continuous motion
     cssEase: 'linear', // Smooth, continuous movement
     pauseOnHover: true, // Pause animation on hover
-    nextArrow: null, // Hide right arrow
-    prevArrow: null, // Hide left arrow
+    nextArrow: undefined, // Changed from null to undefined
+    prevArrow: undefined,
     responsive: [
       {
         breakpoint: 768, // md breakpoint
