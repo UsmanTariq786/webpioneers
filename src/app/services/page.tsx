@@ -1,7 +1,7 @@
 import React from 'react'
 import Box from '../Data/Box';
-import CardData from '@/components/CardData';
-import TableData from '@/components/TableData';
+import CardData from '@/components/cardData/CardData';
+import TableData from '@/components/tableData/TableData';
 import SmallCardData from '@/components/SmallCardData';
 const ServicesPage = () => {
   return (

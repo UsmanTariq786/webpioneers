@@ -1,6 +1,6 @@
 import React from 'react'
 import tableData from '@/app/Data/tableData'
-import Button1 from './Button1'
+import Button1 from '../Button1'
 function TableData() {
   return (
     <div>
