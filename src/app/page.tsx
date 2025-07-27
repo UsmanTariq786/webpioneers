@@ -16,7 +16,7 @@ import Image from "next/image";
 import ReuseAbleBtn from "@/components/ui/ReuseAbleBtn";
 import WorkWeDoChips from "@/components/workWeDoChips";
 import { useState } from "react";
-import WorkSlider from "@/components/workSlider";;
+import WorkSlider from "@/components/workSlider";
 
 
 export default function Home() {
