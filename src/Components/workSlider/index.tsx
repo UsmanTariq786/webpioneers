@@ -32,15 +32,21 @@ const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
     all: [
       { src: '/leftImage.svg', alt: 'All Design 1', width: 600, height: 340 },
       { src: '/rightImage.svg', alt: 'All Design 2', width: 320, height: 340 },
-      { src: '/leftImage.svg', alt: 'All Design 3', width: 600, height: 340 },
-    ],
+      { src: '/workSlider/branding/11.svg', alt: 'Branding 1', width: 550, height: 320 },
+      { src: '/workSlider/branding/12.svg', alt: 'Branding 1', width: 550, height: 320 },
+      { src: '/workSlider/branding/13.svg', alt: 'Branding 1', width: 550, height: 320 },
+      { src: '/workSlider/branding/14.svg', alt: 'Branding 1', width: 550, height: 320 },    ],
     mobile: [
-      { src: '/mobile1.svg', alt: 'Mobile 1', width: 400, height: 300 },
-      { src: '/mobile2.svg', alt: 'Mobile 2', width: 350, height: 300 },
+      { src: '/workSlider/branding/11.svg', alt: 'Branding 1', width: 550, height: 320 },
+      { src: '/workSlider/branding/12.svg', alt: 'Branding 1', width: 550, height: 320 },
+      { src: '/workSlider/branding/13.svg', alt: 'Branding 1', width: 550, height: 320 },
+      { src: '/workSlider/branding/14.svg', alt: 'Branding 1', width: 550, height: 320 },
     ],
     web: [
-      { src: '/web1.svg', alt: 'Web 1', width: 500, height: 280 },
-      { src: '/web2.svg', alt: 'Web 2', width: 450, height: 280 },
+      { src: '/workSlider/branding/11.svg', alt: 'Branding 1', width: 550, height: 320 },
+      { src: '/workSlider/branding/12.svg', alt: 'Branding 1', width: 550, height: 320 },
+      { src: '/workSlider/branding/13.svg', alt: 'Branding 1', width: 550, height: 320 },
+      { src: '/workSlider/branding/14.svg', alt: 'Branding 1', width: 550, height: 320 },
     ],
     branding: [
       { src: '/workSlider/branding/1.svg', alt: 'Branding 1', width: 550, height: 320 },
@@ -59,8 +65,10 @@ const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
       { src: '/workSlider/branding/14.svg', alt: 'Branding 1', width: 550, height: 320 },
     ],
     saas: [
-      { src: '/saas1.svg', alt: 'SaaS 1', width: 480, height: 290 },
-      { src: '/saas2.svg', alt: 'SaaS 2', width: 380, height: 290 },
+      { src: '/workSlider/branding/11.svg', alt: 'Branding 1', width: 550, height: 320 },
+      { src: '/workSlider/branding/12.svg', alt: 'Branding 1', width: 550, height: 320 },
+      { src: '/workSlider/branding/13.svg', alt: 'Branding 1', width: 550, height: 320 },
+      { src: '/workSlider/branding/14.svg', alt: 'Branding 1', width: 550, height: 320 },
     ],
   });
 
@@ -92,10 +100,10 @@ const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
   };
 
   return (
-    <div className="w-full px-4 py-6">
+    <div className="w-full px-4,  py-6">
       <Slider {...sliderSettings}>
         {filteredImages.map((image: ImageData, index: number) => (
-          <div key={index} className="px-1 h-[300px]"> {/* Reduced from px-2 to px-1 */}
+          <div key={index} className="px-1 h-[500px]"> {/* Reduced from px-2 to px-1 */}
             <Image
               src={image.src}
               alt={image.alt}

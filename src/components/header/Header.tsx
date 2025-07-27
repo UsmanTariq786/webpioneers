@@ -27,9 +27,9 @@ const Header = () => {
             {navItems.map((item) => (
               <li key={item} className="relative cursor-pointer">
                 <Link
-                  href={`/${item.toLowerCase()}`}
+                  href={`/${item==='Home' ? '/':item.toLowerCase()}`}
                   className={`px-4 py-2 rounded-full transition-colors ${
-                    pathname === `/${item.toLowerCase()}`
+                    pathname === `/${item==='Home' ? '/':item.toLowerCase()}`
                       ? "bg-[linear-gradient(0deg,rgba(40,40,40,0.7),rgba(40,40,40,0.7)),linear-gradient(0deg,rgba(248,248,248,0.1),rgba(248,248,248,0.1))] text-white"
                       : "hover:bg-gray-700"
                   }`}
@@ -75,17 +75,17 @@ const Header = () => {
             {navItems.map((item) => (
               <li key={item} className="flex items-center justify-between px-1">
                 <Link
-                  href={`/${item.toLowerCase()}`}
+                  href={`/${item==='Home' ? '/':item.toLowerCase()}`}
                   onClick={() => setOpen(false)}
                   className={
-                    pathname === `/${item.toLowerCase()}`
+                    pathname === `/${ item==='Home' ? '/': item.toLowerCase()}`
                       ? "text-xl font-medium"
                       : "hover:text-gray-300"
                   }
                 >
                   {item}
                 </Link>
-                {pathname === `/${item.toLowerCase()}` ? (
+                {(pathname === `/${item==='Home' ? '/':item.toLowerCase()}` || '/') ? (
                   <span className="w-4 h-4 bg-white rounded-full"></span>
                 ) : (
                   <span className="w-4 h-4 border border-white rounded-full"></span>
