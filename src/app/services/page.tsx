@@ -1,8 +1,8 @@
 import React from 'react'
 import Box from '../Data/Box';
-import CardData from '@/Components/CardData';
-import TableData from '@/Components/TableData';
-import SmallCardData from '@/Components/SmallCardData';
+import CardData from '@/components/CardData';
+import TableData from '@/components/TableData';
+import SmallCardData from '@/components/SmallCardData';
 const ServicesPage = () => {
   return (
     <div className='text-white'>
