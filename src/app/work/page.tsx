@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import WorkPageHeading from "./workPageHeading";
-import WorkWeDoChips from "@/components/workWeDoChips";
+import WorkWeDoChips from "@/Components/workWeDoChips";
 import MapProjects from "./mapProjects";
 
 export default function Home() {
