@@ -19,8 +19,8 @@ const Logo = () => {
             height="80"
             rx="20"
             fill="#F8F8F8"
-            fill-opacity="0.03"
-            shape-rendering="crispEdges"
+            fillOpacity="0.03"
+            shapeRendering="crispEdges"
           />
           <rect
             x="2.75"
@@ -29,9 +29,9 @@ const Logo = () => {
             height="78.5"
             rx="19.25"
             stroke="url(#paint0_linear_10389_31578)"
-            stroke-opacity="0.15"
-            stroke-width="1.5"
-            shape-rendering="crispEdges"
+            strokeOpacity="0.15"
+            strokeWidth="1.5"
+            shapeRendering="crispEdges"
           />
           <path
             d="M36.0586 23.6729H41.3522C41.3515 35.8908 41.3543 48.1092 41.3509 60.3272H36.0593C36.0579 56.9482 36.0593 53.5692 36.0586 50.1902C34.7061 51.9642 33.2012 53.6115 31.6431 55.1991C30.1581 56.7037 28.6227 58.158 27.0308 59.5455C25.6663 58.1695 24.3017 56.7936 22.9369 55.4177C24.613 53.5409 26.3724 51.7414 28.2065 50.0241C29.8128 48.5313 31.478 47.0942 33.2797 45.8491C34.0832 45.2982 34.9163 44.7869 35.7985 44.3766C34.5265 44.662 33.2336 44.8414 31.9378 44.9719C30.1661 45.1471 28.3864 45.2265 26.6067 45.252C24.7372 45.2758 22.8671 45.2461 21 45.1453V39.3076C22.4533 39.1992 23.9096 39.139 25.3667 39.1089C27.3287 39.0712 29.2927 39.0942 31.2516 39.2237C32.7149 39.3226 34.1774 39.4783 35.6183 39.7609C34.5664 39.2443 33.5885 38.5864 32.6481 37.8851C31.2011 36.7981 29.8434 35.5935 28.5312 34.3439C26.5981 32.4916 24.7558 30.5417 23.0077 28.5086C24.3716 27.1316 25.7364 25.756 27.1016 24.3804C29.0574 26.1572 30.9328 28.0259 32.7149 29.9824C33.8919 31.2814 35.026 32.6234 36.0582 34.0452C36.0593 30.5879 36.0586 27.1302 36.0586 23.6729Z"
@@ -50,9 +50,9 @@ const Logo = () => {
             width="280"
             height="280"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -109,10 +109,10 @@ const Logo = () => {
             y2="89.8498"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" stop-opacity="0.4" />
-            <stop offset="0.4" stop-color="white" stop-opacity="0.01" />
-            <stop offset="0.6" stop-color="white" stop-opacity="0.01" />
-            <stop offset="1" stop-color="white" stop-opacity="0.1" />
+            <stop stopColor="white" stopOpacity="0.4" />
+            <stop offset="0.4" stopColor="white" stopOpacity="0.01" />
+            <stop offset="0.6" stopColor="white" stopOpacity="0.01" />
+            <stop offset="1" stopColor="white" stopOpacity="0.1" />
           </linearGradient>
         </defs>
       </svg>

@@ -4,35 +4,31 @@ import Button from "../button/Button";
 
 const Hero = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center mt-12 px-4 text-white font-rubik">
+    <section className="relative flex flex-col items-center justify-center mt-12 px-4 pb-8  text-white font-rubik">
       {/* Top Badge */}
-      <div className="mb-4">
-        <p
-          className="
-             relative
-             text-[16px] font-medium font-rubik text-white
-             border-t border-white/14
-             rounded-xl p-2 text-center
-             
-"
-        >
-          200+ companies have scaled faster with our design solutions
-        </p>
-      </div>
+     
+      <div className="p-[1.5px] mb-4 rounded-[32px] bg-[linear-gradient(0deg,_rgba(248,248,248,0.05),_rgba(248,248,248,0.05)),conic-gradient(from_90deg_at_50%_50%,_rgba(255,255,255,0)_-35.78deg,_rgba(255,255,255,0)_256.65deg,_rgba(255,255,255,0.3)_289.14deg,_rgba(255,255,255,0)_324.22deg,_rgba(255,255,255,0)_616.65deg)]">
+  <div className="rounded-[32px] backdrop-blur-[32px] bg-[rgba(18,18,18,0.4)]">
+    <p className="px-4 py-1.5 text-sm font-medium rounded-full text-[rgba(118,118,118,1)]">
+  200+ companies have scaled faster with our design solutions
+</p>
+  </div>
+</div>
 
-      <div className="absolute left-40 top-[40%] hidden sm:flex items-center gap-1">
-        <p className="px-4 py-1.5 text-sm font-medium rounded-full text-white 
+
+      <div className="absolute left-40 top-[25%] hidden sm:flex items-center gap-1">
+        <p className="px-4 py-1.5 text-sm font-medium rounded-full text-[rgba(248,248,248,0.95)] 
          
         bg-[var(--color-accent-orange)]
         ">
           You
         </p>
         <Image
-          src="/Polygon.png"
+          src="/Polygon.svg"
           alt="arrow"
           width={20}
           height={20}
-          className="absolute top-[-30%] left-12"
+          className="absolute top-[-40%] left-13"
         />
       </div>
 
@@ -41,22 +37,29 @@ const Hero = () => {
         We’re a design & development agency that delivers results
       </h1>
 
-      <p className="text-[20px] sm:text-[18px] text-gray-400 text-center max-w-[500px]">
+      <p className="text-[20px] sm:text-[18px] text-center max-w-[500px] text-[rgba(248,248,248,0.7)]">
         At Web Pioneers, we mix smart design with clean code to help your brand
         stand out and sell more.
       </p>
 
-      <div className="absolute right-50 top-[52%] hidden sm:flex items-center gap-1">
+      <div className="absolute right-50 top-[42%] hidden sm:flex items-center gap-1 ">
         <Image
-          src="/Polygon.png"
+          src="/PolygonTwo.svg"
           alt="arrow"
           width={20}
           height={20}
-          className="rotate-180 absolute top-[-31%] right-19"
+          className="rotate-350 absolute bottom-[75%] right-23"
         />
-        <p className="px-4 py-1.5 text-sm font-medium rounded-full text-white bg-[linear-gradient(0deg,var(--neutral-neutral-440,rgba(18,18,18,0.4)),var(--neutral-neutral-440,rgba(18,18,18,0.4))),linear-gradient(0deg,#2F3AFF,#2F3AFF)]">
-          Pioneers
-        </p>
+      <div className="p-[1px] rounded-[32px] ">
+  <div className="[background:linear-gradient(0deg,_rgba(18,18,18,0.4),_rgba(18,18,18,0.4)),linear-gradient(0deg,_rgba(53,61,244,0.95),_rgba(53,61,244,0.95))] 
+              backdrop-blur-[32px] shadow-[inset_2px_4px_16px_rgba(248,248,248,0.06),_0px_24px_32px_-12px_var(--NeutralNeutral410)] 
+              rounded-[32px] text-white">
+    <p className="px-4 py-1.5 text-sm font-medium rounded-full">
+      Pioneers
+    </p>
+  </div>
+</div>
+
       </div>
       <div className="sm:hidden mt-6">
         <Button title="Let’s get started" />

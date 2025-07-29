@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import rubik from "./fonts"; // Import Rubik font
 import "./globals.css";
 import Testimonials from "@/components/testiminals/Testimonials";
-import PioneerDetail from "@/components/pioneerDetail/PioneerDetail";
-import ServiceExcellenceGrid from "@/components/ServiceExcellenceGrid/ServiceExcellenceGrid";
+// import PioneerDetail from "@/components/pioneerDetail/PioneerDetail";
+// import ServiceExcellenceGrid from "@/components/ServiceExcellenceGrid/ServiceExcellenceGrid";
 import { HeroStatement } from "@/components/HeroStatement/HeroStatement";
 import { FAQAccordion } from "@/components/fAQAccordion/FAQAccordion";
 import ContactForm from "@/components/contactForm/ContactForm";
 import Footer from "@/components/footer/Footer";
-import Header from "@/components/header/Header";
+import Header from "@/components/Header/Header";
 import RoundCornerWrapper from "@/Components/RoundCornerWrapper";
 
 export const metadata: Metadata = {

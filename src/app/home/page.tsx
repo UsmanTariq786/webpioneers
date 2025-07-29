@@ -27,110 +27,60 @@ export default function Home() {
     <div className="min-h-screen">
       {/* <Header /> */}
       <section>
-        <div style={{ width: "100%", display: "flex" }}>
-          <div
-            style={{
-              width: "10%",
-              boxSizing: "border-box",
-              borderRight: "1px solid #373737",
-              borderBottom: "1px solid #373737",
-            }}
-          ></div>
-          <div style={{ width: "79.95%" }}>
-            <PartnersSection />
-          
-          </div>
-          <div
-            style={{
-              width: "10.05%",
-              boxSizing: "border-box",
-              borderLeft: "1px solid #373737",
-              borderBottom: "1px solid #373737",
-            }}
-          ></div>
-        </div>
-      </section>
-      <section>
-        <div style={{ width: "100%", display: "flex" }}>
-          <div
-            style={{
-              width: "9.95%",
-              boxSizing: "border-box",
-              borderBottom: "1px solid #373737",
-            }}
-          ></div>
-          <div style={{ width: "80.08%" }}>
-            <RoundCornerWrapper>
-              <Hero />
-            </RoundCornerWrapper>
-          </div>
-          <div
-            style={{
-              width: "9.95%",
-              boxSizing: "border-box",
-              borderBottom: "1px solid #373737",
-            }}
-          ></div>
-        </div>
-      </section>
+  <div className="w-full flex">
+    <div className="w-[10%] border-r border-b border-[#373737]"></div>
+    <div className="w-[79.95%]">
+      <Hero />
+    </div>
+    <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+  </div>
+</section>
 
-      <section>
-        <div style={{ width: "100%", display: "flex" }}>
-          <div
-            style={{
-              width: "10%",
-              boxSizing: "border-box",
-              borderRight: "1px solid #373737",
-              borderBottom: "1px solid #373737",
-            }}
-          ></div>
-          <div style={{ width: "79.95%"}}>
-            <div className="flex justify-center items-center">
-              <video
-                width="1000px"
-                height="200px"
-                controls
-                className="border rounded-2xl"
-              >
-                <source src="video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>{" "}
-          </div>
-          <div
-            style={{
-              width: "10.05%",
-              boxSizing: "border-box",
-              borderLeft: "1px solid #373737",
-              borderBottom: "1px solid #373737",
-            }}
-          ></div>
-        </div>
-      </section>
+<section>
+  <div className="w-full flex">
+    <div className="w-[9.95%] border-b border-[#373737]"></div>
+    <div className="w-[80.08%]">
+      <RoundCornerWrapper>
+        <PartnersSection />
+      </RoundCornerWrapper>
+    </div>
+    <div className="w-[9.95%] border-b border-[#373737]"></div>
+  </div>
+</section>
 
-      <section>
-        <div style={{ width: "100%", display: "flex" }}>
-          <div
-            style={{
-              width: "9.95%",
-              boxSizing: "border-box",
-              borderBottom: "1px solid #373737",
-            }}
-          ></div>
-          <div style={{ width: "80.08%" }}>
-            <RoundCornerWrapper>
-              <ProcessStepsSection />
-            </RoundCornerWrapper>
-          </div>
-          <div
-            style={{
-              width: "9.95%",
-              boxSizing: "border-box",
-              borderBottom: "1px solid #373737",
-            }}
-          ></div>
-        </div>
-      </section>
+<section>
+  <div className="w-full flex">
+    <div className="w-[10%] border-r border-b border-[#373737]"></div>
+    <div className="w-[79.95%] h-[200]">
+      <div className="flex justify-center items-center py-15">
+       <video
+  width="90%"
+  controls
+  className="border rounded-[30px]
+ h-[600px]"
+>
+
+          <source src="video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+  </div>
+</section>
+
+<section>
+  <div className="w-full flex">
+    <div className="w-[9.95%] border-b border-[#373737]"></div>
+    <div className="w-[80.08%]">
+      <RoundCornerWrapper>
+        <ProcessStepsSection />
+      </RoundCornerWrapper>
+    </div>
+    <div className="w-[9.95%] border-b border-[#373737]"></div>
+  </div>
+</section>
+
 
       <section>
         <div style={{ width: "100%", display: "flex" }}>

@@ -36,10 +36,23 @@ const ProcessStepsSection = () => (
   <section className="mt-12 ">
     {/* heading */}
     <div className="flex flex-col items-center mb-10">
-      <button className="font-rubik text-xs uppercase tracking-wider py-2 px-3 font-semibold text-white/80 border border-white/10 rounded-full">
-        How it works
-      </button>
-      <p className="mt-4 font-rubik text-center text-white/80 text-2xl sm:text-[48px] leading-tight max-w-lg">
+<div
+  className="rounded-[16px] p-[1.5px]"
+  style={{
+    background: `linear-gradient(0deg, rgba(248, 248, 248, 0.05), rgba(248, 248, 248, 0.05)),
+                 conic-gradient(from 90deg at 50% 50%, rgba(255,255,255,0) -35.78deg, rgba(255,255,255,0) 260deg, rgba(255,255,255,0.3) 350deg, rgba(255,255,255,0) 360deg)`,
+  }}
+>
+  <div className="rounded-[14.5px] bg-[#202020] bg-opacity-20">
+    <button className="w-full h-full rounded-[14.5px] bg-transparent font-rubik text-xs uppercase tracking-wider px-6 py-2 font-semibold
+     text-[rgba(248,248,248,0.5)]">
+      HOW IT WORKS
+    </button>
+  </div>
+</div>
+      <p className="text-[48px] leading-[56px] font-normal font-['Rubik'] text-center tracking-[-0.02em]
+               bg-[linear-gradient(92.95deg,_rgba(248,248,248,0.9)_0.1%,_rgba(248,248,248,0.5)_100.1%)]
+               bg-clip-text text-transparent max-w-[600px]">
         What happens once we team up
       </p>
     </div>
