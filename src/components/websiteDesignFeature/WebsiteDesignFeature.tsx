@@ -1,14 +1,10 @@
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import React from 'react';
 import WebCard from '../webCard/WebCard';
 
 const WebsiteDesignFeature = () => {
 
-  interface cardProps{
-      title: string,
-      description: string,
-      image: string
-  }
+
 
   const cardData = 
     {
