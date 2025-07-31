@@ -4,7 +4,6 @@ import Button from "@/components/button/Button";
 import Hero from "@/components/hero/Hero";
 import PartnersSection from "@/components/partnersSection/PartnersSection";
 import ProcessStepsSection from "@/components/processStepsSection/ProcessStepsSection";
-import Logo from "@/components/ui/Logo";
 import Reuse from "@/components/ui/Reuse";
 import WebsiteDesignFeature from "@/components/websiteDesignFeature/WebsiteDesignFeature";
 import WebsiteDevelopment from "@/components/websiteDevelopment/WebsiteDevelopment";
@@ -92,7 +91,7 @@ export default function Home() {
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div style={{ width: "79.95%" }}>
+          <div style={{ width: "79.95%"}}>
             <BrandIdentity />
           </div>
           <div

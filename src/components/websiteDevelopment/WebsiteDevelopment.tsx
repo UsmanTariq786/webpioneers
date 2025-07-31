@@ -1,6 +1,7 @@
 import React from "react";
 import WebCard from "../webCard/WebCard";
 import Image from "next/image";
+import "./webdevelopment.css"
 
 const WebsiteDevelopment = () => {
     
@@ -13,7 +14,7 @@ const WebsiteDevelopment = () => {
       const cardData = 
         {
           image: "/web.png",
-          title: "Website design (UX UI)",
+          title: "Website development",
           description: " We design websites that look great, feel right, and turn visitors into happy customers."
         }
       
@@ -34,10 +35,10 @@ const WebsiteDevelopment = () => {
         borderImageSlice: 1,
         borderRadius: '40px',
       }}
-      className="relative mt-10 sm:max-w-[1100px] h-[600px] mx-auto px-10 py-10 sm:flex items-start justify-between gap-10"
+      className="relative mt-10 sm:max-w-[1100px] mx-auto  sm:flex items-start justify-between gap-10"
     >
       {/* Left Web Card */}
-      <div className="pt-2 sm:p-12">
+      <div className="pt-2">
         <WebCard
          title={cardData.title}
          image={cardData.image}
@@ -46,9 +47,9 @@ const WebsiteDevelopment = () => {
       </div>
 
       {/* Right Section: Logos + Code Image */}
-      <div className="pt-8 flex gap-4">
+      <div className="flex gap-4">
         {/* Vertical Logos */}
-        <div className="hidden sm:flex flex-col gap-3">
+        <div className="md:hidden sm:flex flex-col gap-3">
           <Image src="/react.png" width={62} height={62} alt="React" />
           <Image src="/shopify.png" width={62} height={62} alt="Shopify" />
           <Image src="/w.png" width={78} height={78} alt="W" />
@@ -57,13 +58,23 @@ const WebsiteDevelopment = () => {
         </div>
 
         {/* Main Code Image */}
-        <div className="relative">
+        <div className="relative" style={{backgroundColor:'red'}}>
+          <div className="frosted-box">
+            <div style={{width:'100%',height:'100%',borderRadius:'32px'}}>
+             <img
+            src="/webcode.svg"
+            className="frosted-img"
+            alt="Code"
+          />
+          </div>
+
+</div>
+
           <Image
-            src="/code.png"
+            src="/webdevelopment.svg"
             width={470}
             height={400}
             alt="Code"
-            className="sm:mt-6"
           />
           <Image
             src="/Fileitem.png"
