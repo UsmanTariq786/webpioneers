@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { HiMenu, HiX } from "react-icons/hi";
 import Logo from "../ui/Logo";
-import Button from "../button/Button";
+import Button from "@/Components/button/Button";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
