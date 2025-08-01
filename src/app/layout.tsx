@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import rubik from "./fonts"; // Import Rubik font
 import "./globals.css";
-import Testimonials from "@/components/testiminals/Testimonials";
 // import PioneerDetail from "@/components/pioneerDetail/PioneerDetail";
 // import ServiceExcellenceGrid from "@/components/ServiceExcellenceGrid/ServiceExcellenceGrid";
 import { HeroStatement } from "@/components/HeroStatement/HeroStatement";
@@ -72,30 +71,7 @@ export default function RootLayout({
         </div>
 
         {children}
-        <section>
-          <div style={{ width: "100%", display: "flex" }}>
-            <div
-              style={{
-                width: "10%",
-                boxSizing: "border-box",
-                borderRight: "1px solid #373737",
-                borderBottom: "1px solid #373737",
-              }}
-            ></div>
-            <div style={{ width: "79.95%" }}>
-              {/* desktop Slider */}
-              <Testimonials />
-            </div>
-            <div
-              style={{
-                width: "10.05%",
-                boxSizing: "border-box",
-                borderLeft: "1px solid #373737",
-                borderBottom: "1px solid #373737",
-              }}
-            ></div>
-          </div>
-        </section>
+       
         <section>
           <div style={{ width: "100%", display: "flex" }}>
             <div
