@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Mail, Phone, X } from "lucide-react";
 import Image from "next/image";
 import RoundCornerWrapper from "../RoundCornerWrapper";
+import { relative } from "path";
 const Footer = () => {
   return (
     <footer className="text-white">
@@ -17,9 +18,6 @@ const Footer = () => {
             }}
           ></div>
           <div style={{ width: "79.95%" }}>
-            {/* desktop Slider */}
-                        <RoundCornerWrapper>
-
             <div className="flex flex-col sm:flex-row justify-between items-start px-5 sm:px-20 gap-10">
               {/* Logo and Description */}
               <div className="flex-1 max-w-md space-y-4">
@@ -96,7 +94,6 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            </RoundCornerWrapper>
           </div>
           <div
             style={{
@@ -109,19 +106,18 @@ const Footer = () => {
         </div>
       </section>
 
-      {/* Social Media Links Row */}
       <section>
         <div style={{ width: "100%", display: "flex" }}>
           <div
             style={{
-              width: "10%",
+              width: "9.95%",
               boxSizing: "border-box",
-              borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div style={{ width: "79.95%" }}>
-            {/* desktop Slider */}
+          <div style={{ width: "80.08%" }}>
+            <RoundCornerWrapper>
+              {/* desktop Slider */}
               {/* Mobile Layout */}
               <div className="block sm:hidden">
                 <div className="flex items-center justify-between mb-6">
@@ -209,17 +205,18 @@ const Footer = () => {
                   Twitter
                 </Link>
               </div>
+            </RoundCornerWrapper>
           </div>
           <div
             style={{
-              width: "10.05%",
+              width: "9.95%",
               boxSizing: "border-box",
-              borderLeft: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
         </div>
       </section>
+
       <section>
         <div style={{ width: "100%", display: "flex" }}>
           <div
@@ -230,10 +227,8 @@ const Footer = () => {
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div style={{ width: "79.95%" }}>
-            {/* desktop Slider */}
-            <RoundCornerWrapper>
-            <div className="mt-8">
+          <div style={{ width: "79.95%",backgroundColor:'blue' }}>
+            
               <Image
                 src="/btn.svg"
                 width={1100}
@@ -241,8 +236,7 @@ const Footer = () => {
                 alt="get in touch"
                 className="w-full h-auto"
               />
-            </div>
-            </RoundCornerWrapper>
+            
           </div>
           <div
             style={{
@@ -254,41 +248,44 @@ const Footer = () => {
           ></div>
         </div>
       </section>
- <div style={{ width: "100%", display: "flex", height: "49px" }}>
-          <div
-            style={{
-              width: "10%",
-              // height: "50px",
-              borderRight: "1px solid #373737",
-              borderBottom: "1px solid #373737",
-                            // backgroundColor:'blue',
 
-            }}
-          ></div>
+      <div style={{ width: "100%", display: "flex", height: "49px" }}>
+        <div
+          style={{
+            width: "10%",
+            // height: "50px",
+            borderRight: "1px solid #373737",
+            borderBottom: "1px solid #373737",
+            // backgroundColor:'blue',
+          }}
+        ></div>
+        <div
+          style={{
+            width: "80%",
+            // height: "49px",
+            borderRight: "1px solid #373737",
+          }}
+        >
           <div
-            style={{
-              width: "80%",
-              // height: "49px",
-              borderRight: "1px solid #373737",
-            }}
+            className="flex justify-center items-center pt-4"
+            style={{ position: "relative", borderTop: "1px solid #373737" }}
           >
-             <div className="flex justify-center items-center mt-4">
-        <p className="text-[10px] text-[#F8F8F8]/70">
-          © 2025, Web Pioneers, All Rights Reserved.
-        </p>
-      </div>
-          </div>
-          <div
-            style={{
-              width: "10%",
-              // height: "50px",
-                            // backgroundColor:'green',
-              borderBottom: "1px solid #373737",
-            }}
-          >
+            <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -top-[5px] -left-[5px]"></div>
+            <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -top-[5px] -right-[5px]"></div>
+            <p className="text-[10px] text-[#F8F8F8]/70">
+              © 2025, Web Pioneers, All Rights Reserved.
+            </p>
           </div>
         </div>
-     
+        <div
+          style={{
+            width: "10%",
+            // height: "50px",
+            // backgroundColor:'green',
+            borderBottom: "1px solid #373737",
+          }}
+        ></div>
+      </div>
     </footer>
   );
 };

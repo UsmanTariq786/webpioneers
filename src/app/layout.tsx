@@ -71,33 +71,33 @@ export default function RootLayout({
         </div>
 
         {children}
-       
+
+        <FAQAccordion />
+
         <section>
           <div style={{ width: "100%", display: "flex" }}>
             <div
               style={{
-                width: "10%",
+                width: "9.95%",
                 boxSizing: "border-box",
-                borderRight: "1px solid #373737",
                 borderBottom: "1px solid #373737",
               }}
             ></div>
-            <div style={{ width: "79.95%" }}>
-              {/* desktop Slider */}
+            <div style={{ width: "80.08%" }}>
               <RoundCornerWrapper>
-                <FAQAccordion />
+                <HeroStatement />
               </RoundCornerWrapper>
             </div>
             <div
               style={{
-                width: "10.05%",
+                width: "9.95%",
                 boxSizing: "border-box",
-                borderLeft: "1px solid #373737",
                 borderBottom: "1px solid #373737",
               }}
             ></div>
           </div>
         </section>
+
         <section>
           <div style={{ width: "100%", display: "flex" }}>
             <div
@@ -109,34 +109,7 @@ export default function RootLayout({
               }}
             ></div>
             <div style={{ width: "79.95%" }}>
-              {/* desktop Slider */}
-              <HeroStatement />
-            </div>
-            <div
-              style={{
-                width: "10.05%",
-                boxSizing: "border-box",
-                borderLeft: "1px solid #373737",
-                borderBottom: "1px solid #373737",
-              }}
-            ></div>
-          </div>
-        </section>
-        <section>
-          <div style={{ width: "100%", display: "flex" }}>
-            <div
-              style={{
-                width: "10%",
-                boxSizing: "border-box",
-                borderRight: "1px solid #373737",
-                borderBottom: "1px solid #373737",
-              }}
-            ></div>
-            <div style={{ width: "79.95%" }}>
-              {/* desktop Slider */}
-              <RoundCornerWrapper>
-                <ContactForm />
-              </RoundCornerWrapper>
+              <ContactForm />
             </div>
             <div
               style={{
@@ -149,34 +122,30 @@ export default function RootLayout({
           </div>
         </section>
 
-        <div style={{ width: "100%", display: "flex", height: "49px" }}>
-          <div
-            style={{
-              width: "10%",
-              height: "50px",
-              borderRight: "1px solid #373737",
-              borderBottom: "1px solid #373737",
-                            // backgroundColor:'blue',
-
-            }}
-          ></div>
-          <div
-            style={{
-              width: "80%",
-              height: "49px",
-              borderRight: "1px solid #373737",
-            }}
-          ></div>
-          <div
-            style={{
-              width: "10%",
-              height: "50px",
-                            // backgroundColor:'green',
-              borderBottom: "1px solid #373737",
-            }}
-          >
+        <section>
+          <div style={{ width: "100%", display: "flex" }}>
+            <div
+              style={{
+                width: "9.95%",
+                boxSizing: "border-box",
+                borderBottom: "1px solid #373737",
+              }}
+            ></div>
+            <div style={{ width: "80.08%" }}>
+              <RoundCornerWrapper>
+                <div className="h-[50px]"></div>
+              </RoundCornerWrapper>
+            </div>
+            <div
+              style={{
+                width: "9.95%",
+                boxSizing: "border-box",
+                borderBottom: "1px solid #373737",
+              }}
+            ></div>
           </div>
-        </div>
+        </section>
+
         <Footer />
       </body>
     </html>
