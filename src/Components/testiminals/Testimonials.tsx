@@ -3,6 +3,7 @@
 import React, { useRef, useState } from 'react'
 import Slider from 'react-slick'
 import UserCard from '../UserCard'
+import CommonQuestion from '../commonQuestion'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -133,10 +134,11 @@ const Testimonials = () => {
   return (
     <div className="px-4 text-white">
       {/* Title Section */}
-      <div className="flex flex-col items-center mb-10 text-center">
-        <button className="font-rubik text-xs uppercase tracking-wider py-2 px-3 font-semibold text-white/80 border border-white/10 rounded-full">
+      <div className="flex flex-col items-center mb-10 text-center mt-10">
+        {/* <button className="font-rubik text-xs uppercase tracking-wider py-2 px-3 font-semibold text-white/80 border border-white/10 rounded-full">
           Testimonials
-        </button>
+        </button> */}
+        <CommonQuestion question='Testimonials'/>
         <p className="mt-4 font-rubik text-white/80 text-2xl sm:text-3xl md:text-[48px] leading-tight max-w-lg">
           Clients We’ve Worked With (and Impressed)
         </p>

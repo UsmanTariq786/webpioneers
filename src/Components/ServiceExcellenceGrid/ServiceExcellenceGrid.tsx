@@ -5,7 +5,7 @@ const ServiceExcellenceGrid = () => {
     <section className="overflow-x-auto hide-scrollbar px-4 py-6">
       <div className="whitespace-nowrap flex gap-x-10 text-[#F8F8F8]/70">
         {[
-          "Sults That Last",
+          "Results That Last",
           "Achieve More, Together",
           "Focused on Success",
           "Skills That Deliver",
