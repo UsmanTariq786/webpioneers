@@ -1,8 +1,8 @@
 import FolderWorkDesignComp from '@/Components/FolderWorkDesignComp';
 import React, { useState } from 'react';
-import projectsData from '@/app/data/projects.json';
 import ProjectModal from './projectModal';
 import RoundCornerWrapper from "@/Components/RoundCornerWrapper";
+import projectsData from '@/app/Data/projects.json';
 
 
 const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
