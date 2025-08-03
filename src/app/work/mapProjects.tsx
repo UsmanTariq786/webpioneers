@@ -2,6 +2,8 @@ import FolderWorkDesignComp from '@/Components/FolderWorkDesignComp';
 import React, { useState } from 'react';
 import projectsData from '@/app/data/projects.json';
 import ProjectModal from './projectModal';
+import RoundCornerWrapper from "@/Components/RoundCornerWrapper";
+
 
 const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -43,8 +45,17 @@ const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
 
   return (
     <div className="px-4 py-6 sm:px-6 lg:px-8">
+        <RoundCornerWrapper>
       <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
         {filteredProjects.map((project, index) => (
+          //  <div                       
+          //  key={index}
+          //  style={{position:'relative',borderRight:'1px solid #373737',width:'25%'}}>
+
+          // <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -right-[5px] -top-[5px]"></div>
+          // <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
+       
+
           <FolderWorkDesignComp
             key={index}
             image1Url={project.image1}
@@ -54,9 +65,11 @@ const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
             description={project.description}
             superCategory={project.superCategory}
             onClick={() => handleOpenModal(project.id)} // Trigger modal on click
-          />
-        ))}
+            />
+          //  </div>
+            ))}
       </div>
+        </RoundCornerWrapper>
       <ProjectModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}

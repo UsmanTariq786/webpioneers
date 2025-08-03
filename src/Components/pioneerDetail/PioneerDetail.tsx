@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Button from '../button/Button';
 import CommonQuestion from '../commonQuestion';
-import Chip from '@/components/CustomChip';
+import Chip from '@/Components/CustomChip';
 
 
 const PioneerDetail = () => {
