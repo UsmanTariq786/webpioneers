@@ -378,7 +378,10 @@ export default function ContactForm() {
           ></div>
           <div style={{ width: "79.95%" }}>
             <div className="flex">
-              <div className="w-[50%]">
+              <div className="w-[50%] p-5" style={{borderRight: "1px solid #373737",position:'relative'}}>
+                <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
+
+                <div className="w-[60%] " >
                 <p className="text-sm text-white/60">
                   By sending this form I confirm that I have read and accept the{" "}
                   <a
@@ -388,9 +391,10 @@ export default function ContactForm() {
                     Privacy Policy
                   </a>
                 </p>
+                </div>
               </div>
 
-              <div className="w-[50%]">
+              <div className="w-[50%] p-5 flex justify-end">
                 <button className="bg-[#D4541D] hover:bg-[#D4541D]/90 text-white text-[17px] px-6 py-3 rounded-full transition-colors">
                   Send Inquiry
                 </button>

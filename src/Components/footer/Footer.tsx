@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Mail, Phone, X } from "lucide-react";
 import Image from "next/image";
 import RoundCornerWrapper from "../RoundCornerWrapper";
-import { relative } from "path";
 const Footer = () => {
   return (
     <footer className="text-white">
@@ -20,27 +19,46 @@ const Footer = () => {
           <div style={{ width: "79.95%" }}>
             <div className="flex flex-col sm:flex-row">
               {/* Logo and Description */}
-              <div style={{borderRight: "1px solid #373737",width:'45%',position:'relative'}}>
-                    <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -top-[5px] -right-[5px]"></div>
-      <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
-                <div className="ml-5"><Logo /></div>
-                <p className="text-gray-400 w-[300px] text-sm mt-4 p-4">
+              <div
+                className="pl-2 pt-5"
+                style={{
+                  borderRight: "1px solid #373737",
+                  width: "45%",
+                  position: "relative",
+                }}
+              >
+                <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -top-[5px] -right-[5px]"></div>
+                <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
+                <div className="ml-5">
+                  <Logo />
+                </div>
+                <p className="text-[#F8F8F8B3] w-[300px] text-sm mt-4 p-4">
                   Web Panorama is a global agency that fuses brand goals with
                   creative design and development solutions.
                 </p>
               </div>
 
               {/* Quick Links */}
-              <div   style={{borderRight: "1px solid #373737",width:'20%',position:'relative'}}>
-                    <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -top-[5px] -right-[5px]"></div>
-      <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
+              <div
+                className="pt-5 pl-20 pb-10"
+                style={{
+                  borderRight: "1px solid #373737",
+                  width: "20%",
+                  position: "relative",
+                }}
+              >
+                <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -top-[5px] -right-[5px]"></div>
+                <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
                 <div>
-                  <h3 className="text-white font-medium mb-4">• Quick</h3>
+                  <h3 className="mb-4 font-medium leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
+                    • Quick
+                  </h3>
+
                   <ul className="space-y-3">
                     <li>
                       <Link
                         href="/"
-                        className="text-gray-400 hover:text-white transition-colors text-sm"
+                        className="text-[#F8F8F8B3] hover:text-white transition-colors text-sm"
                       >
                         Home
                       </Link>
@@ -48,7 +66,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/portfolio"
-                        className="text-gray-400 hover:text-white transition-colors text-sm"
+                        className="text-[#F8F8F8B3] hover:text-white transition-colors text-sm"
                       >
                         Portfolio
                       </Link>
@@ -56,7 +74,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/about"
-                        className="text-gray-400 hover:text-white transition-colors text-sm"
+                        className="text-[#F8F8F8B3] hover:text-white transition-colors text-sm"
                       >
                         About Us
                       </Link>
@@ -64,7 +82,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/services"
-                        className="text-gray-400 hover:text-white transition-colors text-sm"
+                        className="text-[#F8F8F8B3] hover:text-white transition-colors text-sm"
                       >
                         Services
                       </Link>
@@ -74,23 +92,78 @@ const Footer = () => {
               </div>
 
               {/* Contact Info */}
-              <div  style={{width:'35%'}}>
-                <h3 className="text-white font-medium mb-4">• Contact</h3>
+              <div className="pt-5 pl-20 " style={{ width: "35%" }}>
+                <h3 className="mb-4 font-medium leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
+                  • Contact
+                </h3>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <Mail className="w-4 h-4 text-gray-400" />
+                    <div className="relative w-10 h-10 rounded-full flex items-center justify-center">
+                      <div
+                        className="absolute inset-0 rounded-full p-[1.5px]"
+                        style={{
+                          background:
+                            "linear-gradient(158.39deg, rgba(255,255,255,0.1) 14.19%, rgba(255,255,255,0.000025) 50.59%, rgba(255,255,255,0.000025) 68.79%, rgba(255,255,255,0.025) 105.18%)",
+                        }}
+                      >
+                        <div
+                          className="w-full h-full rounded-full"
+                          style={{
+                            background: `
+          linear-gradient(0deg, rgba(40, 40, 40, 0.7), rgba(40, 40, 40, 0.7)),
+          linear-gradient(0deg, rgba(248, 248, 248, 0.1), rgba(248, 248, 248, 0.1))
+        `,
+                            backdropFilter: "blur(100px)",
+                            WebkitBackdropFilter: "blur(100px)",
+                            boxShadow:
+                              "inset 2px 4px 16px 0px rgba(248, 248, 248, 0.06)",
+                          }}
+                        />
+                      </div>
+
+                      <Mail className="absolute w-4 h-4 text-white" />
+                    </div>
+
                     <a
                       href="mailto:business@webpanorama.com"
-                      className="text-gray-400 hover:text-white transition-colors text-sm"
+                      className="text-[#F8F8F8B3] hover:text-white transition-colors text-sm"
                     >
                       business@webpanorama.com
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Phone className="w-4 h-4 text-gray-400" />
+                    <div className="relative w-10 h-10 rounded-full flex items-center justify-center">
+                      {/* Border layer */}
+                      <div
+                        className="absolute inset-0 rounded-full p-[1.5px] z-0"
+                        style={{
+                          background:
+                            "linear-gradient(158.39deg, rgba(255,255,255,0.1) 14.19%, rgba(255,255,255,0.000025) 50.59%, rgba(255,255,255,0.000025) 68.79%, rgba(255,255,255,0.025) 105.18%)",
+                        }}
+                      >
+                        {/* Inner blurred background */}
+                        <div
+                          className="w-full h-full rounded-full z-0"
+                          style={{
+                            background: `
+          linear-gradient(0deg, rgba(40, 40, 40, 0.7), rgba(40, 40, 40, 0.7)),
+          linear-gradient(0deg, rgba(248, 248, 248, 0.1), rgba(248, 248, 248, 0.1))
+        `,
+                            backdropFilter: "blur(100px)",
+                            WebkitBackdropFilter: "blur(100px)",
+                            boxShadow:
+                              "inset 2px 4px 16px 0px rgba(248, 248, 248, 0.06)",
+                          }}
+                        />
+                      </div>
+
+                      {/* Phone Icon - now above everything else */}
+                      <Phone className="w-4 h-4 text-white z-10" />
+                    </div>
+
                     <a
                       href="tel:+16305502000"
-                      className="text-gray-400 hover:text-white transition-colors text-sm"
+                      className="text-[#F8F8F8B3] hover:text-white transition-colors text-sm"
                     >
                       +1(630) 550-2000
                     </a>
@@ -130,7 +203,7 @@ const Footer = () => {
                     <X className="w-5 h-5" />
                   </button>
                 </div>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 p-5">
                   <Link
                     href="#"
                     className="text-[#F8F8F8]/90 text-lg hover:text-white transition-colors"
@@ -171,40 +244,40 @@ const Footer = () => {
               </div>
 
               {/* Desktop Layout */}
-              <div className="hidden sm:flex flex-row flex-wrap justify-start gap-20">
+              <div className="hidden sm:flex flex-row flex-wrap justify-start gap-20 p-5">
                 <Link
                   href="#"
-                  className="text-[#F8F8F8]/90 text-[30px] hover:text-white transition-colors"
+                  className=" text-[30px] hover:text-white transition-colors leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent"
                 >
                   LinkedIn
                 </Link>
                 <Link
                   href="#"
-                  className="text-[#F8F8F8]/90 text-[30px] hover:text-white transition-colors"
+                  className=" text-[30px] hover:text-white transition-colors leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent"
                 >
                   Instagram
                 </Link>
                 <Link
                   href="#"
-                  className="text-[#F8F8F8]/90 text-[30px] hover:text-white transition-colors"
+                  className=" text-[30px] hover:text-white transition-colors leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent"
                 >
                   Dribbble
                 </Link>
                 <Link
                   href="#"
-                  className="text-[#D4541D]/70 text-[30px] hover:text-[#D4541D] transition-colors"
+                  className=" text-[30px] hover:text-white transition-colors leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent"
                 >
                   Behance
                 </Link>
                 <Link
                   href="#"
-                  className="text-[#F8F8F8]/90 text-[30px] hover:text-white transition-colors"
+                  className=" text-[30px] hover:text-white transition-colors leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent"
                 >
                   WhatsApp
                 </Link>
                 <Link
                   href="#"
-                  className="text-[#F8F8F8]/90 text-[30px] hover:text-white transition-colors"
+                  className=" text-[30px] hover:text-white transition-colors leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent"
                 >
                   Twitter
                 </Link>
@@ -231,16 +304,16 @@ const Footer = () => {
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div style={{ width: "79.95%",backgroundColor:'blue' }}>
-            
-              <Image
-                src="/btn.svg"
-                width={1100}
-                height={300}
-                alt="get in touch"
-                className="w-full h-auto"
-              />
-            
+          <div style={{ width: "79.95%"}}>
+            <div style={{width:'102.3%',marginLeft:'-1.1%',marginBottom:'-2.7%'}}>
+            <Image
+              src="/btn.svg"
+              width={1100}
+              height={300}
+              alt="get in touch"
+              className="w-full h-auto"
+            />
+            </div>
           </div>
           <div
             style={{
