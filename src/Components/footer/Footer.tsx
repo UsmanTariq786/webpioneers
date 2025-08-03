@@ -18,18 +18,22 @@ const Footer = () => {
             }}
           ></div>
           <div style={{ width: "79.95%" }}>
-            <div className="flex flex-col sm:flex-row justify-between items-start px-5 sm:px-20 gap-10">
+            <div className="flex flex-col sm:flex-row">
               {/* Logo and Description */}
-              <div className="flex-1 max-w-md space-y-4">
-                <Logo />
-                <p className="text-gray-400 w-[300px] text-sm">
+              <div style={{borderRight: "1px solid #373737",width:'45%',position:'relative'}}>
+                    <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -top-[5px] -right-[5px]"></div>
+      <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
+                <div className="ml-5"><Logo /></div>
+                <p className="text-gray-400 w-[300px] text-sm mt-4 p-4">
                   Web Panorama is a global agency that fuses brand goals with
                   creative design and development solutions.
                 </p>
               </div>
 
               {/* Quick Links */}
-              <div className="flex-1 flex justify-center">
+              <div   style={{borderRight: "1px solid #373737",width:'20%',position:'relative'}}>
+                    <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -top-[5px] -right-[5px]"></div>
+      <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
                 <div>
                   <h3 className="text-white font-medium mb-4">• Quick</h3>
                   <ul className="space-y-3">
@@ -70,7 +74,7 @@ const Footer = () => {
               </div>
 
               {/* Contact Info */}
-              <div className="flex-1 max-w-md">
+              <div  style={{width:'35%'}}>
                 <h3 className="text-white font-medium mb-4">• Contact</h3>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">

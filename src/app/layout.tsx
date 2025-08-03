@@ -85,7 +85,9 @@ export default function RootLayout({
             ></div>
             <div style={{ width: "80.08%" }}>
               <RoundCornerWrapper>
+                <div className="px-[20px]">
                 <HeroStatement />
+                </div>
               </RoundCornerWrapper>
             </div>
             <div
@@ -98,29 +100,10 @@ export default function RootLayout({
           </div>
         </section>
 
-        <section>
-          <div style={{ width: "100%", display: "flex" }}>
-            <div
-              style={{
-                width: "10%",
-                boxSizing: "border-box",
-                borderRight: "1px solid #373737",
-                borderBottom: "1px solid #373737",
-              }}
-            ></div>
-            <div style={{ width: "79.95%" }}>
+
               <ContactForm />
-            </div>
-            <div
-              style={{
-                width: "10.05%",
-                boxSizing: "border-box",
-                borderLeft: "1px solid #373737",
-                borderBottom: "1px solid #373737",
-              }}
-            ></div>
-          </div>
-        </section>
+
+       
 
         <section>
           <div style={{ width: "100%", display: "flex" }}>

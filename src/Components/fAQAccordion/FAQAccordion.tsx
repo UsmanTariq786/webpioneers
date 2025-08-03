@@ -3,6 +3,7 @@
 import { Plus, Minus } from "lucide-react";
 import { useState } from "react";
 import RoundCornerWrapper from "../RoundCornerWrapper";
+import CommonQuestion from "../commonQuestion";
 
 interface FAQItem {
   id: string;
@@ -64,16 +65,16 @@ export const FAQAccordion = () => {
           ></div>
           <div style={{ width: "80.08%" }}>
             <RoundCornerWrapper>
-              <div className="mb-10 space-y-2.5">
-                <button className="font-rubik text-xs uppercase tracking-wider py-2 px-3 font-semibold text-white/80 border border-white/10 rounded-full">
-                  Got Questions?
-                </button>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-white leading-tight">
-                  Frequently asked
-                  <br />
-                  questions
-                </h2>
-              </div>
+                <div className="sm:ml-20 max-w-md  mt-[25px] mb-[30px]">
+  <div className="w-[200px]">
+    <CommonQuestion question="Got Questions?" />
+  </div>
+  <div className="w-[400px] mt-[10px]">
+    <p className="w-full font-rubik font-normal text-[32px] sm:text-[48px] leading-tight sm:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
+      Frequently Asked Questions
+    </p>
+  </div>
+</div>
             </RoundCornerWrapper>
           </div>
           <div
@@ -106,7 +107,7 @@ export const FAQAccordion = () => {
                   aria-expanded={activeId === "1"}
                   aria-controls="faq-content-1"
                 >
-                  <h3 className="text-base sm:text-lg lg:text-xl text-white pr-8 leading-relaxed group-hover:text-gray-300 transition-colors">
+                  <h3 className="text-base sm:text-lg lg:text-xl text-[rgba(248,248,248,0.95)] pr-8 leading-relaxed group-hover:text-gray-300 transition-colors">
                     What is the typical turnaround time for a design or
                     development project?
                   </h3>
@@ -134,7 +135,7 @@ export const FAQAccordion = () => {
                 >
                   <div className="overflow-hidden">
                     <div className="pt-4 pr-12 sm:pr-16">
-                      <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
+                      <p className="text-sm sm:text-base text-[rgba(248,248,248,0.5)] leading-relaxed">
                         Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been the
                         industry's standard dummy text ever since.
@@ -177,7 +178,7 @@ export const FAQAccordion = () => {
                   aria-expanded={activeId === "2"}
                   aria-controls="faq-content-2"
                 >
-                  <h3 className="text-base sm:text-lg lg:text-xl text-white pr-8 leading-relaxed group-hover:text-gray-300 transition-colors">
+                  <h3 className="text-base sm:text-lg lg:text-xl text-[rgba(248,248,248,0.95)] pr-8 leading-relaxed group-hover:text-gray-300 transition-colors">
                     Can you accommodate rush projects or tight deadlines?
                   </h3>
                   <div
@@ -204,7 +205,7 @@ export const FAQAccordion = () => {
                 >
                   <div className="overflow-hidden">
                     <div className="pt-4 pr-12 sm:pr-16">
-                      <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
+                      <p className="text-sm sm:text-base text-[rgba(248,248,248,0.5)] leading-relaxed">
                         Yes, we offer expedited services for time-sensitive
                         projects with a 15-30% rush fee depending on scope.
                       </p>
@@ -249,7 +250,7 @@ export const FAQAccordion = () => {
                   aria-expanded={activeId === "3"}
                   aria-controls="faq-content-3"
                 >
-                  <h3 className="text-base sm:text-lg lg:text-xl text-white pr-8 leading-relaxed group-hover:text-gray-300 transition-colors">
+                  <h3 className="text-base sm:text-lg lg:text-xl text-[rgba(248,248,248,0.95)] pr-8 leading-relaxed group-hover:text-gray-300 transition-colors">
                     Do you have experience working in our industry or niche?
                   </h3>
                   <div
@@ -276,7 +277,7 @@ export const FAQAccordion = () => {
                 >
                   <div className="overflow-hidden">
                     <div className="pt-4 pr-12 sm:pr-16">
-                      <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
+                      <p className="text-sm sm:text-base text-[rgba(248,248,248,0.5)] leading-relaxed">
                         Our team has served 120+ clients across 8 industries
                         including healthcare, fintech, and e-commerce.{" "}
                       </p>
@@ -320,7 +321,7 @@ export const FAQAccordion = () => {
                   aria-expanded={activeId === "4"}
                   aria-controls="faq-content-4"
                 >
-                  <h3 className="text-base sm:text-lg lg:text-xl text-white pr-8 leading-relaxed group-hover:text-gray-300 transition-colors">
+                  <h3 className="text-base sm:text-lg lg:text-xl text-[rgba(248,248,248,0.95)] pr-8 leading-relaxed group-hover:text-gray-300 transition-colors">
                     What types of services do you offer?
                   </h3>
                   <div
@@ -347,7 +348,7 @@ export const FAQAccordion = () => {
                 >
                   <div className="overflow-hidden">
                     <div className="pt-4 pr-12 sm:pr-16">
-                      <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
+                      <p className="text-sm sm:text-base text-[rgba(248,248,248,0.5)] leading-relaxed">
                         End-to-end product development: UX/UI design,
                         frontend/backend development, QA testing, and DevOps.
                       </p>
@@ -388,7 +389,7 @@ export const FAQAccordion = () => {
                   aria-expanded={activeId === "5"}
                   aria-controls="faq-content-5"
                 >
-                  <h3 className="text-base sm:text-lg lg:text-xl text-white pr-8 leading-relaxed group-hover:text-gray-300 transition-colors">
+                  <h3 className="text-base sm:text-lg lg:text-xl text-[rgba(248,248,248,0.95)] pr-8 leading-relaxed group-hover:text-gray-300 transition-colors">
                     How do you handle revisions or changes during a project?
                   </h3>
                   <div
@@ -415,7 +416,7 @@ export const FAQAccordion = () => {
                 >
                   <div className="overflow-hidden">
                     <div className="pt-4 pr-12 sm:pr-16">
-                      <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
+                      <p className="text-sm sm:text-base text-[rgba(248,248,248,0.5)] leading-relaxed">
                         We include 2 rounds of revisions in all contracts, with
                         clear change request protocols to prevent scope creep.
                       </p>
