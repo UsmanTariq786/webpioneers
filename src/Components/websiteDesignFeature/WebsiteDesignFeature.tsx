@@ -1,18 +1,14 @@
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import React from 'react';
 import WebCard from '../webCard/WebCard';
 
 const WebsiteDesignFeature = () => {
 
-  interface cardProps{
-      title: string,
-      description: string,
-      image: string
-  }
+
 
   const cardData = 
     {
-      image: "/ux.png",
+      image: "/scales.svg",
       title: "Website design (UX UI)",
       description: " We design websites that look great, feel right, and turn visitors into happy customers."
     }
@@ -20,15 +16,15 @@ const WebsiteDesignFeature = () => {
   return (
     <section
       className="
-        mt-10 px-4 py-16 max-w-[1100px] mx-auto
+        mt-10 mb-10  max-w-[1100px] mx-auto
         rounded-[40px] border border-transparent
         bg-gradient-to-br from-white/5 via-white/0 to-white/5
-        flex flex-col sm:flex-col md:flex-row items-center md:items-start gap-10"
+        flex flex-col sm:flex-col md:flex-row  items-center md:items-center"
     >
       {/*  LEFT SECTION (Hidden only on very small devices)  */}
-      <div className="hidden sm:flex flex-col justify-between h-[320px]">
+      <div className="md:hidden sm:flex flex-col justify-between h-[320px]">
         <Image
-          src="/main-container-content.png"
+          src="/websitedesigngroup.svg"
           width={260}
           height={180}
           alt="Main Stack"
@@ -41,25 +37,23 @@ const WebsiteDesignFeature = () => {
       </div>
 
       {/* === CENTER SECTION === */}
-      <div className="relative w-full max-w-[340px]">
+      <div className="relative w-[60%] py-5 pl-2"
+      style={{background:"url('/starstwo.svg')", backgroundSize:'100% 100%'}}
+      >
+        <div className="h-[80%]">
         <Image
-          src="/main-container-content-center.png"
-          width={340}
-          height={320}
+          src="/websitedesigngroup.svg"
+          width={240}
+          height={220}
           alt="Center UI"
           className="w-full h-auto"
         />
-        <Image
-          src="/main-container-content-end.png"
-          width={160}
-          height={60}
-          alt="Color Dots"
-          className="absolute bottom-34 left-55"
-        />
+        </div>
+       
       </div>
 
       {/* === RIGHT SECTION === */}
-      <div className="flex flex-col items-start text-left max-w-[300px] md:mt-10 md:ml-10">
+      <div className="flex flex-col items-start text-left w-[40%]">
      <WebCard
          title={cardData.title}
          image ={cardData.image}

@@ -1,6 +1,7 @@
 import React from 'react'
 import StepCard from '../stepCard/StepCard'
-
+import CommonQuestion from '@/Components/commonQuestion'
+ 
 interface Step {
   stepNumber: number
   title: string
@@ -14,21 +15,21 @@ const steps: Step[] = [
     title: 'Ideation',
     description:
       'You talk, we listen (and sketch stuff). We get all your thoughts out and turn them into a plan.',
-    image: '/Frame11.png',
+    image: '/ideation.svg',
   },
   {
     stepNumber: 2,
     title: 'Design',
     description:
       'We make it look sharp. From wireframes to final UI, you’ll see it come to life.',
-    image: '/Frame12.png',
+    image: '/design.svg',
   },
   {
     stepNumber: 3,
     title: 'Launch',
     description:
       'Your site goes live. You flex. We handle the tech bits and hit publish.',
-    image: '/Frame13.png',
+    image: '/launch.svg',
   },
 ]
 
@@ -36,10 +37,10 @@ const ProcessStepsSection = () => (
   <section className="mt-12 ">
     {/* heading */}
     <div className="flex flex-col items-center mb-10">
-      <button className="font-rubik text-xs uppercase tracking-wider py-2 px-3 font-semibold text-white/80 border border-white/10 rounded-full">
-        How it works
-      </button>
-      <p className="mt-4 font-rubik text-center text-white/80 text-2xl sm:text-[48px] leading-tight max-w-lg">
+     <CommonQuestion question='HOW IT WORKS'/>
+      <p className="text-[48px] leading-[56px] font-normal font-['Rubik'] text-center tracking-[-0.02em]
+               bg-[linear-gradient(92.95deg,_rgba(248,248,248,0.9)_0.1%,_rgba(248,248,248,0.5)_100.1%)]
+               bg-clip-text text-transparent max-w-[600px]">
         What happens once we team up
       </p>
     </div>

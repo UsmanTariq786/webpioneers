@@ -10,19 +10,22 @@ const WebCard = ({title , image , description}: cardProps) => {
 
    
   return (
-    <div>
-       <div className="flex flex-col items-start text-left max-w-[300px] ">
-        <div className=" mb-6">
-          <Image src={image} width={70} height={70} alt="UX Icon" />
-        </div>
-        <h1 className="text-[#F8F8F8]/90  sm:text-[30px]  font-rubik font-normal text-[27px] leading-[40px] tracking-[-0.02em]">
-        {title}
-        </h1>
-        <p className="text-[#F8F8F8]/50 text-base mt-3 leading-[27px] tracking-normal">
-         {description}
-        </p>
-      </div>
-    </div>
+      <div className="w-[240px] self-center">
+              <div className="flex items-center">
+                <img src={image} alt="rings" />
+              </div>
+
+              <p className="text-[40px] leading-[100%] font-normal font-['Rubik'] tracking-[-0.02em]
+                bg-[linear-gradient(92.95deg,_rgba(248,248,248,0.9)_0.1%,_rgba(248,248,248,0.5)_100.1%)]
+                bg-clip-text text-transparent max-w-[900px] mt-[20px]">
+                {title}
+              </p>
+
+              <p className="w-[292px] h-[72px] opacity-80 text-[rgba(248,248,248,0.5)]
+                font-['Rubik'] font-normal text-[16px] leading-[24px]">
+{description}             
+ </p>
+            </div>
   )
 }
 

@@ -1,22 +1,22 @@
 import React from "react";
 import WebCard from "../webCard/WebCard";
 import Image from "next/image";
+import "./webdevelopment.css";
 
 const WebsiteDevelopment = () => {
-    
-      interface cardProps{
-          title: string,
-          description: string,
-          image:string
-      }
-      
-      const cardData = 
-        {
-          image: "/web.png",
-          title: "Website design (UX UI)",
-          description: " We design websites that look great, feel right, and turn visitors into happy customers."
-        }
-      
+  interface cardProps {
+    title: string;
+    description: string;
+    image: string;
+  }
+
+  const cardData = {
+    image: "/web.png",
+    title: "Website development",
+    description:
+      "We design websites that look great, feel right, and turn visitors into happy customers.",
+  };
+
   return (
     <section
       style={{
@@ -32,23 +32,25 @@ const WebsiteDevelopment = () => {
             rgba(255, 255, 255, 0.015) 105.18%
           )`,
         borderImageSlice: 1,
-        borderRadius: '40px',
       }}
-      className="relative mt-10 sm:max-w-[1100px] h-[600px] mx-auto px-10 py-10 sm:flex items-start justify-between gap-10"
+      className="relative mt-10 mb-[30px] max-w-[1100px] mx-auto flex flex-col sm:flex-row rounded-[40px]"
     >
       {/* Left Web Card */}
-      <div className="pt-2 sm:p-12">
+      <div className="flex justify-end w-full sm:w-[40%] pr-[100px]">
         <WebCard
-         title={cardData.title}
-         image={cardData.image}
-         description= {cardData.description}
+          title={cardData.title}
+          image={cardData.image}
+          description={cardData.description}
         />
       </div>
 
       {/* Right Section: Logos + Code Image */}
-      <div className="pt-8 flex gap-4">
+      <div
+        className="flex gap-4 w-full sm:w-[60%] p-10 justify-end"
+        style={{ background: "url('/Starts.svg')" }}
+      >
         {/* Vertical Logos */}
-        <div className="hidden sm:flex flex-col gap-3">
+        <div className="md:hidden sm:flex flex-col gap-3">
           <Image src="/react.png" width={62} height={62} alt="React" />
           <Image src="/shopify.png" width={62} height={62} alt="Shopify" />
           <Image src="/w.png" width={78} height={78} alt="W" />
@@ -59,18 +61,17 @@ const WebsiteDevelopment = () => {
         {/* Main Code Image */}
         <div className="relative">
           <Image
-            src="/code.png"
+            src="/webdevelopment.svg"
             width={470}
             height={400}
             alt="Code"
-            className="sm:mt-6"
           />
           <Image
             src="/Fileitem.png"
             width={200}
             height={72}
             alt="Floating UI"
-            className="hidden sm:absolute top-[310px] right-[-15px]"
+            className="md:hidden sm:block absolute top-[310px] -right-[15px]"
           />
         </div>
       </div>

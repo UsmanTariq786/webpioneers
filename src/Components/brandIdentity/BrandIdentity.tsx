@@ -1,17 +1,20 @@
-import React from 'react';
-import Button from '../button/Button';
-import Image from 'next/image';
+import React from "react";
+import Button from "../button/Button";
+import Image from "next/image";
+import CommonQuestion from "@/Components/commonQuestion";
+import Smallcard from "../smallcard/smallcard";
+import WebCard from "../webCard/WebCard";
 
 const BrandIdentity = () => {
   return (
-    <section className="px-4 md:px-8 lg:px-16">
+    <section className="py-[50px]">
       {/* Header Section */}
       <div className="flex flex-col items-center mb-10 text-center">
-        <button className="font-rubik text-xs uppercase tracking-wider py-2 px-3 font-semibold text-white/80 border border-white/10 rounded-full">
-          what we offer
-        </button>
+        <CommonQuestion question="WHAT WE OFFER" />
 
-        <p className="mt-4 font-rubik text-white/80 text-[28px] sm:text-[36px] md:text-[48px] leading-tight max-w-xl">
+        <p className="text-[48px] leading-[56px] font-normal font-['Rubik'] text-center tracking-[-0.02em]
+          bg-[linear-gradient(92.95deg,_rgba(248,248,248,0.9)_0.1%,_rgba(248,248,248,0.5)_100.1%)]
+          bg-clip-text text-transparent max-w-[550px] mt-[20px]">
           Everything You Need (and Nothing You Don't)
         </p>
 
@@ -21,44 +24,84 @@ const BrandIdentity = () => {
       </div>
 
       {/* Article Section */}
-      <article className="max-w-[1200px] mx-auto bg-[#1a1a1a] p-8 rounded-lg">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 items-center">
-          {/* Left Side: Text */}
-          <div className="col-span-2 flex justify-start md:ml-14">
-            <div className="w-[240px] space-y-4 self-center">
-              <div className="flex items-center">
-                <Image
-                  src="/Vector1.png"
-                  width={70}
-                  height={70}
-                  alt="Brand icon"
-                  className="w-[70px] h-[70px]"
-                />
+      <div
+        className="rounded-[16px] w-[90%] mx-auto"
+        style={{
+          background:
+            "linear-gradient(158.39deg, rgba(255, 255, 255, 0.06) 14.19%, rgba(255, 255, 255, 0.000015) 50.59%, rgba(255, 255, 255, 0.000015) 68.79%, rgba(255, 255, 255, 0.015) 105.18%)",
+        }}
+      >
+        <div
+          className="rounded-[15px] flex pb-[70px]"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(116, 47, 47, 0.02) 0%, rgba(248, 248, 248, 0.0002) 100%), linear-gradient(123.8deg, rgba(248, 248, 248, 0.03) 0%, rgba(248, 248, 248, 0) 46.5%)",
+          }}
+        >
+          {/* Left Text Column */}
+          <div className="w-[30%] flex justify-end">
+            <WebCard image="/rings.svg" title="Brand guidelines" description="We help shape your brand’s personality and build a visual style that actually feels like you.  "/>
+          </div>
+
+          {/* Right Image Column */}
+          <div className="w-[70%] px-[4%] pr-[1%] pl-[15%] py-[3%] bg-[url('/Stars.svg')] bg-no-repeat bg-cover">
+            <div
+              className="relative w-[500px] h-[319px] bg-center bg-no-repeat bg-cover"
+              style={{ backgroundImage: "url('/maincontainer.svg')"}}
+            >
+              {/* Top Right Tag */}
+              <div className="absolute top-[-15px] right-[-42px] flex rounded-[64px] p-[12px_12px_6px_12px]"
+                style={{
+                  backdropFilter: "blur(32px)",
+                  WebkitBackdropFilter: "blur(32px)",
+                  boxShadow: "2px 4px 16px 0px rgba(248, 248, 248, 0.06) inset, 0px 24px 32px -12px var(--NeutralNeutral410)",
+                  background: "var(--neutral-neutral-110, rgba(255, 255, 255, 0.1))",
+                }}>
+                <Image src="/designsystem.svg" width={44} height={44} alt="Brand icon" className="rounded-full"/>
+                <p className="pt-[1px] text-[16px] leading-[24px] font-medium text-[rgba(248,248,248,0.95)] font-['Rubik']">
+                  Design System
+                </p>
               </div>
 
-              <div className="text-white font-medium text-2xl leading-[1.2]">
-                <p>Brand</p>
-                <p>Guidelines</p>
+              {/* Top Left Tag */}
+              <div className="absolute top-[42px] left-[-120px] flex rounded-[64px] p-[12px_12px_6px_12px]"
+                style={{
+                  backdropFilter: "blur(32px)",
+                  WebkitBackdropFilter: "blur(32px)",
+                  boxShadow: "2px 4px 16px 0px rgba(248, 248, 248, 0.06) inset, 0px 24px 32px -12px var(--NeutralNeutral410)",
+                  background: "var(--neutral-neutral-110, rgba(255, 255, 255, 0.1))",
+                }}>
+                <Image src="/designsystem.svg" width={44} height={44} alt="Brand icon" className="rounded-full" />
+                <p className=" pt-[1px] text-[16px] leading-[24px] font-medium text-[rgba(248,248,248,0.95)] font-['Rubik']">
+                  Brand Book
+                </p>
               </div>
 
-              <p className="text-white/60 text-base leading-relaxed w-[260px]">
-                Not long enough your brand is particularly important to yourself either that already finds the price.
-              </p>
+              {/* Bottom Left Card */}
+              <div
+                className="absolute bottom-[-50px] left-[-30px] w-[226px] h-[204px] rounded-[32px]"
+                style={{
+                  background:
+                    "linear-gradient(158.39deg, rgba(255, 255, 255, 0.12) 14.19%, rgba(255, 255, 255, 0.04) 50.59%, rgba(255, 255, 255, 0.04) 68.79%, rgba(255, 255, 255, 0.06) 105.18%)",
+                }}
+              >
+                <div
+                  className="relative w-full h-full rounded-[31px] p-[10px] overflow-hidden"
+                  style={{
+                    background: "var(--neutral-neutral-25, rgba(248, 248, 248, 0.05))",
+                    backdropFilter: "blur(100px)",
+                    WebkitBackdropFilter: "blur(100px)",
+                    boxShadow: "2px 4px 16px 0px rgba(248, 248, 248, 0.06) inset, 0px 24px 32px -12px var(--NeutralNeutral410)",
+                  }}
+                >
+                  <img src="/icons.svg" width="100%" height="100%" alt="icons" />
+                  <img src="/colors.svg" width="100%" height="100%" style={{ marginTop: "10px" }} alt="colors" />
+                </div>
+              </div>
             </div>
           </div>
-
-          {/* Right Side: Image */}
-          <div className="col-span-3">
-            <Image
-              src="/Group.png"
-              alt="Brand visual"
-              width={617}
-              height={480}
-              className="w-full h-auto rounded-lg object-cover"
-            />
-          </div>
         </div>
-      </article>
+      </div>
     </section>
   );
 };
