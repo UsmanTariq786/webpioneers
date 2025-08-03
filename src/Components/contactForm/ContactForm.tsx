@@ -214,17 +214,17 @@ export default function ContactForm() {
                   </button>
 
                   {showServiceDropdown && (
-                    <div className="absolute z-20 mt-2 w-full bg-gray-700 rounded-lg shadow-xl border border-gray-600 overflow-hidden">
+                    <div className="absolute right-[0px] py-2 z-20 mt-2 w-[40%] bg-[#282828B3] rounded-lg shadow-xl border border-[#393939] overflow-hidden">
                       {services.map((service) => (
                         <label
                           key={service}
-                          className="flex items-center justify-between px-4 py-3 hover:bg-gray-600/50 cursor-pointer transition-colors"
+                          className="flex items-center justify-between px-4 py-1 hover:bg-gray-600/50 cursor-pointer transition-colors"
                           onClick={() => {
                             setSelectedService(service);
                             setShowServiceDropdown(false);
                           }}
                         >
-                          <span className="text-white text-sm">{service}</span>
+                          <span className="text-[#F8F8F8F2] text-sm">{service}</span>
                           <div className="relative">
                             <input
                               type="radio"
@@ -237,13 +237,13 @@ export default function ContactForm() {
                             <div
                               className={`w-4 h-4 rounded-full border-2 transition-colors ${
                                 selectedService === service
-                                  ? "border-orange-500 bg-orange-500"
-                                  : "border-gray-400 bg-transparent"
+                                  ? "border-[#727272] bg-[#727272]"
+                                  : "border-[#727272] bg-transparent"
                               }`}
                             >
-                              {selectedService === service && (
+                              {/* {selectedService === service && (
                                 <div className="w-2 h-2 bg-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-                              )}
+                              )} */}
                             </div>
                           </div>
                         </label>
@@ -274,17 +274,17 @@ export default function ContactForm() {
                   </button>
 
                   {showBudgetDropdown && (
-                    <div className="absolute z-20 mt-2 w-4/5 bg-gray-700 rounded-lg shadow-xl border border-gray-600 overflow-hidden">
+                    <div className="absolute right-[0px] py-2 z-20 mt-2 w-[40%] bg-[#282828B3] rounded-lg shadow-xl border border-[#393939] overflow-hidden">
                       {budgets.map((budget) => (
                         <label
                           key={budget}
-                          className="flex items-center justify-between px-4 py-4 hover:bg-gray-600/50 cursor-pointer transition-colors"
+                          className="flex items-center justify-between px-4 py-1 hover:bg-gray-600/50 cursor-pointer transition-colors"
                           onClick={() => {
                             setSelectedBudget(budget);
                             setShowBudgetDropdown(false);
                           }}
                         >
-                          <span className="text-white text-sm">{budget}</span>
+                          <span className="text-[#F8F8F8F2] text-sm">{budget}</span>
                           <div className="relative">
                             <input
                               type="radio"
@@ -297,13 +297,11 @@ export default function ContactForm() {
                             <div
                               className={`w-4 h-4 rounded-full border-2 transition-colors ${
                                 selectedBudget === budget
-                                  ? "border-orange-500 bg-orange-500"
-                                  : "border-gray-400 bg-transparent"
+                                   ? "border-[#727272] bg-[#727272]"
+                                  : "border-[#727272] bg-transparent"
                               }`}
                             >
-                              {selectedBudget === budget && (
-                                <div className="w-2 h-2 bg-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-                              )}
+                             
                             </div>
                           </div>
                         </label>
