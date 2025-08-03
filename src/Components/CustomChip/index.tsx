@@ -1,7 +1,7 @@
 "use client";
 
 import rubik from "@/app/fonts";
-import Button from "@/components/button/Button";
+import Button from "@/Components/button/Button";
 
 interface ChipProps {
   label: string;
