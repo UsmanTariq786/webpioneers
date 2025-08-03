@@ -7,7 +7,7 @@ import { HeroStatement } from "@/Components/HeroStatement/HeroStatement";
 import { FAQAccordion } from "@/Components/fAQAccordion/FAQAccordion";
 import ContactForm from "@/Components/contactForm/ContactForm";
 import Footer from "@/Components/footer/Footer";
-import Header from "@/Components/Header/Header";
+import Header from "@/Components/header/Header";
 import RoundCornerWrapper from "@/Components/RoundCornerWrapper";
 
 export const metadata: Metadata = {
