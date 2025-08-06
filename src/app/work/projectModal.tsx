@@ -27,12 +27,20 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
   const modalContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (isOpen && modalContentRef.current) {
-      modalContentRef.current.scrollTo(0, 0); // Initial scroll to top on open
-      document.body.style.overflow = 'hidden'; // Prevent background scroll
+    if (isOpen) {
+      // Disable background scroll
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = '0'; // Reset any padding if scrollbar was hidden
+      if (modalContentRef.current) {
+        modalContentRef.current.scrollTo(0, 0); // Initial scroll to top
+      }
     }
     return () => {
-      document.body.style.overflow = 'auto'; // Restore scroll on close
+      // Restore background scroll
+      document.documentElement.style.overflow = 'auto';
+      document.body.style.overflow = 'auto';
+      document.body.style.paddingRight = '0';
     };
   }, [isOpen]);
 
@@ -54,7 +62,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[1000]"
       onClick={handleOverlayClick}
     >
       {/* Modal Container */}
@@ -141,12 +149,16 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             </div>
           </div>
 
-          <div className="mt-6 text-center">
+          <div className="mt-6 text-center flex items-center justify-center">
             <button
-              onClick={scrollToTop}
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+             onClick={scrollToTop}
+              className="h-10 w-10 bg-[#373737] rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out"
             >
-              Move to Top
+              <img
+                src="/moveTopButton.png"
+                alt="move to top button"
+                className="h-full w-full object-contain"
+              />
             </button>
           </div>
         </div>

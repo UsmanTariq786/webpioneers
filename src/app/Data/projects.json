@@ -32,7 +32,10 @@
       "superCategory": "branding",
       "image1":"/threePicSets/fundex/image1.png",
       "image2":"/threePicSets/fundex/image2.png",
-      "image3":"/threePicSets/fundex/image3.png"
+      "image3":"/threePicSets/fundex/image3.png",
+      "modalImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+      "modalPath":"/threePicSets/fundex/modalImages/",
+      "modalDescription":["Fundex is a finance management company specializing in providing financial support, audits, and CRM solutions for multinational corporations. With a strong foothold in the industry, Fundex aimed to elevate its brand identity to match its evolving goals and growing clientele.","They approached us with a clear objective: to revamp their brand and explore modern iterations of their brand book. They sought a fresh, contemporary look that would not only enhance their market presence but also help them attract more customers and confidently pitch to larger, high-value clients.","To meet their vision, we conducted thorough research centered on user engagement and audience expectations. Using these insights, we crafted a modern and dynamic brand identity that reflects Fundex’s core values while setting them apart in the competitive finance industry"]
       
     },
     {
@@ -42,7 +45,10 @@
       "superCategory": "web",
       "image1":"/threePicSets/jellice/image1.png",
       "image2":"/threePicSets/jellice/image2.png",
-      "image3":"/threePicSets/jellice/image3.png"
+      "image3":"/threePicSets/jellice/image3.png",
+      "modalImages":[1,2,3,4,5,6,7,8,9,10,11,12],
+      "modalPath":"/threePicSets/jellice/modalImages/",
+      "modalDescription":["Jellice is a Japanese cosmetic brand blending traditional wisdom with advanced technology to create products that enhance vitality and natural beauty. The brand aims to redefine skincare by going beyond surface-level care.","They approached us to audit their website, conduct market research, and propose a modern, user-centric design that aligns with their innovative identity. The objective was to create a seamless, elegant experience that reflects the brand’s commitment to both tradition and cutting-edge technology.","Focusing on simplicity and sophistication, we crafted a minimalistic design inspired by Japanese aesthetics. The updated website highlights storytelling, intuitive navigation, and enhanced shopping features, ensuring an engaging experience that resonates with their audience."]
     },
     {
       "id": 6,
