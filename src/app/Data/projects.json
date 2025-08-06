@@ -51,7 +51,11 @@
       "superCategory": "branding",
       "image3":"/threePicSets/radex/image3.png",
       "image2":"/threePicSets/radex/image1.png",
-      "image1":"/threePicSets/radex/image2.png"
+      "image1":"/threePicSets/radex/image2.png",
+      "modalImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+      "modalPath":"/threePicSets/radex/modalImages/",
+      "modalDescription":["Radex is a dynamic digital marketing agency committed to delivering actionable strategies that drive measurable results. Recognizing the need to modernize their brand identity, they approached us to revamp their image and align it with their evolving goals.","After a comprehensive consultation to understand their vision, we embarked on creating a fresh, contemporary design that encapsulates Radex's commitment to innovation and excellence in the digital marketing landscape."]
+
     },
     {
       "id": 7,

@@ -7,7 +7,7 @@ import projectsData from '@/app/Data/projects.json';
 
 const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedProjectId, setSelectedProjectId] = useState<string | null>(null);
+  const [selectedProjectData, setSelectedProjectData] = useState<any | null>(null);
 
   console.log('projectsData', projectsData);
 
@@ -20,28 +20,18 @@ const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
     : projectsData;
 
   const handleOpenModal = (id: any) => {
-    setSelectedProjectId(id);
+   let projectData = projectsData.filter(item=>item.id===id)
+  //  console.log('projectDatassssssssss', projectData);
+    setSelectedProjectData(projectData[0]);
     setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
-    setSelectedProjectId(null);
+    setSelectedProjectData(null);
   };
 
-  let somedata = [
-    {
-      "id": "1",
-      "projectName": "Project One",
-      "tagline": "Innovative Design",
-      "description": ["Paragraph 1 text.", "Paragraph 2 text."],
-      "imagesArray": ["/image1.jpg", "/image2.jpg", "/image3.jpg"],
-      "image1": "/thumb1.jpg",
-      "image2": "/thumb2.jpg",
-      "image3": "/thumb3.jpg",
-      "superCategory": "design"
-    }
-  ]
+
 
   return (
     <div className="px-4 py-6 sm:px-6 lg:px-8">
@@ -73,8 +63,8 @@ const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
       <ProjectModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
-        projectId={selectedProjectId}
-        projectsData={somedata}
+        selectedProjectData={selectedProjectData}
+       
       />
     </div>
   );
