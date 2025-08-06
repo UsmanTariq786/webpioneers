@@ -305,15 +305,25 @@ const Footer = () => {
             }}
           ></div>
           <div style={{ width: "79.95%"}}>
-            <div style={{width:'102.3%',marginLeft:'-1.1%',marginBottom:'-2.7%'}}>
-            <Image
-              src="/btn.svg"
-              width={1100}
-              height={300}
-              alt="get in touch"
-              className="w-full h-auto"
-            />
-            </div>
+       <div
+  style={{
+    backgroundColor: "rgba(212, 84, 29, 0.95)",
+    overflow: "hidden",
+    padding:'20px 0 20px 0'
+  }}
+  className="flex items-center whitespace-nowrap w-full"
+>
+  <p className="font-[Rubik] font-normal text-[138px] leading-[100%] tracking-[-0.02em] mr-4">
+    Get in touch
+  </p>
+  <p className="font-[Rubik] font-normal text-[138px] leading-[100%] tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0.1%,rgba(248,248,248,0.5)_100.1%)] mr-4">
+    Get in touch
+  </p>
+  <p className="font-[Rubik] font-normal text-[138px] leading-[100%] tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0.1%,rgba(248,248,248,0.5)_100.1%)]">
+    Get in touch
+  </p>
+</div>
+
           </div>
           <div
             style={{

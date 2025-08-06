@@ -1,103 +1,164 @@
-import React from "react";
-// import { XIcon } from '@heroicons/react/outline'; // For close icon (install @heroicons/react if needed)
+'use client'; // Mark as client component
+
+import React, { useRef, useEffect } from 'react';
 
 interface Project {
   id: string;
   projectName: string;
-  tagline: string;
-  description: string[];
+  tagline?: string;
+  description: string;
   imagesArray: string[];
+  modalImages?: number[];
+  modalPath?: string;
+  modalDescription?: string[];
 }
 
 interface ProjectModalProps {
   isOpen: boolean;
   onClose: () => void;
-  projectId: string | null;
-  projectsData: Project[];
+  selectedProjectData: Project | null;
 }
 
 const ProjectModal: React.FC<ProjectModalProps> = ({
   isOpen,
   onClose,
-  projectId,
-  projectsData,
+  selectedProjectData,
 }) => {
-  if (!isOpen || !projectId) return null;
+  const modalContentRef = useRef<HTMLDivElement>(null);
 
-  const project = projectsData[0];
-  if (!project) return null;
+  useEffect(() => {
+    if (isOpen) {
+      // Disable background scroll
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = '0'; // Reset any padding if scrollbar was hidden
+      if (modalContentRef.current) {
+        modalContentRef.current.scrollTo(0, 0); // Initial scroll to top
+      }
+    }
+    return () => {
+      // Restore background scroll
+      document.documentElement.style.overflow = 'auto';
+      document.body.style.overflow = 'auto';
+      document.body.style.paddingRight = '0';
+    };
+  }, [isOpen]);
+
+  if (!isOpen || !selectedProjectData) return null;
+
+  console.log('selectedProjectData', selectedProjectData);
+
+  const handleOverlayClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (modalContentRef.current) {
+      modalContentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
-    <div className="fixed inset-0 bg-black flex items-center justify-center z-50 bg-[#202020]">
-      <div className=" w-full h-full overflow-y-auto">
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[1000]"
+      onClick={handleOverlayClick}
+    >
+      {/* Modal Container */}
+      <div
+        ref={modalContentRef}
+        className="bg-[#202020] w-screen h-screen p-6 overflow-y-auto"
+      >
         {/* Header with Close Icon */}
-        <div className="flex justify-between items-center border-b pb-4 border-b-[#373737] bg-[#272727]">
-          <div>
-            <h2
-              className="text-4xl font-normal text-[#F8F8F8]/90 leading-[56px] tracking-[-0.02em]"
-              style={{ fontSize: "48px" }}
+        <div className="border-b pb-3 border-b-[#373737] bg-[#272727]">
+          <div className="mx-15 py-3 flex justify-between items-center">
+            <div>
+              <h2
+                className="text-4xl font-normal text-[#F8F8F8]/90 leading-[56px] tracking-[-0.02em]"
+                style={{ fontSize: '48px' }}
+              >
+                {selectedProjectData.projectName}
+              </h2>
+              <p className="text-[#F8F8F8B2]">
+                {selectedProjectData.tagline || selectedProjectData.description}
+              </p>
+            </div>
+            <button
+              onClick={onClose}
+              className="h-10 w-10 bg-[#373737] rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out"
             >
-              {project.projectName}
-            </h2>
-            <p className="text-[#F8F8F8B2]">{project.tagline}</p>
+              <img
+                src="/cross.png"
+                alt="cross icon"
+                className="h-full w-full object-contain"
+              />
+            </button>
           </div>
-          <button
-            onClick={onClose}
-            className="text-gray-500 hover:text-gray-700"
-          >
-            {/* <XIcon className="h-6 w-6" />
-             */}
-            x
-          </button>
         </div>
 
-        <div className="bg-[#202020]">
-          {/* Description */}
-          <div className="mt-6">
-            {project.description.map((para, index) => (
-              <p key={index} className="text-gray-700 mb-4">
-                {para}
-              </p>
-            ))}
-          </div>
-
-          {/* Images - Two Columns on Desktop, Stacked on Mobile */}
-          <div className="mt-6">
-            {/* First Image at Top */}
-            {project.imagesArray.length > 0 && (
-              <div className="w-full mb-4">
-                <img
-                  src={project.imagesArray[0]}
-                  alt={`${project.projectName} main image`}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
+        <div className="p-6">
+          <div className="md:hidden">
+            {selectedProjectData.modalImages?.[0] && (
+              <img
+                src={`${selectedProjectData.modalPath}${selectedProjectData.modalImages[0]}.png`}
+                alt="project main image"
+                className="w-full h-auto object-cover mb-4"
+              />
             )}
-
-            {/* Other Images in Two Columns */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {project.imagesArray.slice(1).map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt={`${project.projectName} image ${index + 2}`}
-                  className="w-full h-auto object-cover"
-                />
+            <div className="space-y-4 mb-6">
+              {selectedProjectData.modalDescription?.map((para, index) => (
+                <p key={index} className="text-[#F8F8F8B2]">
+                  {para}
+                </p>
+              ))}
+            </div>
+            <div className="space-y-4">
+              {selectedProjectData.modalImages?.slice(1).map((imageNum: number, index: number) => (
+                <React.Fragment key={index}>
+                  <img
+                    src={`${selectedProjectData.modalPath}${imageNum}.png`}
+                    alt={`project detail image ${index + 2}`}
+                    className="w-full h-auto object-cover"
+                  />
+                </React.Fragment>
               ))}
             </div>
           </div>
 
-          {/* Move to Top Button */}
-          <div className="mt-6 text-center">
+          <div className="hidden md:block">
+            <div className="grid grid-cols-[1fr_1fr] gap-6">
+              <div className="space-y-4">
+                {selectedProjectData.modalImages?.map((imageNum: number, index: number) => (
+                  <React.Fragment key={index}>
+                    <img
+                      src={`${selectedProjectData.modalPath}${imageNum}.png`}
+                      alt={`project detail image ${index + 1}`}
+                      className="w-full h-auto object-cover"
+                    />
+                  </React.Fragment>
+                ))}
+              </div>
+              <div className="space-y-4">
+                {selectedProjectData.modalDescription?.map((para, index) => (
+                  <p key={index} className="text-[#F8F8F8B2]">
+                    {para}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 text-center flex items-center justify-center">
             <button
-              onClick={scrollToTop}
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+             onClick={scrollToTop}
+              className="h-10 w-10 bg-[#373737] rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out"
             >
-              Move to Top
+              <img
+                src="/moveTopButton.png"
+                alt="move to top button"
+                className="h-full w-full object-contain"
+              />
             </button>
           </div>
         </div>

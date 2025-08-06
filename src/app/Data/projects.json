@@ -3,36 +3,39 @@
       "projectName": "Art of Mondays",
       "description": "Get matched with founders",
       "superCategory": "mobile",
-      "image1":"/threePicSets/art_of_monday/image1.svg",
-      "image2":"/threePicSets/art_of_monday/image2.svg",
-      "image3":"/threePicSets/art_of_monday/image3.svg"
+      "image2":"/threePicSets/art_of_monday/image1.png",
+      "image1":"/threePicSets/art_of_monday/image2.png",
+      "image3":"/threePicSets/art_of_monday/image3.png"
     },
     {
       "id": 2,
       "projectName": "Headshots.dk",
       "description": "Professional AI headshots",
       "superCategory": "web",
-      "image1":"/threePicSets/headshots_dk/image1.svg",
-      "image2":"/threePicSets/headshots_dk/image2.svg",
-      "image3":"/threePicSets/headshots_dk/image3.svg"
+      "image2":"/threePicSets/headshots_dk/image1.png",
+      "image1":"/threePicSets/headshots_dk/image2.png",
+      "image3":"/threePicSets/headshots_dk/image3.png"
     },
     {
       "id": 3,
       "projectName": "Sync Thy Self",
       "description": "Digital lifestyle products",
       "superCategory": "web",
-      "image1":"/threePicSets/synctheself/image2.svg",
-      "image2":"/threePicSets/synctheself/image1.svg",
-      "image3":"/threePicSets/synctheself/image3.svg"
+      "image1":"/threePicSets/synctheself/image2.png",
+      "image2":"/threePicSets/synctheself/image1.png",
+      "image3":"/threePicSets/synctheself/image3.png"
     },
     {
       "id": 4,
       "projectName": "Fundex",
       "description": "Simplifying finance for everyone",
       "superCategory": "branding",
-      "image1":"/threePicSets/fundex/image1.svg",
-      "image2":"/threePicSets/fundex/image2.svg",
-      "image3":"/threePicSets/fundex/image3.svg"
+      "image1":"/threePicSets/fundex/image1.png",
+      "image2":"/threePicSets/fundex/image2.png",
+      "image3":"/threePicSets/fundex/image3.png",
+      "modalImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+      "modalPath":"/threePicSets/fundex/modalImages/",
+      "modalDescription":["Fundex is a finance management company specializing in providing financial support, audits, and CRM solutions for multinational corporations. With a strong foothold in the industry, Fundex aimed to elevate its brand identity to match its evolving goals and growing clientele.","They approached us with a clear objective: to revamp their brand and explore modern iterations of their brand book. They sought a fresh, contemporary look that would not only enhance their market presence but also help them attract more customers and confidently pitch to larger, high-value clients.","To meet their vision, we conducted thorough research centered on user engagement and audience expectations. Using these insights, we crafted a modern and dynamic brand identity that reflects Fundex’s core values while setting them apart in the competitive finance industry"]
       
     },
     {
@@ -40,98 +43,105 @@
       "projectName": "Jellice",
       "description": "Products that go beyond skincare",
       "superCategory": "web",
-      "image1":"/threePicSets/jellice/image1.svg",
-      "image2":"/threePicSets/jellice/image2.svg",
-      "image3":"/threePicSets/jellice/image3.svg"
+      "image1":"/threePicSets/jellice/image1.png",
+      "image2":"/threePicSets/jellice/image2.png",
+      "image3":"/threePicSets/jellice/image3.png",
+      "modalImages":[1,2,3,4,5,6,7,8,9,10,11,12],
+      "modalPath":"/threePicSets/jellice/modalImages/",
+      "modalDescription":["Jellice is a Japanese cosmetic brand blending traditional wisdom with advanced technology to create products that enhance vitality and natural beauty. The brand aims to redefine skincare by going beyond surface-level care.","They approached us to audit their website, conduct market research, and propose a modern, user-centric design that aligns with their innovative identity. The objective was to create a seamless, elegant experience that reflects the brand’s commitment to both tradition and cutting-edge technology.","Focusing on simplicity and sophistication, we crafted a minimalistic design inspired by Japanese aesthetics. The updated website highlights storytelling, intuitive navigation, and enhanced shopping features, ensuring an engaging experience that resonates with their audience."]
     },
     {
       "id": 6,
       "projectName": "Radex",
       "description": "Power of innovation",
       "superCategory": "branding",
-      "image2":"/threePicSets/radex/image3.svg",
-      "image3":"/threePicSets/radex/image1.svg",
-      "image1":"/threePicSets/radex/image2.png"
+      "image3":"/threePicSets/radex/image3.png",
+      "image2":"/threePicSets/radex/image1.png",
+      "image1":"/threePicSets/radex/image2.png",
+      "modalImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+      "modalPath":"/threePicSets/radex/modalImages/",
+      "modalDescription":["Radex is a dynamic digital marketing agency committed to delivering actionable strategies that drive measurable results. Recognizing the need to modernize their brand identity, they approached us to revamp their image and align it with their evolving goals.","After a comprehensive consultation to understand their vision, we embarked on creating a fresh, contemporary design that encapsulates Radex's commitment to innovation and excellence in the digital marketing landscape."]
+
     },
     {
       "id": 7,
       "projectName": "Pixel & Paper",
       "description": "Creative design agency",
       "superCategory": "web",
-      "image2":"/threePicSets/pixelpaper/image1.svg",
-      "image1":"/threePicSets/pixelpaper/image2.svg",
-      "image3":"/threePicSets/pixelpaper/image3.svg"
+      "image2":"/threePicSets/pixelpaper/image1.png",
+      "image1":"/threePicSets/pixelpaper/image2.png",
+      "image3":"/threePicSets/pixelpaper/image3.png"
     },
     {
       "id": 8,
       "projectName": "Zenith",
       "description": "Boosting your business with SEO",
       "superCategory": "web",
-      "image3":"/threePicSets/zenith/image1.svg",
-      "image1":"/threePicSets/zenith/image2.svg",
-      "image2":"/threePicSets/zenith/image3.svg"
+      "image3":"/threePicSets/zenith/image1.png",
+      "image1":"/threePicSets/zenith/image2.png",
+      "image2":"/threePicSets/zenith/image3.png"
     },
     {
       "id": 9,
       "projectName": "Daxo",
       "description": "Manage your events",
       "superCategory": "mobile",
-      "image3":"/threePicSets/daxo/image1.svg",
-      "image1":"/threePicSets/daxo/image2.svg",
-      "image2":"/threePicSets/daxo/image3.svg"
+      "image1":"/threePicSets/daxo/image1.png",
+      "image3":"/threePicSets/daxo/image2.png",
+      "image2":"/threePicSets/daxo/image3.png"
     },
     {
       "id": 10,
       "projectName": "Aero",
       "description": "HR Made Effortless",
       "superCategory": "saas",
-      "image2":"/threePicSets/aero/image1.svg",
-      "image1":"/threePicSets/aero/image2.svg",
-      "image3":"/threePicSets/aero/image3.svg"
+      "image2":"/threePicSets/aero/image1.png",
+      "image1":"/threePicSets/aero/image2.png",
+      "image3":"/threePicSets/aero/image3.png"
     },
     {
       "id": 11,
       "projectName": "Nolux",
       "description": "Future of Business",
       "superCategory": "branding",
-      "image2":"/threePicSets/nolux/image1.svg",
-      "image1":"/threePicSets/nolux/image2.svg",
-      "image3":"/threePicSets/nolux/image3.svg"
+      "image2":"/threePicSets/nolux/image1.png",
+      "image1":"/threePicSets/nolux/image2.png",
+      "image3":"/threePicSets/nolux/image3.png"
     },
     {
       "id": 12,
       "projectName": "Onyx",
       "description": "Manage your finances",
       "superCategory": "web",
-      "image1":"/threePicSets/onyx/image1.svg",
-      "image2":"/threePicSets/onyx/image2.svg",
-      "image3":"/threePicSets/onyx/image3.svg"
+      "image2":"/threePicSets/onyx/image1.png",
+      "image3":"/threePicSets/onyx/image2.png",
+      "image1":"/threePicSets/onyx/image3.png"
     },
     {
       "id": 13,
       "projectName": "MairE NoEl",
       "description": "Glow. Define. Embrace.",
       "superCategory": "web",
-      "image3":"/threePicSets/mairEnoel/image1.svg",
-      "image2":"/threePicSets/mairEnoel/image2.svg",
-      "image1":"/threePicSets/mairEnoel/image3.svg"
+      "image3":"/threePicSets/mairEnoel/image1.png",
+      "image2":"/threePicSets/mairEnoel/image2.png",
+      "image1":"/threePicSets/mairEnoel/image3.png"
     },
     {
       "id": 14,
       "projectName": "Stockly AI",
       "description": "Smart Shopping, Effortless Living",
       "superCategory": "mobile",
-      "image1":"/threePicSets/stockyai/image1.svg",
-      "image3":"/threePicSets/stockyai/image2.svg",
-      "image2":"/threePicSets/stockyai/image3.svg"
+      "image1":"/threePicSets/stockyai/image1.png",
+      "image3":"/threePicSets/stockyai/image2.png",
+      "image2":"/threePicSets/stockyai/image3.png"
     },
     {
       "id": 15,
       "projectName": "Orbit",
       "description": "Managing Projects, Simplified.",
       "superCategory": "saas",
-      "image1":"/threePicSets/orbit/image1.svg",
-      "image2":"/threePicSets/orbit/image2.svg",
-      "image3":"/threePicSets/orbit/image3.svg"
+      "image1":"/threePicSets/orbit/image1.png",
+      "image2":"/threePicSets/orbit/image2.png",
+      "image3":"/threePicSets/orbit/image3.png"
     }
   ]
