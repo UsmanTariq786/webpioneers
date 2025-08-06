@@ -1,17 +1,22 @@
-import React from "react";
+'use client'; // Mark as client component
+
+import React, { useRef, useEffect } from 'react';
 
 interface Project {
   id: string;
   projectName: string;
-  tagline: string;
-  description: string[];
+  tagline?: string;
+  description: string;
   imagesArray: string[];
+  modalImages?: number[];
+  modalPath?: string;
+  modalDescription?: string[];
 }
 
 interface ProjectModalProps {
   isOpen: boolean;
   onClose: () => void;
-  selectedProjectData: any;
+  selectedProjectData: Project | null;
 }
 
 const ProjectModal: React.FC<ProjectModalProps> = ({
@@ -19,31 +24,56 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
   onClose,
   selectedProjectData,
 }) => {
+  const modalContentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isOpen && modalContentRef.current) {
+      modalContentRef.current.scrollTo(0, 0); // Initial scroll to top on open
+      document.body.style.overflow = 'hidden'; // Prevent background scroll
+    }
+    return () => {
+      document.body.style.overflow = 'auto'; // Restore scroll on close
+    };
+  }, [isOpen]);
+
   if (!isOpen || !selectedProjectData) return null;
 
-  if (!selectedProjectData) return null;
+  console.log('selectedProjectData', selectedProjectData);
 
-  console.log("selectedProjectData", selectedProjectData);
+  const handleOverlayClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (modalContentRef.current) {
+      modalContentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-[#202020]">
-      <div className=" w-full h-full overflow-y-auto">
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      onClick={handleOverlayClick}
+    >
+      {/* Modal Container */}
+      <div
+        ref={modalContentRef}
+        className="bg-[#202020] w-screen h-screen p-6 overflow-y-auto"
+      >
         {/* Header with Close Icon */}
-        <div className=" border-b pb-3 border-b-[#373737] bg-[#272727]">
+        <div className="border-b pb-3 border-b-[#373737] bg-[#272727]">
           <div className="mx-15 py-3 flex justify-between items-center">
-            <div className="">
+            <div>
               <h2
                 className="text-4xl font-normal text-[#F8F8F8]/90 leading-[56px] tracking-[-0.02em]"
-                style={{ fontSize: "48px" }}
+                style={{ fontSize: '48px' }}
               >
                 {selectedProjectData.projectName}
               </h2>
               <p className="text-[#F8F8F8B2]">
-                {selectedProjectData.description}
+                {selectedProjectData.tagline || selectedProjectData.description}
               </p>
             </div>
             <button
@@ -59,20 +89,58 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           </div>
         </div>
 
-        <div className="bg-[#202020]">
+        <div className="p-6">
+          <div className="md:hidden">
+            {selectedProjectData.modalImages?.[0] && (
+              <img
+                src={`${selectedProjectData.modalPath}${selectedProjectData.modalImages[0]}.png`}
+                alt="project main image"
+                className="w-full h-auto object-cover mb-4"
+              />
+            )}
+            <div className="space-y-4 mb-6">
+              {selectedProjectData.modalDescription?.map((para, index) => (
+                <p key={index} className="text-[#F8F8F8B2]">
+                  {para}
+                </p>
+              ))}
+            </div>
+            <div className="space-y-4">
+              {selectedProjectData.modalImages?.slice(1).map((imageNum: number, index: number) => (
+                <React.Fragment key={index}>
+                  <img
+                    src={`${selectedProjectData.modalPath}${imageNum}.png`}
+                    alt={`project detail image ${index + 2}`}
+                    className="w-full h-auto object-cover"
+                  />
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
 
-         {
-           selectedProjectData?.modalImages.map((imagePath: string, index: number) => (
-             <React.Fragment key={index}>
-               <img
-                 src={`${selectedProjectData.modalPath}${imagePath}.png`}
-                 alt={`project detail image ${index + 1}`}
-               />
-             </React.Fragment>
-           ))
-         }
+          <div className="hidden md:block">
+            <div className="grid grid-cols-[1fr_1fr] gap-6">
+              <div className="space-y-4">
+                {selectedProjectData.modalImages?.map((imageNum: number, index: number) => (
+                  <React.Fragment key={index}>
+                    <img
+                      src={`${selectedProjectData.modalPath}${imageNum}.png`}
+                      alt={`project detail image ${index + 1}`}
+                      className="w-full h-auto object-cover"
+                    />
+                  </React.Fragment>
+                ))}
+              </div>
+              <div className="space-y-4">
+                {selectedProjectData.modalDescription?.map((para, index) => (
+                  <p key={index} className="text-[#F8F8F8B2]">
+                    {para}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
 
-          {/* Move to Top Button */}
           <div className="mt-6 text-center">
             <button
               onClick={scrollToTop}
