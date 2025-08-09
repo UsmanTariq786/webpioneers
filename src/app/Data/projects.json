@@ -1,5 +1,5 @@
 [
-    {
+    { "id": 1,
       "projectName": "Art of Mondays",
       "description": "Get matched with founders",
       "superCategory": "mobile",
@@ -8,6 +8,7 @@
       "image3":"/threePicSets/art_of_monday/image3.svg"
     },
     {
+      "id": 2,
       "projectName": "Headshots.dk",
       "description": "Professional AI headshots",
       "superCategory": "web",
@@ -16,11 +17,16 @@
       "image3":"/threePicSets/headshots_dk/image3.svg"
     },
     {
+      "id": 3,
       "projectName": "Sync Thy Self",
       "description": "Digital lifestyle products",
-      "superCategory": "web"
+      "superCategory": "web",
+      "image1":"/threePicSets/synctheself/image2.svg",
+      "image2":"/threePicSets/synctheself/image1.svg",
+      "image3":"/threePicSets/synctheself/image3.svg"
     },
     {
+      "id": 4,
       "projectName": "Fundex",
       "description": "Simplifying finance for everyone",
       "superCategory": "branding",
@@ -30,6 +36,7 @@
       
     },
     {
+      "id": 5,
       "projectName": "Jellice",
       "description": "Products that go beyond skincare",
       "superCategory": "web",
@@ -38,60 +45,88 @@
       "image3":"/threePicSets/jellice/image3.svg"
     },
     {
+      "id": 6,
       "projectName": "Radex",
       "description": "Power of innovation",
       "superCategory": "branding",
-      "image1":"/threePicSets/radex/image1.svg",
-      "image2":"/threePicSets/radex/image2.svg",
-      "image3":"/threePicSets/radex/image3.svg"
+      "image2":"/threePicSets/radex/image3.svg",
+      "image3":"/threePicSets/radex/image1.svg",
+      "image1":"/threePicSets/radex/image2.png"
     },
     {
+      "id": 7,
       "projectName": "Pixel & Paper",
       "description": "Creative design agency",
-      "superCategory": "web"
+      "superCategory": "web",
+      "image2":"/threePicSets/pixelpaper/image1.svg",
+      "image1":"/threePicSets/pixelpaper/image2.svg",
+      "image3":"/threePicSets/pixelpaper/image3.svg"
     },
     {
+      "id": 8,
       "projectName": "Zenith",
       "description": "Boosting your business with SEO",
-      "superCategory": "web"
+      "superCategory": "web",
+      "image3":"/threePicSets/zenith/image1.svg",
+      "image1":"/threePicSets/zenith/image2.svg",
+      "image2":"/threePicSets/zenith/image3.svg"
     },
     {
+      "id": 9,
       "projectName": "Daxo",
       "description": "Manage your events",
-      "superCategory": "mobile"
+      "superCategory": "mobile",
+      "image3":"/threePicSets/daxo/image1.svg",
+      "image1":"/threePicSets/daxo/image2.svg",
+      "image2":"/threePicSets/daxo/image3.svg"
     },
     {
+      "id": 10,
       "projectName": "Aero",
       "description": "HR Made Effortless",
       "superCategory": "saas",
-      "image1":"/threePicSets/aero/image1.svg",
-      "image2":"/threePicSets/aero/image2.svg",
+      "image2":"/threePicSets/aero/image1.svg",
+      "image1":"/threePicSets/aero/image2.svg",
       "image3":"/threePicSets/aero/image3.svg"
     },
     {
+      "id": 11,
       "projectName": "Nolux",
       "description": "Future of Business",
       "superCategory": "branding",
-      "image1":"/threePicSets/nolux/image1.svg",
-      "image2":"/threePicSets/nolux/image2.svg",
+      "image2":"/threePicSets/nolux/image1.svg",
+      "image1":"/threePicSets/nolux/image2.svg",
       "image3":"/threePicSets/nolux/image3.svg"
     },
     {
+      "id": 12,
       "projectName": "Onyx",
       "description": "Manage your finances",
-      "superCategory": "web"
+      "superCategory": "web",
+      "image1":"/threePicSets/onyx/image1.svg",
+      "image2":"/threePicSets/onyx/image2.svg",
+      "image3":"/threePicSets/onyx/image3.svg"
     },
     {
+      "id": 13,
       "projectName": "MairE NoEl",
       "description": "Glow. Define. Embrace.",
-      "superCategory": "web"
+      "superCategory": "web",
+      "image3":"/threePicSets/mairEnoel/image1.svg",
+      "image2":"/threePicSets/mairEnoel/image2.svg",
+      "image1":"/threePicSets/mairEnoel/image3.svg"
     },
     {
+      "id": 14,
       "projectName": "Stockly AI",
       "description": "Smart Shopping, Effortless Living",
-      "superCategory": "mobile"
+      "superCategory": "mobile",
+      "image1":"/threePicSets/stockyai/image1.svg",
+      "image3":"/threePicSets/stockyai/image2.svg",
+      "image2":"/threePicSets/stockyai/image3.svg"
     },
     {
+      "id": 15,
       "projectName": "Orbit",
       "description": "Managing Projects, Simplified.",
       "superCategory": "saas",
