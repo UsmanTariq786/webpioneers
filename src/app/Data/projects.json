@@ -79,7 +79,10 @@
       "superCategory": "web",
       "image3":"/threePicSets/zenith/image1.png",
       "image1":"/threePicSets/zenith/image2.png",
-      "image2":"/threePicSets/zenith/image3.png"
+      "image2":"/threePicSets/zenith/image3.png",
+      "modalImages":[1,2,3,4,5,6,7,8,9,10,11,12],
+      "modalPath":"/threePicSets/zenith/modalImages/",
+      "modalDescription":["Zenith is a digital agency offering marketing, SEO, and content creation services to boost businesses online. Their website had a classical look, but they wanted a bold and modern visual refresh to align with their brand identity.","After understanding their vision, we designed a contemporary and striking website that reflects Zenith’s expertise and innovative approach, ensuring it resonates with their evolving goals in the digital space."]
     },
     {
       "id": 9,
