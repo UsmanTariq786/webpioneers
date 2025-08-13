@@ -46,6 +46,14 @@ const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
           // <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
        
 
+          //  <div                       
+          //  key={index}
+          //  style={{position:'relative',borderRight:'1px solid #373737',width:'25%'}}>
+
+          // <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -right-[5px] -top-[5px]"></div>
+          // <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
+       
+
           <FolderWorkDesignComp
             key={index}
             image1Url={project.image1}
