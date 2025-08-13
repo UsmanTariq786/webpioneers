@@ -22,7 +22,7 @@ const PartnersSection = () => (
    <div className="flex flex-wrap items-center justify-between px-6 mt-3">
   {logos.map((logo, i) => (
     <Image
-      key={logo}
+      key={logo+'whatlogisthis'}
       src={logo}
       alt=""
       width={120}

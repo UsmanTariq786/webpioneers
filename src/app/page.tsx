@@ -331,7 +331,7 @@ export default function Home() {
                 <div className="" style={{display:'flex',width:'100%'}}>
                   {serviceCards.map((card: any) => (
                     <div                       
-                       key={card.id}
+                       key={card.id+'card-servicespage'}
                        style={{position:'relative',borderRight:'1px solid #373737',width:'25%'}}>
                       <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -right-[5px] -top-[5px]"></div>
                       <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>

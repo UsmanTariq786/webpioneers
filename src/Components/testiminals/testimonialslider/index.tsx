@@ -62,7 +62,7 @@ const TestimonialsSlider = () => {
       {/* Slider section */}
       <Slider ref={sliderRef} {...settings}>
         {testimonials.map((t, idx) => (
-          <div key={t.id} className="px-2">
+          <div key={t.id +'ssssssgew3r'} className="px-2">
             <UserCard
               name={t.name}
               companyName={t.companyName}
@@ -101,7 +101,7 @@ const TestimonialsSlider = () => {
         <div className="flex gap-2">
           {testimonials.map((_, i) => (
             <button
-              key={i}
+              key={i+'okswskwksr3s'}
               onClick={() => goToSlide(i)}
               className={`w-3 h-3 rounded-full ${
                 i === activeIndex

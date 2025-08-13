@@ -30,42 +30,42 @@ const testimonials = [
     quote: 'A huge improvement over our previous design. Very happy with the results.',
   },
   {
-    id: 1,
+    id: 4,
     name: 'Daniel',
     companyName: 'Art of Mondays',
     image: '/david.svg',
     quote: 'I can highly recommend you to anyone looking for a clean, conversion-focused redesign.',
   },
   {
-    id: 2,
+    id: 5,
     name: 'Emily',
     companyName: 'Moonlight Studio',
     image: '/emily.svg',
     quote: 'Working with you was seamless. Our brand finally feels alive.',
   },
   {
-    id: 3,
+    id: 5,
     name: 'Alex',
     companyName: 'Nova Corp',
     image: '/alex.svg',
     quote: 'A huge improvement over our previous design. Very happy with the results.',
   },
   {
-    id: 1,
+    id: 6,
     name: 'Daniel',
     companyName: 'Art of Mondays',
     image: '/david.svg',
     quote: 'I can highly recommend you to anyone looking for a clean, conversion-focused redesign.',
   },
   {
-    id: 2,
+    id: 7,
     name: 'Emily',
     companyName: 'Moonlight Studio',
     image: '/emily.svg',
     quote: 'Working with you was seamless. Our brand finally feels alive.',
   },
   {
-    id: 3,
+    id: 8,
     name: 'Alex',
     companyName: 'Nova Corp',
     image: '/alex.svg',
@@ -218,7 +218,7 @@ const Testimonials = () => {
         >
           {testimonials.map((t) => (
             <div
-              key={t.id}
+              key={t.id+t.quote}
               style={{
                 minWidth: quoteContainerWidth,
                 padding: '0 20px',

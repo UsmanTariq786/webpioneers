@@ -103,7 +103,7 @@ const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
     <div className="w-full px-4,  py-6">
       <Slider {...sliderSettings}>
         {filteredImages.map((image: ImageData, index: number) => (
-          <div key={index} className="px-1 h-[500px]"> {/* Reduced from px-2 to px-1 */}
+          <div key={index+'filteredimagess'} className="px-1 h-[500px]"> {/* Reduced from px-2 to px-1 */}
             <Image
               src={image.src}
               alt={image.alt}

@@ -8,6 +8,7 @@ interface FolderProps {
   description: any;
   superCategory: any;
   onClick: () => void; // Add this
+  keyvalue: any;
 }
 // transition-all duration-300
 const FolderWorkDesignComp = ({
@@ -17,10 +18,11 @@ const FolderWorkDesignComp = ({
   projectName,
   description,
   superCategory,
+  keyvalue,
   onClick,
 }: FolderProps) => {
   return (
-    <div className="mb-2 group flex flex-col items-center justify-center" onClick={onClick}>
+    <div className="mb-2 group flex flex-col items-center justify-center" onClick={onClick} key={keyvalue+'folderworkdesign'}>
       <div className="relative overflow-hidden h-[120px] w-[150px] lg:h-[250px] lg:w-[270px] md:h-[200px] md:w-[230px] sm:h-[150px] sm:w-[180px]   cursor-pointer ">
         {/* First Layer (Base with SVG) */}
         <img

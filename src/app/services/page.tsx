@@ -40,7 +40,7 @@ const ServicesPage = () => {
                 <div>
                   {
                     Array.from({ length: 13 }, (_, index) => (
-                      <div key={index}>
+                      <div key={index+'starrs'}>
                         <span>*  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *</span>
                       </div>
                     ))
@@ -49,7 +49,7 @@ const ServicesPage = () => {
                 <div className='ml-1'>
                   {
                     Array.from({ length: 13 }, (_, index) => (
-                      <div key={index}>
+                      <div key={index+'starrsagain'}>
                         <span>*  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *</span>
                       </div>
                     ))

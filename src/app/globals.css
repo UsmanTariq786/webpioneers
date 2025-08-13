@@ -29,6 +29,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-rubik), Arial, Helvetica, sans-serif;
+  cursor: none;
 }
 
 .gradient-section {
@@ -83,3 +84,19 @@ body {
 .scrollbar-visible::-webkit-scrollbar-thumb:hover {
   background-color: rgba(109, 109, 109, 0.9); /* Darker on hover */
 }
+
+
+
+
+
+
+
+
+/*====================================================================  */
+html,
+body {
+  scroll-behavior: smooth;
+  cursor: url('/cursor.png'), auto; 
+}
+
+/*====================================================================  */

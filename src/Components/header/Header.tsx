@@ -11,7 +11,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  const navItems = ["Home", "Work", "About", "Services"];
+  const navItems = ["/", "Work", "About", "Services"];
 
   return (
     <header className="w-full px-5 py-4 text-white z-50 relative">
@@ -25,16 +25,16 @@ const Header = () => {
         <nav className="hidden md:block place-self-center">
           <ul className="flex gap-4 text-sm tracking-wide">
             {navItems.map((item) => (
-              <li key={item} className="relative cursor-pointer">
+              <li key={item+'navbar'} className="relative cursor-pointer">
                 <Link
-                  href={`/${item==='Home' ? '/':item.toLowerCase()}`}
+                  href={`/${item.toLowerCase()}`}
                   className={`px-4 py-2 rounded-full transition-colors ${
-                    pathname === `/${item==='Home' ? '/':item.toLowerCase()}`
+                    pathname === `/${item==='/' ? '': item.toLowerCase()}`
                       ? "bg-[linear-gradient(0deg,rgba(40,40,40,0.7),rgba(40,40,40,0.7)),linear-gradient(0deg,rgba(248,248,248,0.1),rgba(248,248,248,0.1))] text-white"
                       : "hover:bg-gray-700"
                   }`}
                 >
-                  {item}
+                  {item==='/'?'Home':item}
                 </Link>
               </li>
             ))}
@@ -73,7 +73,7 @@ const Header = () => {
           {/* Navigation Links */}
           <ul className="flex flex-col gap-5 text-[15px]">
             {navItems.map((item) => (
-              <li key={item} className="flex items-center justify-between px-1">
+              <li key={item+'navitemsss'} className="flex items-center justify-between px-1">
                 <Link
                   href={`/${item==='Home' ? '/':item.toLowerCase()}`}
                   onClick={() => setOpen(false)}

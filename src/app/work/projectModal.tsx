@@ -68,7 +68,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
       {/* Modal Container */}
       <div
         ref={modalContentRef}
-        className="bg-[#202020] w-screen h-screen p-6 overflow-y-auto"
+        className="bg-[#202020] w-screen h-screen overflow-y-auto"
       >
         {/* Header with Close Icon */}
         <div className="border-b pb-3 border-b-[#373737] bg-[#272727]">
@@ -108,14 +108,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             )}
             <div className="space-y-4 mb-6">
               {selectedProjectData.modalDescription?.map((para, index) => (
-                <p key={index} className="text-[#F8F8F8B2]">
+                <p key={index+'descofselectedprojct'} className="text-[#F8F8F8B2]">
                   {para}
                 </p>
               ))}
             </div>
             <div className="space-y-4">
               {selectedProjectData.modalImages?.slice(1).map((imageNum: number, index: number) => (
-                <React.Fragment key={index}>
+                <React.Fragment key={index+'modalImageskeyisthis'}>
                   <img
                     src={`${selectedProjectData.modalPath}${imageNum}.png`}
                     alt={`project detail image ${index + 2}`}
@@ -130,7 +130,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             <div className="grid grid-cols-[1fr_1fr] gap-6">
               <div className="space-y-4">
                 {selectedProjectData.modalImages?.map((imageNum: number, index: number) => (
-                  <React.Fragment key={index}>
+                  <React.Fragment key={index+'idontwnwlabt'}>
                     <img
                       src={`${selectedProjectData.modalPath}${imageNum}.png`}
                       alt={`project detail image ${index + 1}`}
@@ -141,7 +141,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               </div>
               <div className="space-y-4">
                 {selectedProjectData.modalDescription?.map((para, index) => (
-                  <p key={index} className="text-[#F8F8F8B2]">
+                  <p key={index +'idontwnwlabtwhysomany'} className="text-[#F8F8F8B2]">
                     {para}
                   </p>
                 ))}

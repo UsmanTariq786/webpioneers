@@ -55,7 +55,7 @@ const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
        
 
           <FolderWorkDesignComp
-            key={index}
+            keyvalue={index}
             image1Url={project.image1}
             image2Url={project.image2}
             image3Url={project.image3}

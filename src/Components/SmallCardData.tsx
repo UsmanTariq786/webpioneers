@@ -7,7 +7,7 @@ function SmallCardData() {
       <div className='flex flex-nowrap  overflow-x-auto sm:grid sm:grid-cols-2 '>
         {
           smallCard.map((card, index) => (
-            <div key={index}>
+            <div key={index+'smallcradwhatisthiscard'}>
               <RoundCornerWrapper>
                 <div className={`p-5 m-5 bg-orange-600 rounded-2xl  ${index === 0 ? 'h-[320px] sm:h-80' : " bg-zinc-700"} h-[320px] sm:h-60  `}>
                   <span>{card.id}</span>

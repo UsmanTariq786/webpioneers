@@ -217,7 +217,7 @@ export default function ContactForm() {
                     <div className="absolute right-[0px] py-2 z-20 mt-2 w-[40%] bg-[#282828B3] rounded-lg shadow-xl border border-[#393939] overflow-hidden">
                       {services.map((service) => (
                         <label
-                          key={service}
+                          key={service+'yaallah'}
                           className="flex items-center justify-between px-4 py-1 hover:bg-gray-600/50 cursor-pointer transition-colors"
                           onClick={() => {
                             setSelectedService(service);
@@ -277,7 +277,7 @@ export default function ContactForm() {
                     <div className="absolute right-[0px] py-2 z-20 mt-2 w-[40%] bg-[#282828B3] rounded-lg shadow-xl border border-[#393939] overflow-hidden">
                       {budgets.map((budget) => (
                         <label
-                          key={budget}
+                          key={budget+'yaallahbudget'}
                           className="flex items-center justify-between px-4 py-1 hover:bg-gray-600/50 cursor-pointer transition-colors"
                           onClick={() => {
                             setSelectedBudget(budget);
