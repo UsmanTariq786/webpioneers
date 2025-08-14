@@ -7,19 +7,39 @@ import MapProjects from "./mapProjects";
 import RoundCornerWrapper from "@/Components/RoundCornerWrapper";
 
 export default function Home() {
-  const [selectedChip, setSelectedChip] = useState<string | null>('all');
-
-
+  const [selectedChip, setSelectedChip] = useState<string | null>("all");
 
   return (
-    <div className="container mx-auto px-4 mt-6 sm:px-6 sm:mt-8 md:px-8 md:mt-10 lg:px-12 lg:mt-12 max-w-screen-xl">
+    <div className="">
+      <section>
+        <div className="w-full flex">
+          <div className="w-[10%] border-r border-b border-[#373737]"></div>
+          <div className="w-[79.95%]">
+            <WorkPageHeading />
+          </div>
+          <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+        </div>
+      </section>
+
+      <section>
+  <div className="w-full flex">
+    <div className="w-[9.95%] border-b border-[#373737]"></div>
+    <div className="w-[80.08%]">
+      <RoundCornerWrapper>
+      <WorkWeDoChips
+        selectedChip={selectedChip}
+        setSelectedChip={setSelectedChip}
+      />
+      </RoundCornerWrapper>
+    </div>
+    <div className="w-[9.95%] border-b border-[#373737]"></div>
+  </div>
+</section>
+
       {/* <RoundCornerWrapper> */}
-        <WorkPageHeading />
+    
       {/* </RoundCornerWrapper> */}
-      {/* <RoundCornerWrapper> */}
-        <WorkWeDoChips selectedChip={selectedChip} setSelectedChip={setSelectedChip} />
-      {/* </RoundCornerWrapper> */}
-  <MapProjects selectedChip={selectedChip} />
-</div>
+      <MapProjects selectedChip={selectedChip} />
+    </div>
   );
 }

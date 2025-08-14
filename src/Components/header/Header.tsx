@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { HiMenu, HiX } from "react-icons/hi";
 import Logo from "../ui/Logo";
 import Button from "@/Components/button/Button";
@@ -10,6 +10,7 @@ import Button from "@/Components/button/Button";
 const Header = () => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   const navItems = ["/", "Work", "About", "Services"];
 
@@ -17,7 +18,7 @@ const Header = () => {
     <header className="w-full px-5 py-4 text-white z-50 relative">
       <div className="max-w-[1280px] mx-auto grid grid-cols-[auto_1fr_auto] items-center">
         {/* Logo – left */}
-        <Link href="/" className="flex items-center gap-2 md:ml-24">
+        <Link href="/" className="flex items-center gap-2 md:ml-12">
           <Logo />
         </Link>
 
@@ -28,7 +29,7 @@ const Header = () => {
               <li key={item+'navbar'} className="relative cursor-pointer">
                 <Link
                   href={`/${item.toLowerCase()}`}
-                  className={`px-4 py-2 rounded-full transition-colors ${
+                  className={`px-2 py-2 rounded-full transition-colors ${
                     pathname === `/${item==='/' ? '': item.toLowerCase()}`
                       ? "bg-[linear-gradient(0deg,rgba(40,40,40,0.7),rgba(40,40,40,0.7)),linear-gradient(0deg,rgba(248,248,248,0.1),rgba(248,248,248,0.1))] text-white"
                       : "hover:bg-gray-700"
@@ -42,8 +43,8 @@ const Header = () => {
         </nav>
 
         {/* CTA – right (desktop) */}
-        <div className="hidden md:block">
-          <Button title="Let’s get started" />
+        <div className="hidden md:block md:mr-10">
+          <Button title="Let’s get started" onClick={()=>router.push('/contactUs')}/>
         </div>
 
         {/* Hamburger – mobile only */}

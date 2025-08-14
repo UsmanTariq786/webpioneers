@@ -1,12 +1,15 @@
+'use client'
 import React from 'react'
 
 interface ButtonProps {
   title: string;
+  onClick?: () => void
 }
 
-const Button = ({ title }: ButtonProps) => {
+const Button = ({ title,onClick=()=>{} }: ButtonProps) => {
   return (
     <button 
+      onClick={onClick}
       className="
         text-white 
         text-[16px] 

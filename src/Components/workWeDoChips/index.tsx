@@ -11,7 +11,7 @@ const WorkWeDoChips = ({ setSelectedChip, selectedChip }: any) => {
   };
 
   return (
-    <div className="flex space-x-2 my-1.5 overflow-x-auto whitespace-nowrap sm:overflow-x-visible sm:whitespace-normal sm:flex-nowrap">
+    <div className="flex space-x-2 my-1.5 overflow-x-auto whitespace-nowrap sm:overflow-x-visible sm:whitespace-normal sm:flex-nowrap py-6 px-13">
       <Chip label="All design" value="all" isSelected={selectedChip === "all"} onSelect={handleChipSelect} />
       <Chip label="Mobile App" value="mobile" isSelected={selectedChip === "mobile"} onSelect={handleChipSelect} />
       <Chip label="Web Design" value="web" isSelected={selectedChip === "web"} onSelect={handleChipSelect} />

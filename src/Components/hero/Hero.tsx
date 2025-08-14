@@ -6,21 +6,22 @@ const Hero = () => {
   return (
     <section className="relative flex flex-col items-center justify-center mt-12 px-4 pb-8  text-white font-rubik">
       {/* Top Badge */}
-     
-      <div className="p-[1.5px] mb-4 rounded-[32px] bg-[linear-gradient(0deg,_rgba(248,248,248,0.05),_rgba(248,248,248,0.05)),conic-gradient(from_90deg_at_50%_50%,_rgba(255,255,255,0)_-35.78deg,_rgba(255,255,255,0)_256.65deg,_rgba(255,255,255,0.3)_289.14deg,_rgba(255,255,255,0)_324.22deg,_rgba(255,255,255,0)_616.65deg)]">
-  <div className="rounded-[32px] backdrop-blur-[32px] bg-[rgba(18,18,18,0.4)]">
-    <p className="px-4 py-1.5 text-sm font-medium rounded-full text-[rgba(118,118,118,1)]">
-  200+ companies have scaled faster with our design solutions
-</p>
-  </div>
-</div>
 
+      <div className="p-[1.5px] mb-4 rounded-[32px] bg-[linear-gradient(0deg,_rgba(248,248,248,0.05),_rgba(248,248,248,0.05)),conic-gradient(from_90deg_at_50%_50%,_rgba(255,255,255,0)_-35.78deg,_rgba(255,255,255,0)_256.65deg,_rgba(255,255,255,0.3)_289.14deg,_rgba(255,255,255,0)_324.22deg,_rgba(255,255,255,0)_616.65deg)]">
+        <div className="rounded-[32px] backdrop-blur-[32px] bg-[rgba(18,18,18,0.4)]">
+          <p className="px-4 py-1.5 text-sm font-medium rounded-full text-[rgba(118,118,118,1)]">
+            200+ companies have scaled faster with our design solutions
+          </p>
+        </div>
+      </div>
 
       <div className="absolute left-40 top-[25%] hidden sm:flex items-center gap-1">
-        <p className="px-4 py-1.5 text-sm font-medium rounded-full text-[rgba(248,248,248,0.95)] 
+        <p
+          className="px-4 py-1.5 text-sm font-medium rounded-full text-[rgba(248,248,248,0.95)] 
          
         bg-[var(--color-accent-orange)]
-        ">
+        "
+        >
           You
         </p>
         <Image
@@ -50,16 +51,17 @@ const Hero = () => {
           height={20}
           className="rotate-350 absolute bottom-[75%] right-23"
         />
-      <div className="p-[1px] rounded-[32px] ">
-  <div className="[background:linear-gradient(0deg,_rgba(18,18,18,0.4),_rgba(18,18,18,0.4)),linear-gradient(0deg,_rgba(53,61,244,0.95),_rgba(53,61,244,0.95))] 
+        <div className="p-[1px] rounded-[32px] ">
+          <div
+            className="[background:linear-gradient(0deg,_rgba(18,18,18,0.4),_rgba(18,18,18,0.4)),linear-gradient(0deg,_rgba(53,61,244,0.95),_rgba(53,61,244,0.95))] 
               backdrop-blur-[32px] shadow-[inset_2px_4px_16px_rgba(248,248,248,0.06),_0px_24px_32px_-12px_var(--NeutralNeutral410)] 
-              rounded-[32px] text-white">
-    <p className="px-4 py-1.5 text-sm font-medium rounded-full">
-      Pioneers
-    </p>
-  </div>
-</div>
-
+              rounded-[32px] text-white"
+          >
+            <p className="px-4 py-1.5 text-sm font-medium rounded-full">
+              Pioneers
+            </p>
+          </div>
+        </div>
       </div>
       <div className="sm:hidden mt-6">
         <Button title="Let’s get started" />
