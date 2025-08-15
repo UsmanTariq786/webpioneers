@@ -38,11 +38,11 @@ const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
         <RoundCornerWrapper>
       <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
         {filteredProjects.map((project, index) => (
-            <div                       
-            key={index+'234232-3s3e33r332vi334espage'}
-            style={{position:'relative',borderRight:'1px solid #373737',width:'25%'}}>
-           <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -right-[5px] -top-[5px]"></div>
-           <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
+          //   <div                       
+          //   key={index+'234232-3s3e33r332vi334espage'}
+          //   style={{position:'relative',borderRight:'1px solid #373737',width:'25%'}}>
+          //  <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -right-[5px] -top-[5px]"></div>
+          //  <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
 
            <FolderWorkDesignComp
             keyvalue={index}
@@ -54,7 +54,7 @@ const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
             superCategory={project.superCategory}
             onClick={() => handleOpenModal(project.id)} // Trigger modal on click
             />
-         </div>
+        //  </div>
 
          
        
