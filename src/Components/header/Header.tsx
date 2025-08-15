@@ -24,8 +24,8 @@ const Header = () => {
           <Logo />
         </Link>
 
-        <div className="w-[40px] h-[40px] border-2">
-        </div>
+        {/* <div className="w-[40px] h-[40px] border-2">
+        </div> */}
 
         {/* Nav – center (desktop) */}
         <nav className="hidden md:block place-self-center">
