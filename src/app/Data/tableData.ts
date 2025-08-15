@@ -18,7 +18,7 @@ const tableData:Design[] = [
         image: "/services_img/branding.png",
         heading : "Branding",
         sub1:"Benefit",
-        description1:"We help you discover your vibe. then bring it to life with a brand that's clear and totally you.",
+        description1:"We help you discover your vibe, then bring it to life with a brand that's clear and totally you.",
         sub2:"Services",
         des1:"Brand book",
         des2:"Brand guidelines",

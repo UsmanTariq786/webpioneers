@@ -5,7 +5,10 @@
       "superCategory": "mobile",
       "image2":"/threePicSets/art_of_monday/image1.png",
       "image1":"/threePicSets/art_of_monday/image2.png",
-      "image3":"/threePicSets/art_of_monday/image3.png"
+      "image3":"/threePicSets/art_of_monday/image3.png",
+      "modalImages":[1,2,3,4,5,6,7,8,9,10,11,12,13],
+      "modalPath":"/threePicSets/art_of_monday/modalImages/",
+      "modalDescription":["Founder Sports Club is a mobile app designed for Art of Mondays, built to bring their founders’ community to life on mobile. The client already had a web version of their platform and wanted to offer members a more engaging and accessible experience through a dedicated app.","They approached us to transform their existing system into a streamlined mobile product. We began by mapping out the complete user flow journey and creating detailed wireframes to define the app’s structure. To ensure we aligned with market expectations, we researched direct competitors like Timeleft and other major players in the networking and founder community niche.","With insights in hand, we designed an MVP that delivers core community features while keeping the interface clean and intuitive. Now that the base UI is established, we’re entering the next phase — refining functionality, implementing adjustments, and developing a robust design system to support future growth."]
     },
     {
       "id": 2,

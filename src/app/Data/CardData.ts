@@ -34,7 +34,7 @@ type card =
                 id : "• 04",
                 image : "/services_img/marketing.png",
                 title : "Market Design",
-                description : "From scroll shoping ads to pitch decks that win, we design visuals that actually to the talking."
+                description : "From scroll shoping ads to pitch decks that win, we design visuals that actually do the talking."
 
             },
             {
