@@ -67,7 +67,7 @@ export default function Home() {
  h-[600px]"
 >
 
-          <source src="video.mp4" type="video/mp4" />
+          <source src="https://www.youtube.com/watch?v=lkqyHdmUpBY" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

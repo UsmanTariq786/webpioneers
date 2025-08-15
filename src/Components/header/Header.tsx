@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { HiMenu, HiX } from "react-icons/hi";
+import { TfiLineDouble } from "react-icons/tfi";
 import Logo from "../ui/Logo";
 import Button from "@/Components/button/Button";
 
@@ -14,6 +15,7 @@ const Header = () => {
 
   const navItems = ["/", "Work", "About", "Services"];
 
+
   return (
     <header className="w-full px-5 py-4 text-white z-50 relative">
       <div className="max-w-[1280px] mx-auto grid grid-cols-[auto_1fr_auto] items-center">
@@ -21,6 +23,9 @@ const Header = () => {
         <Link href="/" className="flex items-center gap-2 md:ml-12">
           <Logo />
         </Link>
+
+        <div className="w-[40px] h-[40px] border-2">
+        </div>
 
         {/* Nav – center (desktop) */}
         <nav className="hidden md:block place-self-center">
@@ -53,7 +58,7 @@ const Header = () => {
           className="md:hidden justify-self-end text-2xl focus:outline-none bg-[#181818] p-2 rounded-full"
           aria-label="Toggle menu"
         >
-          {open ? <HiX /> : <HiMenu />}
+          {open ? <HiX /> : <TfiLineDouble />}
         </button>
       </div>
 
@@ -74,22 +79,21 @@ const Header = () => {
           {/* Navigation Links */}
           <ul className="flex flex-col gap-5 text-[15px]">
             {navItems.map((item) => (
-              <li key={item+'navitemsss'} className="flex items-center justify-between px-1">
+              <li key={item+'navitemsss'} className="flex items-center justify-between px-1 text-[#F8F8F8F2]">
                 <Link
                   href={`/${item==='Home' ? '/':item.toLowerCase()}`}
                   onClick={() => setOpen(false)}
-                  className={
-                    pathname === `/${ item==='Home' ? '/': item.toLowerCase()}`
-                      ? "text-xl font-medium"
-                      : "hover:text-gray-300"
-                  }
+                  className=" text-[#F8F8F8F2]"
                 >
-                  {item}
+                  {item==='/'?'Home':item}
                 </Link>
-                {(pathname === `/${item==='Home' ? '/':item.toLowerCase()}` || '/') ? (
-                  <span className="w-4 h-4 bg-white rounded-full"></span>
+                {(pathname === `/${item==='/' ? '':item.toLowerCase()}`) ? (
+                  
+                  <span className="w-4.5 h-4.5 bg-[#727272] rounded-full"></span>
+
                 ) : (
-                  <span className="w-4 h-4 border border-white rounded-full"></span>
+                
+                <span className="w-4 h-4 border border-[#727272] rounded-full"></span>
                 )}
               </li>
             ))}

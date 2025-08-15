@@ -3,10 +3,12 @@ import React, { useState } from 'react';
 import Button from '../button/Button';
 import CommonQuestion from '../commonQuestion';
 import Chip from '@/Components/CustomChip';
+import { useRouter } from 'next/navigation';
 
 
 const PioneerDetail = () => {
     const [selectedChip,setSelectedChip]=useState<string>()
+    const router = useRouter();
   const handleChipSelect = (value: string) => {
       if(value === selectedChip){
         return 
@@ -38,7 +40,7 @@ const PioneerDetail = () => {
         </p>
 
         <div className="pt-2">
-          <Button title="More about us" />
+          <Button title="More about us" onClick={() =>router.push('/about') }/>
         </div>
       </div>
     </section>

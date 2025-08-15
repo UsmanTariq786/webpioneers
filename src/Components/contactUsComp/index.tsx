@@ -1,109 +1,115 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { HiCheck } from "react-icons/hi";
-import { IoCopyOutline } from "react-icons/io5";
-import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
+import React, { useState } from 'react';
+import { HiCheck } from 'react-icons/hi';
+import { IoCopyOutline } from 'react-icons/io5';
+import { IoChatbubbleEllipsesOutline } from 'react-icons/io5';
 
 const ContactUsComp = () => {
   const [copyStatus, setCopyStatus] = useState<string | null>(null);
-  const textToCopy = "Hello, let’s start a chat!";
+  const emailToCopy = 'business@webpioneers.com';
+  const whatsappNumber = '+16315302666'; // Ensure proper format without spaces
 
   const handleCopy = () => {
     navigator.clipboard
-      .writeText(textToCopy)
+      .writeText(emailToCopy)
       .then(() => {
-        setCopyStatus("Copied!");
-        setTimeout(() => setCopyStatus(null), 2000); // Clear status after 2 seconds
+        setCopyStatus('Copied!');
+        setTimeout(() => setCopyStatus(null), 2000);
       })
       .catch((err) => {
-        console.error("Failed to copy:", err);
-        setCopyStatus("Failed to copy");
+        console.error('Failed to copy:', err);
+        setCopyStatus('Failed to copy');
       });
   };
 
   const handleStartChat = () => {
-    // Placeholder for chat action (e.g., open modal or navigate)
-    alert("Chat started! Implement your chat logic here.");
+    const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\D/g, '')}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
   const contactArray = [
-    "We will respond  to you within 24 hrs.",
-    "We’ll sing an NDA if requested.",
-    "Access to dedicated product specialists.",
+    'We will respond to you within 24 hrs.',
+    'We’ll sign an NDA if requested.',
+    'Access to dedicated product specialists.',
   ];
 
   const CheckedBox = () => {
     return (
-      <div className="h-7 w-7 rounded-4xl bg-[#D4541DF2] flex justify-center items-center">
-        <HiCheck size={20} />
+      <div className="h-6 w-6 rounded-[18px] bg-[#D4541DF2] flex justify-center items-center">
+        <HiCheck className="w-4 h-4 text-white" />
       </div>
     );
   };
 
-  const CustomDiv = ({ children }: any) => {
+  const CustomDiv = ({ children }: { children: React.ReactNode }) => {
     return (
       <div
-        className=" w-[644px] h-[110px] flex  items-center opacity-100 rounded-[30px] border border-transparent bg-[#F8F8F805]"
-
+        className="w-full max-w-[600px] h-[90px] flex items-center opacity-100 rounded-[25px] border border-transparent bg-[#F8F8F805] mb-4"
       >
         {children}
-        {/* Content can be added here */}
       </div>
     );
   };
 
   return (
-    <div className="bg-[#202020] text-[#F8F8F8B2] p-6 rounded-lg shadow-lg my-4 flex justify-between">
-      {/* Header */}
-      <div>
-        <img src="/reachouttagline.png" alt="" />
-        <h1 className="text-4xl font-normal leading-[40px] tracking-[-0.02em] text-[#F8F8F8]/90 mb-4">
-          Got a project? <br />
-          We’re listening.
-        </h1>
-
-        {contactArray.map((item, index) => {
-          return (
-            <div className="flex items-center mb-4">
+    <div className="bg-[#202020] text-[#F8F8F8B2] p-4 rounded-lg shadow-lg my-4 mx-1 md:mx-8">
+      <div className="flex flex-col md:flex-row justify-between gap-6">
+        {/* Left Section (Header and Contact Points) */}
+        <div className="w-full md:w-1/2">
+          <img src="/reachouttagline.png" alt="Reach Out Tagline" className="mb-4" />
+          <h1 className="text-xl md:text-3xl font-normal leading-[32px] tracking-[-0.02em] text-[#F8F8F8]/90 mb-4">
+            Got a project? <br /> We’re listening.
+          </h1>
+          {contactArray.map((item, index) => (
+            <div key={index} className="flex items-center mb-3">
               <CheckedBox />
-              <p className="ml-4">{item}</p>
+              <p className="ml-3 text-xs md:text-sm">{item}</p>
             </div>
-          );
-        })}
+          ))}
+        </div>
+
+        {/* Right Section (Contact Options) */}
+        <div className="w-full md:w-1/2 flex flex-col gap-4">
+          <CustomDiv>
+            <div className="flex justify-between w-full px-3 md:px-4">
+              <div>
+                <p className="text-[#767676] text-xs md:text-sm">Prefer email?</p>
+                <p className="text-[#F8F8F8] text-sm md:text-lg">
+                  {emailToCopy}
+                </p>
+              </div>
+              <div
+                className="flex gap-1 items-center bg-[#FFFFFFF2] rounded-full p-1 md:p-3 py-1 md:py-4 group cursor-pointer hover:bg-[#D4541DF2]"
+                onClick={handleCopy}
+              >
+                <IoCopyOutline className="w-3 h-3 md:w-6 md:h-6 text-[#202020] group-hover:text-white" />
+                <p className="text-[#202020] text-xs md:text-sm group-hover:text-white">Copy</p>
+              </div>
+            </div>
+          </CustomDiv>
+          <CustomDiv>
+            <div className="flex justify-between w-full px-3 md:px-4">
+              <div>
+                <p className="text-[#767676] text-xs md:text-sm">Whatsapp</p>
+                <p className="text-[#F8F8F8] text-sm md:text-lg">
+                  {whatsappNumber}
+                </p>
+              </div>
+              <div
+                className="flex gap-1 items-center bg-[#FFFFFFF2] rounded-full p-1 md:p-3 py-1 md:py-4 group hover:bg-[#25D366] cursor-pointer"
+                onClick={handleStartChat}
+              >
+                <IoChatbubbleEllipsesOutline className="w-3 h-3 md:w-6 md:h-6 text-[#202020] group-hover:text-white" />
+                <p className="text-[#202020] text-xs md:text-sm group-hover:text-white">Chat</p>
+              </div>
+            </div>
+          </CustomDiv>
+        </div>
       </div>
-      <div className="flex flex-col gap-4">
-        <CustomDiv>
-          <div className="flex justify-between w-full px-6">
-            <div>
-              <p className="text-[#767676] text-1xl">Prefer email?</p>
-              <p className="text-[#F8F8F8] text-2xl">
-                business@webpioneers.com
-              </p>
-            </div>
-            <div className="flex gap-2 items-center bg-[#FFFFFFF2] rounded-full p-4 py-5">
-              <IoCopyOutline size={24} onClick={handleCopy} color="#202020" />{" "}
-              <p className="text-[#202020] text-2xl ">Copy</p>
-            </div>
-          </div>
-        </CustomDiv>
-        <CustomDiv>
-        <div className="flex justify-between w-full px-6">
-            <div>
-              <p className="text-[#767676] text-1xl">Whatsapp</p>
-              <p className="text-[#F8F8F8] text-2xl">
-              +1 (631) 530-2666
-              </p>
-            </div>
-            <div className="flex gap-2 items-center bg-[#FFFFFFF2] rounded-full p-4 py-5">
-              <IoChatbubbleEllipsesOutline size={24} onClick={handleCopy} color="#202020" />{" "}
-              <p className="text-[#202020] text-2xl ">Chat</p>
-            </div>
-          </div>
-          
-        </CustomDiv>
-        
-      </div>
+      {copyStatus && (
+        <p className="text-xs text-green-400 mt-2">{copyStatus}</p>
+      )}
     </div>
   );
 };
