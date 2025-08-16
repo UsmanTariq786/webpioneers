@@ -33,20 +33,30 @@ const WebsiteDevelopment = () => {
           )`,
         borderImageSlice: 1,
       }}
-      className="relative mt-10 mb-[30px] max-w-[1100px] mx-auto flex flex-col sm:flex-row rounded-[40px]"
+      className="relative mt-10 mb-[30px] w-[90%] max-w-[1100px] mx-auto flex flex-col sm:flex-row rounded-[30px]"
     >
       {/* Left Web Card */}
-      <div className="flex justify-end w-full sm:w-[40%] pr-[100px]">
+      <div className="w-full xl:w-[30%] flex flex-col md:flex-row xl:flex-row md:gap-4 justify-end">
         <WebCard
           title={cardData.title}
           image={cardData.image}
           description={cardData.description}
         />
+         {/* Image only for mobile/tablet, hidden on xl */}
+         <div className='block xl:hidden pb-[46px]'>
+         <Image
+              src="main-container-content-res2.svg"
+              width={310}
+              height={370}
+              alt="Decorative"
+              className="object-contain w-full mt-6 px-2"
+            />
+          </div>
       </div>
 
       {/* Right Section: Logos + Code Image */}
       <div
-        className="flex gap-4 w-full sm:w-[60%] p-10 justify-end"
+        className="hidden xl:flex gap-4 w-full sm:w-[60%] p-10 justify-end"
         style={{ background: "url('/Starts.svg')" }}
       >
         {/* Vertical Logos */}

@@ -57,55 +57,69 @@ const StepCard = ({ cardNumber, title, description, image }: CardProps) => (
         </span>
       </div>
     </div> */}
-      {cardNumber==2&&<div className="absolute top-[-40px]">
+    {cardNumber === 2 && (
+      <div className="absolute top-[-40px] hidden md:block">
         <Image
-        src='/borderstyleimg.svg'
-        alt={title}
-        layout="responsive" // makes the image responsive to container width
-        width={360} // intrinsic width (aspect ratio)
-        height={200} // intrinsic height (aspect ratio)
-        className="rounded-lg object-contain w-full" // w-full for full container width
-      /></div>}
-<div
-  style={{
-    borderRadius: '32px',
-    padding: '1.5px',
-    background: 'linear-gradient(158.39deg, rgba(255, 255, 255, 0.4) 15%, rgba(255, 255, 255, 0.1) 85%)',
-    backdropFilter: 'blur(100px)',
-    width: '65px',
-    height: '40px',
-    position: 'absolute',
-    zIndex: 10,
-    top: 0,
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-  }}
->
-  <div
-    style={{
-      borderRadius: 'inherit',
-      background: 'rgba(40, 40, 40, 0.7)',
-      padding: '0', // Remove inner padding to keep exact dimensions
-      width: '100%',
-      height: '100%',
-      backdropFilter: 'blur(100px)',
-      boxShadow: 'inset 2px 4px 16px rgba(255, 255, 255, 0.03)',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }}
-  >
-    <span
+          src="/borderstyleimg.svg"
+          alt={title}
+          width={360}
+          height={200}
+          className="rounded-lg object-contain w-full"
+        />
+      </div>
+    )}
+
+    {cardNumber === 1 && (
+      <div className="absolute top-[-40px] md:hidden">
+        <Image
+          src="/borderstyleimg.svg"
+          alt={title}
+          width={200}
+          height={200}
+          className="rounded-lg object-contain w-full"
+        />
+      </div>
+    )}
+    <div
       style={{
-        color: 'rgba(248, 248, 248, 0.95)',
-        fontSize: '14px',
-        fontWeight: 500,
+        borderRadius: '32px',
+        padding: '1.5px',
+        background: 'linear-gradient(158.39deg, rgba(255, 255, 255, 0.4) 15%, rgba(255, 255, 255, 0.1) 85%)',
+        backdropFilter: 'blur(100px)',
+        width: '65px',
+        height: '40px',
+        position: 'absolute',
+        zIndex: 10,
+        top: 0,
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
       }}
     >
-      {cardNumber}
-    </span>
-  </div>
-</div>
+      <div
+        style={{
+          borderRadius: 'inherit',
+          background: 'rgba(40, 40, 40, 0.7)',
+          padding: '0', // Remove inner padding to keep exact dimensions
+          width: '100%',
+          height: '100%',
+          backdropFilter: 'blur(100px)',
+          boxShadow: 'inset 2px 4px 16px rgba(255, 255, 255, 0.03)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <span
+          style={{
+            color: 'rgba(248, 248, 248, 0.95)',
+            fontSize: '14px',
+            fontWeight: 500,
+          }}
+        >
+          {cardNumber}
+        </span>
+      </div>
+    </div>
 
 
 
@@ -146,18 +160,7 @@ const StepCard = ({ cardNumber, title, description, image }: CardProps) => (
         {title}
       </h3>
       <p
-        className="
-    font-rubik
-    font-normal
-    mt-[15px]
-    text-[16px]
-    leading-[24px]
-    tracking-normal
-    text-[rgba(248,248,248,0.5)]
-    w-[292px]
-    mb-[20px]
-    mx-auto
-  "
+        className=" font-rubik font-normal mt-[15px] text-[16px] leading-[24px] tracking-normal text-[rgba(248,248,248,0.5)] w-[90%] xl:w-[292px] mb-[20px] mx-auto min-h-[74px]"
       >
         {description}
       </p>

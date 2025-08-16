@@ -16,7 +16,7 @@ const UserCard: React.FC<UserCardProps> = ({
   return (
     <div
       style={{
-        minWidth: "224px",
+        minWidth: "180px",
         height: "68px",
         padding: "1px", // simulate border width
         borderRadius: "20px",

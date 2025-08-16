@@ -20,15 +20,14 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row">
               {/* Logo and Description */}
               <div
-                className="pl-2 pt-5"
+                className="pl-2 pt-5 border-b md:border-b-0 md:border-r border-[#373737]"
                 style={{
-                  borderRight: "1px solid #373737",
                   width: "45%",
                   position: "relative",
                 }}
               >
-                <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -top-[5px] -right-[5px]"></div>
-                <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
+                <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -top-[5px] -right-[5px] hidden md:block"></div>
+                <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px] hidden md:block"></div>
                 <div className="ml-5">
                   <Logo />
                 </div>

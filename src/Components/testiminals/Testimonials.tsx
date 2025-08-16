@@ -126,7 +126,7 @@ const Testimonials = () => {
           Testimonials
         </button> */}
         <CommonQuestion question='Testimonials'/>
-        <p className="mt-4 font-rubik text-white/80 text-2xl sm:text-3xl md:text-[48px] leading-tight max-w-lg">
+        <p className="mt-4 font-rubik text-white/80 text-[32px] leading-[40px] md:text-[48px] md:leading-[56px] max-w-lg">
           Clients We’ve Worked With (and Impressed)
         </p>
       </div>
@@ -215,7 +215,9 @@ const Testimonials = () => {
                 whiteSpace: 'normal',
               }}
             >
+              <div className='w-[300px] md:w-[50%] lg:w-[90%] overflow-x-auto'>
               “{t.quote}”
+              </div>
             </div>
           ))}
         </div>

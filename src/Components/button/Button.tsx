@@ -14,9 +14,9 @@ const Button = ({ title,onClick=()=>{} }: ButtonProps) => {
         text-white 
         text-[16px] 
         font-rubik 
-        font-semibold 
+        font-medium
         px-5 
-        py-4 
+        py-4
         rounded-full 
         bg-[var(--color-accent-orange)]
         cursor-pointer
