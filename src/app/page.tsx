@@ -467,7 +467,7 @@ export default function Home() {
             ></div>
             <div style={{ width: "79.95%" }}>
               {/* desktop Slider */}
-      <ServiceExcellenceGrid/>
+                <ServiceExcellenceGrid/>
             </div>
             <div
               style={{
