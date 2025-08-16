@@ -14,7 +14,7 @@ const BrandIdentity = () => {
       <div className="flex flex-col items-center mb-10 text-center">
         <CommonQuestion question="WHAT WE OFFER" />
 
-        <p className="text-[48px] leading-[56px] font-normal font-['Rubik'] text-center tracking-[-0.02em]
+        <p className="w-[90%] text-[32px] leading-[40px] md:text-[48px] md:leading-[56px] font-normal font-['Rubik'] text-center tracking-[-0.02em]
           bg-[linear-gradient(92.95deg,_rgba(248,248,248,0.9)_0.1%,_rgba(248,248,248,0.5)_100.1%)]
           bg-clip-text text-transparent max-w-[550px] mt-[20px]">
           Everything You Need (and Nothing You Don't)
@@ -27,26 +27,43 @@ const BrandIdentity = () => {
 
       {/* Article Section */}
       <div
-        className="rounded-[16px] w-[90%] mx-auto"
+        className="rounded-[30px] w-[90%] mx-auto"
         style={{
           background:
             "linear-gradient(158.39deg, rgba(255, 255, 255, 0.06) 14.19%, rgba(255, 255, 255, 0.000015) 50.59%, rgba(255, 255, 255, 0.000015) 68.79%, rgba(255, 255, 255, 0.015) 105.18%)",
         }}
       >
         <div
-          className="rounded-[15px] flex pb-[70px]"
+          className="rounded-[30px] flex pb-[0px] xl:pb-[70px]"
           style={{
             background:
               "linear-gradient(180deg, rgba(116, 47, 47, 0.02) 0%, rgba(248, 248, 248, 0.0002) 100%), linear-gradient(123.8deg, rgba(248, 248, 248, 0.03) 0%, rgba(248, 248, 248, 0) 46.5%)",
           }}
         >
           {/* Left Text Column */}
-          <div className="w-[30%] flex justify-end">
-            <WebCard image="/rings.svg" title="Brand guidelines" description="We help shape your brand’s personality and build a visual style that actually feels like you.  "/>
+          <div className="w-full xl:w-[30%] flex flex-col md:flex-row xl:flex-row md:gap-4 justify-end">
+            {/* Card always visible */}
+            <WebCard
+              image="/rings.svg"
+              title="Brand guidelines"
+              description="We help shape your brand’s personality and build a visual style that actually feels like you."
+            />
+
+          {/* Image only for mobile/tablet, hidden on xl */}
+          <div className='block xl:hidden pb-[46px]'>
+            <Image
+              src="/main-container-content-res.svg"
+              width={310}
+              height={370}
+              alt="Decorative"
+              className="object-contain w-full mt-6 px-2"
+            />
+            </div>
           </div>
 
+
           {/* Right Image Column */}
-          <div className="w-[70%] px-[4%] pr-[1%] pl-[15%] py-[3%] bg-[url('/Stars.svg')] bg-no-repeat bg-cover">
+          <div className="hidden xl:flex w-[70%] px-[4%] pr-[1%] pl-[15%] py-[3%] bg-[url('/Stars.svg')] bg-no-repeat bg-cover">
             <div
               className="relative w-[500px] h-[319px] bg-center bg-no-repeat bg-cover"
               style={{ backgroundImage: "url('/maincontainer.svg')"}}

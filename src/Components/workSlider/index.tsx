@@ -35,7 +35,8 @@ const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
       { src: '/workSlider/branding/11.svg', alt: 'Branding 1', width: 550, height: 320 },
       { src: '/workSlider/branding/12.svg', alt: 'Branding 1', width: 550, height: 320 },
       { src: '/workSlider/branding/13.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/14.svg', alt: 'Branding 1', width: 550, height: 320 },    ],
+      { src: '/workSlider/branding/14.svg', alt: 'Branding 1', width: 550, height: 320 },    
+    ],
     mobile: [
       { src: '/workSlider/branding/11.svg', alt: 'Branding 1', width: 550, height: 320 },
       { src: '/workSlider/branding/12.svg', alt: 'Branding 1', width: 550, height: 320 },
@@ -103,7 +104,7 @@ const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
     <div className="w-full px-4,  py-6">
       <Slider {...sliderSettings}>
         {filteredImages.map((image: ImageData, index: number) => (
-          <div key={index+'filteredimagess'} className="px-1 h-[500px]"> {/* Reduced from px-2 to px-1 */}
+          <div key={index+'filteredimagess'} className="px-1 h-[290px] md:h-[500px]"> {/* Reduced from px-2 to px-1 */}
             <Image
               src={image.src}
               alt={image.alt}

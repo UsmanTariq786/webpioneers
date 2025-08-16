@@ -35,12 +35,12 @@ export default function ContactForm() {
             }}
           ></div>
           <div style={{ width: "79.95%" }}>
-            <div className="sm:ml-20 max-w-md  mt-[25px] mb-[30px]">
-              <div className="w-[320px]">
+            <div className="p-[20px] md:p-0 sm:ml-20 max-w-md  mt-[25px] mb-[30px]">
+              <div className="w-[225px]">
                 <CommonQuestion question="We’re Available for New Projects" />
               </div>
-              <div className="w-[400px] mt-[10px]">
-                <p className="w-full font-rubik font-normal text-[32px] sm:text-[48px] leading-tight sm:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
+              <div className="w-full md:w-[400px] mt-[10px]">
+                <p className="w-full font-rubik font-normal text-[32px] md:text-[48px] leading-[40px] md:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
                   Ready to Share Your Vision?
                 </p>
               </div>

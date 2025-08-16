@@ -22,16 +22,16 @@ const PioneerDetail = () => {
   return (
 
 
-    <section className="flex flex-col lg:flex-row items-start justify-center  max-w-7xl mx-auto">
+    <section className="flex flex-col md:flex-row items-start justify-center  max-w-7xl mx-auto">
       {/* Left Side - Image */}
-      <div  style={{width:'40%',boxSizing:'border-box',display:'flex',justifyContent:'center',padding:'60px',borderRight:'1px solid #373737'}}>
-        <div className="w-[340px]">
+      <div className='w-[100%] md:w-[40%] border-r border-[#373737] p-[10px] md:px-[10px] md:py-[60px] lg:p-[60px]'  style={{boxSizing:'border-box',display:'flex',justifyContent:'center'}}>
+        <div className="md:w-[100%]">
          {chipdata.map((item,index)=><div  key={'chipbox'+index} style={{display:'inline-block',marginLeft:'10px',marginTop:'10px'}}><Chip key={'chip'+index} label={item} value={item} isSelected={selectedChip === item} onSelect={handleChipSelect} /></div>)}
-</div>
+        </div>
       </div>
 
       {/* Right Side - Text Content */}
-      <div className="w-full lg:w-[746px] flex flex-col justify-start" style={{width:'60%',padding:'60px'}}>
+      <div className="hidden sm:flex w-[100%] md:w-[60%] flex-col justify-start p-[20px] md:px-[30px] md:py-[60px] lg:p-[60px]">
         <div className='w-[120px]'>
         <CommonQuestion question='our vibe'/>
         </div>
