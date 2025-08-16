@@ -20,8 +20,8 @@ function TableData() {
                 {/* top heading */}
                 <RoundCornerWrapper top={false}>
                   <div className='flex flex-col items-center justify-center py-10'>
-                    <img src={card.image} alt="" className='w-[75px] h-[75px] mb-8' />
-                    <h1 className='text-5xl' 
+                    <img src={card.image} alt="" className='w-[66px] h-[66px] md:w-[75px] md:h-[75px] mb-8' />
+                    <h1 className='text-[32px] md:text-5xl' 
                      style={{
                       background:
                         "linear-gradient(92.95deg, rgba(248, 248, 248, 0.9) 0.1%, rgba(248, 248, 248, 0.5) 100.1%)",
@@ -50,7 +50,7 @@ function TableData() {
                         "linear-gradient(92.95deg, rgba(248, 248, 248, 0.9) 0.1%, rgba(248, 248, 248, 0.5) 100.1%)",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
-                    }} className='text-[32px]'>{card.description1}</p> <br />
+                    }} className='text-[24px] md:text-[32px]'>{card.description1}</p> <br />
                          <Button title="Let’s get started" onClick={() => {router.push('/contactUs')}} />
                       </div>
                     </RoundCornerWrapper>

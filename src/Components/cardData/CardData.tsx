@@ -87,7 +87,7 @@ function CardData() {
         const handleResize = () => {
             // This is a common way to check for a mobile breakpoint in JS.
             // Tailwind's 'lg' breakpoint is 1024px.
-            setIsMobile(window.innerWidth < 700);
+            setIsMobile(window.innerWidth < 900);
         };
 
         handleResize(); // Set initial state

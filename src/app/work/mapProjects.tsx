@@ -38,7 +38,7 @@ const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
       {/* <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6"> */}
       <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 ">
         {filteredProjects.map((project, index) => (
-   
+          <div key={index+'yahayyiyaqaeym'}>
           <RoundCornerWrapper>
            <FolderWorkDesignComp
             keyvalue={index}
@@ -51,6 +51,7 @@ const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
             onClick={() => handleOpenModal(project.id)} // Trigger modal on click
             />
             </RoundCornerWrapper>
+            </div>
 
          
        
