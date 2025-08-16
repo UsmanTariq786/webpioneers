@@ -14,12 +14,10 @@ interface ImageData {
 }
 
 interface ImageDataMap {
-  [key: string]: ImageData[];
-  all: ImageData[];
-  mobile: ImageData[];
-  web: ImageData[];
-  branding: ImageData[];
-  saas: ImageData[];
+  [key: string]: {
+    path: string;
+    images: number[];
+  };
 }
 
 interface WorkSliderProps {
@@ -28,52 +26,42 @@ interface WorkSliderProps {
 
 const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
   // State object with image arrays keyed by chip values
-  const [imageData, setImageData] = useState<ImageDataMap>({
-    all: [
-      { src: '/leftImage.svg', alt: 'All Design 1', width: 600, height: 340 },
-      { src: '/rightImage.svg', alt: 'All Design 2', width: 320, height: 340 },
-      { src: '/workSlider/branding/11.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/12.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/13.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/14.svg', alt: 'Branding 1', width: 550, height: 320 },    ],
-    mobile: [
-      { src: '/workSlider/branding/11.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/12.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/13.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/14.svg', alt: 'Branding 1', width: 550, height: 320 },
-    ],
-    web: [
-      { src: '/workSlider/branding/11.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/12.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/13.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/14.svg', alt: 'Branding 1', width: 550, height: 320 },
-    ],
-    branding: [
-      { src: '/workSlider/branding/1.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/2.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/3.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/4.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/5.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/6.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/7.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/8.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/9.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/10.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/11.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/12.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/13.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/14.svg', alt: 'Branding 1', width: 550, height: 320 },
-    ],
-    saas: [
-      { src: '/workSlider/branding/11.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/12.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/13.svg', alt: 'Branding 1', width: 550, height: 320 },
-      { src: '/workSlider/branding/14.svg', alt: 'Branding 1', width: 550, height: 320 },
-    ],
+  const [workSliderData, setWorkSliderData] = useState<ImageDataMap>({
+    all: {
+      path: '/workSlider/webDevelopment/',
+      images: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+    },
+    webDev: {
+      path: '/workSlider/webDevelopment/',
+      images: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+    },
+    mobile: {
+      path: '/workSlider/mobileApp/',
+      images: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+    },
+    webDesign: {
+      path: '/workSlider/webDesign/',
+      images: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+    },
+    branding: {
+      path: '/workSlider/branding/',
+      images: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+    },
+    saas: {
+      path: '/workSlider/saasProduct/',
+      images: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+    },
   });
 
-  // Filtered images based on selectedChip
-  const filteredImages: ImageData[] = selectedChip ? imageData[selectedChip] || [] : imageData.all;
+  // Filtered images based on selectedChip and map to the required format
+  const currentCategory = selectedChip ? workSliderData[selectedChip] : workSliderData.all;
+
+  const filteredImages: ImageData[] = currentCategory.images.map((imgNumber) => ({
+    src: `${currentCategory.path}${imgNumber}.png`,
+    alt: `${selectedChip} work image ${imgNumber}`,
+    width: 1920, // Example width, you may need to adjust
+    height: 1080, // Example height, you may need to adjust
+  }));
 
   // Slider settings
   const sliderSettings = {
@@ -100,10 +88,10 @@ const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
   };
 
   return (
-    <div className="w-full px-4,  py-6">
+    <div className="w-full px-4 py-6">
       <Slider {...sliderSettings}>
         {filteredImages.map((image: ImageData, index: number) => (
-          <div key={index+'filteredimagess'} className="px-1 h-[500px]"> {/* Reduced from px-2 to px-1 */}
+          <div key={`${selectedChip}-${index}`} className="px-1 h-[500px]">
             <Image
               src={image.src}
               alt={image.alt}
@@ -119,3 +107,4 @@ const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
 };
 
 export default WorkSlider;
+
