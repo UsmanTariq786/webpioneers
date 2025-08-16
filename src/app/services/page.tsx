@@ -11,12 +11,12 @@ const ServicesPage = () => {
       <section>
         <div className="w-full flex">
           <div className="w-[10%] border-r border-b border-[#373737]"></div>
-          <div className="w-[79.95%] p-12">
+          <div className="w-[79.95%] p-5 md:p-12">
             <div className="w-40 mb-3">
               <CommonQuestion question={Box[0].boxhead} />
             </div>
             <h1
-              className="text-5xl w-150"
+              className="md:text-5xl md:w-150  text-[32px] "
               style={{
                 background:
                   "linear-gradient(92.95deg, rgba(248, 248, 248, 0.9) 0.1%, rgba(248, 248, 248, 0.5) 100.1%)",

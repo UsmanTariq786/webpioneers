@@ -14,7 +14,7 @@
       "id": 2,
       "projectName": "Headshots.dk",
       "description": "Professional AI headshots",
-      "superCategory": "web",
+      "superCategory": "webDesign",
       "image2":"/threePicSets/headshots_dk/image1.png",
       "image1":"/threePicSets/headshots_dk/image2.png",
       "image3":"/threePicSets/headshots_dk/image3.png"
@@ -23,7 +23,7 @@
       "id": 3,
       "projectName": "Sync Thy Self",
       "description": "Digital lifestyle products",
-      "superCategory": "web",
+      "superCategory": "webDesign",
       "image1":"/threePicSets/synctheself/image2.png",
       "image2":"/threePicSets/synctheself/image1.png",
       "image3":"/threePicSets/synctheself/image3.png"
@@ -45,7 +45,7 @@
       "id": 5,
       "projectName": "Jellice",
       "description": "Products that go beyond skincare",
-      "superCategory": "web",
+      "superCategory": "webDesign",
       "image1":"/threePicSets/jellice/image1.png",
       "image2":"/threePicSets/jellice/image2.png",
       "image3":"/threePicSets/jellice/image3.png",
@@ -70,7 +70,7 @@
       "id": 7,
       "projectName": "Pixel & Paper",
       "description": "Creative design agency",
-      "superCategory": "web",
+      "superCategory": "webDesign",
       "image2":"/threePicSets/pixelpaper/image1.png",
       "image1":"/threePicSets/pixelpaper/image2.png",
       "image3":"/threePicSets/pixelpaper/image3.png"
@@ -79,7 +79,7 @@
       "id": 8,
       "projectName": "Zenith",
       "description": "Boosting your business with SEO",
-      "superCategory": "web",
+      "superCategory": "webDesign",
       "image3":"/threePicSets/zenith/image1.png",
       "image1":"/threePicSets/zenith/image2.png",
       "image2":"/threePicSets/zenith/image3.png",
@@ -118,7 +118,7 @@
       "id": 12,
       "projectName": "Onyx",
       "description": "Manage your finances",
-      "superCategory": "web",
+      "superCategory": "webDesign",
       "image2":"/threePicSets/onyx/image1.png",
       "image3":"/threePicSets/onyx/image2.png",
       "image1":"/threePicSets/onyx/image3.png"
@@ -127,7 +127,7 @@
       "id": 13,
       "projectName": "MairE NoEl",
       "description": "Glow. Define. Embrace.",
-      "superCategory": "web",
+      "superCategory": "webDesign",
       "image3":"/threePicSets/mairEnoel/image1.png",
       "image2":"/threePicSets/mairEnoel/image2.png",
       "image1":"/threePicSets/mairEnoel/image3.png"
