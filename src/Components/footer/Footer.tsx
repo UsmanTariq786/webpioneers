@@ -20,14 +20,24 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row">
               {/* Logo and Description */}
               <div
-                className="pl-2 pt-5 border-b md:border-b-0 md:border-r border-[#373737]"
-                style={{
-                  width: "45%",
-                  position: "relative",
-                }}
+                className="
+                  pl-2 pt-5
+                  border-b border-dotted md:border-b-0 md:border-r md:border-dotted
+                  border-[#373737]
+                  relative
+                  w-[100%]
+                  md:w-[45%]
+                "
+                // style={{ width: "45%" }}
               >
+                {/* Dots for desktop (right border) */}
                 <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -top-[5px] -right-[5px] hidden md:block"></div>
                 <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px] hidden md:block"></div>
+
+                {/* Dots for mobile (bottom border) */}
+                <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -left-[5px] md:hidden"></div>
+                <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px] md:hidden"></div>
+
                 <div className="ml-5">
                   <Logo />
                 </div>
@@ -37,17 +47,36 @@ const Footer = () => {
                 </p>
               </div>
 
+
               {/* Quick Links */}
               <div
-                className="pt-5 pl-20 pb-10"
+                className="
+                pt-5 
+                pl-6
+                md:pl-20 
+
+                pb-10
+                border-b border-dotted md:border-b-0 md:border-r md:border-dotted
+                border-[#373737]
+                relative
+                w-[100%]
+                md:w-[20%]
+                "
                 style={{
-                  borderRight: "1px solid #373737",
-                  width: "20%",
+                  // borderRight: "1px solid #373737",
+                  // width: "20%",
                   position: "relative",
                 }}
               >
-                <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -top-[5px] -right-[5px]"></div>
-                <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
+         {/* Dots for desktop (right border) */}
+         <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -top-[5px] -right-[5px] hidden md:block"></div>
+                <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px] hidden md:block"></div>
+
+                {/* Dots for mobile (bottom border) */}
+                <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -left-[5px] md:hidden"></div>
+                <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px] md:hidden"></div>
+
+
                 <div>
                   <h3 className="mb-4 font-medium leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
                     • Quick
@@ -91,7 +120,14 @@ const Footer = () => {
               </div>
 
               {/* Contact Info */}
-              <div className="pt-5 pl-20 " style={{ width: "35%" }}>
+              <div className="pt-5 
+               pl-6
+               md:pl-20 
+               pb-10
+               w-[100%] 
+               md:w-[35%]" 
+              // style={{ width: "35%" }}
+              >
                 <h3 className="mb-4 font-medium leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
                   • Contact
                 </h3>
@@ -196,13 +232,13 @@ const Footer = () => {
               {/* desktop Slider */}
               {/* Mobile Layout */}
               <div className="block sm:hidden">
-                <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center justify-between  pt-6 px-6">
                   <h3 className="text-white font-medium">• Socials</h3>
                   <button className="text-gray-400 hover:text-white transition-colors">
                     <X className="w-5 h-5" />
                   </button>
                 </div>
-                <div className="flex flex-col gap-4 p-5">
+                <div className="flex flex-col gap-8 p-6">
                   <Link
                     href="#"
                     className="text-[#F8F8F8]/90 text-lg hover:text-white transition-colors"
@@ -303,25 +339,25 @@ const Footer = () => {
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div style={{ width: "79.95%"}}>
-       <div
+          <div style={{ width: "79.95%" }}>
+          <div
   style={{
     backgroundColor: "rgba(212, 84, 29, 0.95)",
-    overflow: "hidden",
-    padding:'20px 0 20px 0'
+    padding: "20px 0",
   }}
-  className="flex items-center whitespace-nowrap w-full"
+  className="flex w-full overflow-x-auto whitespace-nowrap scrollbar-hide"
 >
-  <p className="font-[Rubik] font-normal text-[138px] leading-[100%] tracking-[-0.02em] mr-4">
+  <p className="font-[Rubik] font-normal text-[50px] leading-[100%] md:text-[138px] tracking-[-0.02em] mr-4 shrink-0">
     Get in touch
   </p>
-  <p className="font-[Rubik] font-normal text-[138px] leading-[100%] tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0.1%,rgba(248,248,248,0.5)_100.1%)] mr-4">
+  <p className="font-[Rubik] font-normal text-[50px] leading-[100%] md:text-[138px] tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0.1%,rgba(248,248,248,0.5)_100.1%)] mr-4 shrink-0">
     Get in touch
   </p>
-  <p className="font-[Rubik] font-normal text-[138px] leading-[100%] tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0.1%,rgba(248,248,248,0.5)_100.1%)]">
+  <p className="font-[Rubik] font-normal text-[50px] leading-[100%] md:text-[138px] tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0.1%,rgba(248,248,248,0.5)_100.1%)] shrink-0">
     Get in touch
   </p>
 </div>
+
 
           </div>
           <div
