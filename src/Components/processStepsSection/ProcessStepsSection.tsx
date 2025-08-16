@@ -38,19 +38,28 @@ const ProcessStepsSection = () => (
     {/* heading */}
     <div className="flex flex-col items-center mb-10">
      <CommonQuestion question='HOW IT WORKS'/>
-      <p className="text-[48px] leading-[56px] font-normal font-['Rubik'] text-center tracking-[-0.02em]
+      <p className="w-[90%] text-[32px] leading-[40px] md:text-[48px] md:leading-[56px] pt-[10px] font-normal font-['Rubik'] text-center tracking-[-0.02em]
                bg-[linear-gradient(92.95deg,_rgba(248,248,248,0.9)_0.1%,_rgba(248,248,248,0.5)_100.1%)]
                bg-clip-text text-transparent max-w-[600px]">
         What happens once we team up
       </p>
     </div>
 
+    <div className="h-6 lg:h-0"></div>
     {/* cards in a single responsive row */}
-    <div className="grid gap-6 md:grid-cols-3 sm:px-30 p-10">
-      {steps.map((step) => (
-        <StepCard key={step.stepNumber}cardNumber = {step.stepNumber} title ={step.title} description={step.description} image={step.image} />
-      ))}
-    </div>
+  <div className="grid gap-16 md:gap-10 xl:gap-6 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 sm:px-8 px-3 md:p-10">
+    
+  {steps.map((step) => (
+    <StepCard
+      key={step.stepNumber}
+      cardNumber={step.stepNumber}
+      title={step.title}
+      description={step.description}
+      image={step.image}
+    />
+  ))}
+</div>
+<div className="h-12 lg:h-0"></div>
   </section>
 )
 

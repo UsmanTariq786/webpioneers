@@ -22,6 +22,9 @@ const config: Config = {
       borderRadius: {
         'full': '9999px',
       },
+      fontFamily: {
+        rubik: ["Rubik", "sans-serif"], // ✅ Added custom font
+      },
       spacing: {},
     },
   },

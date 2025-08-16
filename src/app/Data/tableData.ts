@@ -10,7 +10,8 @@ type Design ={
     des4?:string,
     des5?:string,
     des6?:string,
-    img:string
+    img:string,
+    superCategory: string
 }
 
 const tableData:Design[] = [
@@ -18,7 +19,7 @@ const tableData:Design[] = [
         image: "/services_img/branding.png",
         heading : "Branding",
         sub1:"Benefit",
-        description1:"We help you discover your vibe. then bring it to life with a brand that's clear and totally you.",
+        description1:"We help you discover your vibe, then bring it to life with a brand that's clear and totally you.",
         sub2:"Services",
         des1:"Brand book",
         des2:"Brand guidelines",
@@ -26,7 +27,8 @@ const tableData:Design[] = [
         des4:"Identity design",
         des5:"Logo design",
         des6:"Pitch decks" ,
-        img:"/services_img/frame1.png"       
+        img:"/services_img/frame1.png",
+        superCategory: "branding",       
     },
     {
         image: "/services_img/webdesign.png",
@@ -40,7 +42,8 @@ const tableData:Design[] = [
         des4:"Web app design",
         des5:"Ecommerce design",
         des6:"SaaS website design",
-        img:"/services_img/frame2.png"       
+        img:"/services_img/frame2.png"   ,
+        "superCategory": "webDesign",    
     },
     {
         image: "/services_img/mobileapp.png",
@@ -52,7 +55,8 @@ const tableData:Design[] = [
         des2:"IOS & android app design",
         des3:"Hybrid app design  ",
         des4:"App prototyping",
-        img:"/services_img/frame3.png"
+        img:"/services_img/frame3.png",
+        "superCategory": "mobile",
                
     },
     {
@@ -65,7 +69,8 @@ const tableData:Design[] = [
         des2:"SaaS Audit",
         des3:"B2B SaaS ",
         des4:"Product Redesign",
-        img:"/services_img/frame4.png"      
+        img:"/services_img/frame4.png",
+        "superCategory": "saas",      
     },
     {
         image: "/services_img/webdev.png",
@@ -78,7 +83,8 @@ const tableData:Design[] = [
         des3:"Shopify Development",
         des4:"Custome Code integrations",
         des5:"WordPress Development",
-        img:"/services_img/frame5.png"       
+        img:"/services_img/frame5.png"      ,
+        "superCategory": "webDev",   
     }
      
 ]

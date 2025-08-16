@@ -16,13 +16,13 @@ const WebsiteDesignFeature = () => {
   return (
     <section
       className="
-        mt-10 mb-10  max-w-[1100px] mx-auto
-        rounded-[40px] border border-transparent
+        mt-10 mb-10 w-[90%] max-w-[1100px] mx-auto
+        rounded-[30px] border border-transparent
         bg-gradient-to-br from-white/5 via-white/0 to-white/5
         flex flex-col sm:flex-col md:flex-row  items-center md:items-center"
     >
       {/*  LEFT SECTION (Hidden only on very small devices)  */}
-      <div className="md:hidden sm:flex flex-col justify-between h-[320px]">
+      {/* <div className="hidden xl:flex md:hidden sm:flex flex-col justify-between h-[320px]">
         <Image
           src="/websitedesigngroup.svg"
           width={260}
@@ -34,10 +34,10 @@ const WebsiteDesignFeature = () => {
           <Image src="/clip-path.png" width={80} height={60} alt="Card 2" />
           <Image src="/Group32.png" width={80} height={60} alt="Card 3" />
         </div>
-      </div>
+      </div> */}
 
       {/* === CENTER SECTION === */}
-      <div className="relative w-[60%] py-5 pl-2"
+      <div className="hidden xl:flex relative w-[60%] py-5 pl-2"
       style={{background:"url('/starstwo.svg')", backgroundSize:'100% 100%'}}
       >
         <div className="h-[80%]">
@@ -53,12 +53,24 @@ const WebsiteDesignFeature = () => {
       </div>
 
       {/* === RIGHT SECTION === */}
-      <div className="flex flex-col items-start text-left w-[40%]">
+      <div className="w-full xl:w-[30%] flex flex-col md:flex-row xl:flex-row md:gap-4 justify-end">
      <WebCard
          title={cardData.title}
          image ={cardData.image}
          description= {cardData.description}
         />
+
+
+          {/* Image only for mobile/tablet, hidden on xl */}
+          <div className='block xl:hidden pb-[46px]'>
+          <Image
+              src="/main-container-content-res1.svg"
+              width={310}
+              height={370}
+              alt="Decorative"
+              className="object-contain w-full mt-6 px-2"
+            />
+            </div>
       </div>
     </section>
   );

@@ -5,13 +5,16 @@
       "superCategory": "mobile",
       "image2":"/threePicSets/art_of_monday/image1.png",
       "image1":"/threePicSets/art_of_monday/image2.png",
-      "image3":"/threePicSets/art_of_monday/image3.png"
+      "image3":"/threePicSets/art_of_monday/image3.png",
+      "modalImages":[1,2,3,4,5,6,7,8,9,10,11,12,13],
+      "modalPath":"/threePicSets/art_of_monday/modalImages/",
+      "modalDescription":["Founder Sports Club is a mobile app designed for Art of Mondays, built to bring their founders’ community to life on mobile. The client already had a web version of their platform and wanted to offer members a more engaging and accessible experience through a dedicated app.","They approached us to transform their existing system into a streamlined mobile product. We began by mapping out the complete user flow journey and creating detailed wireframes to define the app’s structure. To ensure we aligned with market expectations, we researched direct competitors like Timeleft and other major players in the networking and founder community niche.","With insights in hand, we designed an MVP that delivers core community features while keeping the interface clean and intuitive. Now that the base UI is established, we’re entering the next phase — refining functionality, implementing adjustments, and developing a robust design system to support future growth."]
     },
     {
       "id": 2,
       "projectName": "Headshots.dk",
       "description": "Professional AI headshots",
-      "superCategory": "web",
+      "superCategory": "webDesign",
       "image2":"/threePicSets/headshots_dk/image1.png",
       "image1":"/threePicSets/headshots_dk/image2.png",
       "image3":"/threePicSets/headshots_dk/image3.png"
@@ -20,7 +23,7 @@
       "id": 3,
       "projectName": "Sync Thy Self",
       "description": "Digital lifestyle products",
-      "superCategory": "web",
+      "superCategory": "webDesign",
       "image1":"/threePicSets/synctheself/image2.png",
       "image2":"/threePicSets/synctheself/image1.png",
       "image3":"/threePicSets/synctheself/image3.png"
@@ -42,7 +45,7 @@
       "id": 5,
       "projectName": "Jellice",
       "description": "Products that go beyond skincare",
-      "superCategory": "web",
+      "superCategory": "webDesign",
       "image1":"/threePicSets/jellice/image1.png",
       "image2":"/threePicSets/jellice/image2.png",
       "image3":"/threePicSets/jellice/image3.png",
@@ -67,7 +70,7 @@
       "id": 7,
       "projectName": "Pixel & Paper",
       "description": "Creative design agency",
-      "superCategory": "web",
+      "superCategory": "webDesign",
       "image2":"/threePicSets/pixelpaper/image1.png",
       "image1":"/threePicSets/pixelpaper/image2.png",
       "image3":"/threePicSets/pixelpaper/image3.png"
@@ -76,7 +79,7 @@
       "id": 8,
       "projectName": "Zenith",
       "description": "Boosting your business with SEO",
-      "superCategory": "web",
+      "superCategory": "webDesign",
       "image3":"/threePicSets/zenith/image1.png",
       "image1":"/threePicSets/zenith/image2.png",
       "image2":"/threePicSets/zenith/image3.png",
@@ -115,7 +118,7 @@
       "id": 12,
       "projectName": "Onyx",
       "description": "Manage your finances",
-      "superCategory": "web",
+      "superCategory": "webDesign",
       "image2":"/threePicSets/onyx/image1.png",
       "image3":"/threePicSets/onyx/image2.png",
       "image1":"/threePicSets/onyx/image3.png"
@@ -124,7 +127,7 @@
       "id": 13,
       "projectName": "MairE NoEl",
       "description": "Glow. Define. Embrace.",
-      "superCategory": "web",
+      "superCategory": "webDesign",
       "image3":"/threePicSets/mairEnoel/image1.png",
       "image2":"/threePicSets/mairEnoel/image2.png",
       "image1":"/threePicSets/mairEnoel/image3.png"

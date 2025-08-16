@@ -21,7 +21,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+  <section>
   <div className="w-full flex">
     <div className="w-[9.95%] border-b border-[#373737]"></div>
     <div className="w-[80.08%]">
@@ -35,11 +35,26 @@ export default function Home() {
     <div className="w-[9.95%] border-b border-[#373737]"></div>
   </div>
 </section>
+  {/* <section>
+  <div className="w-full flex">
+    <div className="w-[9.95%] border-b border-[#373737]"></div>
+    <div className="w-[80.08%]">
+     
+    </div>
+    <div className="w-[9.95%] border-b border-[#373737]"></div>
+  </div>
+</section> */}
+<section>
+        <div className="w-full flex">
+          <div className="w-[10%] border-r border-b border-[#373737]"></div>
+          <div className="w-[79.95%]">
+          <MapProjects selectedChip={selectedChip} />
+          </div>
+          <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+        </div>
+      </section>
 
-      {/* <RoundCornerWrapper> */}
-    
-      {/* </RoundCornerWrapper> */}
-      <MapProjects selectedChip={selectedChip} />
+  
     </div>
   );
 }
