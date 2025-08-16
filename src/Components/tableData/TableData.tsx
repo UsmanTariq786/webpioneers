@@ -6,6 +6,7 @@ import tableData from '@/app/Data/tableData'
 import RoundCornerWrapper from '@/Components/RoundCornerWrapper';
 import Button from '../button/Button';
 import { useRouter } from 'next/navigation';
+import WorkSlider from '../workSlider';
 function TableData() {
 
   const router = useRouter();
@@ -92,8 +93,8 @@ function TableData() {
 
                   {/* slider */}
                   <RoundCornerWrapper>
-                    <div className='m-20'>
-                      <img src={card.img} alt="" />
+                    <div className=''>
+                    <WorkSlider selectedChip={card.superCategory} />
                     </div>
                   </RoundCornerWrapper>
 
