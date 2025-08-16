@@ -5,6 +5,7 @@ import TableData from "@/Components/tableData/TableData";
 import SmallCardData from "@/Components/SmallCardData";
 import RoundCornerWrapper from "@/Components/RoundCornerWrapper";
 import CommonQuestion from "@/Components/commonQuestion";
+import ProgressBar from "@/Components/progressBar/index";
 const ServicesPage = () => {
   return (
     <div className="min-h-screen text-white">
@@ -41,6 +42,18 @@ const ServicesPage = () => {
   </div>
 </section>
 
+<section className="block md:hidden">
+  <div className="w-full flex">
+    <div className="w-[9.95%] box-border border-b border-[#373737]"></div>
+    <div className="w-[80.08%]">
+      <RoundCornerWrapper>
+        <ProgressBar progress={40} />
+      </RoundCornerWrapper>
+    </div>
+    <div className="w-[9.95%] box-border border-b border-[#373737]"></div>
+  </div>
+</section>
+
 <section>
   <div className="w-full flex">
     <div className="w-[9.95%] "></div>
@@ -60,7 +73,7 @@ const ServicesPage = () => {
     <div className="w-[80.08%]">
     <RoundCornerWrapper top={false}>
       <div className="p-6">
-        <div className="w-50 my-5 mt-15">
+        <div className="w-50 my-5 mt-5 md:mt-15">
          <CommonQuestion question={Box[1].boxhead} />
         </div>
       <h1
@@ -85,16 +98,17 @@ const ServicesPage = () => {
 
       
 
-      <div className="grid grid-cols-1  sm:flex  mx-8">
-        <div className="w-full sm:w-1/2 ">
+      <div className="grid grid-cols-1  md:flex  mx-8">
+        <div className="w-full md:w-1/2 ">
           <RoundCornerWrapper>
             <SmallCardData />
           </RoundCornerWrapper>
         </div>
-        <div className="w-full sm:w-1/2 ">
+        <div className="w-full md:w-1/2 ">
           <div>
+            <div className="hidden md:flex">
             <RoundCornerWrapper>
-              <div className="hidden  sm:flex flex-row  p-6">
+              <div className=" flex-row  p-6">
                 <div>
                   {Array.from({ length: 13 }, (_, index) => (
                     <div key={index + "starrs"}>
@@ -115,7 +129,7 @@ const ServicesPage = () => {
                 </div>
               </div>
             </RoundCornerWrapper>
-
+            </div>
             <div className=" w-full   p-6 ">
               {
                 <RoundCornerWrapper>
