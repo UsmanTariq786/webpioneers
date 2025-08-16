@@ -5,6 +5,7 @@ import TableData from "@/Components/tableData/TableData";
 import SmallCardData from "@/Components/SmallCardData";
 import RoundCornerWrapper from "@/Components/RoundCornerWrapper";
 import CommonQuestion from "@/Components/commonQuestion";
+import WhyUs from "@/Components/whyUs";
 const ServicesPage = () => {
   return (
     <div className="min-h-screen text-white">
@@ -58,7 +59,7 @@ const ServicesPage = () => {
     <div className="w-[9.95%] border-b border-[#373737]"></div>
     
     <div className="w-[80.08%]">
-    <RoundCornerWrapper top={false}>
+    <RoundCornerWrapper top={false} bottom={false}>
       <div className="p-6">
         <div className="w-50 my-5 mt-15">
          <CommonQuestion question={Box[1].boxhead} />
@@ -81,60 +82,19 @@ const ServicesPage = () => {
   </div>
 </section>
        
+<section>
+  <div className="w-full flex">
+    <div className="w-[9.95%] border-b border-[#373737]"></div>
+    <div className="w-[80.08%]">
+    <WhyUs/>
+
+    </div>
+    <div className="w-[9.95%] border-b border-[#373737]"></div>
+  </div>
+</section>
 
 
-      
-
-      <div className="grid grid-cols-1  sm:flex  mx-8">
-        <div className="w-full sm:w-1/2 ">
-          <RoundCornerWrapper>
-            <SmallCardData />
-          </RoundCornerWrapper>
-        </div>
-        <div className="w-full sm:w-1/2 ">
-          <div>
-            <RoundCornerWrapper>
-              <div className="hidden  sm:flex flex-row  p-6">
-                <div>
-                  {Array.from({ length: 13 }, (_, index) => (
-                    <div key={index + "starrs"}>
-                      <span>
-                        * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                      </span>
-                    </div>
-                  ))}
-                </div>
-                <div className="ml-1">
-                  {Array.from({ length: 13 }, (_, index) => (
-                    <div key={index + "starrsagain"}>
-                      <span>
-                        * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </RoundCornerWrapper>
-
-            <div className=" w-full   p-6 ">
-              {
-                <RoundCornerWrapper>
-                  <div>
-                    <span className="border-1 rounded-xl text-sm p-1">
-                      {Box[2].boxhead}
-                    </span>
-                    <br />
-                    <h1 className="text-4xl mt-2">{Box[2].boxdes}</h1> <br />
-                    <button className="border rounded-2xl p-1 bg-orange-600">
-                      More About us
-                    </button>
-                  </div>
-                </RoundCornerWrapper>
-              }
-            </div>
-          </div>
-        </div>
-      </div>
+     
     </div>
   );
 };
