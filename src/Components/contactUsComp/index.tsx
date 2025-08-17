@@ -45,7 +45,7 @@ const ContactUsComp = () => {
   const CustomDiv = ({ children }: { children: React.ReactNode }) => {
     return (
       <div
-        className="w-full max-w-[600px] min-h-[90px] flex items-center opacity-100 rounded-[25px] border border-transparent bg-[#F8F8F805] mb-4"
+        className="w-full max-w-full lg:max-w-[600px] min-h-[90px] flex items-center opacity-100 rounded-[25px] border border-transparent bg-[#F8F8F805] mb-4"
       >
         {children}
       </div>
@@ -54,7 +54,7 @@ const ContactUsComp = () => {
 
   return (
     <div className="bg-[#202020] text-[#F8F8F8B2] p-4 rounded-lg shadow-lg my-4 mx-1 md:mx-8">
-      <div className="flex flex-col md:flex-row justify-between gap-6">
+      <div className="flex flex-col lg:flex-row justify-between gap-6">
         {/* Left Section (Header and Contact Points) */}
         <div className="w-full md:w-1/2">
           <img src="/reachouttagline.png" alt="Reach Out Tagline" className="mb-4" />
@@ -70,7 +70,7 @@ const ContactUsComp = () => {
         </div>
 
         {/* Right Section (Contact Options) */}
-        <div className="w-full md:w-1/2 flex flex-col gap-4">
+        <div className="w-full lg:w-1/2 flex flex-col gap-4">
           <CustomDiv>
             <div className="flex flex-col md:flex-row justify-between w-full px-3 md:px-4 py-[20px] md:py-[0px]">
               <div>
