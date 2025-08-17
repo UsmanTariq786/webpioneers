@@ -17,7 +17,7 @@ const Footer = () => {
             }}
           ></div>
           <div style={{ width: "79.95%" }}>
-            <div className="flex flex-col sm:flex-row">
+            <div className="flex flex-col md:flex-row">
               {/* Logo and Description */}
               <div
                 className="
@@ -53,14 +53,14 @@ const Footer = () => {
                 className="
                 pt-5 
                 pl-6
-                md:pl-20 
+                lg:pl-20
 
                 pb-10
                 border-b border-dotted md:border-b-0 md:border-r md:border-dotted
                 border-[#373737]
                 relative
                 w-[100%]
-                md:w-[20%]
+                lg:w-[20%]
                 "
                 style={{
                   // borderRight: "1px solid #373737",
@@ -121,11 +121,11 @@ const Footer = () => {
 
               {/* Contact Info */}
               <div className="pt-5 
-               pl-6
-               md:pl-20 
+               pl-4
+               lg:pl-20
                pb-10
                w-[100%] 
-               md:w-[35%]" 
+               lg:w-[35%]" 
               // style={{ width: "35%" }}
               >
                 <h3 className="mb-4 font-medium leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
