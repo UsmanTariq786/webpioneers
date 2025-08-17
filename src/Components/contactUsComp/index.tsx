@@ -45,7 +45,7 @@ const ContactUsComp = () => {
   const CustomDiv = ({ children }: { children: React.ReactNode }) => {
     return (
       <div
-        className="w-full max-w-[600px] h-[90px] flex items-center opacity-100 rounded-[25px] border border-transparent bg-[#F8F8F805] mb-4"
+        className="w-full max-w-[600px] min-h-[90px] flex items-center opacity-100 rounded-[25px] border border-transparent bg-[#F8F8F805] mb-4"
       >
         {children}
       </div>
@@ -72,15 +72,15 @@ const ContactUsComp = () => {
         {/* Right Section (Contact Options) */}
         <div className="w-full md:w-1/2 flex flex-col gap-4">
           <CustomDiv>
-            <div className="flex justify-between w-full px-3 md:px-4">
+            <div className="flex flex-col md:flex-row justify-between w-full px-3 md:px-4 py-[20px] md:py-[0px]">
               <div>
                 <p className="text-[#767676] text-xs md:text-sm">Prefer email?</p>
-                <p className="text-[#F8F8F8] text-sm md:text-lg">
+                <p className="text-[#F8F8F8] text-sm md:text-lg mt-[10px] md:mt-[0px]">
                   {emailToCopy}
                 </p>
               </div>
               <div
-                className="flex gap-1 items-center bg-[#FFFFFFF2] rounded-full p-1 md:p-3 py-1 md:py-4 group cursor-pointer hover:bg-[#D4541DF2]"
+                className="w-[60px] md:w-auto justify-center mt-[20px] md:mt-[0px] flex gap-1 items-center bg-[#FFFFFFF2] rounded-full p-1 md:p-3 py-1 md:py-4 group cursor-pointer hover:bg-[#D4541DF2]"
                 onClick={handleCopy}
               >
                 <IoCopyOutline className="w-3 h-3 md:w-6 md:h-6 text-[#202020] group-hover:text-white" />
@@ -89,15 +89,15 @@ const ContactUsComp = () => {
             </div>
           </CustomDiv>
           <CustomDiv>
-            <div className="flex justify-between w-full px-3 md:px-4">
+            <div className="flex flex-col md:flex-row justify-between w-full px-3 md:px-4 py-[20px] md:py-[0px]">
               <div>
                 <p className="text-[#767676] text-xs md:text-sm">Whatsapp</p>
-                <p className="text-[#F8F8F8] text-sm md:text-lg">
+                <p className="text-[#F8F8F8] text-sm md:text-lg mt-[10px] md:mt-[0px]">
                   {whatsappNumber}
                 </p>
               </div>
               <div
-                className="flex gap-1 items-center bg-[#FFFFFFF2] rounded-full p-1 md:p-3 py-1 md:py-4 group hover:bg-[#25D366] cursor-pointer"
+                className="w-[60px] md:w-auto justify-center mt-[20px] md:mt-[0px]  flex gap-1 items-center bg-[#FFFFFFF2] rounded-full p-1 md:p-3 py-1 md:py-4 group hover:bg-[#25D366] cursor-pointer"
                 onClick={handleStartChat}
               >
                 <IoChatbubbleEllipsesOutline className="w-3 h-3 md:w-6 md:h-6 text-[#202020] group-hover:text-white" />
