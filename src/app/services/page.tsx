@@ -78,7 +78,7 @@ const ServicesPage = () => {
          <CommonQuestion question={Box[1].boxhead} />
         </div>
       <h1
-              className="text-5xl w-70"
+              className="text-[32px] leading-[40px] md:text-5xl md-leading-[56px] w-70"
               style={{
                 background:
                   "linear-gradient(92.95deg, rgba(248, 248, 248, 0.9) 0.1%, rgba(248, 248, 248, 0.5) 100.1%)",

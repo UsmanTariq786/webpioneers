@@ -20,7 +20,7 @@ function TableData() {
               <div>
                 {/* top heading */}
                 <RoundCornerWrapper top={false}>
-                  <div className='flex flex-col items-center justify-center py-10'>
+                  <div className='flex flex-col items-center justify-center py-10 px-[20px] md:px-0'>
                     <img src={card.image} alt="" className='w-[66px] h-[66px] md:w-[75px] md:h-[75px] mb-8' />
                     <h1 className='text-[32px] md:text-5xl' 
                      style={{
