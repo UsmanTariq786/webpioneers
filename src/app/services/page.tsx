@@ -111,7 +111,7 @@ const ServicesPage = () => {
                     {Box[2].boxhead}
                   </span>
                   <br />
-                  <h1 className="text-4xl mt-2">{Box[2].boxdes}</h1> <br />
+                  <h1 className="text-[32px] leading-[40px] md:text-4xl md:leading-[56px] mt-2">{Box[2].boxdes}</h1> <br />
                   <Button title="More About us" />
                 </div>
               </RoundCornerWrapper>
@@ -132,7 +132,7 @@ const ServicesPage = () => {
           <div>
             <div className="hidden md:flex">
             <RoundCornerWrapper>
-              <div className=" flex-row  p-6">
+              <div className="flex flex-row p-6 justify-center">
                 <div>
                   {Array.from({ length: 13 }, (_, index) => (
                     <div key={index + "starrs"}>
@@ -142,9 +142,9 @@ const ServicesPage = () => {
                     </div>
                   ))}
                 </div>
-                <div className="ml-1">
+                <div className="pl-1">
                   {Array.from({ length: 13 }, (_, index) => (
-                    <div key={index + "starrsagain"}>
+                    <div key={index + "starrs"}>
                       <span>
                         * * * * * * * * * * * * * * * * * * * * * * * * * * *
                       </span>
@@ -154,15 +154,15 @@ const ServicesPage = () => {
               </div>
             </RoundCornerWrapper>
             </div>
-            <div className=" w-full   p-6 ">
+            <div className=" w-full">
               {
                 <RoundCornerWrapper>
-                  <div>
+                  <div className="p-[6.8px]">
                     <span className="border-1 rounded-xl text-sm p-1">
                       {Box[2].boxhead}
                     </span>
                     <br />
-                    <h1 className="text-4xl mt-2">{Box[2].boxdes}</h1> <br />
+                    <h1 className="text-[30px] leading-[38px] md:text-[44px] md:leading-[52px] mt-2">{Box[2].boxdes}</h1> <br />
                     <Button title="More About us" />
                   </div>
                 </RoundCornerWrapper>
