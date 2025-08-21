@@ -61,12 +61,12 @@ export default function Home() {
 <section>
   <div className="w-full flex">
     <div className="w-[10%] border-r border-b border-[#373737]"></div>
-    <div className="w-[79.95%] h-[200]">
+    <div className="w-[79.95%]">
       <div className="flex justify-center items-center py-15">
        <video
         width="90%"
         controls
-        className="border rounded-[30px] h-[285px] md:h-[600px]"
+        className="border rounded-[30px] h-[285px] md:h-[600px] lg:h-[600px]"
       >
 
           <source src="https://www.youtube.com/watch?v=lkqyHdmUpBY" type="video/mp4" />
