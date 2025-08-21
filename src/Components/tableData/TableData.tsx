@@ -20,7 +20,7 @@ function TableData() {
               <div>
                 {/* top heading */}
                 <RoundCornerWrapper top={false}>
-                  <div className='flex flex-col items-center justify-center py-10'>
+                  <div className='flex flex-col items-center justify-center py-10 px-[20px] md:px-0'>
                     <img src={card.image} alt="" className='w-[66px] h-[66px] md:w-[75px] md:h-[75px] mb-8' />
                     <h1 className='text-[32px] md:text-5xl' 
                      style={{
@@ -59,9 +59,14 @@ function TableData() {
                   </div>
                   {/* right side */}
                   <div className='flex flex-col  sm:w-1/2 '>
-                    <div className='  p-5'>
+                    <div className='p-5 hidden md:block'>
                       <p className='text-[18px] text-[#F8F8F880]'>{card.sub2}</p>
                     </div>
+                    <RoundCornerWrapper>
+                    <div className='p-5 block md:hidden'>
+                      <p className='text-[18px] text-[#F8F8F880]'>{card.sub2}</p>
+                    </div>
+                    </RoundCornerWrapper>
                     <RoundCornerWrapper>
                       <div className=''>
                         <ul>
@@ -71,11 +76,11 @@ function TableData() {
                               <RoundCornerWrapper top={false} key={index}>
                                 <div className='flex p-5 '>
                                 <div className=' flex items-center mr-8'>
-                                <div className='w-2 h-2 rounded-full bg-[#F8F8F880] mr-2'></div>
+                                <div className='w-2 h-2 rounded-full bg-[#F8F8F880] mr-[15px] md:mr-2'></div>
                                  <p className='text-[#F8F8F880]'>0{index+1}</p>
 
                                 </div>
-                                <li key={index} className='text-[20px] text-[#F8F8F8F2]'>{item} </li>
+                                <li key={index} className='text-[18px] md:text-[20px] text-[#F8F8F8F2]'>{item} </li>
                                 </div>
                               </RoundCornerWrapper>
 

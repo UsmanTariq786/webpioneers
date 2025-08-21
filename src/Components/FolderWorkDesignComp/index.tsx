@@ -57,8 +57,8 @@ const FolderWorkDesignComp = ({
           className="absolute bottom-[10px] right-[10px] z-50 md:bottom-[15px] md:right-[15px] w-[20px] sm:w-[25px] lg:w-[30px]"
         />
       </div>
-      <div className="text-center mt-16">
-  <h3 style={{ color: 'rgba(248, 248, 248, 0.95)' }} className="text-[18px] md:text-2xl  font-semibold mb-2">
+      <div className="text-center mt-[25px] md:mt-16">
+  <h3 style={{ color: 'rgba(248, 248, 248, 0.95)' }} className="text-[18px] md:text-2xl font-normal md:font-semibold mb-2">
     {projectName}
   </h3>
   <p style={{ color: 'rgba(248, 248, 248, 0.5)' }} className="text-md hidden md:block">

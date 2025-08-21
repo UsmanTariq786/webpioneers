@@ -52,8 +52,6 @@ const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
             />
             </RoundCornerWrapper>
             </div>
-
-         
        
             ))}
       </div>
