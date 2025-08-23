@@ -116,3 +116,27 @@ body {
 
 
 /*====================================================================  */
+
+
+.animate-slide {
+  animation: slide 30s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.gradien-text {
+  background: linear-gradient(92.95deg, rgba(248, 248, 248, 0.9) 0%, rgba(248, 248, 248, 0.5) 100%);
+  -webkit-background-clip: text; /* For Safari */
+  background-clip: text;
+  color: transparent; /* Ensures text uses the gradient */
+  font-family: 'Rubik', sans-serif; /* Match your font import */
+  line-height: 1.25; /* Equivalent to leading-tight */
+}
