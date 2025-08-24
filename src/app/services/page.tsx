@@ -121,57 +121,59 @@ const ServicesPage = () => {
         </div>
       </section>
 
-<div className="hidden md:block">
-      <div className="grid grid-cols-1  md:flex  mx-8">
-        <div className="w-full md:w-1/2 ">
-          <RoundCornerWrapper>
+<div className="">
+<section>
+  <div className="w-full flex">
+    <div className="w-[9.95%] border-b border-[#373737]"></div>
+    
+    <div className="w-[80.08%]">
+    <div className="flex flex-col lg:flex-col xl:flex-row">
+        <div className="w-full ">
             <SmallCardData />
-          </RoundCornerWrapper>
         </div>
-        <div className="w-full md:w-1/2 ">
+        <div className="w-full ">
           <div>
-            <div className="hidden md:flex">
-            <RoundCornerWrapper>
-              <div className="flex flex-row p-6 justify-center">
-                <div>
-                  {Array.from({ length: 13 }, (_, index) => (
-                    <div key={index + "starrs"}>
-                      <span>
-                        * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                      </span>
-                    </div>
-                  ))}
-                </div>
-                <div className="pl-1">
-                  {Array.from({ length: 13 }, (_, index) => (
-                    <div key={index + "starrs"}>
-                      <span>
-                        * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                      </span>
-                    </div>
-                  ))}
-                </div>
+            <div className="hidden xl:block">
+            <RoundCornerWrapper left={false}>
+              <div className="flex flex-row justify-center p-7">
+              <div className="h-[265px]"> 
+                * * * * * * * * * * * * * * * * * * * *
+                * * * * * * * * * * * * * * * * * * * *
+                * * * * * * * * * * * * * * * * * * * *
+                * * * * * * * * * * * * * * * * * * * *
+                * * * * * * * * * * * * * * * * * * * *
+                * * * * * * * * * * * * * * * * * * * *
+                * * * * * * * * * * * * * * * * * * * *
+                * * * * * * * * * * * * * * * * * * * *
+              </div>
+       
+        
+
               </div>
             </RoundCornerWrapper>
             </div>
-            <div className=" w-full">
-              {
-                <RoundCornerWrapper>
-                  <div className="p-[6.8px]">
-                    <span className="border-1 rounded-xl text-sm p-1">
-                      {Box[2].boxhead}
-                    </span>
+            <div className="">
+                <RoundCornerWrapper bottom={false} top={false} dotBottomLeft={false} dotBottomRight={false}>
+                  <div className="p-6">
+                    <div className="w-30">
+                    <CommonQuestion question={Box[2].boxhead} />
+                    </div>
                     <br />
                     <h1 className="text-[30px] leading-[38px] md:text-[44px] md:leading-[52px] mt-2">{Box[2].boxdes}</h1> <br />
                     <Button title="More About us" />
                   </div>
                 </RoundCornerWrapper>
-              }
+              
             </div>
           </div>
         </div>
       </div>
-      </div>
+    </div>
+    <div className="w-[9.95%] border-b border-[#373737]"></div>
+  </div>
+</section>
+     
+  </div>
     </div>
   );
 };
