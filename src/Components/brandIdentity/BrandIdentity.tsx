@@ -90,7 +90,7 @@ const BrandIdentity = () => {
                   boxShadow: "2px 4px 16px 0px rgba(248, 248, 248, 0.06) inset, 0px 24px 32px -12px var(--NeutralNeutral410)",
                   background: "var(--neutral-neutral-110, rgba(255, 255, 255, 0.1))",
                 }}>
-                <Image src="/designsystem.svg" width={44} height={44} alt="Brand icon" className="rounded-full" />
+                <Image src="/brand-icon-home.svg" width={44} height={44} alt="Brand icon" className="rounded-full" />
                 <p className=" pt-[1px] text-[16px] leading-[24px] font-medium text-[rgba(248,248,248,0.95)] font-['Rubik']">
                   Brand Book
                 </p>
