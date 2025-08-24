@@ -1,9 +1,14 @@
+"use client";
+
+import { useState } from "react";
 import Logo from "../ui/Logo";
 import Link from "next/link";
-import { Mail, Phone, X } from "lucide-react";
+import { Mail, Phone, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import RoundCornerWrapper from "../RoundCornerWrapper";
+
 const Footer = () => {
+  const [isOpen, setIsOpen] = useState(true);
   return (
     <footer className="text-white">
       <section>
@@ -231,92 +236,87 @@ const Footer = () => {
             <RoundCornerWrapper>
               {/* desktop Slider */}
               {/* Mobile Layout */}
-              <div className="block sm:hidden">
-                <div className="flex items-center justify-between  pt-6 px-6">
-                  <h3 className="text-white font-medium">• Socials</h3>
-                  <button className="text-gray-400 hover:text-white transition-colors">
-                    <X className="w-5 h-5" />
-                  </button>
-                </div>
-                <div className="flex flex-col gap-8 p-6">
-                  <Link
-                    href="#"
-                    className="text-[#F8F8F8]/90 text-lg hover:text-white transition-colors"
-                  >
-                    LinkedIn
-                  </Link>
-                  <Link
-                    href="#"
-                    className="text-[#F8F8F8]/90 text-lg hover:text-white transition-colors"
-                  >
-                    Instagram
-                  </Link>
-                  <Link
-                    href="#"
-                    className="text-[#F8F8F8]/90 text-lg hover:text-white transition-colors"
-                  >
-                    Dribbble
-                  </Link>
-                  <Link
-                    href="#"
-                    className="text-[#D4541D] text-lg hover:text-[#D4541D]/80 transition-colors"
-                  >
-                    Behance
-                  </Link>
-                  <Link
-                    href="#"
-                    className="text-[#F8F8F8]/90 text-lg hover:text-white transition-colors"
-                  >
-                    WhatsApp
-                  </Link>
-                  <Link
-                    href="#"
-                    className="text-[#F8F8F8]/90 text-lg hover:text-white transition-colors"
-                  >
-                    Twitter
-                  </Link>
-                </div>
-              </div>
+              <>
+      {/* Mobile Layout (collapsible) */}
+      <div className="block sm:hidden">
+        <div className={`flex items-center justify-between pt-6 px-6 ${
+                isOpen ? "pb-0" : "pb-6"
+              }`}>
+          <h3 className="text-white font-medium">• Socials</h3>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-gray-400 hover:text-white transition-colors"
+          >
+            <Image
+              src="/footer-social-list.svg"
+              alt="Social List"
+              width={24}
+              height={24}
+              className={`w-5 h-5 transform transition-transform ${
+                isOpen ? "rotate-180" : "rotate-0"
+              }`}
+            />
+          </button>
+        </div>
 
-              {/* Desktop Layout */}
-              <div className="hidden sm:flex flex-row flex-wrap justify-start gap-20 p-5">
-                <Link
-                  href="#"
-                  className=" text-[30px] hover:text-white transition-colors leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent"
-                >
-                  LinkedIn
-                </Link>
-                <Link
-                  href="#"
-                  className=" text-[30px] hover:text-white transition-colors leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent"
-                >
-                  Instagram
-                </Link>
-                <Link
-                  href="#"
-                  className=" text-[30px] hover:text-white transition-colors leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent"
-                >
-                  Dribbble
-                </Link>
-                <Link
-                  href="#"
-                  className=" text-[30px] hover:text-white transition-colors leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent"
-                >
-                  Behance
-                </Link>
-                <Link
-                  href="#"
-                  className=" text-[30px] hover:text-white transition-colors leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent"
-                >
-                  WhatsApp
-                </Link>
-                <Link
-                  href="#"
-                  className=" text-[30px] hover:text-white transition-colors leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent"
-                >
-                  Twitter
-                </Link>
-              </div>
+        {isOpen && (
+          <div className="flex flex-col gap-8 p-6">
+            <Link
+              href="#"
+              className="text-[#F8F8F8]/70 text-lg hover:text-white transition-colors"
+            >
+              LinkedIn
+            </Link>
+            <Link
+              href="#"
+              className="text-[#F8F8F8]/70 text-lg hover:text-white transition-colors"
+            >
+              Instagram
+            </Link>
+            <Link
+              href="#"
+              className="text-[#F8F8F8]/70 text-lg hover:text-white transition-colors"
+            >
+              Dribbble
+            </Link>
+            <Link
+              href="#"
+              className="text-[#F8F8F8]/70 text-lg hover:text-white transition-color"
+            >
+              Behance
+            </Link>
+            <Link
+              href="#"
+              className="text-[#F8F8F8]/70 text-lg hover:text-white transition-colors"
+            >
+              WhatsApp
+            </Link>
+            <Link
+              href="#"
+              className="text-[#F8F8F8]/70 text-lg hover:text-white transition-colors"
+            >
+              Twitter
+            </Link>
+          </div>
+        )}
+      </div>
+
+      {/* Desktop Layout (always visible) */}
+      <div className="hidden sm:flex flex-row flex-wrap justify-start gap-20 p-5">
+        {["LinkedIn", "Instagram", "Dribbble", "Behance", "WhatsApp", "Twitter"].map(
+          (item) => (
+            <Link
+              key={item}
+              href="#"
+              className="text-[30px] hover:text-white transition-colors leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent"
+            >
+              {item}
+            </Link>
+          )
+        )}
+      </div>
+    </>
+
             </RoundCornerWrapper>
           </div>
           <div

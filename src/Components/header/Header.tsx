@@ -55,7 +55,7 @@ const Header = () => {
         {/* Hamburger – mobile only */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden justify-self-end text-2xl focus:outline-none bg-[#181818] p-2 rounded-full"
+          className="md:hidden justify-self-end text-2xl focus:outline-none p-2 rounded-[8px] bg-[url('/menu-bg-hyper.svg')] bg-cover bg-center"
           aria-label="Toggle menu"
         >
           {open ? <HiX /> : <TfiLineDouble />}
@@ -64,13 +64,13 @@ const Header = () => {
 
       {/* Mobile Dropdown Menu */}
       {open && (
-        <div className="md:hidden absolute top-[110px] left-1/2 -translate-x-1/2 w-[95%] max-w-sm bg-[#181818]/80 backdrop-blur-md rounded-2xl shadow-lg border border-white/10 px-5 py-6 z-50">
+        <div className="md:hidden absolute top-[220px] left-1/2 -translate-x-1/2 w-[95%] max-w-sm bg-[#181818]/80 backdrop-blur-md rounded-2xl shadow-lg border border-white/10 px-5 py-6 z-50">
           {/* Top Row: Logo + Close */}
           <div className="flex justify-between items-center mb-6">
             <Logo />
             <button
               onClick={() => setOpen(false)}
-              className="text-sm border px-2 py-1 rounded-lg"
+              className="text-[16px] leading-[20px] border-0 rounded-[9px] p-[10px] bg-[url('/close-btn-bg.svg')] bg-cover bg-center text-white"
             >
               Close
             </button>
