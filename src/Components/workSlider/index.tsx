@@ -195,6 +195,7 @@ const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
     pauseOnHover: true,
     nextArrow: undefined,
     prevArrow: undefined,
+    arrows: false, // ✅ hides both next & prev arrows
     responsive: [
       {
         breakpoint: 768, // md breakpoint

@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import Button from '../button/Button';
 import CommonQuestion from '../commonQuestion';
-import Chip from '@/Components/CustomChip';
 import { useRouter } from 'next/navigation';
+import NewCustomChip from '../NewCustomChip/index';
 
 
 const PioneerDetail = () => {
@@ -24,14 +24,14 @@ const PioneerDetail = () => {
 
     <section className="flex flex-col md:flex-row items-start justify-center  max-w-7xl mx-auto">
       {/* Left Side - Image */}
-      <div className='w-[100%] md:w-[40%] border-r border-[#373737] p-[10px] md:px-[10px] md:py-[60px] lg:p-[60px]'  style={{boxSizing:'border-box',display:'flex',justifyContent:'center'}}>
+      <div className='w-[100%] md:w-[40%]  p-[10px] md:px-[10px] md:py-[60px] lg:p-[60px]'  style={{boxSizing:'border-box',display:'flex',justifyContent:'center'}}>
         <div className="md:w-[100%]">
-         {chipdata.map((item,index)=><div  key={'chipbox'+index} style={{display:'inline-block',marginLeft:'10px',marginTop:'10px'}}><Chip key={'chip'+index} label={item} value={item} isSelected={selectedChip === item} onSelect={handleChipSelect} /></div>)}
+         {chipdata.map((item,index)=><div  key={'chipbox'+index} style={{display:'inline-block',marginLeft:'10px',marginTop:'10px'}}><NewCustomChip key={'chip'+index} label={item} value={item} isSelected={selectedChip === item} onSelect={handleChipSelect} /></div>)}
         </div>
       </div>
 
       {/* Right Side - Text Content */}
-      <div className="hidden sm:flex w-[100%] md:w-[60%] flex-col justify-start p-[20px] md:px-[30px] md:py-[60px] lg:p-[60px]">
+      <div className="hidden border-l border-[#373737] sm:flex w-[100%] md:w-[60%] flex-col justify-start p-[20px] md:px-[30px] md:py-[60px] lg:p-[60px]">
         <div className='w-[120px]'>
         <CommonQuestion question='our vibe'/>
         </div>

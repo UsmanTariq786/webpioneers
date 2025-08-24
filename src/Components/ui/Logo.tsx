@@ -4,8 +4,8 @@ const Logo = () => {
   return (
     <div>
       <svg
-        width="70"
-        height="70"
+        width="58"
+        height="58"
         viewBox="0 0 84 84"
         fill="none"
         className="drop-shadow-[0_4px_24px_rgba(255,255,255,0.1)]"   

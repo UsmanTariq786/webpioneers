@@ -309,16 +309,53 @@ export default function Home() {
           ></div>
           <div style={{ width: "80.08%"}}>
             <RoundCornerWrapper>
-                <div className="flex overflow-x-auto no-scrollbar" style={{display:'flex',width:'100%'}}>
-                  {serviceCards.map((card: any) => (
+                <div className="flex md:hidden relative overflow-x-auto no-scrollbar">
+                  {serviceCards.map((card: any,index: number) => (
                     
                     <div                       
                        key={card.id+'card-servicespage'}
-                       style={{position:'relative',borderRight:'1px solid #373737',}} 
+                       style={{
+                        position: 'relative',
+                        borderRight: index === serviceCards.length - 1 ? 'none' : '1px solid #373737',
+                      }}
                        className="w-[320px] lg:w-[25%]"
                        >
+                        {/* Render dots only if NOT last index */}
+                        {index !== serviceCards.length - 1 && (
+                          <>
+                            <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -right-[5px] -top-[5px]"></div>
+                            <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
+                          </>
+                        )}
+
+                    <ServicesCard
+                      cardNumber={card.id}
+                      imageUrl={card.image}
+                      title={card.title}
+                      description={card.description}
+                    />
+                    </div>
+
+                  ))}
+                </div>
+                <div className="hidden md:flex" style={{width:'100%'}}>
+                  {serviceCards.map((card: any,index: number) => (
+                    
+                    <div                       
+                       key={card.id+'card-servicespage'}
+                       style={{
+                        position: 'relative',
+                        borderRight: index === serviceCards.length - 1 ? 'none' : '1px solid #373737',
+                      }}
+                       className="w-[320px] lg:w-[25%]"
+                       >
+                  {/* Render dots only if NOT last index */}
+                  {index !== serviceCards.length - 1 && (
+                    <>
                       <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -right-[5px] -top-[5px]"></div>
                       <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
+                    </>
+                  )}
 
                     <ServicesCard
                       cardNumber={card.id}
@@ -331,6 +368,7 @@ export default function Home() {
                   ))}
                 </div>
             </RoundCornerWrapper>
+            
           </div>
           <div
             style={{

@@ -127,10 +127,10 @@ const StepCard = ({ cardNumber, title, description, image }: CardProps) => (
     <div
       style={{
         border: "1.5px solid transparent",
-        borderImage: `linear-gradient(158.39deg, rgba(255,255,255,0.12), rgba(255,255,255,0))`,
-        borderImageSlice: 1,
+        // borderImage: `linear-gradient(158.39deg, rgba(255,255,255,0.12), rgba(255,255,255,0))`,
+        // borderImageSlice: 1,
         background: "rgba(248, 248, 248, 0.02)",
-        // padding: '40px',
+        padding: '40px',
         boxShadow: `
       0px 5px 1.5px -4px rgba(5, 5, 5, 0.25),
       0px 6px 4px -4px rgba(5, 5, 5, 0.1),
@@ -141,12 +141,15 @@ const StepCard = ({ cardNumber, title, description, image }: CardProps) => (
         backdropFilter: "blur(100px)",
         borderRadius: "40px",
         clipPath: "inset(0 round 40px)",
-        overflow: "visible",
+        overflow: "hidden", /* ensures child content stays clipped */
         textAlign: "center",
       }}
+      className="block md:hidden"
     >
-      <h3
-        className="
+
+      <div className="w-[100%] mx-auto">
+        <h3
+          className="
     font-rubik        /* custom font, explained below */
     font-medium 
     mt-[50px]       /* font-weight: 500 */
@@ -155,16 +158,16 @@ const StepCard = ({ cardNumber, title, description, image }: CardProps) => (
     tracking-normal    /* letter-spacing: 0% */
    
   "
-        style={{ color: "rgba(248, 248, 248, 0.95)" }}
-      >
-        {title}
-      </h3>
-      <p
-        className=" font-rubik font-normal mt-[15px] text-[16px] leading-[24px] tracking-normal text-[rgba(248,248,248,0.5)] w-[90%] xl:w-[292px] mb-[20px] mx-auto min-h-[74px]"
-      >
-        {description}
-      </p>
-
+          style={{ color: "rgba(248, 248, 248, 0.95)" }}
+        >
+          {title}
+        </h3>
+        <p
+          className=" font-rubik font-normal mt-[15px] text-[16px] leading-[24px] tracking-normal text-[rgba(248,248,248,0.5)] mb-[20px] mx-auto min-h-[74px]"
+        >
+          {description}
+        </p>
+      </div>
       <Image
         src={image}
         alt={title}
@@ -174,6 +177,57 @@ const StepCard = ({ cardNumber, title, description, image }: CardProps) => (
         className="rounded-lg object-contain w-full" // w-full for full container width
       />
     </div>
+
+    <div
+      className="
+    hidden
+    md:block
+    relative 
+    rounded-[40px] 
+    overflow-hidden 
+    border 
+    border-transparent 
+    backdrop-blur-[100px] 
+    text-center 
+       p-6 
+    bg-[url('/home-card-mobile-bg.svg')] 
+    bg-cover 
+    bg-center
+    bg-no-repeat
+  "
+    >
+
+      <div className="w-[100%] mx-auto">
+        <h3
+          className="
+    font-rubik        /* custom font, explained below */
+    font-medium 
+    mt-[50px]       /* font-weight: 500 */
+    text-[20px]        /* font-size */
+    leading-[24px]     /* line-height */
+    tracking-normal    /* letter-spacing: 0% */
+   
+  "
+          style={{ color: "rgba(248, 248, 248, 0.95)" }}
+        >
+          {title}
+        </h3>
+        <p
+          className=" font-rubik font-normal mt-[15px] text-[16px] leading-[24px] tracking-normal text-[rgba(248,248,248,0.5)] mb-[20px] mx-auto min-h-[74px]"
+        >
+          {description}
+        </p>
+      </div>
+      <Image
+        src={image}
+        alt={title}
+        layout="responsive" // makes the image responsive to container width
+        width={360} // intrinsic width (aspect ratio)
+        height={200} // intrinsic height (aspect ratio)
+        className="rounded-lg object-contain w-full" // w-full for full container width
+      />
+    </div>
+
   </div>
 );
 
