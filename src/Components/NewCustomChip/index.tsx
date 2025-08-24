@@ -25,7 +25,7 @@ const Chip = ({ label, value, isSelected, onSelect }: ChipProps) => {
         <span className="absolute inset-0 -z-10 rounded-full bg-[var(--color-accent-orange)]" />
       ) : (
         <Image
-          src="/chip-bg.svg"
+          src="/chip-bg.png"
           alt="chip background"
           fill
           className="absolute inset-0 -z-10 object-cover"

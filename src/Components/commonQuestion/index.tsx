@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
 
 interface CommonQuestionProps {
   question: string;
+  uppercase?: boolean; // optional prop
 }
 
-const CommonQuestion: React.FC<CommonQuestionProps> = ({ question }) => {
+const CommonQuestion: React.FC<CommonQuestionProps> = ({ question, uppercase = true }) => {
   return (
     <div>
       <div
@@ -15,7 +16,11 @@ const CommonQuestion: React.FC<CommonQuestionProps> = ({ question }) => {
         }}
       >
         <div className="rounded-[14.5px] bg-[#202020] bg-opacity-20">
-          <button className="w-full h-full rounded-[14.5px] bg-transparent font-rubik text-xs uppercase tracking-wider px-6 py-2 font-semibold text-[rgba(248,248,248,0.5)]">
+          <button
+            className={`w-full h-full rounded-[14.5px] bg-transparent font-rubik text-xs tracking-wider px-6 py-2 font-semibold text-[rgba(248,248,248,0.5)] ${
+              uppercase ? "uppercase" : ""
+            }`}
+          >
             {question}
           </button>
         </div>

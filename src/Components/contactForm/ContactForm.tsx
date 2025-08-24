@@ -211,7 +211,7 @@ export default function ContactForm() {
 
                   {showServiceDropdown && (
                     <div 
-                    className="absolute right-[0px] py-2 z-50 mt-0 w-[100%] bg-[#282828] rounded-[30px] shadow-xl border border-[#393939] overflow-hidden"
+                    className="absolute right-[0px] py-2 z-50 mt-0 w-[100%]  md:w-[390px] bg-[#282828] rounded-[30px] shadow-xl border border-[#393939] overflow-hidden"
                     >
                       {services.map((service) => (
                         <label
@@ -275,7 +275,7 @@ export default function ContactForm() {
 
                   {showBudgetDropdown && (
                     <div 
-                    className="absolute right-[0px] py-2 z-50 mt-0 w-[100%] bg-[#282828] rounded-[30px] shadow-xl border border-[#393939] overflow-hidden">
+                    className="absolute right-[0px] py-2 z-50 mt-0 w-[100%] md:w-[390px]  bg-[#282828] rounded-[30px] shadow-xl border border-[#393939] overflow-hidden">
                       {budgets.map((budget) => (
                         <label
                           key={budget+'yaallahbudget'}
@@ -448,7 +448,7 @@ export default function ContactForm() {
                   </button>
 
                   {showServiceDropdown && (
-                    <div className="absolute right-[0px] py-2 z-50 mt-0 w-[100%] bg-[#282828] rounded-[30px] shadow-xl border border-[#393939] overflow-hidden">
+                    <div className="absolute right-[0px] py-2 z-50 mt-0 w-[100%] md:w-[390px]  bg-[#282828] rounded-[30px] shadow-xl border border-[#393939] overflow-hidden">
                       {services.map((service) => (
                         <label
                           key={service+'yaallah'}
@@ -508,7 +508,7 @@ export default function ContactForm() {
                   </button>
 
                   {showBudgetDropdown && (
-                    <div className="absolute right-[0px] py-2 z-50 mt-0 w-[100%] bg-[#282828] rounded-[30px] shadow-xl border border-[#393939] overflow-hidden">
+                    <div className="absolute right-[0px] py-2 z-50 mt-0 w-[100%] md:w-[390px]  bg-[#282828] rounded-[30px] shadow-xl border border-[#393939] overflow-hidden">
                       {budgets.map((budget) => (
                         <label
                           key={budget+'yaallahbudget'}

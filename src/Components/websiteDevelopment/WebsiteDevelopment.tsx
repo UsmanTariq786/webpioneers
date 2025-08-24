@@ -56,8 +56,8 @@ const WebsiteDevelopment = () => {
 
       {/* Right Section: Logos + Code Image */}
       <div
-        className="hidden xl:flex gap-4 w-full sm:w-[60%] p-10 justify-end"
-        style={{ background: "url('/Starts.svg')" }}
+        className="hidden md:flex gap-4 w-full sm:w-[70%] p-10 justify-end"
+        style={{ background: "url('/web-star.svg')" }}
       >
         {/* Vertical Logos */}
         <div className="md:hidden sm:flex flex-col gap-3">
@@ -69,7 +69,7 @@ const WebsiteDevelopment = () => {
         </div>
 
         {/* Main Code Image */}
-        <div className="relative">
+        <div className="relative flex justify-center md:justify-end items-start">
           <Image
             src="/webdevelopment.svg"
             width={470}
