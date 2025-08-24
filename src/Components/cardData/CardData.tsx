@@ -40,7 +40,7 @@ const MobileCards = () => (
     <div className="flex no-scrollbar flex-nowrap overflow-x-auto overflow-y-hidden p-1 m-[-5px]">
         {cardsData.map((card, index) => (
             <div key={index} className='min-w-[300px] max-w-[300px] shrink-0'>
-                <RoundCornerWrapper>
+                <RoundCornerWrapper left={index===0 ? true :false}>
                     <div className="p-6 min-h-[400px]">
                     <div className='my-2 mb-14 flex items-center'>
                             <div className='w-2 h-2 rounded-full bg-[#F8F8F880] mr-2'></div>
@@ -59,10 +59,11 @@ const MobileCards = () => (
 
 // Component for the large screen grid layout
 const LargeScreenCards = () => (
-    <div className="grid grid-cols-4 md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 ">
+        <RoundCornerWrapper bottom={false} right={false}>
+    <div className="grid grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 sm:grid-cols-2 ">
         {cardsData.map((card, index) => (
             <div key={index}>
-                <RoundCornerWrapper>
+                <RoundCornerWrapper left={false} top={false}>
                     <div className="p-5 min-h-[400px]">
                         <div className='my-2 mb-14 flex items-center'>
                             <div className='w-2 h-2 rounded-full bg-[#F8F8F880] mr-2'></div>
@@ -77,6 +78,7 @@ const LargeScreenCards = () => (
             </div>
         ))}
     </div>
+        </RoundCornerWrapper>
 );
 
 // Main component that switches between the two layouts
@@ -87,7 +89,7 @@ function CardData() {
         const handleResize = () => {
             // This is a common way to check for a mobile breakpoint in JS.
             // Tailwind's 'lg' breakpoint is 1024px.
-            setIsMobile(window.innerWidth < 900);
+            setIsMobile(window.innerWidth < 1000);
         };
 
         handleResize(); // Set initial state
