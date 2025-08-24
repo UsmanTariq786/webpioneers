@@ -22,17 +22,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="block md:hidden">
-  <div className="w-full flex">
-    <div className="w-[9.95%] box-border border-b border-[#373737]"></div>
-    <div className="w-[80.08%]">
-      <RoundCornerWrapper>
-        <ProgressBar progress={40} />
-      </RoundCornerWrapper>
-    </div>
-    <div className="w-[9.95%] box-border border-b border-[#373737]"></div>
-  </div>
-</section>
+
 
   <section>
   <div className="w-full flex">
@@ -46,6 +36,17 @@ export default function Home() {
       </RoundCornerWrapper>
     </div>
     <div className="w-[9.95%] border-b border-[#373737]"></div>
+  </div>
+</section>
+<section className="block md:hidden">
+  <div className="w-full flex">
+    <div className="w-[9.95%] box-border border-b border-[#373737]"></div>
+    <div className="w-[80.08%]">
+      <RoundCornerWrapper top={false}>
+        <ProgressBar progress={40} />
+      </RoundCornerWrapper>
+    </div>
+    <div className="w-[9.95%] box-border border-b border-[#373737]"></div>
   </div>
 </section>
   {/* <section>
