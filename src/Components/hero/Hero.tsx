@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Button from "../button/Button";
+import CommonQuestion from "../commonQuestion/index";
 
 const Hero = () => {
   return (
@@ -14,15 +15,9 @@ const Hero = () => {
           </p>
         </div>
       </div> */}
-
-       <div className="w-[90%] mx-auto md:w-auto p-[1.5px] mb-4 rounded-[32px] bg-[url('/border-hero-section-mobile.svg')] md:bg-[url('/border-hero-section.svg')] bg-no-repeat bg-cover">
-        <div className="rounded-[32px] backdrop-blur-[32px] bg-[rgba(18,18,18,0.4)]">
-          <p className="px-[10px] md:px-[32px] py-[12px] md:py-[14px] text-[14px] md:text-lg leading-[24px] md:leading-[24px] font-medium text-center rounded-full text-[rgba(118,118,118,1)]">
-            200+ companies have scaled faster with our design solutions
-          </p>
-        </div>
-      </div>
-
+<div className="pb-[20px]">
+   <CommonQuestion question="200+ companies have scaled faster with our design solutions" uppercase={false} />
+   </div>
 
       <div className="absolute left-10 xl:left-10 top-[25%] hidden lg:flex items-center gap-1">
         <p
