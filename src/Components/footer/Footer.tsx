@@ -345,7 +345,7 @@ const Footer = () => {
     backgroundColor: "rgba(212, 84, 29, 0.95)",
     padding: "20px 0",
   }}
-  className="flex w-full overflow-x-auto whitespace-nowrap scrollbar-hide"
+  className="flex w-full  whitespace-nowrap scrollbar-hide overflow-clip"
 >
   <p className="font-[Rubik] font-normal text-[50px] leading-[100%] md:text-[138px] tracking-[-0.02em] mr-4 shrink-0">
     Get in touch
