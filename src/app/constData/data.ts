@@ -8,26 +8,26 @@ interface ServiceCard {
 const serviceCards: ServiceCard[] = [
   {
     id: 1,
-    image:"/service1.svg",
+    image:"/service1.png",
     title: "Send us a message",
     description: "Have an idea or project? Just drop us a line and we'll take it from there."
   },
   {
     id: 2,
     title: "Meet us online",
-     image:"/service2.svg",
+     image:"/service2.png",
     description: "Hop on a quick call so we can hear your goals and figure out next steps."
   },
   {
     id: 3,
     title: "Free estimation",
-     image:"/estimation.svg",
+     image:"/service3.png",
     description: "Tell us what you need and we'll send a simple, no-strings quote."
   },
   {
     id: 4,
     title: "Work together",
-    image:"/service4.svg",
+    image:"/service4.png",
     description: "We help founders turn ideas into polished, launch-ready products."
   }
 ];

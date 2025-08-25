@@ -66,15 +66,15 @@ export const FAQAccordion = () => {
           <div style={{ width: "80.08%" }}>
             <RoundCornerWrapper>
                 <div className="p-[20px] md:[0px] sm:ml-20 max-w-md  mt-[25px] mb-[30px]">
-  <div className="w-[200px]">
-    <CommonQuestion question="Got Questions?" />
-  </div>
-  <div className="w-full md:w-[400px] mt-[10px]">
-    <p className="w-full font-rubik font-normal text-[32px] sm:text-[48px] leading-tight sm:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
-      Frequently Asked Questions
-    </p>
-  </div>
-</div>
+                  <div className="w-[200px]">
+                    <CommonQuestion question="Got Questions?" />
+                  </div>
+                  <div className="w-full md:w-[400px] mt-[10px]">
+                    <p className="w-full font-rubik font-normal text-[32px] sm:text-[48px] leading-tight sm:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
+                      Frequently Asked Questions
+                    </p>
+                  </div>
+                </div>
             </RoundCornerWrapper>
           </div>
           <div
@@ -115,13 +115,13 @@ export const FAQAccordion = () => {
                     className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                       activeId === "1"
                         ? "bg-orange-500 text-white"
-                        : "bg-gray-700 text-gray-400 group-hover:bg-gray-600"
+                        : "bg-[url('/circle-icon-button.png')] bg-cover bg-center"
                     }`}
                   >
                     {activeId === "1" ? (
-                      <Minus className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <Minus className="w-4 h-4 sm:w-5 sm:h-5 text-[#F8F8F8F2]" />
                     ) : (
-                      <Plus className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <Plus className="w-4 h-4 sm:w-5 sm:h-5 text-[#F8F8F8F2]" />
                     )}
                   </div>
                 </div>
@@ -185,13 +185,13 @@ export const FAQAccordion = () => {
                     className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                       activeId === "2"
                         ? "bg-orange-500 text-white"
-                        : "bg-gray-700 text-gray-400 group-hover:bg-gray-600"
+                        : "bg-[url('/circle-icon-button.png')] bg-cover bg-center"
                     }`}
                   >
                     {activeId === "2" ? (
-                      <Minus className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <Minus className="w-4 h-4 sm:w-5 sm:h-5 text-[#F8F8F8F2]" />
                     ) : (
-                      <Plus className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <Plus className="w-4 h-4 sm:w-5 sm:h-5 text-[#F8F8F8F2]" />
                     )}
                   </div>
                 </div>
@@ -257,13 +257,13 @@ export const FAQAccordion = () => {
                     className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                       activeId === "3"
                         ? "bg-orange-500 text-white"
-                        : "bg-gray-700 text-gray-400 group-hover:bg-gray-600"
+                        : "bg-[url('/circle-icon-button.png')] bg-cover bg-center"
                     }`}
                   >
                     {activeId === "3" ? (
-                      <Minus className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <Minus className="w-4 h-4 sm:w-5 sm:h-5 text-[#F8F8F8F2]" />
                     ) : (
-                      <Plus className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <Plus className="w-4 h-4 sm:w-5 sm:h-5 text-[#F8F8F8F2]" />
                     )}
                   </div>
                 </div>
@@ -328,13 +328,13 @@ export const FAQAccordion = () => {
                     className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                       activeId === "4"
                         ? "bg-orange-500 text-white"
-                        : "bg-gray-700 text-gray-400 group-hover:bg-gray-600"
+                        : "bg-[url('/circle-icon-button.png')] bg-cover bg-center"
                     }`}
                   >
                     {activeId === "4" ? (
-                      <Minus className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <Minus className="w-4 h-4 sm:w-5 sm:h-5 text-[#F8F8F8F2]" />
                     ) : (
-                      <Plus className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <Plus className="w-4 h-4 sm:w-5 sm:h-5 text-[#F8F8F8F2]" />
                     )}
                   </div>
                 </div>
@@ -396,13 +396,13 @@ export const FAQAccordion = () => {
                     className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                       activeId === "5"
                         ? "bg-orange-500 text-white"
-                        : "bg-gray-700 text-gray-400 group-hover:bg-gray-600"
+                        : "bg-[url('/circle-icon-button.png')] bg-cover bg-center"
                     }`}
                   >
                     {activeId === "5" ? (
-                      <Minus className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <Minus className="w-4 h-4 sm:w-5 sm:h-5 text-[#F8F8F8F2]" />
                     ) : (
-                      <Plus className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <Plus className="w-4 h-4 sm:w-5 sm:h-5 text-[#F8F8F8F2]" />
                     )}
                   </div>
                 </div>

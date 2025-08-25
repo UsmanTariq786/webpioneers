@@ -8,7 +8,7 @@ const WebsiteDesignFeature = () => {
 
   const cardData = 
     {
-      image: "/scales.svg",
+      image: "/scales.png",
       title: "Website design (UX UI)",
       description: " We design websites that look great, feel right, and turn visitors into happy customers."
     }

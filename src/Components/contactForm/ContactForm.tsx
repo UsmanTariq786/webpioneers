@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
 import RoundCornerWrapper from "../RoundCornerWrapper";
 import CommonQuestion from "../commonQuestion";
+import Image from "next/image";
 
 const services = [
   "UI UX / Branding",
@@ -35,13 +35,13 @@ export default function ContactForm() {
             }}
           ></div>
           <div style={{ width: "79.95%" }}>
-            <div className="p-[20px] md:p-0 sm:ml-20 max-w-md  mt-[25px] mb-[30px]">
-              <div className="w-[225px]">
+            <div className="p-[20px] md:p-0 sm:ml-20 max-w-md my-12">
+              <div className="w-[300px]">
                 <CommonQuestion question="We’re Available for New Projects" />
               </div>
-              <div className="w-full md:w-[400px] mt-[10px]">
+              <div className="w-full md:w-[100%] mt-[16px]">
                 <p className="w-full font-rubik font-normal text-[32px] md:text-[48px] leading-[40px] md:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
-                  Ready to Share Your Vision?
+                  Ready to Share <br /> Your Vision?
                 </p>
               </div>
             </div>
@@ -115,7 +115,7 @@ export default function ContactForm() {
                 <input
                   type="text"
                   placeholder="Full name"
-                  className="w-full  rounded-lg px-4 py-4 text-white placeholder-[rgba(118, 118, 118, 1)] focus:outline-none "
+                  className="w-full  rounded-lg px-4 py-6 text-white placeholder-[rgba(118, 118, 118, 1)] focus:outline-none "
                 />
               </div>
 
@@ -123,7 +123,7 @@ export default function ContactForm() {
                 <input
                   type="text"
                   placeholder="Company name"
-                  className="w-full   rounded-lg px-4 py-4 text-white placeholder-[rgba(118, 118, 118, 1)] focus:outline-none "
+                  className="w-full   rounded-lg px-4 py-6 text-white placeholder-[rgba(118, 118, 118, 1)] focus:outline-none "
                 />
               </div>
             </div>
@@ -156,7 +156,7 @@ export default function ContactForm() {
                 <input
                   type="text"
                   placeholder="Full name"
-                  className="w-full  rounded-lg px-4 py-4 text-white placeholder-[rgba(118, 118, 118, 1)] focus:outline-none "
+                  className="w-full  rounded-lg px-4 py-6 text-white placeholder-[rgba(118, 118, 118, 1)] focus:outline-none "
                 />
                 </RoundCornerWrapper>
               </div>
@@ -165,7 +165,7 @@ export default function ContactForm() {
                 <input
                   type="text"
                   placeholder="Company name"
-                  className="w-full   rounded-lg px-4 py-4 text-white placeholder-[rgba(118, 118, 118, 1)] focus:outline-none "
+                  className="w-full   rounded-lg px-4 py-6 text-white placeholder-[rgba(118, 118, 118, 1)] focus:outline-none "
                 />
                 </RoundCornerWrapper>
               </div>
@@ -174,7 +174,7 @@ export default function ContactForm() {
                 <input
                     type="tel"
                     placeholder="Phone number"
-                    className="w-full placeholder-[rgba(118, 118, 118, 1)] rounded-lg px-4 py-4 text-white"
+                    className="w-full placeholder-[rgba(118, 118, 118, 1)] rounded-lg px-4 py-6 text-white"
                   />
                 </RoundCornerWrapper>
               </div>
@@ -183,7 +183,7 @@ export default function ContactForm() {
                 <input
                   type="email"
                   placeholder="Email"
-                  className="w-full  rounded-lg px-4 py-4 text-white placeholder-[rgba(118, 118, 118, 1)] focus:outline-none "
+                  className="w-full  rounded-lg px-4 py-6 text-white placeholder-[rgba(118, 118, 118, 1)] focus:outline-none "
                 />
                 </RoundCornerWrapper>
               </div>
@@ -193,7 +193,7 @@ export default function ContactForm() {
                 <div className="relative">
                   <button
                     onClick={() => setShowServiceDropdown(!showServiceDropdown)}
-                    className="flex justify-between items-center w-full   rounded-lg px-4 py-4  focus:outline-none "
+                    className="flex justify-between items-center w-full   rounded-lg px-4 py-6  focus:outline-none "
                   >
                     <span
                       className={
@@ -202,11 +202,16 @@ export default function ContactForm() {
                     >
                       {selectedService || "Service required"}
                     </span>
-                    <ChevronDown
-                      className={`w-5 h-5 text-gray-400 transition-transform ${
-                        showServiceDropdown ? "rotate-180" : ""
-                      }`}
-                    />
+                    <Image
+                    src="/circle-icon1.png"
+                    alt="Dropdown Icon"
+                    width={35}
+                    height={35}
+                    className={`transition-transform ${
+                      showServiceDropdown ? "rotate-180" : ""
+                    }`}
+                  />
+
                   </button>
 
                   {showServiceDropdown && (
@@ -257,7 +262,7 @@ export default function ContactForm() {
                 <div className="relative">
                   <button
                     onClick={() => setShowBudgetDropdown(!showBudgetDropdown)}
-                    className="flex justify-between items-center w-full  rounded-lg px-4 py-4  focus:outline-none"
+                    className="flex justify-between items-center w-full  rounded-lg px-4 py-6  focus:outline-none"
                   >
                     <span
                       className={
@@ -266,11 +271,16 @@ export default function ContactForm() {
                     >
                       {selectedBudget || "Project Budget"}
                     </span>
-                    <ChevronDown
-                      className={`w-5 h-5 text-gray-400 transition-transform ${
-                        showBudgetDropdown ? "rotate-180" : ""
+                    <Image
+                      src="/circle-icon1.png"
+                      alt="Dropdown Icon"
+                      width={35}
+                      height={35}
+                      className={`transition-transform ${
+                        showServiceDropdown ? "rotate-180" : ""
                       }`}
                     />
+
                   </button>
 
                   {showBudgetDropdown && (
@@ -317,7 +327,7 @@ export default function ContactForm() {
                 <RoundCornerWrapper>
                 <textarea
                     placeholder="Project detail"
-                    className="w-full  rounded-lg px-4 py-4 text-white placeholder-text-[#767676] focus:outline-none  transition-colors min-h-[120px] resize-none"
+                    className="w-full  rounded-lg px-4 py-6 text-white placeholder-text-[#767676] focus:outline-none  transition-colors min-h-[200px] resize-none"
                   />
                 </RoundCornerWrapper>
               </div>
@@ -326,7 +336,7 @@ export default function ContactForm() {
                 <RoundCornerWrapper>
                 <textarea
                   placeholder="Tell us about your project"
-                  className="w-full  rounded-lg px-4 py-4 text-white placeholder-text-[#767676] focus:outline-none min-h-[120px] resize-none"
+                  className="w-full  rounded-lg px-4 py-6 text-white placeholder-text-[#767676] focus:outline-none min-h-[200px] resize-none"
                 />
                 </RoundCornerWrapper>
               </div>
@@ -386,7 +396,7 @@ export default function ContactForm() {
                   <input
                     type="tel"
                     placeholder="Phone number"
-                    className="w-full placeholder-[rgba(118, 118, 118, 1)] rounded-lg px-4 py-4 text-white"
+                    className="w-full placeholder-[rgba(118, 118, 118, 1)] rounded-lg px-4 py-6 text-white"
                   />
                 </RoundCornerWrapper>
               </div>
@@ -398,7 +408,7 @@ export default function ContactForm() {
                 <input
                   type="email"
                   placeholder="Email"
-                  className="w-full  rounded-lg px-4 py-4 text-white placeholder-[rgba(118, 118, 118, 1)] focus:outline-none "
+                  className="w-full  rounded-lg px-4 py-6 text-white placeholder-[rgba(118, 118, 118, 1)] focus:outline-none "
                 />
               </div>
             </div>
@@ -431,7 +441,7 @@ export default function ContactForm() {
                 <div className="relative">
                   <button
                     onClick={() => setShowServiceDropdown(!showServiceDropdown)}
-                    className="flex justify-between items-center w-full   rounded-lg px-4 py-4  focus:outline-none "
+                    className="flex justify-between items-center w-full   rounded-lg px-4 py-6  focus:outline-none "
                   >
                     <span
                       className={
@@ -440,8 +450,12 @@ export default function ContactForm() {
                     >
                       {selectedService || "Service required"}
                     </span>
-                    <ChevronDown
-                      className={`w-5 h-5 text-gray-400 transition-transform ${
+                    <Image
+                      src="/circle-icon1.png"
+                      alt="Dropdown Icon"
+                      width={35}
+                      height={35}
+                      className={`transition-transform ${
                         showServiceDropdown ? "rotate-180" : ""
                       }`}
                     />
@@ -491,7 +505,7 @@ export default function ContactForm() {
                 <div className="relative">
                   <button
                     onClick={() => setShowBudgetDropdown(!showBudgetDropdown)}
-                    className="flex justify-between items-center w-full  rounded-lg px-4 py-4  focus:outline-none"
+                    className="flex justify-between items-center w-full  rounded-lg px-4 py-6  focus:outline-none"
                   >
                     <span
                       className={
@@ -500,9 +514,13 @@ export default function ContactForm() {
                     >
                       {selectedBudget || "Project Budget"}
                     </span>
-                    <ChevronDown
-                      className={`w-5 h-5 text-gray-400 transition-transform ${
-                        showBudgetDropdown ? "rotate-180" : ""
+                    <Image
+                      src="/circle-icon1.png"
+                      alt="Dropdown Icon"
+                      width={35}
+                      height={35}
+                      className={`transition-transform ${
+                        showServiceDropdown ? "rotate-180" : ""
                       }`}
                     />
                   </button>
@@ -574,7 +592,7 @@ export default function ContactForm() {
                 <RoundCornerWrapper>
                   <textarea
                     placeholder="Project detail"
-                    className="w-full  rounded-lg px-4 py-4 text-white placeholder-text-[#767676] focus:outline-none  transition-colors min-h-[120px] resize-none"
+                    className="w-full  rounded-lg px-4 py-6 text-white placeholder-text-[#767676] focus:outline-none  transition-colors min-h-[200px] resize-none"
                   />
                 </RoundCornerWrapper>
               </div>
@@ -585,7 +603,7 @@ export default function ContactForm() {
 
                 <textarea
                   placeholder="Tell us about your project"
-                  className="w-full  rounded-lg px-4 py-4 text-white placeholder-text-[#767676] focus:outline-none min-h-[120px] resize-none"
+                  className="w-full  rounded-lg px-4 py-6 text-white placeholder-text-[#767676] focus:outline-none min-h-[200px] resize-none"
                 />
               </div>
             </div>
@@ -613,7 +631,7 @@ export default function ContactForm() {
           ></div>
           <div style={{ width: "79.95%" }}>
             <div className="flex">
-              <div className="w-[50%] p-5" style={{borderRight: "1px solid #373737",position:'relative'}}>
+              <div className="w-[50%] p-8" style={{borderRight: "1px solid #373737",position:'relative'}}>
                 <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
 
                 <div className="w-[60%]">
@@ -629,7 +647,7 @@ export default function ContactForm() {
                 </div>
               </div>
 
-              <div className="w-[50%] p-5 flex justify-end">
+              <div className="w-[50%] p-8 flex justify-end">
                 <button className="bg-[#D4541D] hover:bg-[#D4541D]/90 text-white text-[17px] px-6 py-3 rounded-full transition-colors">
                   Send Inquiry
                 </button>

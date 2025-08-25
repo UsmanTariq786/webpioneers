@@ -13,12 +13,12 @@ const logos = [
 
 const PartnersSection = () => (
   <section className="py-8 text-center">
-    <h2 className="text-[18px] leading-[24px] font-medium text-center text-[rgba(183,183,183,1)] font-rubik">
+    <h2 className="text-[16px] leading-[22px] font-medium text-center text-[rgba(183,183,183,1)] font-rubik">
       Our Partners in Growth
     </h2>
 
     {/* ✅ Horizontal scroll on mobile, wrap on larger screens */}
-    <div className="flex overflow-x-auto xl:overflow-visible no-scrollbar gap-6 px-6 mt-3 xl:flex-wrap xl:justify-between">
+    <div className="flex overflow-x-auto xl:overflow-visible no-scrollbar gap-6 px-6 mt-[40px] xl:flex-wrap xl:justify-between">
       {logos.map((logo, i) => (
         <Image
           key={logo + 'whatlogisthis'}

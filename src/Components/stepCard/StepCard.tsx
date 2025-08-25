@@ -90,7 +90,7 @@ const StepCard = ({ cardNumber, title, description, image }: CardProps) => (
         height: '40px',
         position: 'absolute',
         zIndex: 10,
-        top: 0,
+        top: "8px",
         left: '50%',
         transform: 'translate(-50%, -50%)',
       }}
@@ -163,7 +163,7 @@ const StepCard = ({ cardNumber, title, description, image }: CardProps) => (
           {title}
         </h3>
         <p
-          className=" font-rubik font-normal mt-[15px] text-[16px] leading-[24px] tracking-normal text-[rgba(248,248,248,0.5)] mb-[20px] mx-auto min-h-[74px]"
+          className="font-rubik font-normal mt-[15px] text-[16px] leading-[24px] tracking-normal text-[rgba(248,248,248,0.5)] mb-[20px] mx-auto min-h-[74px]"
         >
           {description}
         </p>
@@ -213,7 +213,7 @@ const StepCard = ({ cardNumber, title, description, image }: CardProps) => (
           {title}
         </h3>
         <p
-          className=" font-rubik font-normal mt-[15px] text-[16px] leading-[24px] tracking-normal text-[rgba(248,248,248,0.5)] mb-[20px] mx-auto min-h-[74px]"
+          className=" font-rubik font-normal mt-[15px] text-[14px] leading-[22px] tracking-normal text-[rgba(248,248,248,0.5)] max-w-[258px] mb-[20px] mx-auto min-h-[74px]"
         >
           {description}
         </p>

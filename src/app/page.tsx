@@ -172,7 +172,7 @@ export default function Home() {
           ></div>
           <div style={{ width: "80.08%" }}>
             <RoundCornerWrapper>
-             <div className="ml-[20px] mr-[20px] sm:ml-20 max-w-md  mt-[25px] mb-[30px]">
+             <div className="ml-[20px] mr-[20px] sm:ml-20 max-w-md my-14">
               <div className="w-[200px]">
                 <CommonQuestion question="Stuff We've Made" />
               </div>

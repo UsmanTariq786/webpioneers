@@ -215,7 +215,7 @@ const Testimonials = () => {
                 whiteSpace: 'normal',
               }}
             >
-              <div className='w-[300px] md:w-[50%] lg:w-[90%] overflow-x-auto'>
+              <div className='w-[300px] md:w-[50%] lg:w-[600px] text-[16px] overflow-x-auto mx-auto'>
               “{t.quote}”
               </div>
             </div>

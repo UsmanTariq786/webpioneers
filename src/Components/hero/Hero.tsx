@@ -42,7 +42,7 @@ const Hero = () => {
         We’re a design & development agency that delivers results
       </h1>
 
-      <p className="text-[18px] leading-[29px] md:text-[20px] md:leading-[32px] font-normal text-center max-w-[556px] text-[rgba(248,248,248,0.7)]">
+      <p className="text-[18px] leading-[29px] md:text-[18px] md:leading-[30px] font-normal text-center max-w-[556px] text-[rgba(248,248,248,0.7)]">
         At Web Pioneers, we mix smart design with clean code to help your brand
         stand out and sell more.
       </p>
@@ -61,7 +61,7 @@ const Hero = () => {
               backdrop-blur-[32px] shadow-[inset_2px_4px_16px_rgba(248,248,248,0.06),_0px_24px_32px_-12px_var(--NeutralNeutral410)] 
               rounded-[32px] text-white"
           >
-            <p className="px-4 py-1.5 text-sm font-medium rounded-full">
+            <p className="px-4 py-1.5 text-xs font-medium rounded-full">
               Pioneers
             </p>
           </div>

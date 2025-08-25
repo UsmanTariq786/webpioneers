@@ -17,7 +17,7 @@ const BrandIdentity = () => {
         <p className="w-[90%] text-[32px] leading-[40px] md:text-[48px] md:leading-[56px] font-normal font-['Rubik'] text-center tracking-[-0.02em]
           bg-[linear-gradient(92.95deg,_rgba(248,248,248,0.9)_0.1%,_rgba(248,248,248,0.5)_100.1%)]
           bg-clip-text text-transparent max-w-[550px] mt-[20px]">
-          Everything You Need (and Nothing You Don't)
+          Everything you need (and nothing you don’t)
         </p>
 
         <div className="mt-7">
@@ -44,7 +44,7 @@ const BrandIdentity = () => {
           <div className="w-full xl:w-[30%] flex flex-col md:flex-row xl:flex-row md:gap-4 justify-end">
             {/* Card always visible */}
             <WebCard
-              image="/rings.svg"
+              image="/advice-step-icon-container.png"
               title="Brand guidelines"
               description="We help shape your brand’s personality and build a visual style that actually feels like you."
             />
