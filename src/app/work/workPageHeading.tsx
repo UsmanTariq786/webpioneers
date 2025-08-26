@@ -3,12 +3,12 @@ import rubik from "@/app/fonts";
 
 const WorkPageHeading = () => {
   return (
-    <div className='p-4 pl-4 md:p-10 md:pl-20'>
+    <div className='p-4 pl-4 md:p-10 md:pl-20 mt-4'>
       <img src='tagline.svg' alt="stuff we have made" />
       <h1
-        className={`${rubik.className} w-full text-[2rem] mt-[10px] sm:text-[2rem] md:text-[3rem] font-[400] mb-6 bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0%,rgba(248,248,248,0.5)_100%)] text-transparent bg-clip-text leading-tight`}
+        className={`${rubik.className} w-full text-[32px] mt-[10px] sm:text-[32px] md:text-[48px] font-[400] mb-6 bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0%,rgba(248,248,248,0.5)_100%)] text-transparent bg-clip-text leading-tight`}
       >
-        Projects we're proud of
+        Projects we're <br className='hidden md:block' /> proud of
       </h1>
     </div>
   )

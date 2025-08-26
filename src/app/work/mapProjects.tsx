@@ -36,7 +36,7 @@ const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
   return (
     <div className="">
       {/* <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6"> */}
-      <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 ">
+      <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 ">
         {filteredProjects.map((project, index) => (
           <div key={index+'yahayyiyaqaeym'}>
           <RoundCornerWrapper top={false} right={false}> 

@@ -49,7 +49,7 @@ const FolderWorkDesignComp = ({
           className="absolute transition-all duration-300  top-[40%] group-hover:top-[30%] left-[10%] group-hover:left-[6%] w-[50%] h-[50%] object-cover rounded-xl -rotate-10 z-20 border-2 border-[#6D6D6D] md:top-[40%] md:left-[10%] md:w-[50%] md:h-[50%] md:-rotate-15"
         />
         {/* Top Layer (Completing Folder Design) */}
-        <div className="absolute bottom-0 w-full h-[45%] group-hover:h-[30%] transition-all duration-300 bg-[linear-gradient(180deg,#7F7F7F_-76.19%,#333333_100%)] z-40 rounded-2xl"></div>
+        <div className="absolute bottom-0 w-full h-[45%] group-hover:h-[30%] transition-all duration-300 bg-[linear-gradient(180deg,#7F7F7F_-76.19%,#333333_100%)] z-40 rounded-xl md:rounded-2xl"></div>
         {/* Icon on Top Layer */}
         <img
           src="/shortlogo.png"
@@ -57,11 +57,11 @@ const FolderWorkDesignComp = ({
           className="absolute bottom-[10px] right-[10px] z-50 md:bottom-[15px] md:right-[15px] w-[20px] sm:w-[25px] lg:w-[30px]"
         />
       </div>
-      <div className="text-center mt-[25px] md:mt-16">
-  <h3 style={{ color: 'rgba(248, 248, 248, 0.95)' }} className="text-[18px] md:text-2xl font-normal md:font-semibold mb-2">
+      <div className="text-center mt-[25px] md:mt-12 md:mb-5">
+  <h3 style={{ color: 'rgba(248, 248, 248, 0.95)' }} className="text-[18px] md:text-[24px] font-normal md:font-semibold mb-2">
     {projectName}
   </h3>
-  <p style={{ color: 'rgba(248, 248, 248, 0.5)' }} className="text-md hidden md:block">
+  <p style={{ color: 'rgba(248, 248, 248, 0.5)' }} className="text-[19px] hidden md:block">
     {description}
   </p>
 </div>

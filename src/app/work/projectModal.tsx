@@ -75,12 +75,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           <div className="mx-15 py-3 flex justify-between items-center">
             <div>
               <h2
-                className="text-4xl font-normal text-[#F8F8F8]/90 leading-[56px] tracking-[-0.02em]"
-                style={{ fontSize: '48px' }}
+                className="text-[24px] md:text-[48px] font-normal text-[#F8F8F8]/90 leading-[56px] tracking-[-0.02em] gradien-text"
+                // style={{ fontSize: '48px' }}
               >
                 {selectedProjectData.projectName}
               </h2>
-              <p className="text-[#F8F8F8B2]">
+              <p className="text-[#F8F8F8B2] text-[16px] md:text-[20px]">
                 {selectedProjectData.tagline || selectedProjectData.description}
               </p>
             </div>
@@ -106,9 +106,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 className="w-full h-auto object-cover mb-4"
               />
             )}
-            <div className="space-y-4 mb-6">
+            <div className="space-y-4 mb-6 mt-10">
               {selectedProjectData.modalDescription?.map((para, index) => (
-                <p key={index+'descofselectedprojct'} className="text-[#F8F8F8B2]">
+                <p key={index+'descofselectedprojct'} className="text-[#F8F8F8B2] text-[18px] md:text-[20px]">
                   {para}
                 </p>
               ))}
@@ -139,9 +139,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                   </React.Fragment>
                 ))}
               </div>
-              <div className="space-y-4">
+              <div className="space-y-5 px-6">
                 {selectedProjectData.modalDescription?.map((para, index) => (
-                  <p key={index +'idontwnwlabtwhysomany'} className="text-[#F8F8F8B2]">
+                  <p key={index +'idontwnwlabtwhysomany'} className="text-[#F8F8F8B2] text-[18px] md:text-[20px]">
                     {para}
                   </p>
                 ))}
