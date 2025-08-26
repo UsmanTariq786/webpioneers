@@ -187,7 +187,7 @@ const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
     dots: false,
     infinite: true,
     speed: 3000,
-    slidesToShow: 2, // Show 2 slides by default for a side-by-side look
+    slidesToShow: selectedChip==='mobile'? 5 : 2, // Show 2 slides by default for a side-by-side look
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 1500,
@@ -200,7 +200,7 @@ const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
       {
         breakpoint: 768, // md breakpoint
         settings: {
-          slidesToShow: 1, // On smaller screens, show 1 slide
+          slidesToShow: selectedChip==='mobile'? 4 :  1, // On smaller screens, show 1 slide
           slidesToScroll: 1,
         },
       },
