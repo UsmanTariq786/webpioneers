@@ -65,7 +65,7 @@ const BrandIdentity = () => {
           {/* Right Image Column */}
           <div className="hidden xl:flex w-[70%] px-[4%] pr-[1%] pl-[15%] py-[3%] bg-[url('/Stars.svg')] bg-no-repeat bg-cover">
             <div
-              className="relative w-[500px] h-[319px] bg-center bg-no-repeat bg-cover"
+              className="relative w-[500px] h-[319px] bg-center bg-no-repeat bg-contain"
               style={{ backgroundImage: "url('/maincontainer.svg')"}}
             >
               {/* Top Right Tag */}
@@ -83,7 +83,7 @@ const BrandIdentity = () => {
               </div>
 
               {/* Top Left Tag */}
-              <div className="absolute top-[42px] left-[-120px] flex rounded-[64px] p-[12px_12px_6px_12px]"
+              <div className="absolute top-[42px] left-[-86px] flex rounded-[64px] p-[12px_12px_6px_12px]"
                 style={{
                   backdropFilter: "blur(32px)",
                   WebkitBackdropFilter: "blur(32px)",

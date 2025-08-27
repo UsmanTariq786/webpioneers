@@ -17,18 +17,21 @@ const PartnersSection = () => (
       Our Partners in Growth
     </h2>
 
-    {/* ✅ Horizontal scroll on mobile, wrap on larger screens */}
-    <div className="flex overflow-x-auto xl:overflow-visible no-scrollbar gap-6 px-6 mt-[40px] xl:flex-wrap xl:justify-between">
+    <div className="flex overflow-x-auto xl:overflow-visible no-scrollbar gap-6 px-6 mt-[25px] md:mt-[40px] xl:flex-wrap xl:justify-between">
       {logos.map((logo, i) => (
-        <Image
+        <div
           key={logo + 'whatlogisthis'}
-          src={logo}
-          alt="Partner logo"
-          width={120}
-          height={28}
-          loading={i > 2 ? 'lazy' : undefined}
-          className="opacity-70 hover:opacity-100 transition flex-shrink-0"
-        />
+          className="w-[120px] h-[60px] flex items-center justify-center flex-shrink-0"
+        >
+          <Image
+            src={logo}
+            alt="Partner logo"
+            width={120}
+            height={60}
+            loading={i > 2 ? 'lazy' : undefined}
+            className="object-contain opacity-70 hover:opacity-100 transition"
+          />
+        </div>
       ))}
     </div>
   </section>

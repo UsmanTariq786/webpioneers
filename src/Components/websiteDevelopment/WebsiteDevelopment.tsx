@@ -33,7 +33,7 @@ const WebsiteDevelopment = () => {
           )`,
         borderImageSlice: 1,
       }}
-      className="relative mt-10 mb-[30px] w-[90%] max-w-[1100px] mx-auto flex flex-col sm:flex-row rounded-[30px]"
+      className="relative mt-10 mb-[30px] w-[90%] max-w-[1100px] mx-auto flex flex-col sm:flex-row rounded-[30px] items-center min-h-[456px]"
     >
       {/* Left Web Card */}
       <div className="w-full xl:w-[30%] flex flex-col md:flex-row xl:flex-row md:gap-4 justify-end">

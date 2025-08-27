@@ -17,9 +17,13 @@ const WebsiteDesignFeature = () => {
     <section
       className="
         mt-10 mb-10 w-[90%] max-w-[1100px] mx-auto
-        rounded-[30px] border border-transparent
-        bg-gradient-to-br from-white/5 via-white/0 to-white/5
-        flex flex-col sm:flex-col md:flex-row  items-center md:items-center"
+        rounded-[30px]
+    
+        bg-gradient-to-br
+         from-white/5 
+         via-white/0
+          to-white/5
+        flex flex-col sm:flex-col md:flex-row  items-center md:items-center min-h-[456px]"
     >
       {/*  LEFT SECTION (Hidden only on very small devices)  */}
       {/* <div className="hidden xl:flex md:hidden sm:flex flex-col justify-between h-[320px]">
