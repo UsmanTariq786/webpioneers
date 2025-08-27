@@ -7,6 +7,7 @@ interface Step {
   title: string
   description: string
   image: string
+  resImage: string
 }
 
 const steps: Step[] = [
@@ -16,6 +17,7 @@ const steps: Step[] = [
     description:
       'You talk, we listen (and sketch stuff). We get all your thoughts out and turn them into a plan.',
     image: '/ideation.svg',
+    resImage: '/ideation-resp.svg',
   },
   {
     stepNumber: 2,
@@ -23,6 +25,7 @@ const steps: Step[] = [
     description:
       'We make it look sharp. From wireframes to final UI, you’ll see it come to life.',
     image: '/design.svg',
+    resImage: '/design-resp.svg',
   },
   {
     stepNumber: 3,
@@ -30,6 +33,7 @@ const steps: Step[] = [
     description:
       'Your site goes live. You flex. We handle the tech bits and hit publish.',
     image: '/launch.svg',
+    resImage: '/launch-resp.svg',
   },
 ]
 
@@ -56,6 +60,7 @@ const ProcessStepsSection = () => (
       title={step.title}
       description={step.description}
       image={step.image}
+      resImage={step.resImage}
     />
   ))}
 </div>

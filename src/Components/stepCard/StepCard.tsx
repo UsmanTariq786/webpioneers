@@ -6,57 +6,11 @@ interface CardProps {
   title: string;
   description: string;
   image: string;
+  resImage:string
 }
 
-const StepCard = ({ cardNumber, title, description, image }: CardProps) => (
+const StepCard = ({ cardNumber, title, description, image,resImage }: CardProps) => (
   <div className="relative">
-    {/* <div
-      style={{
-        width: "65px",
-        height: "40px",
-        position: "absolute",
-        zIndex: 10,
-
-        top: 0,
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-      }}
-    >
-      <div
-        className="absolute inset-0 rounded-[32px] z-0"
-        style={{
-          background:
-            "linear-gradient(158.39deg, rgba(255, 255, 255, 0.1) 14.19%, rgba(255, 255, 255, 0.000025) 50.59%, rgba(255, 255, 255, 0.000025) 68.79%, rgba(255, 255, 255, 0.025) 105.18%)",
-          padding: "2px",
-          boxShadow: `2px 4px 16px 0px rgba(248, 248, 248, 0.06) inset, 
-           0px 0px 0px 2px var(--NeutralNeutral420)`,
-          backdropFilter: "blur(100px)",
-          WebkitBackdropFilter: "blur(100px)",
-        }}
-      >
-        <div
-          className="w-full h-full rounded-[32px]"
-          style={{
-            background:
-              "linear-gradient(0deg, var(--neutral-neutral-370, rgba(40, 40, 40, 0.7)), var(--neutral-neutral-370, rgba(40, 40, 40, 0.7))), linear-gradient(0deg, var(--neutral-neutral-210, rgba(248, 248, 248, 0.1)), var(--neutral-neutral-210, rgba(248, 248, 248, 0.1)))",
-          }}
-        />
-      </div>
-
-      <div
-        className={`relative z-10 flex justify-center items-center w-full h-full rounded-[32px] transition-colors`}
-      >
-        <span
-          style={{
-            color: "rgba(248, 248, 248, 0.95)",
-            fontSize: "14px",
-            fontWeight: 500,
-          }}
-        >
-          {cardNumber}
-        </span>
-      </div>
-    </div> */}
     {cardNumber === 2 && (
       <div className="absolute top-[-40px] hidden md:block">
         <Image
@@ -130,7 +84,6 @@ const StepCard = ({ cardNumber, title, description, image }: CardProps) => (
         // borderImage: `linear-gradient(158.39deg, rgba(255,255,255,0.12), rgba(255,255,255,0))`,
         // borderImageSlice: 1,
         background: "rgba(248, 248, 248, 0.02)",
-        padding: '40px',
         boxShadow: `
       0px 5px 1.5px -4px rgba(5, 5, 5, 0.25),
       0px 6px 4px -4px rgba(5, 5, 5, 0.1),
@@ -163,13 +116,13 @@ const StepCard = ({ cardNumber, title, description, image }: CardProps) => (
           {title}
         </h3>
         <p
-          className="font-rubik font-normal mt-[15px] text-[16px] leading-[24px] tracking-normal text-[rgba(248,248,248,0.5)] mb-[20px] mx-auto min-h-[74px]"
+          className="font-rubik font-normal mt-[15px] max-w-[220px] text-[16px] leading-[24px] tracking-normal text-[rgba(248,248,248,0.5)] mb-[20px] mx-auto min-h-[74px]"
         >
           {description}
         </p>
       </div>
       <Image
-        src={image}
+        src={resImage}
         alt={title}
         layout="responsive" // makes the image responsive to container width
         width={360} // intrinsic width (aspect ratio)
@@ -179,22 +132,22 @@ const StepCard = ({ cardNumber, title, description, image }: CardProps) => (
     </div>
 
     <div
-      className="
-    hidden
-    md:block
-    relative 
-    rounded-[40px] 
-    overflow-hidden 
-    border 
-    border-transparent 
-    backdrop-blur-[100px] 
-    text-center 
-       p-6 
-    bg-[url('/home-card-mobile-bg.svg')] 
-    bg-cover 
-    bg-center
-    bg-no-repeat
+    className="
+    hidden md:block relative rounded-[40px] overflow-hidden 
+    text-center p-0
+    bg-[url('/home-card-mobile-bg.png')] bg-cover bg-center bg-no-repeat 
+    bg-[rgba(248,248,248,0.02)] 
+    backdrop-blur-[100px]
+    shadow-[0px_5px_1.5px_-4px_rgba(5,5,5,0.25),
+            0px_6px_4px_-4px_rgba(5,5,5,0.1),
+            0px_6px_13px_0px_rgba(5,5,5,0.1),
+            0px_24px_24px_-16px_rgba(5,5,5,0.09),
+            2px_4px_16px_0px_rgba(248,248,248,0.06)_inset]
+    border-[1.5px] border-transparent
+    before:content-[''] before:absolute before:inset-0 before:rounded-[40px] 
+    before:p-[1.5px] before:bg-[linear-gradient(158.39deg,rgba(255,255,255,0.06)_14.19%,rgba(255,255,255,0.000015)_50.59%,rgba(255,255,255,0.000015)_68.79%,rgba(255,255,255,0.015)_105.18%)] before:pointer-events-none
   "
+
     >
 
       <div className="w-[100%] mx-auto">
@@ -213,7 +166,7 @@ const StepCard = ({ cardNumber, title, description, image }: CardProps) => (
           {title}
         </h3>
         <p
-          className=" font-rubik font-normal mt-[15px] text-[14px] leading-[22px] tracking-normal text-[rgba(248,248,248,0.5)] max-w-[258px] mb-[20px] mx-auto min-h-[74px]"
+          className=" font-rubik font-normal mt-[15px] text-[14px] leading-[22px] tracking-normal text-[rgba(248,248,248,0.5)] max-w-[200px] mb-[20px] mx-auto min-h-[74px]"
         >
           {description}
         </p>
