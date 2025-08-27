@@ -11,7 +11,7 @@ const Reuse = ({ title, text }: PropsTypes) => {
       <button className="font-rubik text-xs uppercase tracking-wider py-2 px-4 font-semibold text-white/80 border border-white/10 rounded-full">
         {title}
       </button>
-      <p className="w-full max-w-[550px] font-rubik font-normal text-[32px] sm:text-[48px] leading-tight sm:leading-[56px] py-5 tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
+      <p className="w-full max-w-[550px] font-rubik font-normal text-[32px] sm:text-[42px] leading-tight sm:leading-[56px] py-5 tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
         {text}
       </p>
     </div>

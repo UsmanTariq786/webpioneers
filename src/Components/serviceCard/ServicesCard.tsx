@@ -25,7 +25,7 @@ const ServicesCard = ({ cardNumber, title, description, imageUrl }: ServiceCardP
       )}
 
      
-<h3 className="text-[16px] md:text-[20px] font-semibold mb-3 w-[100%] text-left text-[rgba(248,248,248,0.95)]">
+<h3 className="text-[16px] md:text-[20px] font-semibold mb-3 w-[100%] text-left gradien-text">
   {title}
 </h3>
       {/* Description */}

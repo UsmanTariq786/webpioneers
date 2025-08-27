@@ -190,7 +190,7 @@ const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
     slidesToShow: selectedChip==='mobile'? 5 : 2, // Show 2 slides by default for a side-by-side look
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 100,
     cssEase: 'linear',
     pauseOnHover: true,
     nextArrow: undefined,
@@ -210,8 +210,9 @@ const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
   // Fixed slider height for all categories
   const sliderHeight = 'h-[202px] md:h-[500px]';
 
+
   return (
-    <div className="w-full px-4 py-6">
+    <div className="w-full py-6">
       <Slider {...sliderSettings}>
         {filteredImages.map((image: ImageData, index: number) => (
           <div key={`${selectedChip}-${index}`} className={`px-1 ${sliderHeight}`}>

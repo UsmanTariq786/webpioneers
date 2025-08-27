@@ -42,7 +42,7 @@ const ProcessStepsSection = () => (
     {/* heading */}
     <div className="flex flex-col items-center mb-10">
      <CommonQuestion question='HOW IT WORKS'/>
-      <p className="w-[90%] text-[32px] leading-[40px] md:text-[48px] md:leading-[56px] pt-[10px] font-normal font-['Rubik'] text-center tracking-[-0.02em]
+      <p className="w-[90%] text-[32px] leading-[40px] md:text-[42px] md:leading-[56px] pt-[10px] font-normal font-['Rubik'] text-center tracking-[-0.02em]
                bg-[linear-gradient(92.95deg,_rgba(248,248,248,0.9)_0.1%,_rgba(248,248,248,0.5)_100.1%)]
                bg-clip-text text-transparent max-w-[600px]">
         What happens once <br /> we team up

@@ -70,7 +70,7 @@ export const FAQAccordion = () => {
                     <CommonQuestion question="Got Questions?" />
                   </div>
                   <div className="w-full md:w-[400px] mt-[10px]">
-                    <p className="w-full font-rubik font-normal text-[32px] sm:text-[48px] leading-tight sm:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
+                    <p className="w-full font-rubik font-normal text-[32px] sm:text-[42px] leading-tight sm:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
                       Frequently Asked Questions
                     </p>
                   </div>
@@ -114,7 +114,7 @@ export const FAQAccordion = () => {
                   <div
                     className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                       activeId === "1"
-                        ? "bg-orange-500 text-white"
+                        ? " text-white bg-[#ca511e]"
                         : "bg-[url('/circle-icon-button.png')] bg-cover bg-center"
                     }`}
                   >
@@ -184,7 +184,7 @@ export const FAQAccordion = () => {
                   <div
                     className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                       activeId === "2"
-                        ? "bg-orange-500 text-white"
+                        ? "bg-[#ca511e] text-white"
                         : "bg-[url('/circle-icon-button.png')] bg-cover bg-center"
                     }`}
                   >
@@ -256,7 +256,7 @@ export const FAQAccordion = () => {
                   <div
                     className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                       activeId === "3"
-                        ? "bg-orange-500 text-white"
+                        ? "bg-[#ca511e] text-white"
                         : "bg-[url('/circle-icon-button.png')] bg-cover bg-center"
                     }`}
                   >
@@ -327,7 +327,7 @@ export const FAQAccordion = () => {
                   <div
                     className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                       activeId === "4"
-                        ? "bg-orange-500 text-white"
+                        ? "bg-[#ca511e] text-white"
                         : "bg-[url('/circle-icon-button.png')] bg-cover bg-center"
                     }`}
                   >
@@ -395,7 +395,7 @@ export const FAQAccordion = () => {
                   <div
                     className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                       activeId === "5"
-                        ? "bg-orange-500 text-white"
+                        ? "bg-[#ca511e] text-white"
                         : "bg-[url('/circle-icon-button.png')] bg-cover bg-center"
                     }`}
                   >

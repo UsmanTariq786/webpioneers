@@ -75,7 +75,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           <div className="mx-15 py-3 flex justify-between items-center">
             <div>
               <h2
-                className="text-[24px] md:text-[48px] font-normal text-[#F8F8F8]/90 leading-[56px] tracking-[-0.02em] gradien-text"
+                className="text-[24px] md:text-[42px] font-normal text-[#F8F8F8]/90 leading-[56px] tracking-[-0.02em] gradien-text"
                 // style={{ fontSize: '48px' }}
               >
                 {selectedProjectData.projectName}

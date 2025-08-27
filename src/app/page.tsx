@@ -177,8 +177,8 @@ export default function Home() {
                 <CommonQuestion question="Stuff We've Made" />
               </div>
               <div className="w-full md:w-[250px] mt-[10px]">
-                <p className="w-full font-rubik font-normal text-[32px]  md:text-[48px] leading-[40px] md:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
-                  A peek at our work
+                <p className="w-full font-rubik font-normal text-[32px]  md:text-[42px] leading-[40px] md:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
+                  A peek at <br className="hidden md:block" /> our work
                 </p>
               </div>
             </div>
@@ -281,7 +281,7 @@ export default function Home() {
                     <CommonQuestion question="LET’S GET STARTED" />
                   </div>
                   <div className="w-full md:w-[350px] mt-[10px]">
-                    <p className="w-full font-rubik font-normal text-[32px] sm:text-[48px] leading-tight sm:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
+                    <p className="w-full font-rubik font-normal text-[32px] sm:text-[42px] leading-tight sm:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
                       Start with a free project quote
                     </p>
                   </div>
