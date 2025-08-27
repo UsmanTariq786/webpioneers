@@ -64,14 +64,14 @@ export default function Home() {
     <div className="w-[79.95%]">
       <div className="flex justify-center items-center py-15">
        <video
-        width="90%"
-        controls
-        className="border rounded-[30px] h-[285px] md:h-[600px] lg:h-[600px]"
-      >
-
-          <source src="https://www.youtube.com/watch?v=lkqyHdmUpBY" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+         controls
+         poster="/homepagevideo/Thumbnail.png"
+         className="border rounded-[30px] h-[285px] md:h-[600px] lg:h-[600px]"
+         autoPlay
+       >
+         <source src="/homepagevideo/zohebHassan.mp4" type="video/mp4" />
+         Your browser does not support the video tag.
+       </video>
       </div>
     </div>
     <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
