@@ -16,7 +16,7 @@ const WebsiteDesignFeature = () => {
   return (
     <section
       className="
-        mt-10 mb-10 w-[90%] max-w-[1100px] mx-auto
+        mt-10 mb-10 w-[90%] mx-auto
         rounded-[30px]
     
         bg-gradient-to-br

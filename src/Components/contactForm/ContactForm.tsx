@@ -36,7 +36,7 @@ export default function ContactForm() {
           ></div>
           <div style={{ width: "79.95%" }}>
             <div className="p-[20px] md:p-0 sm:ml-20 max-w-md my-12">
-              <div className="w-[300px]">
+              <div className="w-[250px] md:w-[300px]">
                 <CommonQuestion question="We’re Available for New Projects" />
               </div>
               <div className="w-full md:w-[100%] mt-[16px]">
@@ -208,7 +208,7 @@ export default function ContactForm() {
                     width={35}
                     height={35}
                     className={`transition-transform ${
-                      showServiceDropdown ? "rotate-180" : ""
+                      showServiceDropdown ? "" : "rotate-180"
                     }`}
                   />
 
@@ -277,7 +277,7 @@ export default function ContactForm() {
                       width={35}
                       height={35}
                       className={`transition-transform ${
-                        showServiceDropdown ? "rotate-180" : ""
+                        showServiceDropdown ? "" : "rotate-180"
                       }`}
                     />
 
@@ -456,7 +456,7 @@ export default function ContactForm() {
                       width={35}
                       height={35}
                       className={`transition-transform ${
-                        showServiceDropdown ? "rotate-180" : ""
+                        showServiceDropdown ? "" : "rotate-180"
                       }`}
                     />
                   </button>
@@ -520,7 +520,7 @@ export default function ContactForm() {
                       width={35}
                       height={35}
                       className={`transition-transform ${
-                        showServiceDropdown ? "rotate-180" : ""
+                        showServiceDropdown ? "" : "rotate-180"
                       }`}
                     />
                   </button>

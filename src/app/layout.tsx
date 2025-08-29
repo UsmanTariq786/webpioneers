@@ -116,7 +116,7 @@ export default function RootLayout({
             ></div>
             <div style={{ width: "80.08%" }}>
               <RoundCornerWrapper>
-                <div className="h-[50px]"></div>
+                <div className="h-[50px] md:h-[140px]"></div>
               </RoundCornerWrapper>
             </div>
             <div

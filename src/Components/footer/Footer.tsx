@@ -26,7 +26,7 @@ const Footer = () => {
               {/* Logo and Description */}
               <div
                 className="
-                  pl-2 pt-5
+                  pl-2 pt-5 md:pt-12
                   border-b border-dotted md:border-b-0 md:border-r md:border-dotted
                   border-[#373737]
                   relative
@@ -56,7 +56,7 @@ const Footer = () => {
               {/* Quick Links */}
               <div
                 className="
-                pt-5 
+                pt-5 md:pt-12
                 pl-6
                 lg:pl-20
 
@@ -83,7 +83,7 @@ const Footer = () => {
 
 
                 <div>
-                  <h3 className="mb-4 font-medium leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
+                  <h3 className="mb-6 md:mb-8 font-medium leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
                     • Quick
                   </h3>
 
@@ -125,7 +125,7 @@ const Footer = () => {
               </div>
 
               {/* Contact Info */}
-              <div className="pt-5 
+              <div className="pt-5 md:pt-12
                pl-4
                lg:pl-20
                pb-10
@@ -133,7 +133,7 @@ const Footer = () => {
                lg:w-[35%]" 
               // style={{ width: "35%" }}
               >
-                <h3 className="mb-4 font-medium leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
+                <h3 className="mb-6 md:mb-8 font-medium leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
                   • Contact
                 </h3>
                 <div className="space-y-3">
@@ -298,11 +298,12 @@ const Footer = () => {
               Twitter
             </Link>
           </div>
+   
         )}
       </div>
 
       {/* Desktop Layout (always visible) */}
-      <div className="hidden sm:flex flex-row flex-wrap justify-start gap-20 p-5">
+      <div className="hidden sm:flex flex-row flex-wrap justify-center gap-20 px-5 py-10">
         {["LinkedIn", "Instagram", "Dribbble", "Behance", "WhatsApp", "Twitter"].map(
           (item) => (
             <Link
@@ -343,17 +344,17 @@ const Footer = () => {
           <div
   style={{
     backgroundColor: "rgba(212, 84, 29, 0.95)",
-    padding: "20px 0",
+    padding: "40px 0",
   }}
   className="flex w-full  whitespace-nowrap scrollbar-hide overflow-clip"
 >
-  <p className="font-[Rubik] font-normal text-[50px] leading-[100%] md:text-[138px] tracking-[-0.02em] mr-4 shrink-0">
+  <p className="font-[Rubik] font-normal text-[50px] leading-[100%] md:text-[140px] tracking-[-0.02em] mr-4 shrink-0">
     Get in touch
   </p>
-  <p className="font-[Rubik] font-normal text-[50px] leading-[100%] md:text-[138px] tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0.1%,rgba(248,248,248,0.5)_100.1%)] mr-4 shrink-0">
+  <p className="font-[Rubik] font-normal text-[50px] leading-[100%] md:text-[140px] tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0.1%,rgba(248,248,248,0.5)_100.1%)] mr-4 shrink-0">
     Get in touch
   </p>
-  <p className="font-[Rubik] font-normal text-[50px] leading-[100%] md:text-[138px] tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0.1%,rgba(248,248,248,0.5)_100.1%)] shrink-0">
+  <p className="font-[Rubik] font-normal text-[50px] leading-[100%] md:text-[140px] tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0.1%,rgba(248,248,248,0.5)_100.1%)] shrink-0">
     Get in touch
   </p>
 </div>

@@ -65,7 +65,7 @@ export const FAQAccordion = () => {
           ></div>
           <div style={{ width: "80.08%" }}>
             <RoundCornerWrapper>
-                <div className="p-[20px] md:[0px] sm:ml-20 max-w-md  mt-[25px] mb-[30px]">
+                <div className="p-[20px] md:p-0 sm:ml-20 max-w-md my-12">
                   <div className="w-[200px]">
                     <CommonQuestion question="Got Questions?" />
                   </div>
@@ -98,9 +98,9 @@ export const FAQAccordion = () => {
             }}
           ></div>
           <div style={{ width: "79.95%" }}>
-            <div className="space-y-0">
+            <div className={`space-y-0 ${activeId === "1" ? "bg-[rgba(248,248,248,0.02)]" : ""}`}>
               {/* FAQ 1 */}
-              <div className={`py-6 px-6  sm:py-8`}>
+              <div className={`py-6 px-6 m:py-8  w-[100%] md:w-[91%] mx-auto`}>
                 <div
                   onClick={() => toggleAccordion("1")}
                   className="flex justify-between items-start w-full text-left group cursor-pointer"
@@ -169,9 +169,9 @@ export const FAQAccordion = () => {
           ></div>
           <div style={{ width: "80.08%" }}>
             <RoundCornerWrapper>
-            <div className="space-y-0">
+            <div className={`space-y-0 ${activeId === "2" ? "bg-[rgba(248,248,248,0.02)]" : ""}`}>
               {/* FAQ 2 */}
-              <div className={`py-6 px-6  sm:py-8`}>
+              <div className={`py-6 px-6 sm:py-8  w-[100%] md:w-[91%] mx-auto`}>
                 <div
                   onClick={() => toggleAccordion("2")}
                   className="flex justify-between items-start w-full text-left group cursor-pointer"
@@ -241,9 +241,9 @@ export const FAQAccordion = () => {
             }}
           ></div>
           <div style={{ width: "79.95%" }}>
-              <div className="space-y-0">
+              <div className={`space-y-0 ${activeId === "3" ? "bg-[rgba(248,248,248,0.02)]" : ""}`}>
               {/* FAQ 3 */}
-              <div className={`py-6 px-6  sm:py-8 border-b `}>
+              <div className={`py-6 px-6  w-[100%] md:w-[91%] mx-auto border-b `}>
                 <div
                   onClick={() => toggleAccordion("3")}
                   className="flex justify-between items-start w-full text-left group cursor-pointer"
@@ -312,9 +312,9 @@ export const FAQAccordion = () => {
           ></div>
           <div style={{ width: "80.08%" }}>
             <RoundCornerWrapper>
-            <div className="space-y-0">
+            <div className={`space-y-0 ${activeId === "4" ? "bg-[rgba(248,248,248,0.02)]" : ""}`}>
               {/* FAQ 4 */}
-              <div className={`py-6 px-6 sm:py-8`}>
+              <div className={`py-6 px-6  w-[100%] md:w-[91%] mx-auto`}>
                 <div
                   onClick={() => toggleAccordion("4")}
                   className="flex justify-between items-start w-full text-left group cursor-pointer"
@@ -380,9 +380,9 @@ export const FAQAccordion = () => {
             }}
           ></div>
           <div style={{ width: "79.95%" }}>
-            <div className="space-y-0">
+            <div className={`space-y-0 ${activeId === "5" ? "bg-[rgba(248,248,248,0.02)]" : ""}`}>
               {/* FAQ 5 */}
-              <div className={`py-6 px-6  sm:py-8 `}>
+              <div className={`py-6 px-6  w-[100%] md:w-[91%] mx-auto`}>
                 <div
                   onClick={() => toggleAccordion("5")}
                   className="flex justify-between items-start w-full text-left group cursor-pointer"

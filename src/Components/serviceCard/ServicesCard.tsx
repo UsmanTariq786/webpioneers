@@ -29,7 +29,7 @@ const ServicesCard = ({ cardNumber, title, description, imageUrl }: ServiceCardP
   {title}
 </h3>
       {/* Description */}
-      <p className="text-[14px] md:text-[18px] leading-[24px] text-[#F8F8F8]/50 w-[170px] text-left">{description}</p>
+      <p className="text-[14px] md:text-[16px] leading-[24px] text-[#F8F8F8]/50 w-[190px] text-left">{description}</p>
     </div>
   );
 };

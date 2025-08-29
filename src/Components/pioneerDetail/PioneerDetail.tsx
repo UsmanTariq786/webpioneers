@@ -50,7 +50,7 @@ const PioneerDetail = () => {
               key={"chipbox" + index}
               style={{
                 display: "inline-block",
-                marginLeft: "8px",
+                marginRight: "8px",
                 marginTop: "8px",
               }}
             >
