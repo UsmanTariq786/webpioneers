@@ -43,7 +43,7 @@ const WebsiteDevelopment = () => {
           description={cardData.description}
         />
          {/* Image only for mobile/tablet, hidden on xl */}
-         <div className='block xl:hidden pb-[46px]'>
+         <div className='block md:hidden pb-[46px]'>
          <Image
               src="main-container-content-res2.svg"
               width={310}

@@ -238,7 +238,7 @@ const Footer = () => {
               {/* Mobile Layout */}
               <>
       {/* Mobile Layout (collapsible) */}
-      <div className="block sm:hidden">
+      <div className="block md:hidden">
         <div className={`flex items-center justify-between pt-6 px-6 ${
                 isOpen ? "pb-0" : "pb-6"
               }`}>
@@ -303,7 +303,7 @@ const Footer = () => {
       </div>
 
       {/* Desktop Layout (always visible) */}
-      <div className="hidden sm:flex flex-row flex-wrap justify-center gap-20 px-5 py-10">
+      <div className="hidden md:flex flex-row flex-wrap justify-center gap-20 px-5 py-10">
         {["LinkedIn", "Instagram", "Dribbble", "Behance", "WhatsApp", "Twitter"].map(
           (item) => (
             <Link

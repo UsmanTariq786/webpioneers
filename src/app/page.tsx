@@ -309,7 +309,7 @@ export default function Home() {
           ></div>
           <div style={{ width: "80.08%"}}>
             <RoundCornerWrapper>
-                <div className="flex md:hidden relative overflow-x-auto no-scrollbar">
+                <div className="flex lg:hidden relative overflow-x-auto no-scrollbar">
                   {serviceCards.map((card: any,index: number) => (
                     
                     <div                       
@@ -338,7 +338,7 @@ export default function Home() {
 
                   ))}
                 </div>
-                <div className="hidden md:flex" style={{width:'100%'}}>
+                <div className="hidden lg:flex" style={{width:'100%'}}>
                   {serviceCards.map((card: any,index: number) => (
                     
                     <div                       
