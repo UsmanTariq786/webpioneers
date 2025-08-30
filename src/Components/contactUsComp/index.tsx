@@ -45,7 +45,21 @@ const ContactUsComp = () => {
   const CustomDiv = ({ children }: { children: React.ReactNode }) => {
     return (
       <div
-        className="w-full max-w-full lg:max-w-[600px] min-h-[90px] flex items-center opacity-100 rounded-[25px] border border-transparent bg-[#F8F8F805] mb-4"
+      style={{
+        background: `
+          linear-gradient(180deg, rgba(248, 248, 248, 0.02) 0%, rgba(248, 248, 248, 0.0002) 100%),
+          linear-gradient(123.8deg, rgba(248, 248, 248, 0.03) 0%, rgba(248, 248, 248, 0) 46.5%)`,
+        borderImageSource: `
+          linear-gradient(
+            158.39deg,
+            rgba(255, 255, 255, 0.06) 14.19%,
+            rgba(255, 255, 255, 0.000015) 50.59%,
+            rgba(255, 255, 255, 0.000015) 68.79%,
+            rgba(255, 255, 255, 0.015) 105.18%
+          )`,
+        borderImageSlice: 1,
+      }}
+        className="w-full max-w-full lg:max-w-[600px] min-h-[90px] flex items-center opacity-100 mb-4 rounded-[30px]"
       >
         {children}
       </div>
@@ -53,7 +67,7 @@ const ContactUsComp = () => {
   };
 
   return (
-    <div className="bg-[#202020] text-[#F8F8F8B2] p-4 rounded-lg shadow-lg my-4 mx-1 md:mx-8">
+    <div className="bg-[#202020] text-[#F8F8F8B2] p-4 my-4 mx-1 md:mx-8">
       <div className="flex flex-col lg:flex-row justify-between gap-6">
         {/* Left Section (Header and Contact Points) */}
         <div className="w-full md:w-1/2">
