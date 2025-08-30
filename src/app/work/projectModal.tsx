@@ -4,7 +4,7 @@ import Image from 'next/image';
 import React, { useRef, useEffect, useState } from 'react';
 
 interface Project {
-  id: string;
+  id: any;
   projectName: string;
   tagline?: string;
   description: string;
@@ -78,8 +78,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
   let imagesArray = isMobile ? selectedProjectData?.mobileImages : selectedProjectData?.desktopImages 
   let device = isMobile ? 'Mobile/' : 'Desktop/'
+  let isHeadShot  = selectedProjectData?.id === 2 ? true : false
 
-  console.log('imagesArray',imagesArray,device)
+  console.log('isHeadShot',isHeadShot)
 
 
 
@@ -109,21 +110,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             </div>
             <button
               onClick={onClose}
-              className="h-10 w-10 bg-[#373737] rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out"
+              className="h-10 w-10  flex items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out"
             >
               <img
                 src="/cross.png"
                 alt="cross icon"
                 className="h-full w-full object-contain"
               />
-                  {/* <Image
-        src="/cross.png"
-        alt="cross icon"
-        width={30}
-        height={30}
-        // fill // Fills the parent container
-        className="object-contain" // Maintains aspect ratio without cropping
-      /> */}
+                  
             </button>
           </div>
         </div>
@@ -131,11 +125,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
         <div className="p-6">
           <div className="md:hidden">
             {imagesArray?.[0] && (
-            //   <img
-            //   src={`${selectedProjectData.modalPath}${device}${imagesArray[0]}.png`}
-            //   alt="project main image"
-            //   className="w-full h-auto object-cover mb-4"
-            // />
             <Image
                 src={`${selectedProjectData.modalPath}${device}${imagesArray[0]}.png`}
                 alt="project main image"
@@ -152,14 +141,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 </p>
               ))}
             </div>
+            <div className="space-y-4" >
+              {isHeadShot && <VideoSectionForHeadshot/>}
+            </div>
             <div className="space-y-4">
               {imagesArray?.slice(1).map((imageNum: number, index: number) => (
                 <React.Fragment key={index+'modalImageskeyisthis'}>
-                  {/* <img
-                    src={`${selectedProjectData.modalPath}${device}${imageNum}.png`}
-                    alt={`project detail image ${index + 2}`}
-                    className="w-full h-auto object-cover"
-                  /> */}
                    <Image
                     src={`${selectedProjectData.modalPath}${device}${imageNum}.png`}
                     alt={`project detail image ${index + 2}`}
@@ -176,12 +163,42 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           <div className="hidden md:block">
             <div className="grid grid-cols-[1fr_1fr] gap-6">
               <div className="space-y-4">
-                {imagesArray?.map((imageNum: number, index: number) => (
+              {/* if not headshot then display just images  */}
+
+                {!isHeadShot && imagesArray?.map((imageNum: number, index: number) => (
                   <React.Fragment key={index+'idontwnwlabt'}>
-                    <img
+                    <Image
                       src={`${selectedProjectData.modalPath}${device}${imageNum}.png`}
                       alt={`project detail image ${index + 1}`}
                       className="w-full h-auto object-cover"
+                      width={800} // Adjust to your image's natural width
+                      height={600} 
+                      layout="responsive"
+                    />
+                  </React.Fragment>
+                ))}
+                {/* if headshot then video section in between */}
+                {isHeadShot &&
+                  <Image
+                  src={`${selectedProjectData.modalPath}${device}1.png`}
+                  alt={`project detail image ${1}`}
+                  className="w-full h-auto object-cover"
+                  width={800} // Adjust to your image's natural width
+                  height={600} 
+                  layout="responsive"
+                />
+                }
+                {isHeadShot && <VideoSectionForHeadshot/>}
+                
+                {isHeadShot && imagesArray?.slice(1)?.map((imageNum: number, index: number) => (
+                  <React.Fragment key={index+'idontwnwlabt'}>
+                    <Image
+                      src={`${selectedProjectData.modalPath}${device}${imageNum}.png`}
+                      alt={`project detail image ${index + 1}`}
+                      className="w-full h-auto object-cover"
+                      width={800} // Adjust to your image's natural width
+                      height={600} 
+                      layout="responsive"
                     />
                   </React.Fragment>
                 ))}
@@ -215,3 +232,35 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 };
 
 export default ProjectModal;
+
+
+
+
+
+const VideoSectionForHeadshot = () => {
+  const videoFiles = ['01', '02', '03', '04']; // Array of video file names
+
+  return (
+    <div className="container mx-auto mb-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {videoFiles.map((file) => (
+          <div key={file} className="w-full">
+            <video
+              className="w-full h-auto object-cover rounded-lg min-h-[100px] min-w-[100px]"
+              controls
+              preload="metadata"
+              autoPlay
+              loop
+            >
+              <source
+                src={`/threePicSets/headshots_dk/English/${file}.mp4`}
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
