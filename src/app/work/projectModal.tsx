@@ -1,6 +1,7 @@
 'use client'; // Mark as client component
 
-import React, { useRef, useEffect } from 'react';
+import Image from 'next/image';
+import React, { useRef, useEffect, useState } from 'react';
 
 interface Project {
   id: string;
@@ -8,7 +9,8 @@ interface Project {
   tagline?: string;
   description: string;
   imagesArray: string[];
-  modalImages?: number[];
+  mobileImages?: number[];
+  desktopImages?: number[];
   modalPath?: string;
   modalDescription?: string[];
 }
@@ -19,12 +21,26 @@ interface ProjectModalProps {
   selectedProjectData: Project | null;
 }
 
+
 const ProjectModal: React.FC<ProjectModalProps> = ({
   isOpen,
   onClose,
   selectedProjectData,
 }) => {
   const modalContentRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+        // This is a common way to check for a mobile breakpoint in JS.
+        // Tailwind's 'lg' breakpoint is 1024px.
+        setIsMobile(window.innerWidth <= 767);
+    };
+
+    handleResize(); // Set initial state
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+}, []);
 
   useEffect(() => {
     if (isOpen) {
@@ -60,6 +76,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
     }
   };
 
+  let imagesArray = isMobile ? selectedProjectData?.mobileImages : selectedProjectData?.desktopImages 
+  let device = isMobile ? 'Mobile/' : 'Desktop/'
+
+  console.log('imagesArray',imagesArray,device)
+
+
+
   return (
     <div
       className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[1000]"
@@ -93,16 +116,32 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 alt="cross icon"
                 className="h-full w-full object-contain"
               />
+                  {/* <Image
+        src="/cross.png"
+        alt="cross icon"
+        width={30}
+        height={30}
+        // fill // Fills the parent container
+        className="object-contain" // Maintains aspect ratio without cropping
+      /> */}
             </button>
           </div>
         </div>
 
         <div className="p-6">
           <div className="md:hidden">
-            {selectedProjectData.modalImages?.[0] && (
-              <img
-                src={`${selectedProjectData.modalPath}${selectedProjectData.modalImages[0]}.png`}
+            {imagesArray?.[0] && (
+            //   <img
+            //   src={`${selectedProjectData.modalPath}${device}${imagesArray[0]}.png`}
+            //   alt="project main image"
+            //   className="w-full h-auto object-cover mb-4"
+            // />
+            <Image
+                src={`${selectedProjectData.modalPath}${device}${imagesArray[0]}.png`}
                 alt="project main image"
+                width={800} // Adjust to your image's natural width
+                height={600} // Adjust to your image's natural height
+                layout="responsive"
                 className="w-full h-auto object-cover mb-4"
               />
             )}
@@ -114,13 +153,21 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               ))}
             </div>
             <div className="space-y-4">
-              {selectedProjectData.modalImages?.slice(1).map((imageNum: number, index: number) => (
+              {imagesArray?.slice(1).map((imageNum: number, index: number) => (
                 <React.Fragment key={index+'modalImageskeyisthis'}>
-                  <img
-                    src={`${selectedProjectData.modalPath}${imageNum}.png`}
+                  {/* <img
+                    src={`${selectedProjectData.modalPath}${device}${imageNum}.png`}
                     alt={`project detail image ${index + 2}`}
                     className="w-full h-auto object-cover"
-                  />
+                  /> */}
+                   <Image
+                    src={`${selectedProjectData.modalPath}${device}${imageNum}.png`}
+                    alt={`project detail image ${index + 2}`}
+                    width={800} // Adjust to your image's natural width
+                    height={600} // Adjust to your image's natural height
+                    layout="responsive"
+                    className="w-full h-auto object-cover"
+                   />
                 </React.Fragment>
               ))}
             </div>
@@ -129,10 +176,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           <div className="hidden md:block">
             <div className="grid grid-cols-[1fr_1fr] gap-6">
               <div className="space-y-4">
-                {selectedProjectData.modalImages?.map((imageNum: number, index: number) => (
+                {imagesArray?.map((imageNum: number, index: number) => (
                   <React.Fragment key={index+'idontwnwlabt'}>
                     <img
-                      src={`${selectedProjectData.modalPath}${imageNum}.png`}
+                      src={`${selectedProjectData.modalPath}${device}${imageNum}.png`}
                       alt={`project detail image ${index + 1}`}
                       className="w-full h-auto object-cover"
                     />
