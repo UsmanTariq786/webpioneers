@@ -1,14 +1,16 @@
 'use client'; // Mark as client component
 
-import React, { useRef, useEffect } from 'react';
+import Image from 'next/image';
+import React, { useRef, useEffect, useState } from 'react';
 
 interface Project {
-  id: string;
+  id: any;
   projectName: string;
   tagline?: string;
   description: string;
   imagesArray: string[];
-  modalImages?: number[];
+  mobileImages?: number[];
+  desktopImages?: number[];
   modalPath?: string;
   modalDescription?: string[];
 }
@@ -19,12 +21,26 @@ interface ProjectModalProps {
   selectedProjectData: Project | null;
 }
 
+
 const ProjectModal: React.FC<ProjectModalProps> = ({
   isOpen,
   onClose,
   selectedProjectData,
 }) => {
   const modalContentRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+        // This is a common way to check for a mobile breakpoint in JS.
+        // Tailwind's 'lg' breakpoint is 1024px.
+        setIsMobile(window.innerWidth <= 767);
+    };
+
+    handleResize(); // Set initial state
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+}, []);
 
   useEffect(() => {
     if (isOpen) {
@@ -60,6 +76,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
     }
   };
 
+  let imagesArray = isMobile ? selectedProjectData?.mobileImages : selectedProjectData?.desktopImages 
+  let device = isMobile ? 'Mobile/' : 'Desktop/'
+  let isHeadShot  = selectedProjectData?.id === 2 ? true : false
+
+  console.log('isHeadShot',isHeadShot)
+
+
+
   return (
     <div
       className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[1000]"
@@ -86,23 +110,27 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             </div>
             <button
               onClick={onClose}
-              className="h-10 w-10 bg-[#373737] rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out"
+              className="h-10 w-10  flex items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out"
             >
               <img
                 src="/cross.png"
                 alt="cross icon"
                 className="h-full w-full object-contain"
               />
+                  
             </button>
           </div>
         </div>
 
         <div className="p-6">
           <div className="md:hidden">
-            {selectedProjectData.modalImages?.[0] && (
-              <img
-                src={`${selectedProjectData.modalPath}${selectedProjectData.modalImages[0]}.png`}
+            {imagesArray?.[0] && (
+            <Image
+                src={`${selectedProjectData.modalPath}${device}${imagesArray[0]}.png`}
                 alt="project main image"
+                width={800} // Adjust to your image's natural width
+                height={600} // Adjust to your image's natural height
+                layout="responsive"
                 className="w-full h-auto object-cover mb-4"
               />
             )}
@@ -113,14 +141,20 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 </p>
               ))}
             </div>
+            <div className="space-y-4" >
+              {isHeadShot && <VideoSectionForHeadshot/>}
+            </div>
             <div className="space-y-4">
-              {selectedProjectData.modalImages?.slice(1).map((imageNum: number, index: number) => (
+              {imagesArray?.slice(1).map((imageNum: number, index: number) => (
                 <React.Fragment key={index+'modalImageskeyisthis'}>
-                  <img
-                    src={`${selectedProjectData.modalPath}${imageNum}.png`}
+                   <Image
+                    src={`${selectedProjectData.modalPath}${device}${imageNum}.png`}
                     alt={`project detail image ${index + 2}`}
+                    width={800} // Adjust to your image's natural width
+                    height={600} // Adjust to your image's natural height
+                    layout="responsive"
                     className="w-full h-auto object-cover"
-                  />
+                   />
                 </React.Fragment>
               ))}
             </div>
@@ -129,12 +163,42 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           <div className="hidden md:block">
             <div className="grid grid-cols-[1fr_1fr] gap-6">
               <div className="space-y-4">
-                {selectedProjectData.modalImages?.map((imageNum: number, index: number) => (
+              {/* if not headshot then display just images  */}
+
+                {!isHeadShot && imagesArray?.map((imageNum: number, index: number) => (
                   <React.Fragment key={index+'idontwnwlabt'}>
-                    <img
-                      src={`${selectedProjectData.modalPath}${imageNum}.png`}
+                    <Image
+                      src={`${selectedProjectData.modalPath}${device}${imageNum}.png`}
                       alt={`project detail image ${index + 1}`}
                       className="w-full h-auto object-cover"
+                      width={800} // Adjust to your image's natural width
+                      height={600} 
+                      layout="responsive"
+                    />
+                  </React.Fragment>
+                ))}
+                {/* if headshot then video section in between */}
+                {isHeadShot &&
+                  <Image
+                  src={`${selectedProjectData.modalPath}${device}1.png`}
+                  alt={`project detail image ${1}`}
+                  className="w-full h-auto object-cover"
+                  width={800} // Adjust to your image's natural width
+                  height={600} 
+                  layout="responsive"
+                />
+                }
+                {isHeadShot && <VideoSectionForHeadshot/>}
+                
+                {isHeadShot && imagesArray?.slice(1)?.map((imageNum: number, index: number) => (
+                  <React.Fragment key={index+'idontwnwlabt'}>
+                    <Image
+                      src={`${selectedProjectData.modalPath}${device}${imageNum}.png`}
+                      alt={`project detail image ${index + 1}`}
+                      className="w-full h-auto object-cover"
+                      width={800} // Adjust to your image's natural width
+                      height={600} 
+                      layout="responsive"
                     />
                   </React.Fragment>
                 ))}
@@ -168,3 +232,35 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 };
 
 export default ProjectModal;
+
+
+
+
+
+const VideoSectionForHeadshot = () => {
+  const videoFiles = ['01', '02', '03', '04']; // Array of video file names
+
+  return (
+    <div className="container mx-auto mb-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {videoFiles.map((file) => (
+          <div key={file} className="w-full">
+            <video
+              className="w-full h-auto object-cover rounded-lg min-h-[100px] min-w-[100px]"
+              controls
+              preload="metadata"
+              autoPlay
+              loop
+            >
+              <source
+                src={`/threePicSets/headshots_dk/English/${file}.mp4`}
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};

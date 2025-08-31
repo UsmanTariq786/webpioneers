@@ -6,8 +6,9 @@
       "image2":"/threePicSets/art_of_monday/image1.png",
       "image1":"/threePicSets/art_of_monday/image2.png",
       "image3":"/threePicSets/art_of_monday/image3.png",
-      "modalImages":[1,2,3,4,5,6,7,8,9,10,11,12,13],
-      "modalPath":"/threePicSets/art_of_monday/modalImages/",
+      "mobileImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+      "desktopImages":[1,2,3,4,5,6,7,8,9,10,11,12,13],
+      "modalPath":"/threePicSets/art_of_monday/",
       "modalDescription":["Founder Sports Club is a mobile app designed for Art of Mondays, built to bring their founders’ community to life on mobile. The client already had a web version of their platform and wanted to offer members a more engaging and accessible experience through a dedicated app.","They approached us to transform their existing system into a streamlined mobile product. We began by mapping out the complete user flow journey and creating detailed wireframes to define the app’s structure. To ensure we aligned with market expectations, we researched direct competitors like Timeleft and other major players in the networking and founder community niche.","With insights in hand, we designed an MVP that delivers core community features while keeping the interface clean and intuitive. Now that the base UI is established, we’re entering the next phase — refining functionality, implementing adjustments, and developing a robust design system to support future growth."]
     },
     {
@@ -17,7 +18,11 @@
       "superCategory": "webDesign",
       "image2":"/threePicSets/headshots_dk/image1.png",
       "image1":"/threePicSets/headshots_dk/image2.png",
-      "image3":"/threePicSets/headshots_dk/image3.png"
+      "image3":"/threePicSets/headshots_dk/image3.png",
+      "mobileImages":[1,2,3,4,5,6,7,8],
+      "desktopImages":[1,2,3,4,5,6,7],
+      "modalPath":"/threePicSets/headshots_dk/",
+      "modalDescription":["Headshoot DK is an AI-powered image platform that transforms simple mobile selfies into professional-quality headshots. They approached us to redesign their main homepage, aiming for a cleaner, more modern feel that would resonate with their target audience.","Our redesign introduced a neo-brutalism inspired aesthetic, giving the site a bold and contemporary personality. To improve user engagement, we proposed and implemented an animated “How It Works” steps section, making the product usage process more interactive and easy to follow.","We also restructured the pricing section with key CRO principles in mind — ensuring clarity, highlighting value, and nudging users toward conversion. Every element of the design was made fully mobile responsive, delivering a seamless experience across devices.","The result is a fresh, visually striking homepage that not only elevates the brand’s image but also improves usability and engagement."]
     },
     {
       "id": 3,
@@ -26,7 +31,11 @@
       "superCategory": "webDesign",
       "image1":"/threePicSets/synctheself/image2.png",
       "image2":"/threePicSets/synctheself/image1.png",
-      "image3":"/threePicSets/synctheself/image3.png"
+      "image3":"/threePicSets/synctheself/image3.png",
+      "mobileImages":[1,2,3,4,5,6,7,8,9,10,11,12],
+      "desktopImages":[1,2,3,4,5,6,7,8,9,10,11,12],
+      "modalPath":"/threePicSets/synctheself/",
+      "modalDescription":["Sync The Self is an eCommerce brand that came to us with a critical challenge — their existing online store was generating zero sales. Our mission was to identify conversion blockers and redesign the experience to turn traffic into revenue.","We began with a full CRO audit of the homepage and product detail pages, uncovering gaps in trust, clarity, and persuasive design. From there, we implemented targeted conversion strategies and redesigned product images using a blend of AI tools and creative direction. Every product page section was crafted with intention — from trust badges and unique value propositions to strategic product descriptions.","To increase average order value, we integrated custom product bundles directly on PDPs, encouraging users to purchase more in a single session. The new design reflects a minimalist, Apple-like aesthetic with modern bento-style layouts, aligning with the brand’s tech-forward identity.","The results were immediate — sales began to climb, and conversions improved significantly. Our next phase will focus on A/B testing using Hotjar heatmaps and user journey analytics to continually optimize what works and refine what doesn’t."]
     },
     {
       "id": 4,
@@ -36,8 +45,9 @@
       "image1":"/threePicSets/fundex/image1.png",
       "image2":"/threePicSets/fundex/image2.png",
       "image3":"/threePicSets/fundex/image3.png",
-      "modalImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
-      "modalPath":"/threePicSets/fundex/modalImages/",
+      "mobileImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+      "desktopImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+      "modalPath":"/threePicSets/fundex/",
       "modalDescription":["Fundex is a finance management company specializing in providing financial support, audits, and CRM solutions for multinational corporations. With a strong foothold in the industry, Fundex aimed to elevate its brand identity to match its evolving goals and growing clientele.","They approached us with a clear objective: to revamp their brand and explore modern iterations of their brand book. They sought a fresh, contemporary look that would not only enhance their market presence but also help them attract more customers and confidently pitch to larger, high-value clients.","To meet their vision, we conducted thorough research centered on user engagement and audience expectations. Using these insights, we crafted a modern and dynamic brand identity that reflects Fundex’s core values while setting them apart in the competitive finance industry"]
       
     },
@@ -49,8 +59,9 @@
       "image1":"/threePicSets/jellice/image1.png",
       "image2":"/threePicSets/jellice/image2.png",
       "image3":"/threePicSets/jellice/image3.png",
-      "modalImages":[1,2,3,4,5,6,7,8,9,10,11,12],
-      "modalPath":"/threePicSets/jellice/modalImages/",
+      "mobileImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+      "desktopImages":[1,2,3,4,5,6,7,8,9,10,11,12],
+      "modalPath":"/threePicSets/jellice/",
       "modalDescription":["Jellice is a Japanese cosmetic brand blending traditional wisdom with advanced technology to create products that enhance vitality and natural beauty. The brand aims to redefine skincare by going beyond surface-level care.","They approached us to audit their website, conduct market research, and propose a modern, user-centric design that aligns with their innovative identity. The objective was to create a seamless, elegant experience that reflects the brand’s commitment to both tradition and cutting-edge technology.","Focusing on simplicity and sophistication, we crafted a minimalistic design inspired by Japanese aesthetics. The updated website highlights storytelling, intuitive navigation, and enhanced shopping features, ensuring an engaging experience that resonates with their audience."]
     },
     {
@@ -61,8 +72,9 @@
       "image3":"/threePicSets/radex/image3.png",
       "image2":"/threePicSets/radex/image1.png",
       "image1":"/threePicSets/radex/image2.png",
-      "modalImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
-      "modalPath":"/threePicSets/radex/modalImages/",
+      "mobileImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+      "desktopImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+      "modalPath":"/threePicSets/radex/",
       "modalDescription":["Radex is a dynamic digital marketing agency committed to delivering actionable strategies that drive measurable results. Recognizing the need to modernize their brand identity, they approached us to revamp their image and align it with their evolving goals.","After a comprehensive consultation to understand their vision, we embarked on creating a fresh, contemporary design that encapsulates Radex's commitment to innovation and excellence in the digital marketing landscape."]
 
     },
@@ -73,7 +85,11 @@
       "superCategory": "webDesign",
       "image2":"/threePicSets/pixelpaper/image1.png",
       "image1":"/threePicSets/pixelpaper/image2.png",
-      "image3":"/threePicSets/pixelpaper/image3.png"
+      "image3":"/threePicSets/pixelpaper/image3.png",
+      "mobileImages":[1,2,3,4,5,6,7,8,9,10,11,12,13],
+      "desktopImages":[1,2,3,4,5,6,7,8,9,10,11,12,13],
+      "modalPath":"/threePicSets/pixelpaper/",
+      "modalDescription":["Pixel and Paper is a creative design agency specializing in art and illustration services for brands. They approached us with a vision for a bold, modern, colorful, and energetic website that would resonate with their vibrant identity and attract creative-minded clients.","To bring their vision to life, we began with in-depth research to understand both their goals and their audience's needs. By analyzing every detail, from branding to user expectations, we crafted a website that aligns perfectly with their dynamic style.","The result? A visually striking, high-energy website that reflects Pixel and Paper’s unique ethos. The design not only captures their bold spirit but also ensures a seamless, engaging experience for their users, solidifying their position as leaders in the creative industry."]
     },
     {
       "id": 8,
@@ -83,8 +99,9 @@
       "image3":"/threePicSets/zenith/image1.png",
       "image1":"/threePicSets/zenith/image2.png",
       "image2":"/threePicSets/zenith/image3.png",
-      "modalImages":[1,2,3,4,5,6,7,8,9,10,11,12],
-      "modalPath":"/threePicSets/zenith/modalImages/",
+      "mobileImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
+      "desktopImages":[1,2,3,4,5,6,7,8,9,10,11,12],
+      "modalPath":"/threePicSets/zenith/",
       "modalDescription":["Zenith is a digital agency offering marketing, SEO, and content creation services to boost businesses online. Their website had a classical look, but they wanted a bold and modern visual refresh to align with their brand identity.","After understanding their vision, we designed a contemporary and striking website that reflects Zenith’s expertise and innovative approach, ensuring it resonates with their evolving goals in the digital space."]
     },
     {
@@ -94,7 +111,11 @@
       "superCategory": "mobile",
       "image1":"/threePicSets/daxo/image1.png",
       "image3":"/threePicSets/daxo/image2.png",
-      "image2":"/threePicSets/daxo/image3.png"
+      "image2":"/threePicSets/daxo/image3.png",
+      "mobileImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18],
+      "desktopImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18], 
+      "modalPath":"/threePicSets/daxo/",
+      "modalDescription":["Daxo is an event booking management platform designed to simplify the way events are planned, organized, and executed. Their existing system was functional but lacked the intuitive experience and sleek design modern users expect.","To align with Daxo's vision of becoming a go-to solution for seamless event management, we created a bold, user-friendly interface paired with efficient booking workflows. The refreshed design not only enhances usability but also reflects Daxo’s commitment to innovation and excellence in event management, ensuring users have a hassle-free experience while organizing memorable events."]
     },
     {
       "id": 10,
@@ -103,7 +124,12 @@
       "superCategory": "saas",
       "image2":"/threePicSets/aero/image1.png",
       "image1":"/threePicSets/aero/image2.png",
-      "image3":"/threePicSets/aero/image3.png"
+      "image3":"/threePicSets/aero/image3.png",
+      "mobileImages":[1,2,3,4,5,6,7,8,9,10,11,12,13],
+      "desktopImages":[1,2,3,4,5,6,7,8,9,10,11,12,13], 
+      "modalPath":"/threePicSets/aero/",
+      "modalDescription":["Aero is an innovative HR management company providing tools and resources to software houses. They sought a sleek, user-friendly dashboard to streamline employee management and payroll in one place.","To bring their vision to life, Aero approached us for a fresh, minimal design. Through close collaboration, we crafted an intuitive, modern interface that enhances efficiency while maintaining a clean, professional aesthetic—ensuring a seamless experience for HR teams."]
+   
     },
     {
       "id": 11,
@@ -112,7 +138,11 @@
       "superCategory": "branding",
       "image2":"/threePicSets/nolux/image1.png",
       "image1":"/threePicSets/nolux/image2.png",
-      "image3":"/threePicSets/nolux/image3.png"
+      "image3":"/threePicSets/nolux/image3.png",
+      "mobileImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23],
+      "desktopImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23], 
+      "modalPath":"/threePicSets/nolux/",
+      "modalDescription":["Nolux is a bold content strategy agency empowering brands worldwide with impactful storytelling and innovative content solutions. Seeking to elevate their visual identity, they approached us to craft a modern, dynamic look that reflects their fearless approach to branding.","Through in-depth collaboration, we designed a fresh, contemporary design that not only enhances their presence but also reinforces Nolux’s commitment to bold creativity and strategic excellence in the content landscape."]
     },
     {
       "id": 12,
@@ -121,7 +151,11 @@
       "superCategory": "webDesign",
       "image2":"/threePicSets/onyx/image1.png",
       "image3":"/threePicSets/onyx/image2.png",
-      "image1":"/threePicSets/onyx/image3.png"
+      "image1":"/threePicSets/onyx/image3.png",
+      "mobileImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+      "desktopImages":[1,2,3,4,5,6,7,8,9,10,11], 
+      "modalPath":"/threePicSets/onyx/",
+      "modalDescription":["Onyx is a financial management platform offering financial and brokerage services to companies. They approached us with a vision to transform their traditional design into a sleek, modern SaaS product aesthetic that reflects innovation and functionality.","To bring their vision to life, we started with detailed research to understand their objectives and user needs. By reimagining their platform’s look and feel, we created a design that seamlessly blends modernity with usability.","The result? A polished, user-centric website and software that not only elevate Onyx’s brand but also enhance the client experience, setting them apart as a leader in financial services."]
     },
     {
       "id": 13,
@@ -130,7 +164,11 @@
       "superCategory": "webDesign",
       "image3":"/threePicSets/mairEnoel/image1.png",
       "image2":"/threePicSets/mairEnoel/image2.png",
-      "image1":"/threePicSets/mairEnoel/image3.png"
+      "image1":"/threePicSets/mairEnoel/image3.png",
+      "mobileImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18],
+      "desktopImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16], 
+      "modalPath":"/threePicSets/mairEnoel/",
+      "modalDescription":["MairE NoEl is a beauty skincare brand with a mission to empower confidence through radiant skin. They approached us to launch their brand and create impactful product mockups, seeking a modern, bold, and striking online presence.","To bring their vision to life, we conducted in-depth market research and competitive analysis, ensuring the website would stand out in the beauty industry. The result? A visually stunning and high-performing website that embodies MairE NoEl’s essence—Glow, Define, Embrace—while making a lasting impact on its audience."]
     },
     {
       "id": 14,
@@ -139,7 +177,11 @@
       "superCategory": "mobile",
       "image1":"/threePicSets/stockyai/image1.png",
       "image3":"/threePicSets/stockyai/image2.png",
-      "image2":"/threePicSets/stockyai/image3.png"
+      "image2":"/threePicSets/stockyai/image3.png",
+      "mobileImages":[1,2,3,4,5,6,7,8,9,10,11,12],
+      "desktopImages":[1,2,3,4,5,6,7,8,9,10,11,12], 
+      "modalPath":"/threePicSets/stockyai/",
+      "modalDescription":["Stockly AI is a mobile app designed to revolutionize online shopping by using AI prompts to automatically find the best and cheapest products for users. The app also enables seamless product comparisons, making shopping smarter and more efficient.","They approached us with a vision to bring this fresh idea to life by developing an early MVP for the app. Their goal was to create a product that embodies innovation and delivers a user-friendly experience.","To achieve this, we conducted thorough research to align with their objectives and user needs. By designing an intuitive and sleek interface, we ensured the app balances advanced AI functionality with usability."]
     },
     {
       "id": 15,
@@ -148,6 +190,11 @@
       "superCategory": "saas",
       "image1":"/threePicSets/orbit/image1.png",
       "image2":"/threePicSets/orbit/image2.png",
-      "image3":"/threePicSets/orbit/image3.png"
+      "image3":"/threePicSets/orbit/image3.png",
+      "mobileImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+      "desktopImages":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+      "modalPath":"/threePicSets/orbit/",
+      "modalDescription":["Orbit is a cutting-edge project management tool designed for organizations to streamline internal projects for their employees. They envisioned a bold, dark-themed interface that caters to their predominantly night-shift workforce.","Through in-depth research and collaboration, we crafted a sleek, intuitive dashboard that enhances productivity while maintaining a modern and immersive experience. The result? A seamless, efficient platform tailored for teams working around the clock."]
+
     }
   ]

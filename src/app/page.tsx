@@ -25,7 +25,7 @@ import { useState } from "react";
 import WorkSlider from "@/Components/workSlider";
 import ProgressBar from "@/Components/progressBar/index";
 import TestimonialsResponsive from "@/Components/testiminals/TestimonialsResponsive";
-import PioneerDetailResponsive from "@/Components/PioneerDetailResponsive/PioneerDetailResponsive";
+// import PioneerDetailResponsive from "@/Components/PioneerDetailResponsive/PioneerDetailResponsive";
 // import { HeroStatement } from "@/Components/HeroStatement/HeroStatement";
 // import { FAQAccordion } from "@/Components/fAQAccordion/FAQAccordion";
 // import ContactForm from "@/Components/contactForm/ContactForm";
@@ -318,7 +318,7 @@ export default function Home() {
                         position: 'relative',
                         borderRight: index === serviceCards.length - 1 ? 'none' : '1px solid #373737',
                       }}
-                       className="w-[320px] lg:w-[25%]"
+                       className="w-[320px] lg:w-[25%] m-1"
                        >
                         {/* Render dots only if NOT last index */}
                         {index !== serviceCards.length - 1 && (
@@ -444,7 +444,7 @@ export default function Home() {
         </section>
 
 
-      <section className="block md:block">
+      <section className="">
         <div style={{ width: "100%", display: "flex" }}>
           <div
             style={{
@@ -468,7 +468,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="block md:hidden lg:hidden xl:hidden">
+      {/* <section className="block md:hidden lg:hidden xl:hidden">
         <div style={{ width: "100%", display: "flex" }}>
           <div
             style={{
@@ -490,7 +490,7 @@ export default function Home() {
             }}
           ></div>
         </div>
-      </section>
+      </section> */}
 
 
        <section>
