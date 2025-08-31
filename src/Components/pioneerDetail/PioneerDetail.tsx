@@ -4,6 +4,7 @@ import Button from "../button/Button";
 import CommonQuestion from "../commonQuestion";
 import { useRouter } from "next/navigation";
 import NewCustomChip from "../NewCustomChip/index";
+import RoundCornerWrapper from "../RoundCornerWrapper";
 
 const PioneerDetail = () => {
   const [selectedChip, setSelectedChip] = useState<string>();
@@ -34,17 +35,18 @@ const PioneerDetail = () => {
 
 
   return (
-    <section className="flex flex-col md:flex-row items-start justify-center  max-w-7xl mx-auto">
+    <section className="flex flex-col lg:flex-row items-start justify-center mx-auto">
       {/* Left Side - Image */}
+      <RoundCornerWrapper top={false} left={false}>
       <div
-        className="w-[100%] md:w-[40%]  p-[10px] md:px-[10px] md:py-[60px] lg:p-[60px] lg:py-[50px]"
+        className="w-[100%] p-5 py-[40px] md:px-[15px] md:py-[60px] "
         style={{
           boxSizing: "border-box",
           display: "flex",
           justifyContent: "center",
         }}
       >
-        <div className="md:w-[100%]">
+        <div className="md:w-[100%] max-w-[400px]">
           {chipdata.map((item, index) => (
             <div
               key={"chipbox" + index}
@@ -69,21 +71,25 @@ const PioneerDetail = () => {
           ))}
         </div>
       </div>
+      </RoundCornerWrapper>
 
       {/* Right Side - Text Content */}
-      <div className="hidden border-l border-[#373737] sm:flex w-[100%] md:w-[60%] flex-col justify-start p-[20px] md:px-[30px] md:py-[60px] lg:p-[60px]">
-        <div className="w-[120px]">
-          <CommonQuestion question="our vibe" />
-        </div>
-        <p className="font-rubik text-[38px] leading-[52px] tracking-[-0.02em] font-normal text-white/70 my-3 rounded-xl">
-          We help brands grow by designing smooth, smart experiences people
-          actually enjoy using.
-        </p>
-
-        <div className="pt-2">
-          <Button title="More about us" onClick={() => router.push("/about")} />
-        </div>
+      {/* <RoundCornerWrapper top={false} left={false}> */}
+      <section className="flex flex-col lg:flex-row items-start justify-center mx-auto">
+        <div className="w-full flex-col justify-start p-[20px] md:p-[40px] md:py-[50px] py-[40px]">
+      <div className='w-[120px]'>
+      <CommonQuestion question='our vibe'/>
       </div>
+      <p className="font-rubik text-[30px] md:text-[44px] leading-[46px] tracking-[-0.02em] font-normal text-white/70 my-3 rounded-xl">
+        We help brands grow by designing smooth, smart experiences people actually enjoy using.
+      </p>
+
+      <div className="pt-2">
+        <Button title="More about us" onClick={() =>router.push('/about') }/>
+      </div>
+    </div>
+  </section>
+  {/* </RoundCornerWrapper> */}
     </section>
   );
 };
