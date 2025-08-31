@@ -63,7 +63,7 @@ const BrandIdentity = () => {
 
 
           {/* Right Image Column */}
-          <div className="hidden xl:flex w-[70%] px-[4%] pr-[1%] pl-[15%] py-[3%] bg-[url('/Stars.svg')] bg-no-repeat bg-cover">
+          <div className="hidden xl:flex w-[70%] justify-center px-[4%] pr-[1%] pl-[15%] py-[3%] bg-[url('/Stars.svg')] bg-no-repeat bg-cover">
             <div
               className="relative w-[500px] h-[319px] bg-center bg-no-repeat bg-contain"
               style={{ backgroundImage: "url('/maincontainer.svg')"}}

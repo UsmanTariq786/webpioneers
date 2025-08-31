@@ -36,7 +36,7 @@ const WebsiteDevelopment = () => {
       className="relative mt-10 mb-[30px] w-[90%] mx-auto flex flex-col sm:flex-row rounded-[30px] items-center min-h-[456px]"
     >
       {/* Left Web Card */}
-      <div className="w-full xl:w-[30%] flex flex-col md:flex-row xl:flex-row md:gap-4 justify-end">
+      <div className="w-full md:w-[30%] lg:w-[50%] flex flex-col md:flex-row xl:flex-row md:gap-4 justify-end lg:justify-center">
         <WebCard
           title={cardData.title}
           image={cardData.image}
@@ -56,7 +56,7 @@ const WebsiteDevelopment = () => {
 
       {/* Right Section: Logos + Code Image */}
       <div
-        className="hidden md:flex gap-4 w-full sm:w-[70%] p-10 justify-end"
+        className="hidden md:flex gap-4 w-full md:w-[70%] lg:w-[50%] p-10 justify-end lg:justify-center"
         style={{ background: "url('/web-star.svg')" }}
       >
         {/* Vertical Logos */}
