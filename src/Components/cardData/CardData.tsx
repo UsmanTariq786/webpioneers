@@ -48,8 +48,8 @@ const MobileCards = () => (
 
                         </div>
                         <img src={card.image} alt={card.title} className="w-[70px] h-[70px] mb-12" />
-                        <h3 className="text-xl mt-6 text-[#F8F8F8F2]">{card.title}</h3>
-                        <p className="mt-2 text-[18px] text-[#F8F8F880]">{card.description}</p>
+                        <h3 className="text-[18px] mt-6 text-[#F8F8F8F2]">{card.title}</h3>
+                        <p className="mt-2 text-[16px] text-[#F8F8F880]">{card.description}</p>
                     </div>
                 </RoundCornerWrapper>
             </div>
@@ -71,7 +71,7 @@ const LargeScreenCards = () => (
 
                         </div>
                         <img src={card.image} alt={card.title} className="w-[70px] h-[70px] mb-12" />
-                        <h3 className="text-xl mt-6 text-[#F8F8F8F2]">{card.title}</h3>
+                        <h3 className="text-[20px] mt-6 text-[#F8F8F8F2]">{card.title}</h3>
                         <p className="mt-2 text-[18px] text-[#F8F8F880]">{card.description}</p>
                     </div>
                 </RoundCornerWrapper>

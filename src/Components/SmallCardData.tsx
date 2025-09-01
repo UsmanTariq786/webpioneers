@@ -34,23 +34,24 @@ function SmallCardData() {
 
       <div className="flex flex-row overflow-auto">
         {smallCard.map((card, index) => (
-          <div key={index + "smallcradwhatisthiscard"}>
+          <div key={index + "smallcradwhatisthiscard"} >
             {/* ✅ Mobile / <md: without RoundCornerWrapper */}
-            <div className="block md:hidden">
-            <RoundCornerWrapper>
+            <div className="block md:hidden my-1  ">
+            <RoundCornerWrapper dotTopLeft={false} dotBottomLeft>
               <div
-                className={`p-5 m-5 border-1 border-[#2b2b2b] border-opacity-40 rounded-2xl h-[320px] sm:h-80 ${
-                  index === 0 ? "bg-[#D4541DF2]" : ""
-                } h-[320px] sm:h-60  `}
-                style={{
-                  boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
-                }}
+                className={`m-5 p-5 m-5border-1 border-t-1 border-b-0 border-x-0 border-[#313131] rounded-2xl  ${
+                  index === 0 ? "bg-[#D4541DF2]" : "#242424"
+                }`}
+                style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}
               >
-                <span>{card.id}</span>
+                <div className="flex items-center">
+            <div className="w-2 h-2 bg-[#FFFFFF] rounded-full mr-2"></div>
+            <span className="text-[16px]"> {card.id}</span>
+            </div>
                 <h2 className={`pt-30 text-[20px] mb-2 text-[#F8F8F8] `}>
                   {card.heading}
                 </h2>
-                <p className={` text-[#F8F8F8] opacity-95 ${"w-[180px]"}`}>
+                <p className={` text-[#F8F8F8] text-[16px] opacity-75 ${"w-[180px]"}`}>
                   {card.description}
                 </p>
               </div>
@@ -74,34 +75,36 @@ const DeskTopCardsView = () => {
         <section className="w-full flex flex-col">
         <RoundCornerWrapper>
           <div
-            className={`p-5 m-5 border-1 border-[#2b2b2b] border-opacity-40 rounded-2xl bg-[#D4541DF2]  
+            className={`p-5 m-5 rounded-2xl  border-1 border-t-1 border-b-0 border-x-0 border-[#313131] bg-[#D4541DF2]  
                   h-[380px]`}
-            style={{
-              boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
-            }}
+                  style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}
           >
-            <span>• 01</span>
-            <h2 className={`pt-40 text-[20px] mb-2 text-[#F8F8F8] `}>
+             <div className="flex items-center">
+            <div className="w-2 h-2 bg-[#FFFFFF] rounded-full mr-2"></div>
+            <span className="text-[16px]"> 01</span>
+            </div>
+            <h2 className={`pt-40 text-[20px] mb-2 text-[#F8F8F8] font-semibold `}>
               You first
             </h2>
-            <p className={` text-[#F8F8F8] opacity-95 ${"w-[180px]"}`}>
+            <p className={` text-[#F8F8F8]  opacity-75 text-[16px] ${"w-[180px]"}`}>
               We're here for your vision. With teamwork, we'll make it real.
             </p>
           </div>
         </RoundCornerWrapper>
         <RoundCornerWrapper top={false} >
           <div
-            className={`p-5 m-5 border-1 border-[#2b2b2b] border-opacity-40 rounded-2xl 
-                  h-[280px]`}
-            style={{
-              boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
-            }}
+            className="p-5 m-5 rounded-2xl 
+                  h-[280px]  border-1 border-t-1 border-b-0 border-x-0 border-[#313131] bg-[#242424]"
+                  style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}
           >
-            <span>• 03</span>
-            <h2 className={`pt-15 text-[20px] mb-2 text-[#F8F8F8] `}>
+            <div className="flex items-center">
+            <div className="w-2 h-2 bg-[#FFFFFF] rounded-full mr-2"></div>
+            <span className="text-[16px]"> 03</span>
+            </div>
+            <h2 className={`pt-15 text-[20px] mb-2 text-[#F8F8F8] font-semibold `}>
             Hide nothing
             </h2>
-            <p className={` text-[#F8F8F8] opacity-95 ${"w-[180px]"}`}>
+            <p className={` text-[#F8F8F8] opacity-75 text-[16px] ${"w-[180px]"} `}>
             To us, transparency means you're part of our team's journey.
             </p>
           </div>
@@ -111,34 +114,36 @@ const DeskTopCardsView = () => {
         <section className="w-full flex flex-col">
         <RoundCornerWrapper left={false}>
           <div
-            className={`p-5 m-5 border-1 border-[#2b2b2b] border-opacity-40 rounded-2xl  
-                  h-[280px]`}
-            style={{
-              boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
-            }}
+            className="p-5 m-5 rounded-2xl  
+                  h-[280px]  border-1 border-t-1 border-b-0 border-x-0 border-[#313131] bg-[#242424]"
+                  style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}
           >
-            <span>• 02</span>
+              <div className="flex items-center">
+            <div className="w-2 h-2 bg-[#FFFFFF] rounded-full mr-2"></div>
+            <span className="text-[16px]"> 02</span>
+            </div>
             <h2 className={`pt-15 text-[20px] mb-2 text-[#F8F8F8] `}>
             Cutting edge
             </h2>
-            <p className={` text-[#F8F8F8] opacity-95 ${"w-[180px]"}`}>
+            <p className={` text-[#F8F8F8]  opacity-75 text-[16px] ${"w-[180px]"}`}>
             We use the latest tech to create solutions that grow and evolve.
             </p>
           </div>
         </RoundCornerWrapper>
         <RoundCornerWrapper top={false}  left={false}>
           <div
-            className={`p-5 m-5 border-1 border-[#2b2b2b] border-opacity-40 rounded-2xl 
-                  h-[380px]`}
-            style={{
-              boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
-            }}
+            className="p-5 m-5 rounded-2xl 
+                  h-[380px]  border-1 border-t-1 border-b-0 border-x-0 border-[#313131] bg-[#242424]"
+                  style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}
           >
-            <span>• 04</span>
-            <h2 className={`pt-35 text-[20px] mb-2 text-[#F8F8F8] `}>
+            <div className="flex items-center">
+            <div className="w-2 h-2 bg-[#FFFFFF] rounded-full mr-2"></div>
+            <span className="text-[16px]"> 04</span>
+            </div>
+            <h2 className={`pt-35 text-[20px] mb-2 text-[#F8F8F8] font-semibold `}>
             Fresh angles
             </h2>
-            <p className={` text-[#F8F8F8] opacity-95 ${"w-[180px]"}`}>
+            <p className={` text-[#F8F8F8]  opacity-75 text-[16px] ${"w-[180px]"}`}>
             We inspire through exploration, adaptation and curiosity.
             </p>
           </div>

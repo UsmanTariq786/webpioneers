@@ -31,14 +31,14 @@ function TableData() {
             <div>
               {/* top heading */}
               <RoundCornerWrapper top={false}>
-                <div className="flex flex-col items-center justify-center px-[20px] md:px-0 py-10">
+                <div className="flex flex-col items-center justify-center px-[20px] md:px-0 py-10 pt-20">
                   <img
                     src={card.image}
                     alt=""
                     className="w-[66px] h-[66px] md:w-[75px] md:h-[75px] mb-8"
                   />
                  <h1
-                    className="text-[32px] md:text-5xl bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0%,rgba(248,248,248,0.5)_100%)] text-transparent bg-clip-text leading-[1.5] pb-1"
+                    className="text-[32px] md:text-[42px] bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0%,rgba(248,248,248,0.5)_100%)] text-transparent bg-clip-text leading-[1.5] pb-1"
                     style={{
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
@@ -57,18 +57,18 @@ function TableData() {
                   left={false}
                 >
                   {/* <div className="sm:flex md:flex-wrap grid grid-cols-1"> */}
-                  <div className="sm:flex md:flex-wrap grid grid-cols-1">
+                  <div className="sm:flex sm:flex-wrap grid grid-cols-1">
                     {/* left side */}
                     <div className=" w-full  sm:w-1/2 border-l-1 border-b-1 border-[#373737]">
                       <RoundCornerWrapper left={false} top={false}>
-                        <div className=" p-5 ">
+                        <div className=" p-8 ">
                           <p className="text-[18px] text-[#F8F8F880]">
                             {card.sub1}
                           </p>
                         </div>
                       </RoundCornerWrapper>
                       <RoundCornerWrapper top={false} right={isMobile ? true: false} left={false} bottom={false} dotBottomLeft={false} dotBottomRight={false}>
-                        <div className=" p-5 ">
+                        <div className=" p-8 ">
                           <p
                             style={{
                               background:
@@ -93,14 +93,14 @@ function TableData() {
                     {/* right side */}
                     <div className="flex flex-col  sm:w-1/2 ">
                       <RoundCornerWrapper left={false} top={false} className="hidden md:block">
-                        <div className="p-5 hidden md:block">
+                        <div className="p-8 hidden md:block">
                           <p className="text-[18px] text-[#F8F8F880]">
                             {card.sub2}
                           </p>
                         </div>
                       </RoundCornerWrapper>
                       <RoundCornerWrapper className="block md:hidden" top={false}>
-                        <div className="p-5 block md:hidden">
+                        <div className="p-8 block md:hidden">
                           <p className="text-[18px] text-[#F8F8F880]">
                             {card.sub2}
                           </p>
@@ -121,7 +121,7 @@ function TableData() {
                             .map((item, index) => (
                               <RoundCornerWrapper top={false} key={index}>
                                 <div key={index + "serrser3ds"}>
-                                  <div className="flex p-5 ">
+                                  <div className="flex p-8 ">
                                     <div className=" flex items-center mr-8">
                                       <div className="w-2 h-2 rounded-full bg-[#F8F8F880] mr-[15px] md:mr-2"></div>
                                       <p className="text-[#F8F8F880]">

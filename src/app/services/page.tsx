@@ -13,12 +13,12 @@ const ServicesPage = () => {
       <section>
         <div className="w-full flex">
           <div className="w-[10%] border-r border-b border-[#373737]"></div>
-          <div className="w-[79.95%] p-5 md:p-12">
+          <div className="w-[79.95%] md:p-15 p-10">
             <div className="w-40 mb-3">
               <CommonQuestion question={Box[0].boxhead} />
             </div>
             <h1
-              className="md:text-5xl md:w-150  text-[32px] "
+              className="md:text-[42px] md:w-150  text-[32px] "
               style={{
                 background:
                   "linear-gradient(92.95deg, rgba(248, 248, 248, 0.9) 0.1%, rgba(248, 248, 248, 0.5) 100.1%)",
@@ -26,7 +26,7 @@ const ServicesPage = () => {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              {Box[0].boxdes}
+              Services that actually <br />move the needle
             </h1>
           </div>
           <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
@@ -73,12 +73,12 @@ const ServicesPage = () => {
     
     <div className="w-[80.08%]">
     <RoundCornerWrapper top={false} bottom={false}>
-      <div className="p-6">
-        <div className="w-50 my-5 mt-5 md:mt-15">
+      <div className="p-10 pb-14">
+        <div className="w-50 my-5">
          <CommonQuestion question={Box[1].boxhead} />
         </div>
       <h1
-              className="text-[32px] leading-[40px] md:text-5xl md-leading-[56px] w-70"
+              className="text-[32px] leading-[40px] md:text-[42px] md-leading-[56px] w-70"
               style={{
                 background:
                   "linear-gradient(92.95deg, rgba(248, 248, 248, 0.9) 0.1%, rgba(248, 248, 248, 0.5) 100.1%)",
@@ -86,7 +86,7 @@ const ServicesPage = () => {
                 WebkitTextFillColor: "transparent",
               }}
             >
-           {Box[1].boxdes}
+          What sets <br /> us apart?
             </h1>
       </div>
     </RoundCornerWrapper>
@@ -97,7 +97,7 @@ const ServicesPage = () => {
        
 
 
-      <section className="block md:hidden">
+      {/* <section className="block md:hidden">
         <div className="w-full flex">
           <div className="w-[9.95%] box-border border-b border-[#373737]"></div>
           <div className="w-[80.08%]">
@@ -119,7 +119,7 @@ const ServicesPage = () => {
           </div>
           <div className="w-[9.95%] box-border border-b border-[#373737]"></div>
         </div>
-      </section>
+      </section> */}
 
 <div className="">
 <section>
@@ -161,6 +161,7 @@ const ServicesPage = () => {
                     <br />
                     <h1 className="text-[30px] leading-[38px] md:text-[44px] md:leading-[52px] mt-2">{Box[2].boxdes}</h1> <br />
                     <Button title="More About us" />
+                    
                   </div>
                 </RoundCornerWrapper>
               
