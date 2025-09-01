@@ -25,39 +25,25 @@ const WebsiteDesignFeature = () => {
           to-white/5
         flex flex-col sm:flex-col md:flex-row  items-center md:items-center min-h-[456px]"
     >
-      {/*  LEFT SECTION (Hidden only on very small devices)  */}
-      {/* <div className="hidden xl:flex md:hidden sm:flex flex-col justify-between h-[320px]">
-        <Image
-          src="/websitedesigngroup.svg"
-          width={260}
-          height={180}
-          alt="Main Stack"
-        />
-        <div className="flex justify-between gap-1 w-[260px]">
-          <Image src="/Group31.png" width={80} height={60} alt="Card 1" />
-          <Image src="/clip-path.png" width={80} height={60} alt="Card 2" />
-          <Image src="/Group32.png" width={80} height={60} alt="Card 3" />
-        </div>
-      </div> */}
 
       {/* === CENTER SECTION === */}
-      <div className="hidden xl:flex relative w-[60%] py-5 pl-2"
+      <div className="hidden xl:flex relative w-full md:w-[60%] lg:w-[50%] py-5 pl-2 justify-center items-center"
       style={{background:"url('/starstwo.svg')", backgroundSize:'100% 100%'}}
       >
-        <div className="h-[80%]">
+        <div className="relative flex justify-center md:justify-start items-start">
         <Image
           src="/websitedesigngroup.svg"
-          width={240}
-          height={220}
+          width={500}
+          height={275}
           alt="Center UI"
-          className="w-full h-auto"
+          // className="w-full h-auto"
         />
         </div>
        
       </div>
 
       {/* === RIGHT SECTION === */}
-      <div className="w-full xl:w-[30%] flex flex-col md:flex-row xl:flex-row md:gap-4 justify-end">
+      <div className="w-full md:w-[30%] lg:w-[50%] flex flex-col md:flex-row xl:flex-row md:gap-4 justify-end lg:justify-center">
      <WebCard
          title={cardData.title}
          image ={cardData.image}
