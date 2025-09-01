@@ -49,7 +49,7 @@ const ContactUsComp = () => {
       <div className="flex flex-col xl:flex-row justify-between gap-6 items-center">
         {/* Left Section (Header and Contact Points) */}
         <RoundCornerWrapper top={false} right={false} left={false} dotTopRight={false} className="w-full ">
-        <div className="w-full p-4 mx-1 md:mx-8 my-10">
+        <div className="w-full p-5 mx-4 md:mx-8 md:ml-12 my-10">
           <div className="w-[150px] mb-5 ">
             <CommonQuestion question="REACH OUT" />
           </div>
@@ -92,7 +92,7 @@ const ContactEmail = ({ emailToCopy, handleCopy }: any) => {
   return (
     <>
       <div
-        className=" p-2 py-6 md:py-5 md:p-5 rounded-3xl border-1 border-t-1 border-b-0 border-x-0 border-[#313131] bg-[#242424]"
+        className=" p-5 sm:pl-20 py-10 md:py-5 md:p-5 rounded-3xl border-1 border-t-1 border-b-0 border-x-0 border-[#313131] bg-[#242424]"
         style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}
       >
         <div className="flex flex-col md:flex-row justify-between md:px-4">
@@ -100,7 +100,7 @@ const ContactEmail = ({ emailToCopy, handleCopy }: any) => {
             <p className="text-[#767676] text-[18px] md:text-[20px]">
               Prefer email?
             </p>
-            <p className="text-[#F8F8F8] text-[20px] md:text-[25px]    mt-[10px] md:mt-[0px]">
+            <p className="text-[#F8F8F8] wrap-anywhere md:wrap-normal  text-[20px] md:text-[25px]    mt-[10px] md:mt-[0px]">
               {emailToCopy}
             </p>
           </div>
@@ -123,7 +123,7 @@ const ContactPhone = ({ whatsappNumber, handleStartChat }: any) => {
   return (
     <>
       <div
-        className=" p-5 py-6 rounded-3xl border-1 border-t-1 border-b-0 border-x-0 border-[#313131] bg-[#242424]"
+        className=" p-5 sm:pl-20 py-10 md:py-5 md:p-5 rounded-3xl border-1 border-t-1 border-b-0 border-x-0 border-[#313131] bg-[#242424]"
         style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}
       >
         <div className="flex flex-col md:flex-row justify-between md:px-4 ">
