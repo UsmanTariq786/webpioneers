@@ -221,7 +221,7 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="block md:hidden">
+      {/* <section className="block md:hidden">
   <div className="w-full flex">
     <div className="w-[9.95%] box-border border-b border-[#373737]"></div>
     <div className="w-[80.08%]">
@@ -231,7 +231,7 @@ export default function Home() {
     </div>
     <div className="w-[9.95%] box-border border-b border-[#373737]"></div>
   </div>
-</section>
+</section> */}
 
 
 
