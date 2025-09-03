@@ -394,9 +394,9 @@ export default function ContactForm() {
               <div className="w-[50%]">
                 <RoundCornerWrapper>
                   <input
-                    type="tel"
+                    type="text"
                     placeholder="Phone number"
-                    className="w-full placeholder-[rgba(118, 118, 118, 1)] rounded-lg px-4 py-6 text-white"
+                    className="w-full placeholder-[rgba(118, 118, 118, 1)] rounded-lg px-4 py-6 text-white focus:outline-none"
                   />
                 </RoundCornerWrapper>
               </div>
@@ -631,8 +631,8 @@ export default function ContactForm() {
           ></div>
           <div style={{ width: "79.95%" }}>
             <div className="flex">
-              <div className="w-[50%] p-8" style={{borderRight: "1px solid #373737",position:'relative'}}>
-                <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
+              <div className="w-[50%] p-8 xl:pt-12" style={{borderRight: "1px solid #373737",position:'relative'}}>
+                <div className="w-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
 
                 <div className="w-[60%]">
                 <p className="text-sm text-white/60">
