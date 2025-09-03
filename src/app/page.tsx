@@ -67,7 +67,7 @@ export default function Home() {
          controls
          poster="/homepagevideo/Thumbnail.png"
          className="border rounded-[30px] h-[285px] md:h-[600px] lg:h-[600px]"
-         autoPlay
+        //  autoPlay
        >
          <source src="/homepagevideo/zohebHassan.mp4" type="video/mp4" />
          Your browser does not support the video tag.
@@ -195,7 +195,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      {/* <section>
         <div style={{ width: "100%", display: "flex" }}>
           <div
             style={{
@@ -206,7 +206,6 @@ export default function Home() {
             }}
           ></div>
           <div style={{ width: "79.95%", }} >
-            {/* desktop Slider */}
            
               <WorkWeDoChips selectedChip={selectedChip} setSelectedChip={setSelectedChip} />
             
@@ -220,9 +219,9 @@ export default function Home() {
             }}
           ></div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="block md:hidden">
+      {/* <section className="block md:hidden">
   <div className="w-full flex">
     <div className="w-[9.95%] box-border border-b border-[#373737]"></div>
     <div className="w-[80.08%]">
@@ -232,7 +231,7 @@ export default function Home() {
     </div>
     <div className="w-[9.95%] box-border border-b border-[#373737]"></div>
   </div>
-</section>
+</section> */}
 
 
 
@@ -248,8 +247,8 @@ export default function Home() {
             }}
           ></div>
           <div style={{ width: "80.08%" }}>
-            <RoundCornerWrapper>
-            <WorkSlider selectedChip={selectedChip} />
+            <RoundCornerWrapper top={false}>
+            <WorkSlider selectedChip={'homePage'} />
             </RoundCornerWrapper>
           </div>
           <div

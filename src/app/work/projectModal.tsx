@@ -249,7 +249,7 @@ const VideoSectionForHeadshot = () => {
               className="w-full h-auto object-cover rounded-lg min-h-[100px] min-w-[100px]"
               controls
               preload="metadata"
-              autoPlay
+              // autoPlay
               loop
             >
               <source

@@ -69,7 +69,7 @@ const BrandIdentity = () => {
               style={{ backgroundImage: "url('/maincontainer.svg')"}}
             >
               {/* Top Right Tag */}
-              <div className="absolute top-[-15px] right-[-42px] flex rounded-[64px] p-[12px_12px_6px_12px]"
+              <div className="absolute top-[-15px] right-[-42px] flex rounded-[64px] p-[12px_24px_6px_12px]"
                 style={{
                   backdropFilter: "blur(32px)",
                   WebkitBackdropFilter: "blur(32px)",
@@ -83,7 +83,7 @@ const BrandIdentity = () => {
               </div>
 
               {/* Top Left Tag */}
-              <div className="absolute top-[42px] left-[-86px] flex rounded-[64px] p-[12px_12px_6px_12px]"
+              <div className="absolute top-[42px] left-[-86px] flex rounded-[64px] p-[12px_24px_6px_12px]"
                 style={{
                   backdropFilter: "blur(32px)",
                   WebkitBackdropFilter: "blur(32px)",

@@ -127,6 +127,7 @@ const ServicesPage = () => {
     <div className="w-[9.95%] border-b border-[#373737]"></div>
     
     <div className="w-[80.08%]">
+    <RoundCornerWrapper top={false} bottom={false} left={false}>
     <div className="flex flex-col lg:flex-col xl:flex-row">
         <div className="w-full ">
             <SmallCardData />
@@ -134,17 +135,10 @@ const ServicesPage = () => {
         <div className="w-full ">
           <div>
             <div className="hidden xl:block">
-            <RoundCornerWrapper left={false}>
-              <div className="flex flex-row justify-center p-7">
+            <RoundCornerWrapper left={false} right={false}>
+              <div className="flex flex-row justify-center p-7 px-14">
               <div className="h-[265px]"> 
-                * * * * * * * * * * * * * * * * * * * *
-                * * * * * * * * * * * * * * * * * * * *
-                * * * * * * * * * * * * * * * * * * * *
-                * * * * * * * * * * * * * * * * * * * *
-                * * * * * * * * * * * * * * * * * * * *
-                * * * * * * * * * * * * * * * * * * * *
-                * * * * * * * * * * * * * * * * * * * *
-                * * * * * * * * * * * * * * * * * * * *
+               <img src="/dotsServices.png" alt="" />
               </div>
        
         
@@ -152,23 +146,22 @@ const ServicesPage = () => {
               </div>
             </RoundCornerWrapper>
             </div>
-            <div className="">
-                <RoundCornerWrapper bottom={false} top={false} dotBottomLeft={false} dotBottomRight={false}>
-                  <div className="p-6">
+                <RoundCornerWrapper bottom={false} top={false} dotBottomLeft={false} dotBottomRight={false} right={false}>
+                  <div className="p-10 py-15 lg:px-15 lg:py-6 " >
                     <div className="w-30">
                     <CommonQuestion question={Box[2].boxhead} />
                     </div>
                     <br />
-                    <h1 className="text-[30px] leading-[38px] md:text-[44px] md:leading-[52px] mt-2">{Box[2].boxdes}</h1> <br />
+                    <h1 className="text-[26px] md:text-[32px] md:leading-[52px] mt-2">{Box[2].boxdes}</h1> <br />
                     <Button title="More About us" />
                     
                   </div>
                 </RoundCornerWrapper>
               
-            </div>
           </div>
         </div>
       </div>
+      </RoundCornerWrapper>
     </div>
     <div className="w-[9.95%] border-b border-[#373737]"></div>
   </div>

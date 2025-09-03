@@ -54,7 +54,7 @@ const ContactUsComp = () => {
             <CommonQuestion question="REACH OUT" />
           </div>
           {/* <img src="/reachouttagline.png" alt="Reach Out Tagline" className="mb-4" /> */}
-          <h1 className="text-[32px] md:text-[48px] font-normal leading-[32px] tracking-[-0.02em] gradien-text mb-7">
+          <h1 className="text-[32px] md:text-[42px] font-normal leading-[32px] tracking-[-0.02em] gradien-text mb-7">
             Got a project? <br /> We’re listening.
           </h1>
 
@@ -97,10 +97,10 @@ const ContactEmail = ({ emailToCopy, handleCopy }: any) => {
       >
         <div className="flex flex-col md:flex-row justify-between md:px-4">
           <div>
-            <p className="text-[#767676] text-[18px] md:text-[20px]">
+            <p className="text-[#767676] text-[16px] md:text-[18px]">
               Prefer email?
             </p>
-            <p className="text-[#F8F8F8] wrap-anywhere md:wrap-normal  text-[20px] md:text-[25px]    mt-[10px] md:mt-[0px]">
+            <p className="text-[#F8F8F8] wrap-anywhere md:wrap-normal  text-[18px] md:text-[20px]    mt-[10px] md:mt-[0px]">
               {emailToCopy}
             </p>
           </div>
@@ -128,10 +128,10 @@ const ContactPhone = ({ whatsappNumber, handleStartChat }: any) => {
       >
         <div className="flex flex-col md:flex-row justify-between md:px-4 ">
           <div>
-            <p className="text-[#767676] text-[18px] md:text-[20px]">
+            <p className="text-[#767676] text-[16px] md:text-[18px]">
               Whatsapp
             </p>
-            <p className="text-[#F8F8F8] text-[20px] md:text-[25px] mt-[10px] md:mt-[0px]">
+            <p className="text-[#F8F8F8] text-[18px] md:text-[20px] mt-[10px] md:mt-[0px]">
               {whatsappNumber}
             </p>
           </div>

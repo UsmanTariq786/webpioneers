@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <header className="w-full px-5 py-4 text-white z-50 relative">
-      <div className="max-w-[1280px] mx-auto grid grid-cols-[auto_1fr_auto] items-center">
+      <div className="mx-auto grid grid-cols-[auto_1fr_auto] ">
         {/* Logo – left */}
         <Link href="/" className="flex items-center gap-2 md:ml-12">
           <Logo />
@@ -55,10 +55,10 @@ const Header = () => {
         {/* Hamburger – mobile only */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden justify-self-end text-2xl focus:outline-none p-2 rounded-[8px] bg-[url('/menu-bg-hyper.svg')] bg-cover bg-center"
+          className="md:hidden justify-self-end focus:outline-none px-2 rounded-[8px] bg-[url('/menu-bg-hyper.svg')] bg-cover bg-center min-w-[70px] flex items-center justify-center"
           aria-label="Toggle menu"
         >
-          {open ? <HiX /> : <HiMenuAlt4 />}
+          {open ? <HiX className="h-8 w-8" /> : <HiMenuAlt4 className="h-8 w-8"/>}
         </button>
       </div>
 
