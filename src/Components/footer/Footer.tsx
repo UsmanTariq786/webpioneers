@@ -409,6 +409,7 @@ const Footer = () => {
           }}
         ></div>
       </div>
+      <div style={{ borderBottom: "1px solid #373737"}}></div>
     </footer>
   );
 };

@@ -21,13 +21,13 @@ const PartnersSection = () => (
       {logos.map((logo, i) => (
         <div
           key={logo + 'whatlogisthis'}
-          className="w-[120px] h-[60px] flex items-center justify-center flex-shrink-0"
+          className="w-[135px] h-[80px] flex items-center justify-center flex-shrink-0"
         >
           <Image
             src={logo}
             alt="Partner logo"
-            width={120}
-            height={60}
+            width={135}
+            height={80}
             loading={i > 2 ? 'lazy' : undefined}
             className="object-contain opacity-70 hover:opacity-100 transition"
           />

@@ -67,7 +67,7 @@ export default function Home() {
          controls
          poster="/homepagevideo/Thumbnail.png"
          className="border rounded-[30px] h-[285px] md:h-[600px] lg:h-[600px]"
-         autoPlay
+        //  autoPlay
        >
          <source src="/homepagevideo/zohebHassan.mp4" type="video/mp4" />
          Your browser does not support the video tag.
