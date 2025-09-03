@@ -195,7 +195,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      {/* <section>
         <div style={{ width: "100%", display: "flex" }}>
           <div
             style={{
@@ -206,7 +206,6 @@ export default function Home() {
             }}
           ></div>
           <div style={{ width: "79.95%", }} >
-            {/* desktop Slider */}
            
               <WorkWeDoChips selectedChip={selectedChip} setSelectedChip={setSelectedChip} />
             
@@ -220,7 +219,7 @@ export default function Home() {
             }}
           ></div>
         </div>
-      </section>
+      </section> */}
 
       <section className="block md:hidden">
   <div className="w-full flex">
@@ -248,8 +247,8 @@ export default function Home() {
             }}
           ></div>
           <div style={{ width: "80.08%" }}>
-            <RoundCornerWrapper>
-            <WorkSlider selectedChip={selectedChip} />
+            <RoundCornerWrapper top={false}>
+            <WorkSlider selectedChip={'homePage'} />
             </RoundCornerWrapper>
           </div>
           <div
