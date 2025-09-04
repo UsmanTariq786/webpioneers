@@ -175,7 +175,7 @@ interface ImageDataMap {
 type ChipType = 'homePage' | 'webDev' | 'mobile' | 'webDesign' | 'branding' | 'saas';
 
 interface WorkSliderProps {
-  selectedChip: ChipType | null;
+  selectedChip: any | null;
 }
 
 const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
