@@ -27,16 +27,15 @@ const WebsiteDesignFeature = () => {
     >
 
       {/* === CENTER SECTION === */}
-      <div className="hidden xl:flex relative w-full md:w-[60%] lg:w-[50%] py-5 pl-2 justify-center items-center"
+      <div className="hidden md:flex relative w-full md:w-[60%] lg:w-[50%] py-5 pl-2 justify-center items-center"
       style={{background:"url('/starstwo.svg')", backgroundSize:'100% 100%'}}
       >
         <div className="relative flex justify-center md:justify-start items-start">
         <Image
-          src="/websitedesigngroup.svg"
+          src="/homePage/ServicesDesktop/2.png"
           width={500}
           height={275}
           alt="Center UI"
-          // className="w-full h-auto"
         />
         </div>
        
@@ -52,9 +51,9 @@ const WebsiteDesignFeature = () => {
 
 
           {/* Image only for mobile/tablet, hidden on xl */}
-          <div className='block xl:hidden pb-[46px]'>
+          <div className='block md:hidden pb-[46px]'>
           <Image
-              src="/main-container-content-res1.svg"
+              src="/homePage/ServicesMobile/2.png"
               width={310}
               height={370}
               alt="Decorative"

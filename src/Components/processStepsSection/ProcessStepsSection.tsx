@@ -10,30 +10,57 @@ interface Step {
   resImage: string
 }
 
+// const steps: Step[] = [
+//   {
+//     stepNumber: 1,
+//     title: 'Ideation',
+//     description:
+//       'You talk, we listen (and sketch stuff). We get all your thoughts out and turn them into a plan.',
+//     image: '/ideation.svg',
+//     resImage: '/ideation-resp.svg',
+//   },
+//   {
+//     stepNumber: 2,
+//     title: 'Design',
+//     description:
+//       'We make it look sharp. From wireframes to final UI, you’ll see it come to life.',
+//     image: '/design.svg',
+//     resImage: '/design-resp.svg',
+//   },
+//   {
+//     stepNumber: 3,
+//     title: 'Launch',
+//     description:
+//       'Your site goes live. You flex. We handle the tech bits and hit publish.',
+//     image: '/launch.svg',
+//     resImage: '/launch-resp.svg',
+//   },
+// ]
+
 const steps: Step[] = [
   {
     stepNumber: 1,
     title: 'Ideation',
     description:
       'You talk, we listen (and sketch stuff). We get all your thoughts out and turn them into a plan.',
-    image: '/ideation.svg',
-    resImage: '/ideation-resp.svg',
+    image: '/homePage/StepsDesktop/ideation.png',
+    resImage: '/homePage/StepsMobile/ideation.png',
   },
   {
     stepNumber: 2,
     title: 'Design',
     description:
       'We make it look sharp. From wireframes to final UI, you’ll see it come to life.',
-    image: '/design.svg',
-    resImage: '/design-resp.svg',
+    image: '/homePage/StepsDesktop/design.png',
+    resImage: '/homePage/StepsMobile/design.png',
   },
   {
     stepNumber: 3,
     title: 'Launch',
     description:
       'Your site goes live. You flex. We handle the tech bits and hit publish.',
-    image: '/launch.svg',
-    resImage: '/launch-resp.svg',
+    image: '/homePage/StepsDesktop/lanuch.png',
+    resImage: '/homePage/StepsMobile/launch.png',
   },
 ]
 
