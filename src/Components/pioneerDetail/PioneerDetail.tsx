@@ -5,6 +5,7 @@ import CommonQuestion from "../commonQuestion";
 import { useRouter } from "next/navigation";
 import NewCustomChip from "../NewCustomChip/index";
 import RoundCornerWrapper from "../RoundCornerWrapper";
+import Image from "next/image";
 
 const PioneerDetail = () => {
   const [selectedChip, setSelectedChip] = useState<string>();
@@ -57,7 +58,15 @@ const PioneerDetail = () => {
               }}
             >
 
-              <div className="h-[58px]"><img src={`/chips/${[index+1]}.png`} alt="item" style={{width:'100%',height:'100%'}} /></div>
+              <div className="h-[58px]">
+                <Image
+                  src={`/chips/${index + 1}.png`}
+                  alt="item"
+                  width={100} // Set a fixed width
+                  height={58} // Set a fixed height
+                  style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                />
+              </div>
 
 
               {/* <NewCustomChip
