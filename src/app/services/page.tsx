@@ -37,7 +37,9 @@ const ServicesPage = () => {
   <div className="w-full flex">
     <div className="w-[9.95%] border-b border-[#373737]"></div>
     <div className="w-[80.08%]">
+    <RoundCornerWrapper>
       <CardData />
+    </RoundCornerWrapper>
     </div>
     <div className="w-[9.95%] border-b border-[#373737]"></div>
   </div>

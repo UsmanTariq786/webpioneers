@@ -30,7 +30,7 @@ const DuoSection = () => {
             
               <section key={index+item.id+'griftar'} className="flex-1">
                   <RoundCornerWrapper bottom={false} left={false}>
-                    <div className="  p-3 flex flex-col xl:flex-row items-center justify-center ">
+                    <div className="  m-5 flex flex-col xl:flex-row items-center justify-center flex-wrap ">
                       <div className="max-w-[320px] max-h-[460px] min-w-[260px] min-h-[380px]  ">
                         <Image
                           src={item.image}
@@ -40,7 +40,7 @@ const DuoSection = () => {
                           className="w-[100%] h-[100%]"
                         />
                       </div>
-                      <div className="px-2 mt-3 xl:w-60 xl:ml-4 h-[180px]">
+                      <div className="px-2 mt-3 xl:w-60 xl:ml-4 h-[180px] md:my-3 my-6">
                       <p className="text-[#959595] text-[16px]">
                         {item.description}
                       </p>

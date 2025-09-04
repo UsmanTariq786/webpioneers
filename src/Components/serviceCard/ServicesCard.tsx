@@ -9,7 +9,7 @@ interface ServiceCardProps {
 
 const ServicesCard = ({ cardNumber, title, description, imageUrl }: ServiceCardProps) => {
   return (
-    <div className="flex flex-col items-start justify-start text-white px-10 py-5 space-y-3 sm:space-y-0 
+    <div className="flex flex-col items-start justify-start text-white px-10 py-5 space-y-3 sm:space-y-0 md:pb-10
      ">
 
       <div className="flex items-center space-x-3 sm:mb-14">

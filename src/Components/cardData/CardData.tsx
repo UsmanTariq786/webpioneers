@@ -37,10 +37,10 @@ import RoundCornerWrapper from '@/Components/RoundCornerWrapper';
 
 // Component for the mobile/small screen horizontal scroll layout
 const MobileCards = () => (
-    <div className="flex no-scrollbar flex-nowrap overflow-x-auto overflow-y-hidden p-1 m-[-5px]">
+    <div className="flex no-scrollbar flex-nowrap overflow-x-auto overflow-y-hidden py-1 my-[-5px]">
         {cardsData.map((card, index) => (
             <div key={index} className='min-w-[300px] max-w-[300px] shrink-0'>
-                <RoundCornerWrapper left={index===0 ? true :false}>
+                <RoundCornerWrapper left={index===0 ? true :false} right={index=== 7 ? false : true} dotTopLeft={index=== 7 ? false : true} dotTopRight={index=== 7 ? false : true} >
                     <div className="p-6 min-h-[400px]">
                     <div className='my-2 mb-14 flex items-center'>
                             <div className='w-2 h-2 rounded-full bg-[#F8F8F880] mr-2'></div>

@@ -55,7 +55,7 @@ const Header = () => {
         {/* Hamburger – mobile only */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden justify-self-end focus:outline-none px-2 rounded-[8px] bg-[url('/menu-bg-hyper.svg')] bg-cover bg-center min-w-[70px] flex items-center justify-center"
+          className="md:hidden justify-self-end focus:outline-none px-2 rounded-[8px] bg-[url('/menu-bg-hyper.svg')] bg-cover bg-center min-w-[45px] flex items-center justify-center h-[45px] mt-1"
           aria-label="Toggle menu"
         >
           {open ? <HiX className="h-8 w-8" /> : <HiMenuAlt4 className="h-8 w-8"/>}
@@ -70,9 +70,10 @@ const Header = () => {
             <Logo />
             <button
               onClick={() => setOpen(false)}
-              className="text-[16px] leading-[20px] border-0 rounded-[9px] p-[10px] bg-[url('/close-btn-bg.svg')] bg-cover bg-center text-white"
+              className="text-[16px] leading-[20px] border-0 rounded-[9px] p-[10px] bg-[url('/closebtn.png')] bg-cover bg-center text-transparent"
             >
               Close
+
             </button>
           </div>
 

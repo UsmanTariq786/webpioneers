@@ -308,7 +308,7 @@ export default function Home() {
           ></div>
           <div style={{ width: "80.08%"}}>
             <RoundCornerWrapper>
-                <div className="flex lg:hidden relative overflow-x-auto no-scrollbar">
+                <div className="flex lg:hidden relative overflow-x-auto overflow-y-hidden no-scrollbar">
                   {serviceCards.map((card: any,index: number) => (
                     
                     <div                       
@@ -317,7 +317,7 @@ export default function Home() {
                         position: 'relative',
                         borderRight: index === serviceCards.length - 1 ? 'none' : '1px solid #373737',
                       }}
-                       className="w-[320px] lg:w-[25%] m-1"
+                       className="w-[320px] lg:w-[25%] m-1.25"
                        >
                         {/* Render dots only if NOT last index */}
                         {index !== serviceCards.length - 1 && (

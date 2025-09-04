@@ -75,7 +75,7 @@ const AboutPage = () => {
           <div className="w-[9.95%] border-b border-[#373737]"></div>
           <div className="w-[80.08%]">
             <RoundCornerWrapper bottom={false}>
-              <div className="flex overflow-hidden py-4">
+              <div className="flex overflow-hidden py-6">
                 <div className="flex flex-nowrap animate-slide infinite">
                   {chipsSliding.map((item: string) => {
                     return (

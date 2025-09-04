@@ -31,15 +31,16 @@ function SmallCardData() {
   return (
     <div>
       <DeskTopCardsView />
+      <RoundCornerWrapper>
 
-      <div className="flex flex-row overflow-auto">
+      <div className="flex no-scrollbar flex-nowrap overflow-x-auto overflow-y-hidden py-1 my-[-5px] md:hidden">
         {smallCard.map((card, index) => (
           <div key={index + "smallcradwhatisthiscard"} >
             {/* ✅ Mobile / <md: without RoundCornerWrapper */}
-            <div className="block md:hidden my-1  ">
-            <RoundCornerWrapper dotTopLeft={false} dotBottomLeft>
+            <div className="block md:hidden   ">
+            <RoundCornerWrapper dotTopLeft={false} dotBottomRight={false} dotTopRight={index===3 ? false : true} right={index===3 ? false : true}>
               <div
-                className={`m-5 p-5 m-5border-1 border-t-1 border-b-0 border-x-0 border-[#313131] rounded-2xl  ${
+                className={`m-5 p-10 m-5border-1 border-t-1 border-b-0 border-x-0 border-[#313131] rounded-2xl  ${
                   index === 0 ? "bg-[#D4541DF2]" : "#242424"
                 }`}
                 style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}
@@ -60,6 +61,7 @@ function SmallCardData() {
           </div>
         ))}
       </div>
+      </RoundCornerWrapper>
     </div>
   );
 }

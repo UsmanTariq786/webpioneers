@@ -64,7 +64,7 @@ const PartnersSection = () => (
     <div className="flex flex-row xl:hidden overflow-x-auto xl:overflow-visible no-scrollbar gap-6 px-6 mt-[25px] md:mt-[40px] xl:flex-wrap xl:justify-between">
       {mobileInfinity.map((logo, i) => (
         <div
-          key={logo + "whatlogisthismobile"}
+          key={logo + "whatlogisthismobile"+i}
           className="w-[135px] h-[80px] flex items-center justify-center flex-shrink-0"
         >
           <Image

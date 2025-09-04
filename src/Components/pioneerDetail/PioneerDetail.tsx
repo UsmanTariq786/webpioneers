@@ -80,7 +80,7 @@ const PioneerDetail = () => {
       <div className='w-[120px]'>
       <CommonQuestion question='our vibe'/>
       </div>
-      <p className="font-rubik text-[30px] md:text-[44px] leading-[46px] tracking-[-0.02em] font-normal text-white/70 my-3 rounded-xl">
+      <p className="font-rubik text-[30px] md:text-[42px] leading-[46px] tracking-[-0.02em] font-normal text-white/70 my-3 rounded-xl">
         We help brands grow by designing smooth, smart experiences people actually enjoy using.
       </p>
 
