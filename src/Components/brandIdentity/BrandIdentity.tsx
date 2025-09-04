@@ -4,10 +4,11 @@ import Image from "next/image";
 import CommonQuestion from "@/Components/commonQuestion";
 import Smallcard from "../smallcard/smallcard";
 import WebCard from "../webCard/WebCard";
-import { useRouter } from "next/navigation";
+import ButtonAllServices from "./buttonAllServices";
+
 
 const BrandIdentity = () => {
-  const router = useRouter();
+ 
   return (
     <section className="py-[50px]">
       {/* Header Section */}
@@ -21,7 +22,7 @@ const BrandIdentity = () => {
         </p>
 
         <div className="mt-7">
-          <Button title="Check all services" onClick={() => router.push("/services")} />
+          <ButtonAllServices/>
         </div>
       </div>
 

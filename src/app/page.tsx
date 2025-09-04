@@ -1,5 +1,3 @@
-'use client'
-
 import BrandIdentity from "@/Components/brandIdentity/BrandIdentity";
 import Button from "@/Components/button/Button";
 // import Header from "@/Components/header/Header";
@@ -21,7 +19,6 @@ import Testimonials from "@/Components/testiminals/Testimonials";
 
 import ServiceExcellenceGrid from "@/Components/ServiceExcellenceGrid/ServiceExcellenceGrid";
 import WorkWeDoChips from "@/Components/workWeDoChips";
-import { useState } from "react";
 import WorkSlider from "@/Components/workSlider";
 import ProgressBar from "@/Components/progressBar/index";
 import TestimonialsResponsive from "@/Components/testiminals/TestimonialsResponsive";
@@ -32,7 +29,6 @@ import TestimonialsResponsive from "@/Components/testiminals/TestimonialsRespons
 // import Footer from "@/Components/footer/Footer";
 
 export default function Home() {
-  const [selectedChip, setSelectedChip] = useState<string | null>('all');
   return (
     <div className="min-h-screen">
       {/* <Header /> */}
