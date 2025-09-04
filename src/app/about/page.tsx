@@ -11,6 +11,7 @@ import HeadingWorkWithUs from "./headingWorkWithUs";
 import WorkingWithUsSection from "./workingWithUsSection";
 import FirstWebSectionImages from "./firstWebSectionImages";
 import ContainerWithText from "./containerWithText";
+import WhyPickUsSection from "./whyPickUsSection";
 
 const chipsSliding = [
   "01",
@@ -198,7 +199,16 @@ const AboutPage = () => {
       <section>
         <div className="w-full flex">
           <div className="w-[10%] border-r border-b border-[#373737]"></div>
-          <div className="w-[79.95%]  border-[#373737] border-t-1">
+          <div className="w-[79.95%]  border-[#373737]">
+          <WhyPickUsSection/>
+          </div>
+          <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+        </div>
+      </section>
+      <section>
+        <div className="w-full flex">
+          <div className="w-[10%] border-r border-b border-[#373737]"></div>
+          <div className="w-[79.95%]  border-[#373737]">
           <HeadingWorkWithUs/>
           </div>
           <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
