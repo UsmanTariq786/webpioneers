@@ -86,10 +86,10 @@ const PioneerDetail = () => {
       {/* <RoundCornerWrapper top={false} left={false}> */}
       <section className="flex flex-col lg:flex-row items-start justify-center mx-auto">
         <div className="w-full flex-col justify-start p-[20px] md:p-[40px] md:py-[50px] py-[40px]">
-      <div className='w-[120px]'>
+      <div className=''>
       <CommonQuestion question='our vibe'/>
       </div>
-      <p className="font-rubik text-[30px] md:text-[42px] leading-[46px] tracking-[-0.02em] font-normal text-white/70 my-3 rounded-xl">
+      <p className="font-rubik text-[26px] md:text-[32px] md:leading-[40px] tracking-[-0.02em] font-normal bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0%,rgba(248,248,248,0.5)_100%)] text-transparent bg-clip-text my-3 rounded-xl">
         We help brands grow by designing smooth, smart experiences people actually enjoy using.
       </p>
 

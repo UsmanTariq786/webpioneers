@@ -154,7 +154,7 @@ const ServicesPage = () => {
                     <CommonQuestion question={Box[2].boxhead} />
                     </div>
                     <br />
-                    <h1 className="text-[26px] md:text-[32px] md:leading-[52px] mt-2">{Box[2].boxdes}</h1> <br />
+                    <h1 className="text-[26px] md:text-[32px] md:leading-[40px] mt-2  bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0%,rgba(248,248,248,0.5)_100%)] text-transparent bg-clip-text">{Box[2].boxdes}</h1> <br />
                     <Button title="More About us" />
                     
                   </div>

@@ -93,7 +93,7 @@ const DeskTopCardsView = () => {
             </p>
           </div>
         </RoundCornerWrapper>
-        <RoundCornerWrapper top={false} >
+        <RoundCornerWrapper top={false} dotBottomLeft={false} bottom={false} >
           <div
             className="p-5 m-5 rounded-2xl 
                   h-[280px]  border-1 border-t-1 border-b-0 border-x-0 border-[#313131] bg-[#242424]"
@@ -132,7 +132,7 @@ const DeskTopCardsView = () => {
             </p>
           </div>
         </RoundCornerWrapper>
-        <RoundCornerWrapper top={false}  left={false}>
+        <RoundCornerWrapper top={false}  left={false} bottom={false} dotBottomLeft={false} dotBottomRight={false} dotTopRight={false}>
           <div
             className="p-5 m-5 rounded-2xl 
                   h-[380px]  border-1 border-t-1 border-b-0 border-x-0 border-[#313131] bg-[#242424]"
