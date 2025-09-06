@@ -32,7 +32,6 @@ const PioneerDetail = () => {
     "Design",
     "Transformation",
   ];
-  const chipImageData =[1,2,3,4,5,6,7,8,9,10,11,12]
 
 
   return (
@@ -58,24 +57,15 @@ const PioneerDetail = () => {
               }}
             >
 
-              <div className="h-[58px]">
-                <Image
-                  src={`/chips/${index + 1}.png`}
-                  alt="item"
-                  width={100} // Set a fixed width
-                  height={58} // Set a fixed height
-                  style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                />
-              </div>
-
-
-              {/* <NewCustomChip
-                key={"chip" + index}
-                label={item}
-                value={item}
-                isSelected={selectedChip === item}
-                onSelect={handleChipSelect}
-              /> */}
+             <div className="h-[58px]">
+               <Image
+                 src={`/chips/${index + 1}.png`}
+                 alt="item"
+                 width={100} 
+                 height={58} 
+                 style={{ objectFit: 'contain', width: '100%', height: '100%' }} // <--- Change 'cover' to 'contain'
+               />
+             </div>
             </div>
           ))}
         </div>
@@ -83,7 +73,6 @@ const PioneerDetail = () => {
       </RoundCornerWrapper>
 
       {/* Right Side - Text Content */}
-      {/* <RoundCornerWrapper top={false} left={false}> */}
       <section className="flex flex-col lg:flex-row items-start justify-center mx-auto">
         <div className="w-full flex-col justify-start p-[20px] md:p-[40px] md:py-[50px] py-[40px]">
       <div className=''>
