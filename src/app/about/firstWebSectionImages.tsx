@@ -17,7 +17,7 @@ const FirstWebSectionImages = () => {
         </div>
       </div>
       {/* </RoundCornerWrapper> */}
-      <RoundCornerWrapper right={false} bottom={false} className="">
+      <RoundCornerWrapper right={false} bottom={false} className="flex justify-end">
         <div className=" h-[400px] m-4 mr-0 max-w-[700px]">
           <img
             src="aboutUs/firstContainer.png"

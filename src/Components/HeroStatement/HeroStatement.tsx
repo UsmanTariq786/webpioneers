@@ -32,7 +32,7 @@ export const HeroStatement = () => {
         alt="Hero Graphic"
         className="mb-4 w-[180px] sm:w-[240px] h-auto hidden md:flex"
       />
-    <p className="w-full font-rubik font-normal text-[32px] md:text-[42px] leading-[40px] md:leading-[50px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent mb-[15px]">
+    <p className="w-full font-rubik font-normal text-[28px] md:text-[42px] leading-[36px] md:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent mb-[15px]">
         Here’s Where the Fun Starts
       </p>
       <p className="font-[300] text-[16px]  leading-[28px] font-rubik text-[rgba(248,248,248,0.7)] mb-6 text-center w-full max-w-[98%] sm:max-w-[457px] px-2">

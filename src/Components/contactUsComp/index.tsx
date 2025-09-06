@@ -7,6 +7,20 @@ import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 import CommonQuestion from "../commonQuestion";
 import RoundCornerWrapper from "../RoundCornerWrapper";
 
+const contactArray = [
+  "We will respond to you within 24 hrs.",
+  "We’ll sign an NDA if requested.",
+  "Access to dedicated product specialists.",
+];
+
+const CheckedBox = () => {
+  return (
+    <div className="h-6 w-6 rounded-[18px] bg-[#D4541DF2] flex justify-center items-center">
+      <HiCheck className="w-4 h-4 text-white" />
+    </div>
+  );
+};
+
 const ContactUsComp = () => {
   const [copyStatus, setCopyStatus] = useState<string | null>(null);
   const emailToCopy = "business@webpioneers.com";
@@ -30,44 +44,21 @@ const ContactUsComp = () => {
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 
-  const contactArray = [
-    "We will respond to you within 24 hrs.",
-    "We’ll sign an NDA if requested.",
-    "Access to dedicated product specialists.",
-  ];
 
-  const CheckedBox = () => {
-    return (
-      <div className="h-6 w-6 rounded-[18px] bg-[#D4541DF2] flex justify-center items-center">
-        <HiCheck className="w-4 h-4 text-white" />
-      </div>
-    );
-  };
+
+
 
   return (
     <div className="bg-[#202020] text-[#F8F8F8B2]">
       <div className="flex flex-col xl:flex-row justify-between gap-6 items-center">
         {/* Left Section (Header and Contact Points) */}
-        <RoundCornerWrapper top={false} right={false} left={false} dotTopRight={false} className="w-full ">
-        <div className="w-full p-5 mx-4 md:mx-8 md:ml-12 my-10">
-          <div className="w-[150px] mb-5 ">
-            <CommonQuestion question="REACH OUT" />
-          </div>
-          {/* <img src="/reachouttagline.png" alt="Reach Out Tagline" className="mb-4" /> */}
-          <h1 className="text-[32px] md:text-[42px] font-normal leading-[32px] tracking-[-0.02em] gradien-text mb-7">
-            Got a project? <br /> We’re listening.
-          </h1>
-
-          {contactArray.map((item, index) => (
-            <div key={index} className="flex items-center mb-3">
-              <CheckedBox />
-              <p className="ml-3 text-[16px] md:text-[20px] md:text-sm">
-                {item}
-              </p>
-            </div>
-          ))}
-        </div>
+        <RoundCornerWrapper top={false} right={false} left={false} dotTopRight={false} className="w-full xl:hidden">
+        <RightSideHeading/>
         </RoundCornerWrapper>
+        <div className="w-full hidden xl:block">
+        <RightSideHeading/>
+        </div>
+    
 
         <div className="w-full mt-6 p-4 mx-1 md:mx-8 my-10">
           <div className="w-full flex flex-col gap-6 max-w-[600px] ">
@@ -75,9 +66,10 @@ const ContactUsComp = () => {
             <ContactPhone
               whatsappNumber={whatsappNumber}
               handleStartChat={handleStartChat}
-            />
+              />
           </div>
         </div>
+      {/* </RoundCornerWrapper> */}
       </div>
       {copyStatus && (
         <p className="text-xs text-green-400 mt-2">{copyStatus}</p>
@@ -149,3 +141,29 @@ const ContactPhone = ({ whatsappNumber, handleStartChat }: any) => {
     </>
   );
 };
+
+
+
+const RightSideHeading =()=>{
+  return(<>
+          <div className="w-full p-5 mx-4 md:mx-8 md:ml-12 my-10">
+          <div className="w-[150px] mb-5 ">
+            <CommonQuestion question="REACH OUT" />
+          </div>
+          <h1 className="text-[28px] md:text-[42px] font-normal leading-[36px] md:leading-[56px] tracking-[-0.02em] gradien-text mb-7">
+            Got a project? <br /> We’re listening.
+          </h1>
+
+          {contactArray.map((item, index) => (
+            <div key={index} className="flex items-center mb-3">
+              <CheckedBox />
+              <p className="ml-3 text-[16px] md:text-[20px] md:text-sm">
+                {item}
+              </p>
+            </div>
+          ))}
+        </div>
+  
+  
+  </>)
+}

@@ -11,7 +11,7 @@ const HeadingPartners = () => {
       <CommonQuestion question="BRANDS WE’VE WORKED WITH" />
     </div>
     <h1
-      className={`${rubik.className} w-full text-[32px] mt-[10px] md:text-[42px] font-[400] mb-6 bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0%,rgba(248,248,248,0.5)_100%)] text-transparent bg-clip-text leading-tight`}
+      className={`${rubik.className} w-full text-[28px] mt-[10px] md:text-[42px] font-[400] mb-6 bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0%,rgba(248,248,248,0.5)_100%)] text-transparent bg-clip-text leading-[36px] md:leading-[56px]`}
     >
       Our Partners <br />
       in Growth

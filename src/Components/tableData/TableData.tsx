@@ -38,7 +38,7 @@ function TableData() {
                     className="w-[66px] h-[66px] md:w-[75px] md:h-[75px] mb-8"
                   />
                  <h1
-                    className="text-[32px] md:text-[42px] bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0%,rgba(248,248,248,0.5)_100%)] text-transparent bg-clip-text leading-[1.5] pb-1"
+                    className="text-[28px] md:text-[42px] leading-[36px] md:leading-[56px] bg-[linear-gradient(92.95deg,rgba(248,248,248,0.9)_0%,rgba(248,248,248,0.5)_100%)] text-transparent bg-clip-text pb-1"
                     style={{
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",

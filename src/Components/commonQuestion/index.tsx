@@ -7,7 +7,7 @@ interface CommonQuestionProps {
 
 const CommonQuestion: React.FC<CommonQuestionProps> = ({ question, uppercase = true }) => {
   return (
-    <div>
+    <div className="inline-block">
       <div
         className="rounded-[16px] p-[1.5px]"
         style={{

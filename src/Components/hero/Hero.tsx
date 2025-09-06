@@ -42,7 +42,7 @@ const Hero = () => {
         We’re a design & development agency that delivers results
       </h1>
 
-      <p className="text-[18px] leading-[29px] md:text-[18px] md:leading-[30px] font-normal text-center max-w-[556px] text-[rgba(248,248,248,0.7)]">
+      <p className="text-[16px] md:text-[18px] leading-[24px] md:leading-[30px] font-normal text-center max-w-[556px] text-[rgba(248,248,248,0.7)]">
         At Web Pioneers, we mix smart design with clean code to help your brand
         stand out and sell more.
       </p>

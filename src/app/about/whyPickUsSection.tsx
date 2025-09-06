@@ -99,7 +99,7 @@ const DeskTopCardsView = () => {
                   <span className="text-[16px] text-[#FFFFFF]"> 01</span>
                 </div>
                 <h2
-                  className={`pt-20 text-[20px] md:text-[40px] mb-2 text-[#F8F8F8]  `}
+                  className={`pt-20 text-[20px] md:text-[32px] mb-2 text-[#F8F8F8]  `}
                 >
                   90%
                 </h2>
@@ -121,7 +121,7 @@ const DeskTopCardsView = () => {
                   <span className="text-[16px] text-[#FFFFFF]"> 02</span>
                 </div>
                 <h2
-                  className={`pt-15 text-[20px] md:text-[40px] mb-2 text-[#F8F8F8]  `}
+                  className={`pt-20 text-[20px] md:text-[32px] mb-2 text-[#F8F8F8]  `}
                 >
                   200+
                 </h2>
@@ -143,7 +143,7 @@ const DeskTopCardsView = () => {
                   <span className="text-[16px] text-[#FFFFFF]"> 03</span>
                 </div>
                 <h2
-                  className={`pt-15 text-[20px] md:text-[40px] mb-2 text-[#F8F8F8]  `}
+                  className={`pt-20 text-[20px] md:text-[32px] mb-2 text-[#F8F8F8]  `}
                 >
                   2020
                 </h2>
@@ -168,7 +168,7 @@ const DeskTopCardsView = () => {
                   <div className="w-2 h-2 bg-[#FFFFFF] rounded-full mr-2"></div>
                   <span className="text-[16px] text-[#FFFFFF]"> 04</span>
                 </div>
-                <h2 className={`pt-15 text-[20px] md:text-[40px] mb-2 text-[#F8F8F8] `}>
+                <h2 className={`pt-20 text-[20px] md:text-[32px] mb-2 text-[#F8F8F8] `}>
                 Authenticity
                 </h2>
                 <p
@@ -189,7 +189,7 @@ const DeskTopCardsView = () => {
                   <span className="text-[16px]  text-[#FFFFFF]"> 05</span>
                 </div>
                 <h2
-                  className={`pt-20 text-[20px] md:text-[40px] mb-2 text-[#F8F8F8]  `}
+                  className={`pt-20 text-[20px] md:text-[32px] mb-2 text-[#F8F8F8]  `}
                 >
                  Chasing Excellence
                 </h2>

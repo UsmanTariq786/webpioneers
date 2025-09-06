@@ -36,11 +36,11 @@ export default function ContactForm() {
           ></div>
           <div style={{ width: "79.95%" }}>
             <div className="p-[20px] md:p-0 sm:ml-20 max-w-md my-12">
-              <div className="w-[250px] md:w-[300px]">
+              <div className="">
                 <CommonQuestion question="We’re Available for New Projects" />
               </div>
               <div className="w-full md:w-[100%] mt-[16px]">
-                <p className="w-full font-rubik font-normal text-[32px] md:text-[42px] leading-[40px] md:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
+                <p className="w-full font-rubik font-normal text-[28px] md:text-[42px] leading-[36px] md:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
                   Ready to share <br /> your vision?
                 </p>
               </div>

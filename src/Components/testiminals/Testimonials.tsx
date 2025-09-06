@@ -126,7 +126,7 @@ const Testimonials = () => {
           Testimonials
         </button> */}
         <CommonQuestion question='Testimonials'/>
-        <p className="mt-4 font-rubik text-white/80 text-[32px] leading-[40px] md:text-[42px] md:leading-[56px] max-w-lg">
+        <p className="mt-4 font-rubik text-white/80 text-[28px] leading-[36px] md:text-[42px] md:leading-[56px] max-w-lg">
           Clients We’ve Worked With (and Impressed)
         </p>
       </div>

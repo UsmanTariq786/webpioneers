@@ -37,24 +37,24 @@ const qualitiesList = [
 const WorkingWithUsSection = () => {
   return (<>
   <div className="xl:flex  ">
-        <RoundCornerWrapper top={false} bottom={false} left={false} className="hidden xl:block">
+        <RoundCornerWrapper top={false} bottom={false} left={false} className="hidden xl:block flex-1">
         <div className="w-50">
         </div>
         </RoundCornerWrapper>
   
-    <div className="flex flex-col flex-wrap">
+    <div className="flex flex-col flex-wrap flex-2">
       {qualitiesList.map((item, index) => (
         <div key={index} className="w-full flex flex-col">
         <RoundCornerWrapper top={false} right={false} left={false} bottom={item.num==='05' ? false:true}>          {/* Num, Title, and Chips Container */}
           <div className="flex flex-col lg:flex-row items-start gap-4 p-4 py-10 md:py-4">
             {/* Num */}
-            <div className="text-[40px] md:text-[60px] text-[#D4541DF2] md:mr-10 md:mt-5">
+            <div className="text-[40px] md:text-[60px] text-[#D4541DF2] md:mr-10 md:mt-1">
               {item.num}.
             </div>
             {/* Title and Chips Column */}
             <div className="flex flex-col gap-4 w-full lg:w-auto">
               {/* Title */}
-              <div className="text-[40px] md:text-[80px]  text-[#959595]">
+              <div className="text-[40px] md:text-[60px]  text-[#959595]">
                 {item.title}
               </div>
               {/* Chips Container */}

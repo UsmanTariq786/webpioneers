@@ -70,7 +70,7 @@ export const FAQAccordion = () => {
                     <CommonQuestion question="Got Questions?" />
                   </div>
                   <div className="w-full md:w-[400px] mt-[10px]">
-                    <p className="w-full font-rubik font-normal text-[32px] sm:text-[42px] leading-tight sm:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
+                    <p className="w-full font-rubik font-normal text-[28px] md:text-[42px] leading-[36px] md:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
                       Frequently Asked Questions
                     </p>
                   </div>

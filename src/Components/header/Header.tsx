@@ -7,6 +7,11 @@ import { HiMenu, HiX } from "react-icons/hi";
 import { HiMenuAlt4 } from "react-icons/hi";
 import Logo from "../ui/Logo";
 import Button from "@/Components/button/Button";
+import { MdOutlineClose } from "react-icons/md";
+import { IoCloseOutline } from "react-icons/io5";
+import { HiEquals } from "react-icons/hi2";
+import { HiOutlineEquals } from "react-icons/hi2";
+
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -58,7 +63,14 @@ const Header = () => {
           className="md:hidden justify-self-end focus:outline-none px-2 rounded-[8px] bg-[url('/menu-bg-hyper.svg')] bg-cover bg-center min-w-[45px] flex items-center justify-center h-[45px] mt-1"
           aria-label="Toggle menu"
         >
-          {open ? <HiX className="h-8 w-8" /> : <HiMenuAlt4 className="h-8 w-8"/>}
+          {open ? <IoCloseOutline className="w-8" style={{
+    width: '35px',
+    height: '35px',
+  }}/> : <HiOutlineEquals  style={{
+    width: '35px',
+    height: '35px',
+  }}/>}
+          {/* {open ? <HiX className="h-1 w-8" /> : <HiMenuAlt4 className="h-2 !w-8"/>} */}
         </button>
       </div>
 
