@@ -24,24 +24,21 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${rubik.variable} antialiased`}>
         <div style={{ width: "100%", display: "flex", height: "49px" }}>
-          <div
+          <div className="w-[5%] md:w-[10%]"
             style={{
-              width: "10%",
               height: "50px",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div
+          <div className="w-[90%] md:w-[80%]"
             style={{
-              width: "80%",
               height: "49px",
               borderRight: "1px solid #373737",
             }}
           ></div>
-          <div
+          <div className="w-[5%] md:w-[10%]"
             style={{
-              width: "10%",
               height: "50px",
               borderRight: "1px slid #373737",
               borderBottom: "1px solid #373737",
@@ -49,21 +46,20 @@ export default function RootLayout({
           ></div>
         </div>
         <div style={{ width: "100%", display: "flex" }}>
-          <div
+          <div className="w-[4.95%] md:w-[9.95%]"
             style={{
-              width: "9.95%",
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div style={{ width: "80.08%" }}>
+          <div className="w-[90.08%] md:w-[80.08%]" 
+            >
             <RoundCornerWrapper>
               <Header />
             </RoundCornerWrapper>
           </div>
-          <div
+          <div className="w-[4.95%] md:w-[9.95%]"
             style={{
-              width: "9.95%",
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
             }}
@@ -76,23 +72,22 @@ export default function RootLayout({
 
         <section>
           <div style={{ width: "100%", display: "flex" }}>
-            <div
+            <div className="w-[4.95%] md:w-[9.95%]"
               style={{
-                width: "9.95%",
                 boxSizing: "border-box",
                 borderBottom: "1px solid #373737",
               }}
             ></div>
-            <div style={{ width: "80.08%" }}>
+            <div className="w-[90.08%] md:w-[80.08%]" 
+            >
               <RoundCornerWrapper>
                 <div className="px-[20px]">
                 <HeroStatement />
                 </div>
               </RoundCornerWrapper>
             </div>
-            <div
+            <div className="w-[4.95%] md:w-[9.95%]"
               style={{
-                width: "9.95%",
                 boxSizing: "border-box",
                 borderBottom: "1px solid #373737",
               }}
@@ -107,21 +102,19 @@ export default function RootLayout({
 
         <section>
           <div style={{ width: "100%", display: "flex" }}>
-            <div
+            <div className="w-[4.95%] md:w-[9.95%]"
               style={{
-                width: "9.95%",
                 boxSizing: "border-box",
                 borderBottom: "1px solid #373737",
               }}
             ></div>
-            <div style={{ width: "80.08%" }}>
+            <div className="w-[90.08%] md:w-[80.08%]" >
               <RoundCornerWrapper>
                 <div className="h-[50px] md:h-[140px]"></div>
               </RoundCornerWrapper>
             </div>
-            <div
+            <div className="w-[4.95%] md:w-[9.95%]"
               style={{
-                width: "9.95%",
                 boxSizing: "border-box",
                 borderBottom: "1px solid #373737",
               }}

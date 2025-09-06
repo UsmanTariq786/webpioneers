@@ -14,11 +14,11 @@ export default function Home() {
     <div className="">
       <section>
         <div className="w-full flex">
-          <div className="w-[10%] border-r border-b border-[#373737]"></div>
-          <div className="w-[79.95%]">
+          <div className="w-[5%] md:w-[10%] border-r border-b border-[#373737]"></div>
+          <div className="w-[89.95%] md:w-[79.95%] ">
             <WorkPageHeading />
           </div>
-          <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+          <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
         </div>
       </section>
 
@@ -26,8 +26,8 @@ export default function Home() {
 
   <section>
   <div className="w-full flex">
-    <div className="w-[9.95%] border-b border-[#373737]"></div>
-    <div className="w-[80.08%]">
+    <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
+    <div className="w-[90.08%] md:w-[80.08%]">
       <RoundCornerWrapper>
       <WorkWeDoChips
         selectedChip={selectedChip}
@@ -35,36 +35,36 @@ export default function Home() {
       />
       </RoundCornerWrapper>
     </div>
-    <div className="w-[9.95%] border-b border-[#373737]"></div>
+    <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
   </div>
 </section>
 <section className="block md:hidden">
   <div className="w-full flex">
-    <div className="w-[9.95%] box-border border-b border-[#373737]"></div>
-    <div className="w-[80.08%]">
+    <div className="w-[4.95%] md:w-[9.95%] box-border border-b border-[#373737]"></div>
+    <div className="w-[90.08%] md:w-[80.08%]">
       <RoundCornerWrapper top={false}>
-        <ProgressBar progress={40} />
+        <ProgressBar progress={90} />
       </RoundCornerWrapper>
     </div>
-    <div className="w-[9.95%] box-border border-b border-[#373737]"></div>
+    <div className="w-[4.95%] md:w-[9.95%] box-border border-b border-[#373737]"></div>
   </div>
 </section>
   {/* <section>
   <div className="w-full flex">
-    <div className="w-[9.95%] border-b border-[#373737]"></div>
-    <div className="w-[80.08%]">
+    <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
+    <div className="w-[90.08%] md:w-[80.08%]">
      
     </div>
-    <div className="w-[9.95%] border-b border-[#373737]"></div>
+    <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
   </div>
 </section> */}
 <section>
         <div className="w-full flex">
-          <div className="w-[10%] border-r border-b border-[#373737]"></div>
-          <div className="w-[79.95%]">
+          <div className="w-[5%] md:w-[10%] border-r border-b border-[#373737]"></div>
+          <div className="w-[89.95%] md:w-[79.95%] ">
           <MapProjects selectedChip={selectedChip} />
           </div>
-          <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+          <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
         </div>
       </section>
 

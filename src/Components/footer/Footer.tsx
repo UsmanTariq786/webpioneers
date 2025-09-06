@@ -13,15 +13,14 @@ const Footer = () => {
     <footer className="text-white">
       <section>
         <div style={{ width: "100%", display: "flex" }}>
-          <div
+          <div className="w-[5%] md:w-[10%]"
             style={{
-              width: "10%",
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div style={{ width: "79.95%" }}>
+          <div className="w-[89.95%] md:w-[79.95%]">
             <div className="flex flex-col md:flex-row">
               {/* Logo and Description */}
               <div
@@ -212,9 +211,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div
+          <div className="w-[5.05%] md:w-[10.05%]"
             style={{
-              width: "10.05%",
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
               borderBottom: "1px solid #373737",
@@ -225,14 +223,13 @@ const Footer = () => {
 
       <section>
         <div style={{ width: "100%", display: "flex" }}>
-          <div
+          <div className="w-[4.95%] md:w-[9.95%]"
             style={{
-              width: "9.95%",
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div style={{ width: "80.08%" }}>
+          <div className="w-[90.08%] md:w-[80.08%]">
             <RoundCornerWrapper>
               {/* desktop Slider */}
               {/* Mobile Layout */}
@@ -320,9 +317,8 @@ const Footer = () => {
 
             </RoundCornerWrapper>
           </div>
-          <div
+          <div className="w-[4.95%] md:w-[9.95%]"
             style={{
-              width: "9.95%",
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
             }}
@@ -332,15 +328,14 @@ const Footer = () => {
 
       <section>
         <div style={{ width: "100%", display: "flex" }}>
-          <div
+          <div className="w-[5%] md:w-[10%]"
             style={{
-              width: "10%",
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div style={{ width: "79.95%" }}>
+          <div className="w-[89.95%] md:w-[79.95%]">
           <div
   style={{
     backgroundColor: "rgba(212, 84, 29, 0.95)",
@@ -361,9 +356,8 @@ const Footer = () => {
 
 
           </div>
-          <div
+          <div className="w-[5.05%] md:w-[10.05%]"
             style={{
-              width: "10.05%",
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
               borderBottom: "1px solid #373737",
@@ -373,18 +367,16 @@ const Footer = () => {
       </section>
 
       <div style={{ width: "100%", display: "flex", height: "49px" }}>
-        <div
+        <div className="w-[5%] md:w-[10%]"
           style={{
-            width: "10%",
             // height: "50px",
             borderRight: "1px solid #373737",
             borderBottom: "1px solid #373737",
             // backgroundColor:'blue',
           }}
         ></div>
-        <div
+        <div className="w-[90%] md:w-[80%]"
           style={{
-            width: "80%",
             // height: "49px",
             borderRight: "1px solid #373737",
           }}
@@ -400,9 +392,8 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div
+        <div className="w-[5%] md:w-[10%]"
           style={{
-            width: "10%",
             // height: "50px",
             // backgroundColor:'green',
             borderBottom: "1px solid #373737",

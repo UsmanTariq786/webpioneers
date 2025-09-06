@@ -26,15 +26,15 @@ export default function ContactForm() {
 
       <section>
         <div style={{ width: "100%", display: "flex" }}>
-          <div
+          <div className="w-[5%] md:w-[10%]"
             style={{
-              width: "10%",
+           
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div style={{ width: "79.95%" }}>
+          <div className="w-[89.95%] md:w-[79.95%]">
             <div className="p-[20px] md:p-0 sm:ml-20 max-w-md my-12">
               <div className="">
                 <CommonQuestion question="We’re Available for New Projects" />
@@ -46,9 +46,9 @@ export default function ContactForm() {
               </div>
             </div>
           </div>
-          <div
+          <div className="w-[5.05%] md:w-[10.05%]"
             style={{
-              width: "10.05%",
+            
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
               borderBottom: "1px solid #373737",
@@ -59,15 +59,15 @@ export default function ContactForm() {
 
       <section>
         <div style={{ width: "100%", display: "flex" }}>
-          <div
+          <div className="w-[5%] md:w-[10%]"
             style={{
-              width: "10%",
+             
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div style={{ width: "79.95%" }}>
+          <div className="w-[89.95%] md:w-[79.95%]">
             <div className="flex">
               <div className="w-[50%] bg-[rgba(40,40,40,0.7)]">
                 <RoundCornerWrapper>
@@ -87,9 +87,9 @@ export default function ContactForm() {
               </div>
             </div>
           </div>
-          <div
+          <div className="w-[5.05%] md:w-[10.05%]"
             style={{
-              width: "10.05%",
+             
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
               borderBottom: "1px solid #373737",
@@ -101,15 +101,15 @@ export default function ContactForm() {
 
       <section className="hidden md:flex">
         <div style={{ width: "100%", display: "flex" }}>
-          <div
+          <div className="w-[5%] md:w-[10%]"
             style={{
-              width: "10%",
+             
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div style={{ width: "79.95%" }}>
+          <div className="w-[89.95%] md:w-[79.95%]">
             <div className="flex">
               <div className="w-[50%] border-r  border-r-[#373737]">
                 <input
@@ -128,9 +128,9 @@ export default function ContactForm() {
               </div>
             </div>
           </div>
-          <div
+          <div className="w-[5.05%] md:w-[10.05%]"
             style={{
-              width: "10.05%",
+             
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
               borderBottom: "1px solid #373737",
@@ -141,15 +141,15 @@ export default function ContactForm() {
 
       <section className="flex md:hidden">
         <div style={{ width: "100%", display: "flex" }}>
-          <div
+          <div className="w-[5%] md:w-[10%]"
             style={{
-              width: "10%",
+           
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div style={{ width: "79.95%" }}>
+          <div className="w-[89.95%] md:w-[79.95%]">
             <div className="flex flex-col">
               <div className="w-[100%]">
                 <RoundCornerWrapper>
@@ -364,9 +364,9 @@ export default function ContactForm() {
 
             </div>
           </div>
-          <div
+          <div className="w-[5.05%] md:w-[10.05%]"
             style={{
-              width: "10.05%",
+            
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
               borderBottom: "1px solid #373737",
@@ -381,15 +381,15 @@ export default function ContactForm() {
 
       <section className="hidden md:flex">
         <div style={{ width: "100%", display: "flex" }}>
-          <div
+          <div className="w-[5%] md:w-[10%]"
             style={{
-              width: "10%",
+             
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div style={{ width: "79.95%" }}>
+          <div className="w-[89.95%] md:w-[79.95%]">
             <div className="flex">
               <div className="w-[50%]">
                 <RoundCornerWrapper>
@@ -413,9 +413,9 @@ export default function ContactForm() {
               </div>
             </div>
           </div>
-          <div
+          <div className="w-[5.05%] md:w-[10.05%]"
             style={{
-              width: "10.05%",
+              
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
               borderBottom: "1px solid #373737",
@@ -427,15 +427,15 @@ export default function ContactForm() {
 
       <section className="hidden md:flex">
         <div style={{ width: "100%", display: "flex" }}>
-          <div
+          <div className="w-[5%] md:w-[10%]"
             style={{
-              width: "10%",
+            
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div style={{ width: "79.95%" }}>
+          <div className="w-[89.95%] md:w-[79.95%]">
             <div className="flex">
               <div className="w-[50%] border-r  border-r-[#373737]">
                 <div className="relative">
@@ -564,9 +564,9 @@ export default function ContactForm() {
               </div>
             </div>
           </div>
-          <div
+          <div className="w-[5.05%] md:w-[10.05%]"
             style={{
-              width: "10.05%",
+             
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
               borderBottom: "1px solid #373737",
@@ -578,15 +578,15 @@ export default function ContactForm() {
 
       <section className="hidden md:flex">
         <div style={{ width: "100%", display: "flex" }}>
-          <div
+          <div className="w-[5%] md:w-[10%]"
             style={{
-              width: "10%",
+          
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div style={{ width: "79.95%" }}>
+          <div className="w-[89.95%] md:w-[79.95%]">
             <div className="flex">
               <div className="w-[50%]">
                 <RoundCornerWrapper>
@@ -608,9 +608,9 @@ export default function ContactForm() {
               </div>
             </div>
           </div>
-          <div
+          <div className="w-[5.05%] md:w-[10.05%]"
             style={{
-              width: "10.05%",
+             
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
               borderBottom: "1px solid #373737",
@@ -621,15 +621,15 @@ export default function ContactForm() {
 
       <section className="hidden md:flex">
         <div style={{ width: "100%", display: "flex" }}>
-          <div
+          <div  className="w-[5%] md:w-[10%]"
             style={{
-              width: "10%",
+             
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div style={{ width: "79.95%" }}>
+          <div className="w-[89.95%] md:w-[79.95%]">
             <div className="flex">
               <div className="w-[50%] p-8 xl:pt-12" style={{borderRight: "1px solid #373737",position:'relative'}}>
                 <div className="w-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
@@ -654,9 +654,9 @@ export default function ContactForm() {
               </div>
             </div>
           </div>
-          <div
+          <div className="w-[5.05%] md:w-[10.05%]"
             style={{
-              width: "10.05%",
+             
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
               borderBottom: "1px solid #373737",

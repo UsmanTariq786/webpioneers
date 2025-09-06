@@ -36,27 +36,27 @@ const AboutPage = () => {
     <div>
       <section>
         <div className="w-full flex">
-          <div className="w-[10%] border-r border-b border-[#373737]"></div>
-          <div className="w-[79.95%]">
+          <div className="w-[5%] md:w-[10%] border-r border-b border-[#373737]"></div>
+          <div className="w-[89.95%] md:w-[79.95%] ">
             <HeadingAbout />
           </div>
-          <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+          <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
         </div>
       </section>
       <section className="hidden lg:block">
         <div className="w-full flex">
-          <div className="w-[10%] border-r border-b border-[#373737]"></div>
-          <div className="w-[79.95%]">
+          <div className="w-[5%] md:w-[10%] border-r border-b border-[#373737]"></div>
+          <div className="w-[89.95%] md:w-[79.95%] ">
             <FirstWebSectionImages />
           </div>
-          <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+          <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
         </div>
       </section>
 
       <section className="block lg:hidden">
         <div className="w-full flex">
-          <div className="w-[9.95%] border-b border-[#373737]"></div>
-          <div className="w-[80.08%]">
+          <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
+          <div className="w-[90.08%] md:w-[80.08%]">
             <RoundCornerWrapper bottom={false}>
               <div className=" w-full flex justify-center p-3">
                 <Image
@@ -68,13 +68,13 @@ const AboutPage = () => {
               </div>
             </RoundCornerWrapper>
           </div>
-          <div className="w-[9.95%] border-b border-[#373737]"></div>
+          <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
         </div>
       </section>
       <section>
         <div className="w-full flex">
-          <div className="w-[9.95%] border-b border-[#373737]"></div>
-          <div className="w-[80.08%]">
+          <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
+          <div className="w-[90.08%] md:w-[80.08%]">
             <RoundCornerWrapper bottom={false}>
               <div className="flex overflow-hidden py-6">
                 <div className="flex flex-nowrap animate-slide infinite">
@@ -102,13 +102,13 @@ const AboutPage = () => {
               </div>
             </RoundCornerWrapper>
           </div>
-          <div className="w-[9.95%] border-b border-[#373737]"></div>
+          <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
         </div>
       </section>
       <section className="block lg:hidden">
         <div className="w-full flex">
-          <div className="w-[9.95%] border-b border-[#373737]"></div>
-          <div className="w-[80.08%]">
+          <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
+          <div className="w-[90.08%] md:w-[80.08%]">
             <RoundCornerWrapper bottom={false}>
               <div className=" w-full flex justify-center p-3 py-10">
                 <p className="text-[22px] text-[#959595] ">
@@ -119,13 +119,13 @@ const AboutPage = () => {
               </div>
             </RoundCornerWrapper>
           </div>
-          <div className="w-[9.95%] border-b border-[#373737]"></div>
+          <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
         </div>
       </section>
       <section className="block lg:hidden">
         <div className="w-full flex">
-          <div className="w-[9.95%] border-b border-[#373737]"></div>
-          <div className="w-[80.08%]">
+          <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
+          <div className="w-[90.08%] md:w-[80.08%]">
             <RoundCornerWrapper>
               <div className=" w-full flex justify-center p-3 py-10">
                 <p className="text-[22px] text-[#959595] ">
@@ -137,96 +137,96 @@ const AboutPage = () => {
               </div>
             </RoundCornerWrapper>
           </div>
-          <div className="w-[9.95%] border-b border-[#373737]"></div>
+          <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
         </div>
       </section>
       <section className="">
         <div className="w-full flex">
-          <div className="w-[9.95%] border-b border-[#373737]"></div>
-          <div className="w-[80.08%]">
+          <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
+          <div className="w-[90.08%] md:w-[80.08%]">
           <ContainerWithText/>
           </div>
-          <div className="w-[9.95%] border-b border-[#373737]"></div>
+          <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
         </div>
       </section>
       <section>
         <div className="w-full flex">
-          <div className="w-[10%] border-r border-b border-[#373737]"></div>
-          <div className="w-[79.95%]">
+          <div className="w-[5%] md:w-[10%] border-r border-b border-[#373737]"></div>
+          <div className="w-[89.95%] md:w-[79.95%] ">
             <HeadingDuo />
           </div>
-          <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+          <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
         </div>
       </section>
       <section>
         <div className="w-full flex">
-          <div className="w-[10%] border-r border-b border-[#373737]"></div>
-          <div className="w-[79.95%]">
+          <div className="w-[5%] md:w-[10%] border-r border-b border-[#373737]"></div>
+          <div className="w-[89.95%] md:w-[79.95%] ">
           <DuoSection/>
           </div>
-          <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+          <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
         </div>
       </section>
 
       
       <section>
         <div className="w-full flex">
-          <div className="w-[10%] border-r border-b border-[#373737]"></div>
-          <div className="w-[79.95%] border-1 border-[#373737]">
+          <div className="w-[5%] md:w-[10%] border-r border-b border-[#373737]"></div>
+          <div className="w-[89.95%] md:w-[79.95%]  border-1 border-[#373737]">
           <HeadingPartners/>
           </div>
-          <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+          <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
         </div>
       </section>
       <section>
         <div className="w-full flex">
-          <div className="w-[10%] border-r border-b border-[#373737]"></div>
-          <div className="w-[79.95%]">
+          <div className="w-[5%] md:w-[10%] border-r border-b border-[#373737]"></div>
+          <div className="w-[89.95%] md:w-[79.95%] ">
           <PartnerLogos/>
           </div>
-          <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+          <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
         </div>
       </section>
       <section>
         <div className="w-full flex">
-          <div className="w-[10%] border-r border-b border-[#373737]"></div>
-          <div className="w-[79.95%]  border-[#373737] border-t-1">
+          <div className="w-[5%] md:w-[10%] border-r border-b border-[#373737]"></div>
+          <div className="w-[89.95%] md:w-[79.95%]   border-[#373737] border-t-1">
           <HeadingWhyPickUs/>
           </div>
-          <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+          <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
         </div>
       </section>
       <section>
         <div className="w-full flex">
-          <div className="w-[10%] border-r border-b border-[#373737]"></div>
-          <div className="w-[79.95%]  border-[#373737]">
+          <div className="w-[5%] md:w-[10%] border-r border-b border-[#373737]"></div>
+          <div className="w-[89.95%] md:w-[79.95%]   border-[#373737]">
           <WhyPickUsSection/>
           </div>
-          <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+          <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
         </div>
       </section>
       <section>
         <div className="w-full flex">
-          <div className="w-[10%] border-r border-b border-[#373737]"></div>
-          <div className="w-[79.95%]  border-[#373737]">
+          <div className="w-[5%] md:w-[10%] border-r border-b border-[#373737]"></div>
+          <div className="w-[89.95%] md:w-[79.95%]   border-[#373737]">
           <HeadingWorkWithUs/>
           </div>
-          <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+          <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
         </div>
       </section>
       <section>
         <div className="w-full flex">
-          <div className="w-[10%] border-r border-b border-[#373737]"></div>
-          <div className="w-[79.95%]  border-[#373737] border-t-1">
+          <div className="w-[5%] md:w-[10%] border-r border-b border-[#373737]"></div>
+          <div className="w-[89.95%] md:w-[79.95%]   border-[#373737] border-t-1">
           <WorkingWithUsSection/>
           </div>
-          <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+          <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
         </div>
       </section>
       <section>
         <div className="w-full flex">
-          <div className="w-[10%] border-r border-b border-[#373737]"></div>
-          <div className="w-[79.95%]  border-[#373737] border-t-1">
+          <div className="w-[5%] md:w-[10%] border-r border-b border-[#373737]"></div>
+          <div className="w-[89.95%] md:w-[79.95%]   border-[#373737] border-t-1">
           <div className="py-8 flex justify-center">
             <Image
                     src="/aboutUs/theater.png"
@@ -236,7 +236,7 @@ const AboutPage = () => {
                   />
             </div>
           </div>
-          <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+          <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
         </div>
       </section>
    

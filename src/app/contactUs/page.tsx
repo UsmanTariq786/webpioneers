@@ -6,11 +6,11 @@ const ContactUsPage = () => {
     <div>
           <section>
         <div className="w-full flex">
-          <div className="w-[10%] border-r border-b border-[#373737]"></div>
-          <div className="w-[79.95%]">
+          <div className="w-[5%] md:w-[10%] border-r border-b border-[#373737]"></div>
+          <div className="w-[89.95%] md:w-[79.95%] ">
           <ContactUsComp/>
           </div>
-          <div className="w-[10.05%] border-l border-b border-[#373737]"></div>
+          <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
         </div>
       </section>
       

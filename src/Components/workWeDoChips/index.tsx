@@ -22,3 +22,4 @@ const WorkWeDoChips = ({ setSelectedChip, selectedChip }: any) => {
 }
 
 export default WorkWeDoChips
+
