@@ -1,4 +1,6 @@
 
+// 'use client'
+
 // import Image from 'next/image';
 // import React, { useState, useEffect } from 'react';
 // import Slider from 'react-slick';
@@ -74,7 +76,7 @@
 //     autoplay: true,
 //     autoplaySpeed: 100,
 //     cssEase: 'linear',
-//     pauseOnHover: true,
+//     // pauseOnHover: true,
 //     nextArrow: undefined,
 //     prevArrow: undefined,
 //     arrows: false, // ✅ hides both next & prev arrows
@@ -230,15 +232,15 @@ const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
   autoplay={{
     delay: 0, // Continuous sliding with 0 delay, handled by speed
     disableOnInteraction: false, // Continues after drag
-    pauseOnMouseEnter: true, // Stops immediately on hover
+    pauseOnMouseEnter: false, // Stops immediately on hover
     stopOnLastSlide: false, // Keeps looping
   }}
   speed={2000} // Smooth transition speed (2 seconds per full cycle)
   modules={[Autoplay]} // Only Autoplay module
   navigation={false} // No arrows
   pagination={false} // No pagination
-  onSwiper={(swiper) => (swiperRef.current = swiper)} // Store swiper instance
-  onMouseLeave={() => swiperRef.current?.autoplay.start()} // Resume from current position
+  // onSwiper={(swiper) => (swiperRef.current = swiper)} // Store swiper instance
+  // onMouseLeave={() => swiperRef.current?.autoplay.start()} // Resume from current position
   className={sliderHeight} // Apply height
   breakpoints={{
     0: {
@@ -274,18 +276,6 @@ const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
 };
 
 export default WorkSlider;
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

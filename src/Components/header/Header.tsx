@@ -33,7 +33,7 @@ const Header = () => {
         </div> */}
 
         {/* Nav – center (desktop) */}
-        <nav className="hidden md:block place-self-center">
+        <nav className="hidden md:block place-self-center xl:mr-[-70px] lg:mr-[-60px]">
           <ul className="flex gap-4 text-sm tracking-wide">
             {navItems.map((item) => (
               <li key={item+'navbar'} className="relative cursor-pointer">
@@ -53,7 +53,7 @@ const Header = () => {
         </nav>
 
         {/* CTA – right (desktop) */}
-        <div className="hidden md:block md:mr-10">
+        <div className="hidden md:block xl:mr-10 lg:mr-1 ">
           <Button title="Let’s get started" onClick={()=>router.push('/contactUs')}/>
         </div>
 
