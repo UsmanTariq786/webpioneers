@@ -38,7 +38,7 @@ const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
             <div key={index + 'yahayyiyaqaeym'}>
               <RoundCornerWrapper
                 top={false}
-                // right={isLastInRow} // 👉 only true for last in row
+                className='py-5 md:py-1'
               >
                 <FolderWorkDesignComp
                   keyvalue={index}

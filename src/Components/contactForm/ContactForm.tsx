@@ -174,7 +174,7 @@ export default function ContactForm() {
                 <input
                     type="tel"
                     placeholder="Phone number"
-                    className="w-full placeholder-[rgba(118, 118, 118, 1)] rounded-lg px-4 py-6 text-white"
+                    className="w-full placeholder-[rgba(118, 118, 118, 1)] rounded-lg px-4 py-6 text-white focus:outline-none"
                   />
                 </RoundCornerWrapper>
               </div>
@@ -332,14 +332,14 @@ export default function ContactForm() {
                 </RoundCornerWrapper>
               </div>
 
-              <div className="w-[100%]">
+              {/* <div className="w-[100%]">
                 <RoundCornerWrapper>
                 <textarea
                   placeholder="Tell us about your project"
                   className="w-full  rounded-lg px-4 py-6 text-white placeholder-text-[#767676] focus:outline-none min-h-[200px] resize-none"
                 />
                 </RoundCornerWrapper>
-              </div>
+              </div> */}
 
               <div className="w-[100%]">
                 <RoundCornerWrapper>
@@ -588,15 +588,15 @@ export default function ContactForm() {
           ></div>
           <div className="w-[89.95%] md:w-[79.95%]">
             <div className="flex">
-              <div className="w-[50%]">
-                <RoundCornerWrapper>
+              <div className="w-[100%]">
+                <RoundCornerWrapper right={false} left={false}>
                   <textarea
                     placeholder="Project detail"
                     className="w-full  rounded-lg px-4 py-6 text-white placeholder-text-[#767676] focus:outline-none  transition-colors min-h-[200px] resize-none"
                   />
                 </RoundCornerWrapper>
               </div>
-
+{/* 
               <div className="w-1/2 relative border-t border-b border-t-[#373737] border-b-[#373737]">
                 <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -top-[5px] -right-[5px]"></div>
                 <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
@@ -605,7 +605,7 @@ export default function ContactForm() {
                   placeholder="Tell us about your project"
                   className="w-full  rounded-lg px-4 py-6 text-white placeholder-text-[#767676] focus:outline-none min-h-[200px] resize-none"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="w-[5.05%] md:w-[10.05%]"
@@ -631,7 +631,7 @@ export default function ContactForm() {
           ></div>
           <div className="w-[89.95%] md:w-[79.95%]">
             <div className="flex">
-              <div className="w-[50%] p-8 xl:pt-12" style={{borderRight: "1px solid #373737",position:'relative'}}>
+              <div className="w-[50%] p-8 xl:pt-12" style={{position:'relative'}}>
                 <div className="w-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
 
                 <div className="w-[60%]">

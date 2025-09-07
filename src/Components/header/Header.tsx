@@ -60,10 +60,10 @@ const Header = () => {
         {/* Hamburger – mobile only */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden justify-self-end focus:outline-none px-2 rounded-[8px] bg-[url('/menu-bg-hyper.svg')] bg-cover bg-center min-w-[45px] flex items-center justify-center h-[45px] mt-1"
+          className="md:hidden justify-self-end focus:outline-none p-2 rounded-[8px] bg-[url('/menu-bg-hyper.svg')] bg-cover bg-center w-[45px] h-[45px] flex items-center justify-center  mt-1"
           aria-label="Toggle menu"
         >
-          {open ? <IoCloseOutline className="w-8" style={{
+          {open ? <IoCloseOutline style={{
     width: '35px',
     height: '35px',
   }}/> : <HiOutlineEquals  style={{

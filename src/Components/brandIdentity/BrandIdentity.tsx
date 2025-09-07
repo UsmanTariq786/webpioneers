@@ -52,7 +52,7 @@ const BrandIdentity = () => {
          description="We help shape your brand’s personality and build a visual style that actually feels like you."
        />
          {/* Image only for mobile/tablet, hidden on xl */}
-         <div className='block md:hidden pb-[46px]'>
+         <div className='block md:hidden md:pb-[46px]'>
          <Image
               src="/homePage/ServicesMobile/1.png"
               width={310}

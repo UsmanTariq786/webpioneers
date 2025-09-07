@@ -99,12 +99,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           <div className="mx-15 py-3 flex justify-between items-center">
             <div>
               <h2
-                className="text-[24px] md:text-[42px] font-normal text-[#F8F8F8]/90 leading-[56px] tracking-[-0.02em] gradien-text"
+                className="text-[24px] md:text-[32px] font-normal text-[#F8F8F8]/90 leading-[56px] tracking-[-0.02em] gradien-text"
                 // style={{ fontSize: '48px' }}
               >
                 {selectedProjectData.projectName}
               </h2>
-              <p className="text-[#F8F8F8B2] text-[16px] md:text-[20px]">
+              <p className="text-[#F8F8F8B2] text-[16px]">
                 {selectedProjectData.tagline || selectedProjectData.description}
               </p>
             </div>
@@ -136,7 +136,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             )}
             <div className="space-y-4 mb-6 mt-10">
               {selectedProjectData.modalDescription?.map((para, index) => (
-                <p key={index+'descofselectedprojct'} className="text-[#F8F8F8B2] text-[18px] md:text-[20px]">
+                <p key={index+'descofselectedprojct'} className="text-[#F8F8F8B2] text-[16px]">
                   {para}
                 </p>
               ))}
@@ -205,7 +205,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               </div>
               <div className="space-y-5 px-6">
                 {selectedProjectData.modalDescription?.map((para, index) => (
-                  <p key={index +'idontwnwlabtwhysomany'} className="text-[#F8F8F8B2] text-[18px] md:text-[20px]">
+                  <p key={index +'idontwnwlabtwhysomany'} className="text-[#F8F8F8B2] text-[16px]">
                     {para}
                   </p>
                 ))}

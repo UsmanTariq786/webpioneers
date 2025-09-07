@@ -76,7 +76,7 @@ function TableData() {
                               WebkitBackgroundClip: "text",
                               WebkitTextFillColor: "transparent",
                             }}
-                            className="text-[24px] md:text-[32px]"
+                            className="text-[24px] md:text-[28px]"
                           >
                             {card.description1}
                           </p>{" "}
