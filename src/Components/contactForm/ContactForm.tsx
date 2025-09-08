@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import RoundCornerWrapper from "../RoundCornerWrapper";
 import CommonQuestion from "../commonQuestion";
 import Image from "next/image";
+import Cal, { getCalApi } from "@calcom/embed-react";
 
 const services = [
   "UI UX / Branding",
@@ -19,6 +20,21 @@ export default function ContactForm() {
   const [showServiceDropdown, setShowServiceDropdown] = useState(false);
   const [selectedBudget, setSelectedBudget] = useState("");
   const [showBudgetDropdown, setShowBudgetDropdown] = useState(false);
+  const [tab, setTab] = useState('quote')     // quote , book
+  
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "30min" });
+      cal("ui", {
+        theme: "dark",
+        cssVarsPerTheme: { light: { "cal-brand": "#cb521e" }, dark: { "cal-brand": "#cb521e" }  },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    })();
+  }, []);
+
+  
 
   return (
     <div>
@@ -69,7 +85,7 @@ export default function ContactForm() {
           ></div>
           <div className="w-[89.95%] md:w-[79.95%]">
             <div className="flex">
-              <div className="w-[50%] bg-[rgba(40,40,40,0.7)]">
+              <div className={`w-[50%] ${tab==='quote'? 'bg-[rgba(40,40,40,0.7)]':''} `} onClick={() => setTab('quote')}>
                 <RoundCornerWrapper>
                   <p className="text-center text-[16px] md:text-[24px] py-5 font-normal leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
                     Request a quote
@@ -77,7 +93,8 @@ export default function ContactForm() {
                 </RoundCornerWrapper>
               </div>
 
-              <div className="w-1/2 relative border-t border-b border-t-[#373737] border-b-[#373737]">
+              <div className={`w-1/2 relative border-t border-b border-t-[#373737] border-b-[#373737]
+               ${tab==='book'? 'bg-[rgba(40,40,40,0.7)]':''} `} onClick={() => setTab('book')}>
                 <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -top-[5px] -right-[5px]"></div>
                 <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
 
@@ -97,7 +114,10 @@ export default function ContactForm() {
           ></div>
         </div>
       </section>
+      
 
+
+      {tab === 'quote' && <div>
 
       <section className="hidden md:flex">
         <div style={{ width: "100%", display: "flex" }}>
@@ -664,8 +684,40 @@ export default function ContactForm() {
           ></div>
         </div>
       </section>
+      </div>}
 
-      {/* Footer */}
+
+      {
+        tab === "book" && 
+        <div style={{ width: "100%", display: "flex" }}>
+        <div className="w-[5%] md:w-[10%]"
+          style={{
+           
+            boxSizing: "border-box",
+            borderRight: "1px solid #373737",
+            borderBottom: "1px solid #373737",
+          }}
+        ></div>
+        <div className="w-[89.95%] md:w-[79.95%] mt-5">
+
+         <Cal
+          namespace="30min"
+          calLink="usman-ips/30min"
+          style={{ width: "100%", height: "100%", overflow: "scroll" }}
+          config={{ layout: "month_view", theme: "dark" }}
+          />
+      </div>
+      <div className="w-[5.05%] md:w-[10.05%]"
+            style={{
+            
+              boxSizing: "border-box",
+              borderLeft: "1px solid #373737",
+              borderBottom: "1px solid #373737",
+            }}
+          ></div>
+      </div>
+
+       }
     </div>
   );
 }
