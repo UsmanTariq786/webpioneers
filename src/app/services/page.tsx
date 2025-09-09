@@ -7,6 +7,8 @@ import RoundCornerWrapper from "@/Components/RoundCornerWrapper";
 import CommonQuestion from "@/Components/commonQuestion";
 import ProgressBar from "@/Components/progressBar/index";
 import Button from "@/Components/button/Button";
+import { HeroStatement } from "@/Components/HeroStatement/HeroStatement";
+import ContactForm from "@/Components/contactForm";
 const ServicesPage = () => {
   return (
     <div className="min-h-screen text-white">
@@ -168,6 +170,31 @@ const ServicesPage = () => {
     <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
   </div>
 </section>
+<section>
+  <div style={{ width: "100%", display: "flex" }}>
+    <div className="w-[4.95%] md:w-[9.95%]"
+      style={{
+        boxSizing: "border-box",
+        borderBottom: "1px solid #373737",
+      }}
+    ></div>
+    <div className="w-[90.08%] md:w-[80.08%]" 
+    >
+      <RoundCornerWrapper>
+        <div className="px-[20px]">
+        <HeroStatement />
+        </div>
+      </RoundCornerWrapper>
+    </div>
+    <div className="w-[4.95%] md:w-[9.95%]"
+      style={{
+        boxSizing: "border-box",
+        borderBottom: "1px solid #373737",
+      }}
+    ></div>
+  </div>
+</section>
+<ContactForm />
      
   </div>
     </div>

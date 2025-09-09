@@ -46,7 +46,7 @@ const PioneerDetail = () => {
           justifyContent: "center",
         }}
       >
-        <div className="md:w-[100%] max-w-[400px]">
+        <div className="w-[100%] max-w-[400px]">
           {chipdata.map((item, index) => (
             <div
               key={"chipbox" + index}
@@ -57,7 +57,7 @@ const PioneerDetail = () => {
               }}
             >
 
-             <div className="h-[58px]">
+             <div className="h-[48px] md:h-[58px]">
                <Image
                  src={`/chips/${index + 1}.png`}
                  alt="item"

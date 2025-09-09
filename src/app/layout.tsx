@@ -68,7 +68,7 @@ export default function RootLayout({
 
         {children}
 
-        <FAQAccordion />
+        {/* <FAQAccordion /> 
 
         <section>
           <div style={{ width: "100%", display: "flex" }}>
@@ -96,7 +96,7 @@ export default function RootLayout({
         </section>
 
 
-              <ContactForm />
+       <ContactForm /> */}
 
        
 

@@ -225,7 +225,7 @@ const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
   return (
     <div className="w-full py-6">
 <Swiper
-  spaceBetween={4} // Small 4px gap between slides
+  spaceBetween={14} // Small 4px gap between slides
   // freeMode={true}
   // slidesPerView={3} // Default to 3 slides
   loop={true} // Infinite scrolling

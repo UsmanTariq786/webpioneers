@@ -12,6 +12,8 @@ import WorkingWithUsSection from "./workingWithUsSection";
 import FirstWebSectionImages from "./firstWebSectionImages";
 import ContainerWithText from "./containerWithText";
 import WhyPickUsSection from "./whyPickUsSection";
+import { HeroStatement } from "@/Components/HeroStatement/HeroStatement";
+import ContactForm from "@/Components/contactForm";
 
 const chipsSliding = [
   "01",
@@ -239,6 +241,31 @@ const AboutPage = () => {
           <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
         </div>
       </section>
+      <section>
+  <div style={{ width: "100%", display: "flex" }}>
+    <div className="w-[4.95%] md:w-[9.95%]"
+      style={{
+        boxSizing: "border-box",
+        borderBottom: "1px solid #373737",
+      }}
+    ></div>
+    <div className="w-[90.08%] md:w-[80.08%]" 
+    >
+      <RoundCornerWrapper>
+        <div className="px-[20px]">
+        <HeroStatement />
+        </div>
+      </RoundCornerWrapper>
+    </div>
+    <div className="w-[4.95%] md:w-[9.95%]"
+      style={{
+        boxSizing: "border-box",
+        borderBottom: "1px solid #373737",
+      }}
+    ></div>
+  </div>
+</section>
+<ContactForm />
    
     </div>
   );
