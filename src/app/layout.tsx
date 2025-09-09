@@ -5,7 +5,7 @@ import "./globals.css";
 // import ServiceExcellenceGrid from "@/Components/ServiceExcellenceGrid/ServiceExcellenceGrid";
 import { HeroStatement } from "@/Components/HeroStatement/HeroStatement";
 import { FAQAccordion } from "@/Components/fAQAccordion/FAQAccordion";
-import ContactForm from "@/Components/contactForm/ContactForm";
+import ContactForm from "@/Components/contactForm";
 import Footer from "@/Components/footer/Footer";
 import Header from "@/Components/header/Header";
 import RoundCornerWrapper from "@/Components/RoundCornerWrapper";
