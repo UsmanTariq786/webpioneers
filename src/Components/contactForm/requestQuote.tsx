@@ -581,8 +581,7 @@
 // }
 
 // export default RequestQuoteForm
-
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import RoundCornerWrapper from "../RoundCornerWrapper";
 import Image from "next/image";
 
@@ -596,19 +595,21 @@ const services = [
 const budgets = ["Under $3k", "$3k–5k", "$5k–10k", "$10k+", "Not sure"];
 
 const RequestQuoteForm = () => {
-  const [selectedService, setSelectedService] = useState("");
-  const [showServiceDropdown, setShowServiceDropdown] = useState(false);
-  const [selectedBudget, setSelectedBudget] = useState("");
-  const [showBudgetDropdown, setShowBudgetDropdown] = useState(false);
-  const [fullName, setFullName] = useState("");
-  const [companyName, setCompanyName] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [email, setEmail] = useState("");
-  const [projectDetail, setProjectDetail] = useState("");
-  const [errors, setErrors] = useState({});
-  const [touched, setTouched] = useState({});
+  const [selectedService, setSelectedService] = useState<string>("");
+  const [showServiceDropdown, setShowServiceDropdown] = useState<boolean>(false);
+  const [selectedBudget, setSelectedBudget] = useState<string>("");
+  const [showBudgetDropdown, setShowBudgetDropdown] = useState<boolean>(false);
+  const [fullName, setFullName] = useState<string>("");
+  const [companyName, setCompanyName] = useState<string>("");
+  const [phoneNumber, setPhoneNumber] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [projectDetail, setProjectDetail] = useState<string>("");
+  const [errors, setErrors] = useState<any>({});
+  const [touched, setTouched] = useState<any>({});
+  const [formStatus, setFormStatus] = useState<string | null>(null);
+  const [formMessage, setFormMessage] = useState<string>("");
 
-  const validationSchema = {
+  const validationSchema: any = {
     fullName: {
       required: true,
       message: "Full name is required.",
@@ -624,7 +625,7 @@ const RequestQuoteForm = () => {
     email: {
       required: true,
       message: "Email is required.",
-      validate: (value:any) =>
+      validate: (value: any) =>
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) || "Please enter a valid email address.",
     },
     selectedService: {
@@ -641,7 +642,7 @@ const RequestQuoteForm = () => {
     },
   };
 
-  const getFieldValue = (field:any) => {
+  const getFieldValue = (field: any) => {
     switch (field) {
       case "fullName":
         return fullName;
@@ -662,9 +663,8 @@ const RequestQuoteForm = () => {
     }
   };
 
-  const validateField = (field:any) => {
-    // const schema = validationSchema[field];
-    const schema = validationSchema[field as keyof typeof validationSchema];
+  const validateField = (field: any) => {
+    const schema = validationSchema[field];
     if (!schema) return;
 
     const value = getFieldValue(field);
@@ -677,16 +677,15 @@ const RequestQuoteForm = () => {
       if (typeof valRes === "string") error = valRes;
     }
 
-    setErrors((prev) => ({ ...prev, [field]: error }));
+    setErrors((prev: any) => ({ ...prev, [field]: error }));
   };
 
-  const handleBlur = (field:any) => {
-    setTouched((prev) => ({ ...prev, [field]: true }));
+  const handleBlur = (field: any) => {
+    setTouched((prev: any) => ({ ...prev, [field]: true }));
     validateField(field);
   };
 
-  const handleChange = (field:any, value:any) => {
-    // Update state based on field
+  const handleChange = (field: any, value: any) => {
     switch (field) {
       case "fullName":
         setFullName(value);
@@ -711,7 +710,7 @@ const RequestQuoteForm = () => {
     }
   };
 
-  const handleSelectService = (service:any) => {
+  const handleSelectService = (service: any) => {
     setSelectedService(service);
     setShowServiceDropdown(false);
     if (touched?.selectedService) {
@@ -719,7 +718,7 @@ const RequestQuoteForm = () => {
     }
   };
 
-  const handleSelectBudget = (budget:any) => {
+  const handleSelectBudget = (budget: any) => {
     setSelectedBudget(budget);
     setShowBudgetDropdown(false);
     if (touched?.selectedBudget) {
@@ -727,27 +726,30 @@ const RequestQuoteForm = () => {
     }
   };
 
-  const handleDropdownBlur = (field:any) => {
-    setTouched((prev) => ({ ...prev, [field]: true }));
+  const handleDropdownBlur = (field: any) => {
+    setTouched((prev: any) => ({ ...prev, [field]: true }));
     validateField(field);
   };
 
   const handleSubmit = async () => {
     // Mark all fields as touched
-    const allTouched: { [key: string]: boolean } = Object.keys(validationSchema).reduce(
-      (acc, key) => {
+    const allTouched: any = Object.keys(validationSchema).reduce(
+      (acc: any, key) => {
         acc[key] = true;
         return acc;
       },
-      {}
+      {} as any
     );
     setTouched(allTouched);
-  
+
     // Validate all fields
     Object.keys(validationSchema).forEach((field) => validateField(field));
-    // Check if any errors
-    const hasErrors = Object.values(errors).some((error) => error);
+
+    // Check for errors
+    const hasErrors = Object.values(errors).some((error: any) => error);
     if (hasErrors) {
+      setFormStatus("error");
+      setFormMessage("Please fix the errors above to proceed.");
       return;
     }
 
@@ -761,16 +763,16 @@ const RequestQuoteForm = () => {
       budget: selectedBudget,
       projectDetail,
     };
-  
+
     try {
       const response = await fetch("/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-  
+
       const result = await response.json();
-  
+
       if (result.success) {
         // Reset form
         setFullName("");
@@ -782,21 +784,20 @@ const RequestQuoteForm = () => {
         setProjectDetail("");
         setErrors({});
         setTouched({});
-        // setFormStatus("success");
-        // setFormMessage("Your inquiry has been sent successfully!");
+        setFormStatus("success");
+        setFormMessage("Your inquiry has been sent successfully!");
       } else {
-        // setFormStatus("error");
-        // setFormMessage(result.error || "Failed to send inquiry. Please try again.");
+        setFormStatus("error");
+        setFormMessage(result.error || "Failed to send inquiry. Please try again.");
       }
     } catch (error) {
-      // setFormStatus("error");
-      // setFormMessage("An unexpected error occurred. Please try again later.");
+      setFormStatus("error");
+      setFormMessage("An unexpected error occurred. Please try again later.");
       console.error("Submission error:", error);
     }
   };
 
-  
-  const hasError = (field:any) => touched[field] && errors[field];
+  const hasError = (field: any) => touched[field] && errors[field];
 
   return (
     <div>
@@ -1107,6 +1108,15 @@ const RequestQuoteForm = () => {
               <div className="w-[100%]">
                 <RoundCornerWrapper>
                   <div className="w-[100%] p-[20px]">
+                    {formStatus && (
+                      <div
+                        className={`w-[100%] p-4 rounded-[10px] text-sm mb-4 ${
+                          formStatus === "success" ? "bg-green-500/20 text-green-500" : "bg-red-500/20 text-red-500"
+                        }`}
+                      >
+                        {formMessage}
+                      </div>
+                    )}
                     <p className="text-sm text-white/60">
                       By sending this form I confirm that I have read and accept the{" "}
                       <a
@@ -1405,7 +1415,6 @@ const RequestQuoteForm = () => {
             <div className="flex">
               <div className="w-[50%] p-8 xl:pt-12" style={{ position: "relative" }}>
                 <div className="w-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
-
                 <div className="w-[60%]">
                   <p className="text-sm text-white/60">
                     By sending this form I confirm that I have read and accept the{" "}
@@ -1418,8 +1427,16 @@ const RequestQuoteForm = () => {
                   </p>
                 </div>
               </div>
-
               <div className="w-[50%] p-8 flex justify-end">
+                {formStatus && (
+                  <div
+                    className={`w-[100%] p-4 rounded-[10px] text-sm mb-4 ${
+                      formStatus === "success" ? "bg-green-500/20 text-green-500" : "bg-red-500/20 text-red-500"
+                    }`}
+                  >
+                    {formMessage}
+                  </div>
+                )}
                 <button
                   onClick={handleSubmit}
                   className="bg-[#D4541D] hover:bg-[#D4541D]/90 text-white text-[17px] px-6 py-3 rounded-full transition-colors"
