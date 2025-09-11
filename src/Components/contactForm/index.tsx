@@ -83,7 +83,7 @@ export default function ContactForm() {
                 onClick={() => setTab("quote")}
               >
                 <RoundCornerWrapper>
-                  <p className="text-center text-[16px] md:text-[24px] py-5 font-normal leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
+                  <p className="text-center text-[16px] md:text-[20px] py-5 font-normal leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
                     Request a quote
                   </p>
                 </RoundCornerWrapper>
@@ -97,7 +97,7 @@ export default function ContactForm() {
                 <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -top-[5px] -right-[5px]"></div>
                 <div className="w-[9px] h-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
 
-                <p className="text-center py-5 text-[16px] md:text-[24px] font-normal leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
+                <p className="text-center py-5 text-[16px] md:text-[20px] font-normal leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
                   Book a call
                 </p>
               </div>

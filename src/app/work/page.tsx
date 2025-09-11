@@ -71,6 +71,17 @@ export default function Home() {
           <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
         </div>
       </section>
+      <section>
+        <div className="w-full flex">
+          <div className="w-[5%] md:w-[10%] border-r border-b border-[#373737]"></div>
+          <div className="w-[89.95%] md:w-[79.95%] border-b border-[#373737] ">
+          <RoundCornerWrapper bottom={false} right={false} left={false} dotBottomLeft={false} dotBottomRight={false} top={false}>
+            {""}
+          </RoundCornerWrapper>
+          </div>
+          <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
+        </div>
+      </section>
       <section className="hidden md:block">
           <div style={{ width: "100%", display: "flex" }}>
             <div className="w-[5%] md:w-[10%]"

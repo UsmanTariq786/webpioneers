@@ -637,7 +637,7 @@ const RequestQuoteForm = () => {
       message: "Project budget is required.",
     },
     projectDetail: {
-      required: false,
+      required: true,
       message: "Project detail is required.",
     },
   };
@@ -681,8 +681,8 @@ const RequestQuoteForm = () => {
   };
 
   const handleBlur = (field: any) => {
-    setTouched((prev: any) => ({ ...prev, [field]: true }));
-    validateField(field);
+    // setTouched((prev: any) => ({ ...prev, [field]: true }));
+    // validateField(field);
   };
 
   const handleChange = (field: any, value: any) => {
@@ -705,25 +705,25 @@ const RequestQuoteForm = () => {
       default:
         break;
     }
-    if (touched[field]) {
-      validateField(field);
-    }
+    // if (touched[field]) {
+    //   validateField(field);
+    // }
   };
 
   const handleSelectService = (service: any) => {
     setSelectedService(service);
     setShowServiceDropdown(false);
-    if (touched?.selectedService) {
-      validateField("selectedService");
-    }
+    // if (touched?.selectedService) {
+    //   validateField("selectedService");
+    // }
   };
 
   const handleSelectBudget = (budget: any) => {
     setSelectedBudget(budget);
     setShowBudgetDropdown(false);
-    if (touched?.selectedBudget) {
-      validateField("selectedBudget");
-    }
+    // if (touched?.selectedBudget) {
+    //   validateField("selectedBudget");
+    // }
   };
 
   const handleDropdownBlur = (field: any) => {
@@ -1129,7 +1129,7 @@ const RequestQuoteForm = () => {
                     <div className="w-[100%] pt-[25px] flex justify-start">
                       <button
                         onClick={handleSubmit}
-                        className="bg-[#D4541D] hover:bg-[#D4541D]/90 text-white text-[16px] px-6 py-3 rounded-full transition-colors"
+                        className="bg-[#D4541D] hover:bg-[#D4541D]/90 whitespace-nowrap text-white text-[16px] px-6 py-3 rounded-full transition-colors"
                       >
                         Send Inquiry
                       </button>
@@ -1427,19 +1427,19 @@ const RequestQuoteForm = () => {
                   </p>
                 </div>
               </div>
-              <div className="w-[50%] p-8 flex justify-end">
+              <div className="w-[50%] p-8 flex justify-end align-text-bottom">
                 {formStatus && (
                   <div
-                    className={`w-[100%] p-4 rounded-[10px] text-sm mb-4 ${
-                      formStatus === "success" ? "bg-green-500/20 text-green-500" : "bg-red-500/20 text-red-500"
-                    }`}
+                    className={`w-[100%] p-4 rounded-[10px] text-sm text-white/60  `
+                    
+                    }
                   >
-                    {formMessage}
+                    {formMessage}!
                   </div>
                 )}
                 <button
                   onClick={handleSubmit}
-                  className="bg-[#D4541D] hover:bg-[#D4541D]/90 text-white text-[17px] px-6 py-3 rounded-full transition-colors"
+                  className="bg-[#D4541D] hover:bg-[#D4541D]/90 whitespace-nowrap text-white text-[17px] px-6 py-3 rounded-full transition-colors"
                 >
                   Send Inquiry
                 </button>
