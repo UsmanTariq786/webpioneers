@@ -76,7 +76,7 @@ const Header = () => {
 
       {/* Mobile Dropdown Menu */}
       {open && (
-        <div className="md:hidden absolute top-[220px] left-1/2 -translate-x-1/2 w-[100%] max-w-sm bg-[#282828]/70 backdrop-blur-lg rounded-2xl shadow-lg border border-white/10 px-5 py-6 z-50">
+        <div className="md:hidden fixed top-[220px] left-1/2 -translate-x-1/2 w-[100%] max-w-sm bg-[#282828]/70 backdrop-blur-lg rounded-2xl shadow-lg border border-white/10 px-5 py-6 z-500">
           {/* Top Row: Logo + Close */}
           <div className="flex justify-between items-center mb-6">
             <Logo />

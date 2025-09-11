@@ -6,7 +6,7 @@ import rubik from "@/app/fonts";
 
 const HeadingAbout = () => {
   return (
-    <div className=" p-10 md:px-25 md:pt-15 md:pb-10">
+    <div className=" p-10 pl-6 md:px-25 md:pt-15 md:pb-10 md:pl-18">
     <div className="w-30">
       <CommonQuestion question="ABOUT US" /> 
     </div>

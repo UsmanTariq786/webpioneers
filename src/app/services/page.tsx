@@ -15,7 +15,7 @@ const ServicesPage = () => {
       <section>
         <div className="w-full flex">
           <div className="w-[5%] md:w-[10%] border-r border-b border-[#373737]"></div>
-          <div className="w-[89.95%] md:w-[79.95%]  md:p-15 p-10">
+          <div className="w-[89.95%] md:w-[79.95%]  md:p-15 p-10 pl-6 md:pl-18">
             <div className="w-40 mb-3">
               <CommonQuestion question={Box[0].boxhead} />
             </div>
@@ -77,7 +77,7 @@ const ServicesPage = () => {
     
     <div className="w-[90.08%] md:w-[80.08%]">
     <RoundCornerWrapper top={false} bottom={false}>
-      <div className="p-10 pb-14">
+      <div className="p-10 pb-14 pl-6 md:pl-18">
         <div className="w-50 my-5">
          <CommonQuestion question={Box[1].boxhead} />
         </div>

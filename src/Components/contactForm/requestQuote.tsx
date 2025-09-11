@@ -1,16 +1,18 @@
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import RoundCornerWrapper from "../RoundCornerWrapper";
 import Image from "next/image";
+import toast from "react-hot-toast"; // Ensure you have react-hot-toast installed (npm install react-hot-toast)
+import { Toaster } from "react-hot-toast";
 
-const services = [
-  "UI UX / Branding",
-  "Development",
-  "Design + Development",
-  "Not Sure",
-];
-
+const services = ["UI UX / Branding", "Development", "Design + Development", "Not Sure"];
 const budgets = ["Under $3k", "$3k–5k", "$5k–10k", "$10k+", "Not sure"];
+
+type ValidationSchemaType = {
+  required: boolean;
+  message: string;
+  validate?: (value: string) => boolean | string;
+};
 
 const RequestQuoteForm = () => {
   const [selectedService, setSelectedService] = useState<string>("");
@@ -23,44 +25,29 @@ const RequestQuoteForm = () => {
   const [email, setEmail] = useState<string>("");
   const [projectDetail, setProjectDetail] = useState<string>("");
   const [errors, setErrors] = useState<any>({});
-  const [touched, setTouched] = useState<any>({});
   const [formStatus, setFormStatus] = useState<string | null>(null);
   const [formMessage, setFormMessage] = useState<string>("");
-  const [formSubmitLoading, setFormSubmitLoading] = useState(false)
+  const [formSubmitLoading, setFormSubmitLoading] = useState(false);
 
-  const validationSchema: any = {
-    fullName: {
-      required: true,
-      message: "Full name is required.",
-    },
-    companyName: {
-      required: false,
-      message: "Company name is required.",
-    },
+  const validationSchema = {
+    fullName: { required: true, message: "Full name is required." },
+    companyName: { required: false, message: "Company name is required." },
     phoneNumber: {
       required: true,
       message: "Phone number is required.",
+      validate: (value: string) =>
+        /^\+?[\d\s\-\(\)]{7,15}$/.test(value) || "Please enter a valid phone number (e.g., +1234567890 or 123-456-7890).",
     },
     email: {
       required: true,
       message: "Email is required.",
-      validate: (value: any) =>
+      validate: (value: string) =>
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) || "Please enter a valid email address.",
     },
-    selectedService: {
-      required: false,
-      message: "Service required is required.",
-    },
-    selectedBudget: {
-      required: false,
-      message: "Project budget is required.",
-    },
-    projectDetail: {
-      required: true,
-      message: "Project detail is required.",
-    },
+    selectedService: { required: false, message: "Service required is required." },
+    selectedBudget: { required: false, message: "Project budget is required." },
+    projectDetail: { required: true, message: "Project detail is required." },
   };
-
   const getFieldValue = (field: any) => {
     switch (field) {
       case "fullName":
@@ -82,28 +69,28 @@ const RequestQuoteForm = () => {
     }
   };
 
-  const validateField = (field: any) => {
-    const schema = validationSchema[field];
-    if (!schema) return;
 
+  // Type guard function
+function hasValidate(schema: ValidationSchemaType): schema is ValidationSchemaType & { validate: (value: string) => boolean | string } {
+  return "validate" in schema;
+}
+
+  const validateField = (field: keyof typeof validationSchema) => {
+    const schema = validationSchema[field];
+    if (!schema) return "";
+  
     const value = getFieldValue(field);
     let error = "";
-
+  
     if (schema.required && !value.trim()) {
       error = schema.message;
-    } else if (schema?.validate) {
-      const valRes = schema?.validate(value);
+    } else if (hasValidate(schema) && value.trim()) {
+      const valRes = schema.validate(value);
       if (typeof valRes === "string") error = valRes;
     }
-
-    setErrors((prev: any) => ({ ...prev, [field]: error }));
+  
+    return error;
   };
-
-  const handleBlur = (field: any) => {
-    // setTouched((prev: any) => ({ ...prev, [field]: true }));
-    // validateField(field);
-  };
-
   const handleChange = (field: any, value: any) => {
     switch (field) {
       case "fullName":
@@ -124,57 +111,38 @@ const RequestQuoteForm = () => {
       default:
         break;
     }
-    // if (touched[field]) {
-    //   validateField(field);
-    // }
   };
 
   const handleSelectService = (service: any) => {
     setSelectedService(service);
     setShowServiceDropdown(false);
-    // if (touched?.selectedService) {
-    //   validateField("selectedService");
-    // }
   };
 
   const handleSelectBudget = (budget: any) => {
     setSelectedBudget(budget);
     setShowBudgetDropdown(false);
-    // if (touched?.selectedBudget) {
-    //   validateField("selectedBudget");
-    // }
-  };
-
-  const handleDropdownBlur = (field: any) => {
-    setTouched((prev: any) => ({ ...prev, [field]: true }));
-    validateField(field);
   };
 
   const handleSubmit = async () => {
-    // Mark all fields as touched
-    const allTouched: any = Object.keys(validationSchema).reduce(
-      (acc: any, key) => {
-        acc[key] = true;
-        return acc;
-      },
-      {} as any
-    );
-    setTouched(allTouched);
-
-    // Validate all fields
-    Object.keys(validationSchema).forEach((field) => validateField(field));
-
+    // Validate all fields on submit
+    const newErrors = Object.keys(validationSchema).reduce((acc: any, field) => {
+      const error = validateField(field as keyof typeof validationSchema);
+      if (error) acc[field] = error;
+      return acc;
+    }, {});
+  
+    setErrors(newErrors);
+  
     // Check for errors
-    const hasErrors = Object.values(errors).some((error: any) => error);
-    if (hasErrors) {
+    if (Object.keys(newErrors).length > 0) {
       setFormStatus("error");
       setFormMessage("Please fix the errors above to proceed.");
       return;
     }
-
-    setFormSubmitLoading(true)
+  
+    setFormSubmitLoading(true);
     setFormMessage("");
-
+  
     // Prepare data for API call
     const formData = {
       fullName,
@@ -185,17 +153,18 @@ const RequestQuoteForm = () => {
       budget: selectedBudget,
       projectDetail,
     };
-
+  
     try {
       const response = await fetch("/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-
+  
       const result = await response.json();
-
+  
       if (result.success) {
+        toast.success("Your inquiry has been sent successfully!");
         // Reset form
         setFullName("");
         setCompanyName("");
@@ -205,24 +174,20 @@ const RequestQuoteForm = () => {
         setSelectedBudget("");
         setProjectDetail("");
         setErrors({});
-        setTouched({});
-        setFormStatus("success");
-        setFormMessage("Your inquiry has been sent successfully!");
+        setFormStatus(null);
+        setFormMessage("");
       } else {
-        setFormStatus("error");
-        setFormMessage(result.error || "Failed to send inquiry. Please try again.");
+        toast.error(result.error || "Failed to send inquiry. Please try again.");
       }
     } catch (error) {
-      setFormStatus("error");
-      setFormMessage("An unexpected error occurred. Please try again later.");
+      toast.error("An unexpected error occurred. Please try again later.");
       console.error("Submission error:", error);
-    }
-    finally{
-      setFormSubmitLoading(false)
+    } finally {
+      setFormSubmitLoading(false);
     }
   };
 
-  const hasError = (field: any) => touched[field] && errors[field];
+  const hasError = (field: any) => errors[field];
 
   return (
     <div>
@@ -244,7 +209,6 @@ const RequestQuoteForm = () => {
                   placeholder="Full name"
                   value={fullName}
                   onChange={(e) => handleChange("fullName", e.target.value)}
-                  onBlur={() => handleBlur("fullName")}
                   className={`w-full rounded-lg px-4 py-6 text-white placeholder-[rgba(118, 118, 118, 1)] focus:outline-none ${
                     hasError("fullName") ? "border border-red-500" : ""
                   }`}
@@ -256,14 +220,12 @@ const RequestQuoteForm = () => {
                   </div>
                 )}
               </div>
-
               <div className="w-[50%] relative group">
                 <input
                   type="text"
                   placeholder="Company name"
                   value={companyName}
                   onChange={(e) => handleChange("companyName", e.target.value)}
-                  onBlur={() => handleBlur("companyName")}
                   className={`w-full rounded-lg px-4 py-6 text-white placeholder-[rgba(118, 118, 118, 1)] focus:outline-none ${
                     hasError("companyName") ? "border border-red-500" : ""
                   }`}
@@ -308,7 +270,6 @@ const RequestQuoteForm = () => {
                       placeholder="Full name"
                       value={fullName}
                       onChange={(e) => handleChange("fullName", e.target.value)}
-                      onBlur={() => handleBlur("fullName")}
                       className={`w-full rounded-lg px-4 py-6 text-white placeholder-[rgba(118, 118, 118, 1)] focus:outline-none ${
                         hasError("fullName") ? "border border-red-500" : ""
                       }`}
@@ -330,7 +291,6 @@ const RequestQuoteForm = () => {
                       placeholder="Company name"
                       value={companyName}
                       onChange={(e) => handleChange("companyName", e.target.value)}
-                      onBlur={() => handleBlur("companyName")}
                       className={`w-full rounded-lg px-4 py-6 text-white placeholder-[rgba(118, 118, 118, 1)] focus:outline-none ${
                         hasError("companyName") ? "border border-red-500" : ""
                       }`}
@@ -352,7 +312,6 @@ const RequestQuoteForm = () => {
                       placeholder="Phone number"
                       value={phoneNumber}
                       onChange={(e) => handleChange("phoneNumber", e.target.value)}
-                      onBlur={() => handleBlur("phoneNumber")}
                       className={`w-full placeholder-[rgba(118, 118, 118, 1)] rounded-lg px-4 py-6 text-white focus:outline-none ${
                         hasError("phoneNumber") ? "border border-red-500" : ""
                       }`}
@@ -374,7 +333,6 @@ const RequestQuoteForm = () => {
                       placeholder="Email"
                       value={email}
                       onChange={(e) => handleChange("email", e.target.value)}
-                      onBlur={() => handleBlur("email")}
                       className={`w-full rounded-lg px-4 py-6 text-white placeholder-[rgba(118, 118, 118, 1)] focus:outline-none ${
                         hasError("email") ? "border border-red-500" : ""
                       }`}
@@ -388,10 +346,9 @@ const RequestQuoteForm = () => {
                   </div>
                 </RoundCornerWrapper>
               </div>
-
               <div className="w-[100%]">
                 <RoundCornerWrapper>
-                  <div className="relative group" onBlur={() => handleDropdownBlur("selectedService")}>
+                  <div className="relative group" onBlur={() => setShowServiceDropdown(false)}>
                     <button
                       onClick={() => setShowServiceDropdown(!showServiceDropdown)}
                       className={`flex justify-between items-center w-full rounded-lg px-4 py-6 focus:outline-none ${
@@ -409,7 +366,6 @@ const RequestQuoteForm = () => {
                         className={`transition-transform ${showServiceDropdown ? "rotate-180" : ""}`}
                       />
                     </button>
-
                     {showServiceDropdown && (
                       <div className="absolute right-[0px] py-2 z-50 mt-0 w-[100%] md:w-[390px] bg-[#282828] rounded-[30px] shadow-xl border border-[#393939] overflow-hidden">
                         {services.map((service) => (
@@ -448,10 +404,9 @@ const RequestQuoteForm = () => {
                   </div>
                 </RoundCornerWrapper>
               </div>
-
               <div className="w-[100%]">
                 <RoundCornerWrapper>
-                  <div className="relative group" onBlur={() => handleDropdownBlur("selectedBudget")}>
+                  <div className="relative group" onBlur={() => setShowBudgetDropdown(false)}>
                     <button
                       onClick={() => setShowBudgetDropdown(!showBudgetDropdown)}
                       className={`flex justify-between items-center w-full rounded-lg px-4 py-6 focus:outline-none ${
@@ -469,7 +424,6 @@ const RequestQuoteForm = () => {
                         className={`transition-transform ${showBudgetDropdown ? "rotate-180" : ""}`}
                       />
                     </button>
-
                     {showBudgetDropdown && (
                       <div className="absolute right-[0px] py-2 z-50 mt-0 w-[100%] md:w-[390px] bg-[#282828] rounded-[30px] shadow-xl border border-[#393939] overflow-hidden">
                         {budgets.map((budget) => (
@@ -478,7 +432,7 @@ const RequestQuoteForm = () => {
                             className="flex items-center text-base font-medium justify-between px-4 py-2 hover:bg-gray-600/50 cursor-pointer transition-colors"
                             onClick={() => handleSelectBudget(budget)}
                           >
-                            <span className="text-[#F8F8F8F2] text-sm">{budget}</span>
+                            <span className="text-[#F8F8F2] text-sm">{budget}</span>
                             <div className="relative">
                               <input
                                 type="radio"
@@ -508,7 +462,6 @@ const RequestQuoteForm = () => {
                   </div>
                 </RoundCornerWrapper>
               </div>
-
               <div className="w-[100%]">
                 <RoundCornerWrapper>
                   <div className="relative group">
@@ -516,7 +469,6 @@ const RequestQuoteForm = () => {
                       placeholder="Project detail"
                       value={projectDetail}
                       onChange={(e) => handleChange("projectDetail", e.target.value)}
-                      onBlur={() => handleBlur("projectDetail")}
                       className={`w-full rounded-lg px-4 py-6 text-white placeholder-[#767676] focus:outline-none transition-colors min-h-[200px] resize-y ${
                         hasError("projectDetail") ? "border border-red-500" : ""
                       }`}
@@ -615,7 +567,7 @@ const RequestQuoteForm = () => {
                       placeholder="Phone number"
                       value={phoneNumber}
                       onChange={(e) => handleChange("phoneNumber", e.target.value)}
-                      onBlur={() => handleBlur("phoneNumber")}
+                     
                       className={`w-full placeholder-[rgba(118, 118, 118, 1)] rounded-lg px-4 py-6 text-white focus:outline-none ${
                         hasError("phoneNumber") ? "border border-red-500" : ""
                       }`}
@@ -639,7 +591,7 @@ const RequestQuoteForm = () => {
                     placeholder="Email"
                     value={email}
                     onChange={(e) => handleChange("email", e.target.value)}
-                    onBlur={() => handleBlur("email")}
+               
                     className={`w-full rounded-lg px-4 py-6 text-white placeholder-[rgba(118, 118, 118, 1)] focus:outline-none ${
                       hasError("email") ? "border border-red-500" : ""
                     }`}
@@ -677,7 +629,7 @@ const RequestQuoteForm = () => {
           ></div>
           <div className="w-[89.95%] md:w-[79.95%]">
             <div className="flex">
-              <div className="w-[50%] border-r border-r-[#373737] relative group" onBlur={() => handleDropdownBlur("selectedService")}>
+              <div className="w-[50%] border-r border-r-[#373737] relative group">
                 <button
                   onClick={() => setShowServiceDropdown(!showServiceDropdown)}
                   className={`flex justify-between items-center w-full rounded-lg px-4 py-6 focus:outline-none ${
@@ -695,7 +647,6 @@ const RequestQuoteForm = () => {
                     className={`transition-transform ${showServiceDropdown ? "rotate-180" : ""}`}
                   />
                 </button>
-
                 {showServiceDropdown && (
                   <div className="absolute right-[0px] py-2 z-50 mt-0 w-[100%] md:w-[390px] bg-[#282828] rounded-[30px] shadow-xl border border-[#393939] overflow-hidden">
                     {services.map((service) => (
@@ -704,7 +655,7 @@ const RequestQuoteForm = () => {
                         className="flex items-center text-base font-medium justify-between px-4 py-2 hover:bg-gray-600/50 cursor-pointer transition-colors"
                         onClick={() => handleSelectService(service)}
                       >
-                        <span className="text-[#F8F8F8F2] text-sm">{service}</span>
+                        <span className="text-[#F8F8F2] text-sm">{service}</span>
                         <div className="relative">
                           <input
                             type="radio"
@@ -732,8 +683,7 @@ const RequestQuoteForm = () => {
                   </div>
                 )}
               </div>
-
-              <div className="w-[50%] relative group" onBlur={() => handleDropdownBlur("selectedBudget")}>
+              <div className="w-[50%] relative group" onBlur={() => setShowBudgetDropdown(false)}>
                 <button
                   onClick={() => setShowBudgetDropdown(!showBudgetDropdown)}
                   className={`flex justify-between items-center w-full rounded-lg px-4 py-6 focus:outline-none ${
@@ -751,7 +701,6 @@ const RequestQuoteForm = () => {
                     className={`transition-transform ${showBudgetDropdown ? "rotate-180" : ""}`}
                   />
                 </button>
-
                 {showBudgetDropdown && (
                   <div className="absolute right-[0px] py-2 z-50 mt-0 w-[100%] md:w-[390px] bg-[#282828] rounded-[30px] shadow-xl border border-[#393939] overflow-hidden">
                     {budgets.map((budget) => (
@@ -760,7 +709,7 @@ const RequestQuoteForm = () => {
                         className="flex items-center text-base font-medium justify-between px-4 py-2 hover:bg-gray-600/50 cursor-pointer transition-colors"
                         onClick={() => handleSelectBudget(budget)}
                       >
-                        <span className="text-[#F8F8F8F2] text-sm">{budget}</span>
+                        <span className="text-[#F8F8F2] text-sm">{budget}</span>
                         <div className="relative">
                           <input
                             type="radio"
@@ -820,7 +769,6 @@ const RequestQuoteForm = () => {
                       placeholder="Project detail"
                       value={projectDetail}
                       onChange={(e) => handleChange("projectDetail", e.target.value)}
-                      onBlur={() => handleBlur("projectDetail")}
                       className={`w-full rounded-lg px-4 py-6 text-white placeholder-[#767676] focus:outline-none transition-colors min-h-[200px] resize-y ${
                         hasError("projectDetail") ? "border border-red-500" : ""
                       }`}
@@ -863,10 +811,7 @@ const RequestQuoteForm = () => {
                 <div className="w-[60%]">
                   <p className="text-sm text-white/60">
                     By sending this form I confirm that I have read and accept the{" "}
-                    <a
-                      href="#"
-                      className="text-[#D4541D] hover:text-[#D4541D]/80 transition-colors"
-                    >
+                    <a href="#" className="text-[#D4541D] hover:text-[#D4541D]/80 transition-colors">
                       Privacy Policy
                     </a>
                   </p>
@@ -874,49 +819,40 @@ const RequestQuoteForm = () => {
               </div>
               <div className="w-[50%] p-8 flex justify-end align-text-bottom">
                 {formStatus && (
-                  <div
-                    className={`w-[100%] p-4 rounded-[10px] text-sm text-white/60  `
-                    
-                    }
-                  >
-                    {formMessage}
-                  </div>
+                  <div className={`w-[100%] p-4 rounded-[10px] text-sm text-white/60`}>{formMessage}</div>
                 )}
-                {/* <button
-                 disabled={formSubmitLoading}
+                <button
+                  disabled={formSubmitLoading}
                   onClick={handleSubmit}
-                  className="bg-[#D4541D] hover:bg-[#D4541D]/90 whitespace-nowrap text-white text-[17px] px-6 py-3 rounded-full transition-colors cursor-pointer"
+                  className={`
+                    text-white text-[17px] px-6 py-3 rounded-full transition-colors
+                    min-w-[150px]
+                    ${formSubmitLoading
+                      ? "bg-[#D4541D]/50 cursor-not-allowed"
+                      : "bg-[#D4541D] hover:bg-[#D4541D]/90 cursor-pointer"
+                    }
+                  `}
                 >
-                  Send Inquiry
-                </button> */}
- <button
-  disabled={formSubmitLoading}
-  onClick={handleSubmit}
-  className={`
-    // Base styles:
-    text-white text-[17px] px-6 py-3 rounded-full transition-colors
-
-    // Ensure a consistent minimum width:
-    min-w-[150px]
-    
-    // Conditional styles based on loading state:
-    ${formSubmitLoading
-      ? 'bg-[#D4541D]/50 cursor-not-allowed'
-      : 'bg-[#D4541D] hover:bg-[#D4541D]/90 cursor-pointer'
-    }
-  `}
->
-  {formSubmitLoading ? (
-    <div className="flex items-center justify-center">
-      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-      </svg>
-    </div>
-  ) : (
-    "Send Inquiry"
-  )}
-</button>
+                  {formSubmitLoading ? (
+                    <div className="flex items-center justify-center">
+                      <svg
+                        className="animate-spin h-5 w-5 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        ></path>
+                      </svg>
+                    </div>
+                  ) : (
+                    "Send Inquiry"
+                  )}
+                </button>
               </div>
             </div>
           </div>
@@ -930,6 +866,17 @@ const RequestQuoteForm = () => {
           ></div>
         </div>
       </section>
+      <Toaster
+          position="top-right" // Customize position as needed
+          toastOptions={{
+            duration: 4000, // Duration in ms
+            style: {
+              background: "#282828",
+              color: "#F8F8F8",
+              border: "1px solid #393939",
+            },
+          }}
+        />
     </div>
   );
 };

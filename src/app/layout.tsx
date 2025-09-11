@@ -23,7 +23,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${rubik.variable} antialiased`}>
-        <div style={{ width: "100%", display: "flex", height: "49px" }}>
+        <div style={{ width: "100%", display: "flex", height: "49px", borderTop: "1px solid #373737" }}>
+        {/* <div className="w-[5%] md:w-[10%]"
+            style={{
+              height: "50px",
+              // borderRight: "1px solid #373737",
+              borderBottom: "1px solid #373737",
+            }}
+          ></div> */}
           <div className="w-[5%] md:w-[10%]"
             style={{
               height: "50px",
