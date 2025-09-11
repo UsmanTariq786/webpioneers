@@ -406,7 +406,7 @@ function hasValidate(schema: ValidationSchemaType): schema is ValidationSchemaTy
               </div>
               <div className="w-[100%]">
                 <RoundCornerWrapper>
-                  <div className="relative group" onBlur={() => setShowBudgetDropdown(false)}>
+                  <div className="relative group">
                     <button
                       onClick={() => setShowBudgetDropdown(!showBudgetDropdown)}
                       className={`flex justify-between items-center w-full rounded-lg px-4 py-6 focus:outline-none ${
@@ -683,7 +683,7 @@ function hasValidate(schema: ValidationSchemaType): schema is ValidationSchemaTy
                   </div>
                 )}
               </div>
-              <div className="w-[50%] relative group" onBlur={() => setShowBudgetDropdown(false)}>
+              <div className="w-[50%] relative group">
                 <button
                   onClick={() => setShowBudgetDropdown(!showBudgetDropdown)}
                   className={`flex justify-between items-center w-full rounded-lg px-4 py-6 focus:outline-none ${
