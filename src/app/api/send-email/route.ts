@@ -29,7 +29,7 @@ export async function POST(request: Request) {
 
 
     // Server-side validation
-    if (!fullName || !phoneNumber || !email ) {
+    if (!fullName || !phoneNumber || !email || !projectDetail  ) {
       return NextResponse.json(
         { success: false, error: "Missing required fields" },
         { status: 400 }
@@ -37,8 +37,7 @@ export async function POST(request: Request) {
     }
 
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      // host: "smtp.office365.com",
+      host: "smtp.office365.com",
       port: 587,
       secure: false,
       auth: {
@@ -46,7 +45,7 @@ export async function POST(request: Request) {
         pass: process.env.EMAIL_PASS,
       },
       tls: {
-        rejectUnauthorized: false,
+        ciphers: "SSLv3",
       },
     });
 
@@ -63,9 +62,10 @@ export async function POST(request: Request) {
       ${projectDetail}
     `;
 
-    await transporter.sendMail({
+    // Use a promise and 'fire-and-forget' pattern
+    transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: process.env.CLIENT_EMAIL || email, // Use CLIENT_EMAIL if set, else user's email
+      to: process.env.CLIENT_EMAIL ,
       subject: `Quote Request from ${fullName}`,
       text: emailContent,
       html: `
@@ -82,8 +82,11 @@ export async function POST(request: Request) {
           <p>${projectDetail.replace(/\n/g, "<br>")}</p>
         </div>
       `,
-    });
+    })
+    .then(() => console.log('Email sent successfully'))
+    .catch(err => console.error('Error sending email:', err));
 
+    // Immediately return the success response to the client
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Error in API route:", error);

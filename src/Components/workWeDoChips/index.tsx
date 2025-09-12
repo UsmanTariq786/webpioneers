@@ -1,7 +1,7 @@
 import React from 'react'
 import Chip from '@/Components/CustomChip';
 
-const WorkWeDoChips = ({ setSelectedChip, selectedChip }: any) => {
+const WorkWeDoChips = ({ setSelectedChip, selectedChip,scrollContainerRef }: any) => {
   const handleChipSelect = (value: string) => {
     if (value === selectedChip) {
       return;
@@ -11,7 +11,9 @@ const WorkWeDoChips = ({ setSelectedChip, selectedChip }: any) => {
   };
 
   return (
-    <div className="flex space-x-2 my-1.5 overflow-x-auto whitespace-nowrap sm:overflow-x-visible sm:whitespace-normal sm:flex-nowrap py-6 px-4 md:px-13 no-scrollbar scroll-smooth">
+    <div className="flex space-x-2 my-1.5 overflow-x-auto whitespace-nowrap sm:overflow-x-visible sm:whitespace-normal sm:flex-nowrap py-6 px-4 md:px-13 no-scrollbar scroll-smooth"
+    ref={scrollContainerRef}
+    >
       <Chip label="All design" value="all" isSelected={selectedChip === "all"} onSelect={handleChipSelect} />
       <Chip label="Mobile App" value="mobile" isSelected={selectedChip === "mobile"} onSelect={handleChipSelect} />
       <Chip label="Web Design" value="webDesign" isSelected={selectedChip === "webDesign"} onSelect={handleChipSelect} />

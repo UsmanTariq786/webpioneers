@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import WorkPageHeading from "./workPageHeading";
 import WorkWeDoChips from "@/Components/workWeDoChips";
 import MapProjects from "./mapProjects";
@@ -13,7 +13,7 @@ import ContactForm from "@/Components/contactForm";
 
 export default function Home() {
   const [selectedChip, setSelectedChip] = useState<string | null>("all");
-
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   return (
     <div className="">
       <section>
@@ -36,18 +36,19 @@ export default function Home() {
       <WorkWeDoChips
         selectedChip={selectedChip}
         setSelectedChip={setSelectedChip}
+        scrollContainerRef={scrollContainerRef}
       />
       </RoundCornerWrapper>
     </div>
     <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
   </div>
 </section>
-<section className="block md:hidden">
+<section className="block sm:hidden">
   <div className="w-full flex">
     <div className="w-[4.95%] md:w-[9.95%] box-border border-b border-[#373737]"></div>
     <div className="w-[90.08%] md:w-[80.08%]">
       <RoundCornerWrapper top={false}>
-        <ProgressBar progress={90} />
+        <ProgressBar scrollableRef={scrollContainerRef} />
       </RoundCornerWrapper>
     </div>
     <div className="w-[4.95%] md:w-[9.95%] box-border border-b border-[#373737]"></div>

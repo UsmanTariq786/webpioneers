@@ -47,7 +47,7 @@ const ServicesPage = () => {
   </div>
 </section>
 
-<section className="block lg:hidden">
+{/* <section className="block lg:hidden">
   <div className="w-full flex">
     <div className="w-[4.95%] md:w-[9.95%] box-border border-b border-[#373737]"></div>
     <div className="w-[90.08%] md:w-[80.08%]">
@@ -57,7 +57,7 @@ const ServicesPage = () => {
     </div>
     <div className="w-[4.95%] md:w-[9.95%] box-border border-b border-[#373737]"></div>
   </div>
-</section>
+</section> */}
 
 <section>
   <div className="w-full flex">

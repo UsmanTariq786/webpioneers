@@ -1,11 +1,14 @@
-import React from "react";
+'use client'
+import React, { useRef } from "react";
 import RoundCornerWrapper from "../RoundCornerWrapper";
 import CommonQuestion from "../commonQuestion";
 import serviceCards from "@/app/constData/data";
 import ServicesCard from "@/Components/serviceCard/ServicesCard";
 import ProgressBar from "../progressBar";
 
+
 const FreeProjectQuoteCards = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   return (
     <>
       <section>
@@ -53,7 +56,9 @@ const FreeProjectQuoteCards = () => {
           ></div>
           <div className="w-[90.08%] md:w-[80.08%]">
             <RoundCornerWrapper>
-              <div className="flex lg:hidden relative overflow-x-auto overflow-y-hidden no-scrollbar">
+              <div className="flex lg:hidden relative overflow-x-auto overflow-y-hidden no-scrollbar"
+              ref={scrollContainerRef}
+              >
                 {serviceCards.map((card: any, index: number) => (
                   <div
                     key={card.id + "card-servicespage"}
@@ -125,12 +130,12 @@ const FreeProjectQuoteCards = () => {
         </div>
       </section>
 
-      <section className="block md:hidden">
+      <section className="block lg:hidden">
         <div className="w-full flex">
           <div className="w-[4.95%] md:w-[9.95%] box-border border-b border-[#373737]"></div>
           <div className="w-[90.08%] md:w-[80.08%]">
             <RoundCornerWrapper>
-              <ProgressBar progress={40} />
+              <ProgressBar scrollableRef={scrollContainerRef} />
             </RoundCornerWrapper>
           </div>
           <div className="w-[4.95%] md:w-[9.95%] box-border border-b border-[#373737]"></div>

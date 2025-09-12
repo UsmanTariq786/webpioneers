@@ -31,13 +31,18 @@
 
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import cardsData from '@/app/Data/CardData';
 import RoundCornerWrapper from '@/Components/RoundCornerWrapper';
+import ProgressBar from '../progressBar';
 
 // Component for the mobile/small screen horizontal scroll layout
-const MobileCards = () => (
-    <div className="flex no-scrollbar flex-nowrap overflow-x-auto overflow-y-hidden py-1 my-[-5px]">
+const MobileCards = () =>{
+const scrollContainerRef = useRef<HTMLDivElement>(null);
+return(<>
+    <div className="flex no-scrollbar flex-nowrap overflow-x-auto overflow-y-hidden py-1 my-[-5px]"
+        ref={scrollContainerRef}
+        >
         {cardsData.map((card, index) => (
             <div key={index} className='min-w-[300px] max-w-[300px] shrink-0'>
                 <RoundCornerWrapper left={index===0 ? true :false} right={index=== 7 ? false : true} dotTopLeft={index=== 7 ? false : true} dotTopRight={index=== 7 ? false : true} >
@@ -53,10 +58,44 @@ const MobileCards = () => (
                     </div>
                 </RoundCornerWrapper>
             </div>
-        ))}
+        ))} 
+  
     </div>
-);
 
+    <RoundCornerWrapper bottom={false} right={false} left={false}>
+    <ProgressBar scrollableRef={scrollContainerRef} />
+    </RoundCornerWrapper>
+  {/* <section>
+  <div className="w-full flex">
+    <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
+
+    <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
+  </div>
+</section> */}
+        </>
+);
+}
+
+// const MobileCards = () => (
+//     <div className="flex no-scrollbar flex-nowrap overflow-x-auto overflow-y-hidden py-1 my-[-5px]">
+//         {cardsData.map((card, index) => (
+//             <div key={index} className='min-w-[300px] max-w-[300px] shrink-0'>
+//                 <RoundCornerWrapper left={index===0 ? true :false} right={index=== 7 ? false : true} dotTopLeft={index=== 7 ? false : true} dotTopRight={index=== 7 ? false : true} >
+//                     <div className="p-6 min-h-[400px]">
+//                     <div className='my-2 mb-14 flex items-center'>
+//                             <div className='w-2 h-2 rounded-full bg-[#F8F8F880] mr-2'></div>
+//                         <p className='text-[#F8F8F880]'>0{index+1}</p>
+
+//                         </div>
+//                         <img src={card.image} alt={card.title} className="w-[70px] h-[70px] mb-12" />
+//                         <h3 className="text-[18px] mt-6 text-[#F8F8F8F2]">{card.title}</h3>
+//                         <p className="mt-2 text-[16px] text-[#F8F8F880]">{card.description}</p>
+//                     </div>
+//                 </RoundCornerWrapper>
+//             </div>
+//         ))}
+//     </div>
+// );
 // Component for the large screen grid layout
 const LargeScreenCards = () => (
         <RoundCornerWrapper bottom={false} right={false}>

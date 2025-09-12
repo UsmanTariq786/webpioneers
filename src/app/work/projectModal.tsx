@@ -86,13 +86,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[1000]"
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[1000] "
       onClick={handleOverlayClick}
     >
       {/* Modal Container */}
       <div
         ref={modalContentRef}
-        className="bg-[#202020] w-screen h-screen overflow-y-auto"
+        className="bg-[#202020] w-screen overflow-y-auto h-screen min-h-[100dvh]"
       >
         {/* Header with Close Icon */}
         <div className="border-b pb-3 border-b-[#373737] bg-[#272727]">
