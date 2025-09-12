@@ -36,7 +36,7 @@ try {
  }
   // NOTE: For now, we will use a Gmail SMTP host
  const transporter = nodemailer.createTransport({
- host: "smtp.gmail.com",
+  host: "smtp.office365.com",
  port: 587,
  secure: false,
  auth: {
