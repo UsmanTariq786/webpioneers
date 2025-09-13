@@ -62,7 +62,7 @@ const ContactUsComp = () => {
 
         <div className="w-full mt-6 p-4 mx-1 md:mx-8 my-10">
           <div className="w-full flex flex-col gap-6 max-w-[600px] ">
-            <ContactEmail handleCopy={handleCopy} emailToCopy={emailToCopy} />
+            <ContactEmail handleCopy={handleCopy} emailToCopy={emailToCopy} copyStatus={copyStatus} />
             <ContactPhone
               whatsappNumber={whatsappNumber}
               handleStartChat={handleStartChat}
@@ -71,16 +71,14 @@ const ContactUsComp = () => {
         </div>
       {/* </RoundCornerWrapper> */}
       </div>
-      {copyStatus && (
-        <p className="text-xs text-green-400 mt-2">{copyStatus}</p>
-      )}
+  
     </div>
   );
 };
 
 export default ContactUsComp;
 
-const ContactEmail = ({ emailToCopy, handleCopy }: any) => {
+const ContactEmail = ({ emailToCopy, handleCopy ,copyStatus}: any) => {
   return (
     <>
       <div
@@ -97,13 +95,16 @@ const ContactEmail = ({ emailToCopy, handleCopy }: any) => {
             </p>
           </div>
           <button
-            className="min-w-[100px] max-w-[120px] md:w-auto justify-center mt-[20px] md:mt-[0px] flex gap-1 items-center bg-[#FFFFFFF2] rounded-full  p-6 py-4 md:p-6 md:py-4 group cursor-pointer hover:bg-[#D4541DF2]"
+            className=" relative min-w-[100px] max-w-[120px] md:w-auto justify-center mt-[20px] md:mt-[0px] flex gap-1 items-center bg-[#FFFFFFF2] rounded-full  p-6 py-4 md:p-6 md:py-4 group cursor-pointer hover:bg-[#D4541DF2]"
             onClick={handleCopy}
           >
             <IoCopyOutline className="w-6 h-6 text-[#202020] group-hover:text-white" />
             <p className="text-[#202020] text-[16px] md:text-sm group-hover:text-white">
               Copy
             </p>
+        {copyStatus && (
+        <p className="text-[14px] text-[#D4541DF2] font-bold mt-2 absolute top-[-30px] right-8">{copyStatus}</p>
+      )}
           </button>
         </div>
       </div>

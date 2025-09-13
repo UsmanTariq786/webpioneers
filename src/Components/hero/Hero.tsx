@@ -1,9 +1,14 @@
+'use client'
 import React from "react";
 import Image from "next/image";
 import Button from "../button/Button";
 import CommonQuestion from "../commonQuestion/index";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+
+  const router = useRouter()
+
   return (
     <section className="relative flex flex-col items-center justify-center mt-12 px-4 pb-8  text-white font-rubik">
       {/* Top Badge */}
@@ -68,7 +73,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="sm:hidden mt-6">
-        <Button title="Let’s get started" />
+        <Button title="Let’s get started" onClick={()=>router.push('/contactUs')}/>
       </div>
     </section>
   );
