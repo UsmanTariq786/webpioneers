@@ -13,61 +13,80 @@ projectDetail: string;
 
 export async function POST(request: Request) {
 try {
- let data: FormData;
- try {
- data = await request.json();
- } catch (e) {
- return NextResponse.json(
-  { success: false, error: "Invalid JSON format" },
-  { status: 400 }
- );
- }
+ let data: FormData;
+ try {
+ data = await request.json();
+ } catch (e) {
+ return NextResponse.json(
+  { success: false, error: "Invalid JSON format" },
+  { status: 400 }
+ );
+ }
 
- const { fullName, companyName, phoneNumber, email, service, budget, projectDetail } = data;
+ const { fullName, companyName, phoneNumber, email, service, budget, projectDetail } = data;
 
 
 
- // Server-side validation
- if (!fullName || !phoneNumber || !email || !projectDetail ) {
- return NextResponse.json(
-  { success: false, error: "Missing required fields" },
-  { status: 400 }
- );
- }
-  // NOTE: For now, we will use a Gmail SMTP host
- const transporter = nodemailer.createTransport({
-  host: "smtp.office365.com",
- port: 587,
- secure: false,
- auth: {
-  user: process.env.EMAIL_USER,
-  pass: process.env.EMAIL_PASS,
- },
- tls: {
-  rejectUnauthorized: false,
- },
- });
+ // Server-side validation
+ if (!fullName || !phoneNumber || !email || !projectDetail ) {
+ return NextResponse.json(
+  { success: false, error: "Missing required fields" },
+  { status: 400 }
+ );
+ }
+  // NOTE: For now, we will use a Gmail SMTP host
+ const transporter = nodemailer.createTransport({
+  host: "smtp.office365.com",
+ port: 587,
+ secure: false,
+ auth: {
+  user: process.env.EMAIL_USER,
+  pass: process.env.EMAIL_PASS,
+ },
+ tls: {
+  rejectUnauthorized: false,
+ },
+ });
 
- const emailContent = `
- 📩 New Quote Request Submission:
+ const clientEmailContent = `
+ 📩 New Quote Request Submission:
 
- 👤 Full Name: ${fullName}
- ✉️ Email: ${email}
- 🏢 Company: ${companyName}
- 📱 Phone Number: ${phoneNumber}
- 🛠️ Service: ${service}
- 💰 Budget: ${budget}
- 📝 Project Detail:
- ${projectDetail}
- `;
+ 👤 Full Name: ${fullName}
+ ✉️ Email: ${email}
+ 🏢 Company: ${companyName}
+ 📱 Phone Number: ${phoneNumber}
+ 🛠️ Service: ${service}
+ 💰 Budget: ${budget}
+ 📝 Project Detail:
+ ${projectDetail}
+ `;
 
- // Use a promise and 'fire-and-forget' pattern
-try {
-    const info = await transporter.sendMail({
+ const userThankYouHtml = `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6; background: #282828; color: #F8F8F8F2; padding: 20px; border-radius: 10px;">
+            <h2 style="color: #D4541D;">Thank you for your inquiry, ${fullName}!</h2>
+            <p>We have received your request and are excited to review your project details. We will get back to you within the next 24 hours.</p>
+            <p>Best regards,<br/>The Webpioneers Team</p>
+        </div>
+    `;
+
+ try {
+    // 1. Send the thank-you email to the user
+    await transporter.sendMail({
         from: process.env.EMAIL_USER,
-        to: process.env.CLIENT_EMAIL || email,
-        subject: `Quote Request from ${fullName}`,
-        text: emailContent,
+        to: email, // Send to the user's email directly
+        subject: `Thank you for your inquiry, ${fullName}`,
+        text: 'Thank you for your inquiry...', // Simple text fallback
+        html: userThankYouHtml,
+    });
+    console.log('Thank you email sent to user successfully');
+
+    // 2. Send the form details to both client emails
+    const clientRecipients = [process.env.CLIENT_EMAIL, process.env.CLIENT_EMAIL_2].filter(Boolean) as string[];
+    await transporter.sendMail({
+        from: process.env.EMAIL_USER,
+        to: clientRecipients,
+        subject: `New Quote Request from ${fullName}`,
+        text: clientEmailContent,
         html: `
             <div style="font-family: Arial, sans-serif; line-height: 1.6; background: #282828; color: #F8F8F8F2; padding: 20px; border-radius: 10px;">
                 <h2 style="color: #D4541D;">📩 New Quote Request Submission</h2>
@@ -83,7 +102,8 @@ try {
             </div>
         `,
     });
-    console.log('Email sent successfully:', info.messageId);
+    console.log('Form details sent to client emails successfully');
+    
     return NextResponse.json({ success: true });
 } catch (error) {
     console.error("Error sending email:", error);
@@ -98,14 +118,14 @@ try {
 }
 
 } catch (error) {
- console.error("Error in API route:", error);
- return NextResponse.json(
- {
-  success: false,
-  error: "Internal server error",
-  details: process.env.NODE_ENV === "development" ? (error as Error).message : null,
- },
- { status: 500 }
- );
+ console.error("Error in API route:", error);
+ return NextResponse.json(
+ {
+  success: false,
+  error: "Internal server error",
+  details: process.env.NODE_ENV === "development" ? (error as Error).message : null,
+ },
+ { status: 500 }
+ );
 }
 }
