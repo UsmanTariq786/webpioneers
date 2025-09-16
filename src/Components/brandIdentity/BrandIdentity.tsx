@@ -15,7 +15,7 @@ const BrandIdentity = () => {
       <div className="flex flex-col items-center mb-10 text-center">
         <CommonQuestion question="WHAT WE OFFER" />
 
-        <p className="w-[90%] text-[28px] leading-[36px] md:text-[42px] md:leading-[56px] font-normal font-['Rubik'] text-center tracking-[-0.02em]
+        <p className="w-[90%] text-[28px] leading-[36px] md:text-[32px] lg:text-[42px] md:leading-[40px] lg:leading-[56px] font-normal font-['Rubik'] text-center tracking-[-0.02em]
           bg-[linear-gradient(92.95deg,_rgba(248,248,248,0.9)_0.1%,_rgba(248,248,248,0.5)_100.1%)]
           bg-clip-text text-transparent max-w-[550px] mt-[20px]">
           Everything you need <br />(and nothing you don’t)

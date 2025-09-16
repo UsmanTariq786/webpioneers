@@ -20,7 +20,7 @@ const ServicesPage = () => {
               <CommonQuestion question={Box[0].boxhead} />
             </div>
             <h1
-              className="md:text-[42px] md:w-150  text-[28px] leading-[36px] md:leading-[56px]"
+              className="md:text-[32px] lg:text-[42px] md:w-150  text-[28px] leading-[36px] md:leading-[40px] lg:leading-[56px]"
               style={{
                 background:
                   "linear-gradient(92.95deg, rgba(248, 248, 248, 0.9) 0.1%, rgba(248, 248, 248, 0.5) 100.1%)",
@@ -82,7 +82,7 @@ const ServicesPage = () => {
          <CommonQuestion question={Box[1].boxhead} />
         </div>
       <h1
-              className="text-[28px] leading-[36px] md:text-[42px] md:leading-[56px] w-70"
+              className="text-[28px] leading-[36px] md:text-[32px] lg:text-[42px] md:leading-[40px] lg:leading-[56px] w-70"
               style={{
                 background:
                   "linear-gradient(92.95deg, rgba(248, 248, 248, 0.9) 0.1%, rgba(248, 248, 248, 0.5) 100.1%)",
@@ -115,7 +115,7 @@ const ServicesPage = () => {
                     {Box[2].boxhead}
                   </span>
                   <br />
-                  <h1 className="text-[32px] leading-[40px] md:text-4xl md:leading-[56px] mt-2">{Box[2].boxdes}</h1> <br />
+                  <h1 className="text-[32px] leading-[40px] md:text-4xl md:leading-[40px] lg:leading-[56px] mt-2">{Box[2].boxdes}</h1> <br />
                   <Button title="More About us" />
                 </div>
               </RoundCornerWrapper>

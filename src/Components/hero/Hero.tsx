@@ -43,7 +43,7 @@ const Hero = () => {
       </div>
 
       {/* Center Headline */}
-      <h1 className="max-w-[850px] text-center text-[35px] leading-[44px]  md:text-[70px] md:leading-[80px] font-medium tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(to_right,rgba(248,248,248,0.9),rgba(248,248,248,0.5))] mb-4">
+      <h1 className="max-w-[850px] text-center text-[35px] leading-[44px]  md:text-[50px] lg:text-[70px] md:leading-[65px] lg:leading-[80px] font-medium tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(to_right,rgba(248,248,248,0.9),rgba(248,248,248,0.5))] mb-4">
         We’re a design & development agency that delivers results
       </h1>
 

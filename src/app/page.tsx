@@ -172,7 +172,7 @@ export default function Home() {
                 <CommonQuestion question="Stuff We've Made" />
               </div>
               <div className="w-full md:w-[250px] mt-[10px]">
-                <p className="w-full font-rubik font-normal text-[28px]  md:text-[42px] leading-[36px] md:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
+                <p className="w-full font-rubik font-normal text-[28px]  md:text-[32px] lg:text-[42px] leading-[36px] md:leading-[40px] lg:leading-[56px] tracking-[-0.02em] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent">
                   A peek at <br className="hidden md:block" /> our work
                 </p>
               </div>
