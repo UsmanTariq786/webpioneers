@@ -21,7 +21,7 @@ const ContainerWithText = () => {
         <RoundCornerWrapper bottom={false} left={false}>
           <div className=" w-[600px] flex justify-center px-10 py-10">
             <p className="text-[22px] text-[#959595] ">
-              ② Leading brands trust us because we honor their identity while
+              Leading brands trust us because we honor their identity while
               daring to push creative limits. Specializing in website and
               branding design, we bring your vision to life, piece by piece.
             </p>
@@ -30,7 +30,7 @@ const ContainerWithText = () => {
         <RoundCornerWrapper left={false}>
           <div className=" w-[600px] flex justify-center px-10 py-10">
             <p className="text-[22px] text-[#959595] ">
-              ① Where brands discover their voice, creativity clicks into place,
+              Where brands discover their voice, creativity clicks into place,
               and ideas come to life. At Web Pioneers, each team member is a
               unique building block, innovating with confidence,
             </p>

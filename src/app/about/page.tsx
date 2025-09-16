@@ -114,7 +114,7 @@ const AboutPage = () => {
             <RoundCornerWrapper bottom={false}>
               <div className=" w-full flex justify-center p-3 py-10">
                 <p className="text-[22px] text-[#959595] ">
-                  ① Where brands discover their voice, creativity clicks into
+                  Where brands discover their voice, creativity clicks into
                   place, and ideas come to life. At Web Pioneers, each team
                   member is a unique building block, innovating with confidence,
                 </p>
@@ -131,7 +131,7 @@ const AboutPage = () => {
             <RoundCornerWrapper>
               <div className=" w-full flex justify-center p-3 py-10">
                 <p className="text-[22px] text-[#959595] ">
-                  ② Leading brands trust us because we honor their identity
+                  Leading brands trust us because we honor their identity
                   while daring to push creative limits. Specializing in website
                   and branding design, we bring your vision to life, piece by
                   piece.

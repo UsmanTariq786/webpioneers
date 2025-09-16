@@ -11,7 +11,7 @@ let textArray = [
 const ServiceExcellenceGrid = () => {
   return (
     <>
-      <section className="overflow-x-auto hide-scrollbar px-4 py-6 hidden xl:block">
+      {/* <section className="overflow-x-auto hide-scrollbar px-4 py-6 hidden xl:block">
         <div className="whitespace-nowrap flex gap-x-10 text-[#F8F8F8]/70 justify-center ">
           {textArray.map((text, index) => (
             <p
@@ -23,9 +23,9 @@ const ServiceExcellenceGrid = () => {
             </p>
           ))}
         </div>
-      </section>
+      </section> */}
 
-      <div className="flex overflow-hidden py-4  text-[#F8F8F8]/70 xl:hidden">
+      <div className="flex overflow-hidden py-4  text-[#F8F8F8]/70">
         <div className="flex flex-nowrap animate-slide infinite gap-x-10">
           {textArray.map((item: string, index: number) => {
             return (

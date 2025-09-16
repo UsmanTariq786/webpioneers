@@ -14,7 +14,7 @@ const WebsiteDevelopment = () => {
     image: "/new-web.png",
     title: "Website development",
     description:
-      "We design websites that look great, feel right, and turn visitors into happy customers.",
+      " We build fast, responsive sites that work smoothly on any device—no stress, no mess.",
   };
 
   return (
