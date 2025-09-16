@@ -51,7 +51,7 @@ const WhyUs = () => {
                 </div>
                 
                 <br />
-                <h1 className="text-[32px] leading-[40px] md:text-[32px] lg:text-[42px] md:leading-[40px] lg:leading-[56px] mt-2">We help brands grow by designing smooth,smart experiences people actually enjoy using.</h1> <br />
+                <h1 className="text-[32px] leading-[40px] md:text-[42px] md:leading-[56px] mt-2">We help brands grow by designing smooth,smart experiences people actually enjoy using.</h1> <br />
                 <Button title="More About Us" onClick={() => {router.push('/about')}} />
               </div>
             </RoundCornerWrapper>

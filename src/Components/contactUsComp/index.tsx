@@ -151,7 +151,7 @@ const RightSideHeading =()=>{
           <div className="w-[150px] mb-5 ">
             <CommonQuestion question="REACH OUT" />
           </div>
-          <h1 className="text-[28px] md:text-[32px] lg:text-[42px] font-normal leading-[36px] md:leading-[40px] lg:leading-[56px] tracking-[-0.02em] gradien-text mb-7">
+          <h1 className="text-[28px] md:text-[42px] font-normal leading-[36px] md:leading-[56px] tracking-[-0.02em] gradien-text mb-7">
             Got a project? <br /> We’re listening.
           </h1>
 
