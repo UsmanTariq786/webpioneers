@@ -39,7 +39,7 @@ const PioneerDetail = () => {
       {/* Left Side - Image */}
       <RoundCornerWrapper top={false} left={false}>
       <div
-        className="w-[100%] min-w-[320px] md:min-w-[390px] p-5 py-[40px] md:px-[15px] md:py-[60px] "
+        className="w-[100%] min-w-[340px] md:min-w-[390px] p-5 py-[40px] md:px-[15px] md:py-[60px] "
         style={{
           boxSizing: "border-box",
           display: "flex",
@@ -57,7 +57,7 @@ const PioneerDetail = () => {
               }}
             >
 
-             <div className="h-[48px] md:h-[58px]">
+             <div className="h-[43px] md:h-[48px] lg:h-[58px]">
                <Image
                  src={`/chips/${index + 1}.png`}
                  alt="item"
