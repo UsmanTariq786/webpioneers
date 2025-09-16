@@ -113,25 +113,20 @@ const Testimonials = () => {
     afterChange: onAfterChange,
     responsive: [
       {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2, centerMode: true },
+      },
+      {
         breakpoint: 768,
         settings: { slidesToShow: 1, centerMode: false },
       },
     ],
   };
 
-  // Width of the quote container matches maxWidth from your original style (960px)
-  const quoteContainerWidth = 960;
-
-  // Calculate translateX for quote sliding effect
-  const translateX = -activeIndex * quoteContainerWidth;
-
   return (
     <div className="px-4 text-white">
       {/* Title Section */}
       <div className="flex flex-col items-center mb-10 text-center mt-10">
-        {/* <button className="font-rubik text-xs uppercase tracking-wider py-2 px-3 font-semibold text-white/80 border border-white/10 rounded-full">
-          Testimonials
-        </button> */}
         <CommonQuestion question="Testimonials" />
         <p className="mt-4 font-rubik text-white/80 text-[28px] leading-[36px] md:text-[32px] lg:text-[42px] md:leading-[46px] lg:leading-[56px] max-w-lg">
           Clients We’ve Worked With (and Impressed)
@@ -149,7 +144,7 @@ const Testimonials = () => {
             backgroundPosition: "center",
             borderRadius: "30px",
             width: "100%",
-            maxWidth: quoteContainerWidth,
+            maxWidth: "960px",
           }}
         >
           <div
@@ -192,7 +187,7 @@ const Testimonials = () => {
               <div
                 style={{
                   overflow: "hidden",
-                  width: quoteContainerWidth,
+                  width: "100%",
                   margin: "2rem auto",
                 }}
               >
@@ -201,8 +196,7 @@ const Testimonials = () => {
                     display: "flex",
                     alignItems: "center",
                     transition: "transform 0.5s ease",
-                    transform: `translateX(${translateX}px)`,
-                    whiteSpace: "nowrap",
+                    transform: `translateX(${-activeIndex * 100}%)`,
                     fontFamily: "Rubik, sans-serif",
                     fontWeight: 400,
                     fontSize: "20px",
@@ -214,15 +208,20 @@ const Testimonials = () => {
                     <div
                       key={t.id + t.quote}
                       style={{
-                        minWidth: quoteContainerWidth,
+                        flex: "0 0 100%",
                         padding: "0 20px",
                         boxSizing: "border-box",
-                        userSelect: "none",
                         textAlign: "center",
-                        whiteSpace: "normal",
                       }}
                     >
-                      <div className="w-[300px] md:w-[50%] lg:w-[600px] text-[16px] overflow-x-auto mx-auto">
+                      <div
+                        className="mx-auto"
+                        style={{
+                          maxWidth: "600px",
+                          fontSize: "clamp(14px, 4vw, 16px)",
+                          lineHeight: "1.5",
+                        }}
+                      >
                         “{t.quote}”
                       </div>
                     </div>
@@ -238,7 +237,6 @@ const Testimonials = () => {
       <div
         className="flex items-center justify-center gap-4 mt-8"
         style={{
-          // width: '200px',
           width: "fit-content",
           margin: "2rem auto",
           padding: "8px",
@@ -256,11 +254,6 @@ const Testimonials = () => {
           gap: "12px",
         }}
       >
-        {/* <button
-          className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition"
-        >
-          <Image src="/arrow-left.svg" alt="Prev" width={16} height={16} />
-        </button> */}
         <button
           onClick={() => sliderRef.current?.slickPrev()}
           style={{
@@ -274,7 +267,7 @@ const Testimonials = () => {
               "linear-gradient(158.39deg, rgba(255, 255, 255, 0.1) 14.19%, rgba(255, 255, 255, 0.000025) 50.59%, rgba(255, 255, 255, 0.000025) 68.79%, rgba(255, 255, 255, 0.025) 105.18%)",
             background: "var(--neutral-neutral-210, rgba(248, 248, 248, 0.1))",
             backdropFilter: "blur(100px)",
-            WebkitBackdropFilter: "blur(100px)", // for Safari support
+            WebkitBackdropFilter: "blur(100px)",
             boxShadow: "inset 2px 4px 16px rgba(248, 248, 248, 0.06)",
             opacity: 1,
             display: "flex",
@@ -293,7 +286,6 @@ const Testimonials = () => {
             }}
           />
         </button>
-        {/* Dots */}
         <div className="flex gap-2">
           {testimonials.map((_, i) => (
             <button
@@ -313,10 +305,8 @@ const Testimonials = () => {
             />
           ))}
         </div>
-
         <button
           onClick={() => sliderRef.current?.slickNext()}
-          className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition"
           style={{
             width: "40px",
             height: "40px",
@@ -328,7 +318,7 @@ const Testimonials = () => {
               "linear-gradient(158.39deg, rgba(255, 255, 255, 0.1) 14.19%, rgba(255, 255, 255, 0.000025) 50.59%, rgba(255, 255, 255, 0.000025) 68.79%, rgba(255, 255, 255, 0.025) 105.18%)",
             background: "var(--neutral-neutral-210, rgba(248, 248, 248, 0.1))",
             backdropFilter: "blur(100px)",
-            WebkitBackdropFilter: "blur(100px)", // for Safari support
+            WebkitBackdropFilter: "blur(100px)",
             boxShadow: "inset 2px 4px 16px rgba(248, 248, 248, 0.06)",
             opacity: 1,
             display: "flex",

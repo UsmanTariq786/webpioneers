@@ -39,7 +39,7 @@ const PioneerDetail = () => {
       {/* Left Side - Image */}
       <RoundCornerWrapper top={false} left={false}>
       <div
-        className="w-[100%] p-5 py-[40px] md:px-[15px] md:py-[60px] "
+        className="w-[100%] min-w-[320px] md:min-w-[390px] p-5 py-[40px] md:px-[15px] md:py-[60px] "
         style={{
           boxSizing: "border-box",
           display: "flex",
