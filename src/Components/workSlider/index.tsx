@@ -220,7 +220,7 @@ const WorkSlider: React.FC<WorkSliderProps> = ({ selectedChip }) => {
   }));
 
   // Fixed slider height for all categories
-  const sliderHeight = 'h-[202px] md:h-[500px]';
+  const sliderHeight = 'h-[202px] md:h-[260px] lg:h-[360px] xl:h-[500px]';
 
   return (
     <div className="w-full py-6">

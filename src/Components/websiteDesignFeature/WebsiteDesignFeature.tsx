@@ -23,7 +23,7 @@ const WebsiteDesignFeature = () => {
          from-white/5 
          via-white/0
           to-white/5
-        flex flex-col sm:flex-col md:flex-row  items-center md:items-center min-h-[456px]"
+        flex flex-col-reverse lg:flex-row  items-center md:items-center min-h-[456px]"
     >
 
       {/* === CENTER SECTION === */}
@@ -42,7 +42,7 @@ const WebsiteDesignFeature = () => {
       </div>
 
       {/* === RIGHT SECTION === */}
-      <div className="w-full md:w-[30%] lg:w-[50%] flex flex-col md:flex-row xl:flex-row md:gap-4 justify-end lg:justify-center">
+      <div className="w-full lg:w-[50%] flex flex-col md:flex-row xl:flex-row md:gap-4 justify-end lg:justify-center">
      <WebCard
          title={cardData.title}
          image ={cardData.image}

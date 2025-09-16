@@ -10,7 +10,7 @@ const WebCard = ({title , image , description}: cardProps) => {
 
    
   return (
-      <div className="w-full xl:w-[300px] self-center px-4 mt-4">
+      <div className="w-full lg:w-[300px] self-center px-4 mt-4">
               <div className="flex items-center">
                 <img src={image} alt="rings" width={70} height={70} />
               </div>

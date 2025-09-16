@@ -42,17 +42,17 @@ const BrandIdentity = () => {
           )`,
         borderImageSlice: 1,
       }}
-      className="relative mt-10 mb-[30px] w-[90%] mx-auto flex flex-col sm:flex-row rounded-[30px] items-center min-h-[456px]"
+      className="relative mt-10 mb-[30px] w-[90%] mx-auto flex flex-col lg:flex-row rounded-[30px] items-center min-h-[456px]"
     >
       {/* Left Web Card */}
-      <div className="w-full md:w-[30%] lg:w-[50%] flex flex-col md:flex-row xl:flex-row md:gap-4 justify-end lg:justify-center">
+      <div className="w-full lg:w-[50%] flex flex-col md:flex-row xl:flex-row md:gap-4 justify-end lg:justify-center">
       <WebCard
          image="/advice-step-icon-container.png"
          title="Brand guidelines"
          description="We help shape your brand’s personality and build a visual style that actually feels like you."
        />
          {/* Image only for mobile/tablet, hidden on xl */}
-         <div className='block md:hidden md:pb-[46px]'>
+         <div className='block md:hidden'>
          <Image
               src="/homePage/ServicesMobile/1.png"
               width={310}
