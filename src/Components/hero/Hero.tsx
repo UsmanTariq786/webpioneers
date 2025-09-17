@@ -24,7 +24,7 @@ const Hero = () => {
    <CommonQuestion question="200+ companies have scaled faster with our design solutions" uppercase={false} />
    </div>
 
-      <div className="absolute left-10 xl:left-10 top-[25%] hidden lg:flex items-center gap-1">
+      <div className="absolute left-10 xl:left-10 top-[25%] hidden xl:flex items-center gap-1">
         <p
           className="px-4 py-1.5 text-sm font-medium rounded-full text-[rgba(248,248,248,0.95)] 
          
@@ -43,7 +43,7 @@ const Hero = () => {
       </div>
 
       {/* Center Headline */}
-      <h1 className="max-w-[850px] text-center text-[35px] leading-[44px]  md:text-[50px] lg:text-[70px] md:leading-[65px] lg:leading-[80px] font-medium tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(to_right,rgba(248,248,248,0.9),rgba(248,248,248,0.5))] mb-4">
+      <h1 className="max-w-[850px] text-center text-[35px] leading-[44px]  md:text-[42px] lg:text-[70px] md:leading-[46px] lg:leading-[80px] font-medium tracking-[-0.02em] text-transparent bg-clip-text bg-[linear-gradient(to_right,rgba(248,248,248,0.9),rgba(248,248,248,0.5))] mb-4">
         We’re a design & development agency that delivers results
       </h1>
 
@@ -52,7 +52,7 @@ const Hero = () => {
         stand out and sell more.
       </p>
 
-      <div className="absolute right-8 xl:right-10 top-[42%] hidden lg:flex items-center gap-1 ">
+      <div className="absolute right-8 xl:right-10 top-[57%] hidden xl:flex items-center gap-1 ">
         <Image
           src="/polygon-two.svg"
           alt="arrow"
