@@ -14,14 +14,14 @@ const FreeProjectQuoteCards = () => {
       <section>
         <div style={{ width: "100%", display: "flex" }}>
           <div
-            className="w-[5%] md:w-[10%]"
+            className="w-[5%] md:w-[7%] lg:w-[10%]"
             style={{
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[89.95%] md:w-[79.95%]">
+          <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%]">
             {/* desktop Slider */}
             <div className="ml-[20px] mr-[20px] sm:ml-20 max-w-md  mt-[25px] mb-[30px]">
               <div className="w-[200px]">
@@ -35,7 +35,7 @@ const FreeProjectQuoteCards = () => {
             </div>
           </div>
           <div
-            className="w-[5.05%] md:w-[10.05%]"
+            className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%]"
             style={{
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
@@ -48,13 +48,13 @@ const FreeProjectQuoteCards = () => {
       <section>
         <div style={{ width: "100%", display: "flex" }}>
           <div
-            className="w-[4.95%] md:w-[9.95%]"
+            className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
             style={{
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[90.08%] md:w-[80.08%]">
+          <div className="w-[90.08%] md:w-[86.08%] lg:w-[80.08%]">
             <RoundCornerWrapper>
               <div className="flex lg:hidden relative overflow-x-auto overflow-y-hidden no-scrollbar"
               ref={scrollContainerRef}
@@ -121,7 +121,7 @@ const FreeProjectQuoteCards = () => {
             </RoundCornerWrapper>
           </div>
           <div
-            className="w-[4.95%] md:w-[9.95%]"
+            className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
             style={{
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
@@ -132,13 +132,13 @@ const FreeProjectQuoteCards = () => {
 
       <section className="block lg:hidden">
         <div className="w-full flex">
-          <div className="w-[4.95%] md:w-[9.95%] box-border border-b border-[#373737]"></div>
-          <div className="w-[90.08%] md:w-[80.08%]">
+          <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%] box-border border-b border-[#373737]"></div>
+          <div className="w-[90.08%] md:w-[86.08%] lg:w-[80.08%]">
             <RoundCornerWrapper>
               <ProgressBar scrollableRef={scrollContainerRef} />
             </RoundCornerWrapper>
           </div>
-          <div className="w-[4.95%] md:w-[9.95%] box-border border-b border-[#373737]"></div>
+          <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%] box-border border-b border-[#373737]"></div>
         </div>
       </section>
     </>

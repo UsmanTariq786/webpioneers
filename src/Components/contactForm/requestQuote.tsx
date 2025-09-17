@@ -194,14 +194,14 @@ function hasValidate(schema: ValidationSchemaType): schema is ValidationSchemaTy
       <section className="hidden md:flex">
         <div style={{ width: "100%", display: "flex" }}>
           <div
-            className="w-[5%] md:w-[10%]"
+            className="w-[5%] md:w-[7%] lg:w-[10%]"
             style={{
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[89.95%] md:w-[79.95%]">
+          <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%]">
             <div className="flex">
               <div className="w-[50%] border-r border-r-[#373737] relative group">
                 <input
@@ -240,7 +240,7 @@ function hasValidate(schema: ValidationSchemaType): schema is ValidationSchemaTy
             </div>
           </div>
           <div
-            className="w-[5.05%] md:w-[10.05%]"
+            className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%]"
             style={{
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
@@ -253,14 +253,14 @@ function hasValidate(schema: ValidationSchemaType): schema is ValidationSchemaTy
       <section className="flex md:hidden">
         <div style={{ width: "100%", display: "flex" }}>
           <div
-            className="w-[5%] md:w-[10%]"
+            className="w-[5%] md:w-[7%] lg:w-[10%]"
             style={{
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[89.95%] md:w-[79.95%]">
+          <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%]">
             <div className="flex flex-col">
               <div className="w-[100%]">
                 <RoundCornerWrapper>
@@ -537,7 +537,7 @@ function hasValidate(schema: ValidationSchemaType): schema is ValidationSchemaTy
             </div>
           </div>
           <div
-            className="w-[5.05%] md:w-[10.05%]"
+            className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%]"
             style={{
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
@@ -550,14 +550,14 @@ function hasValidate(schema: ValidationSchemaType): schema is ValidationSchemaTy
       <section className="hidden md:flex">
         <div style={{ width: "100%", display: "flex" }}>
           <div
-            className="w-[5%] md:w-[10%]"
+            className="w-[5%] md:w-[7%] lg:w-[10%]"
             style={{
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[89.95%] md:w-[79.95%]">
+          <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%]">
             <div className="flex">
               <div className="w-[50%]">
                 <RoundCornerWrapper>
@@ -607,7 +607,7 @@ function hasValidate(schema: ValidationSchemaType): schema is ValidationSchemaTy
             </div>
           </div>
           <div
-            className="w-[5.05%] md:w-[10.05%]"
+            className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%]"
             style={{
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
@@ -620,14 +620,14 @@ function hasValidate(schema: ValidationSchemaType): schema is ValidationSchemaTy
       <section className="hidden md:flex">
         <div style={{ width: "100%", display: "flex" }}>
           <div
-            className="w-[5%] md:w-[10%]"
+            className="w-[5%] md:w-[7%] lg:w-[10%]"
             style={{
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[89.95%] md:w-[79.95%]">
+          <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%]">
             <div className="flex">
               <div className="w-[50%] border-r border-r-[#373737] relative group">
                 <button
@@ -740,7 +740,7 @@ function hasValidate(schema: ValidationSchemaType): schema is ValidationSchemaTy
             </div>
           </div>
           <div
-            className="w-[5.05%] md:w-[10.05%]"
+            className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%]"
             style={{
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
@@ -753,14 +753,14 @@ function hasValidate(schema: ValidationSchemaType): schema is ValidationSchemaTy
       <section className="hidden md:flex">
         <div style={{ width: "100%", display: "flex" }}>
           <div
-            className="w-[5%] md:w-[10%]"
+            className="w-[5%] md:w-[7%] lg:w-[10%]"
             style={{
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[89.95%] md:w-[79.95%]">
+          <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%]">
             <div className="flex">
               <div className="w-[100%]">
                 <RoundCornerWrapper right={false} left={false}>
@@ -784,7 +784,7 @@ function hasValidate(schema: ValidationSchemaType): schema is ValidationSchemaTy
             </div>
           </div>
           <div
-            className="w-[5.05%] md:w-[10.05%]"
+            className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%]"
             style={{
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
@@ -797,14 +797,14 @@ function hasValidate(schema: ValidationSchemaType): schema is ValidationSchemaTy
       <section className="hidden md:flex">
         <div style={{ width: "100%", display: "flex" }}>
           <div
-            className="w-[5%] md:w-[10%]"
+            className="w-[5%] md:w-[7%] lg:w-[10%]"
             style={{
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[89.95%] md:w-[79.95%]">
+          <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%]">
             <div className="flex">
               <div className="w-[50%] p-8 xl:pt-12" style={{ position: "relative" }}>
                 <div className="w-[9px] rounded-full bg-[#373737] absolute -bottom-[5px] -right-[5px]"></div>
@@ -857,7 +857,7 @@ function hasValidate(schema: ValidationSchemaType): schema is ValidationSchemaTy
             </div>
           </div>
           <div
-            className="w-[5.05%] md:w-[10.05%]"
+            className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%]"
             style={{
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",

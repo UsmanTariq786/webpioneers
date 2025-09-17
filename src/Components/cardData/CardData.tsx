@@ -67,9 +67,9 @@ return(<>
     </RoundCornerWrapper>
   {/* <section>
   <div className="w-full flex">
-    <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
+    <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%] border-b border-[#373737]"></div>
 
-    <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
+    <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%] border-b border-[#373737]"></div>
   </div>
 </section> */}
         </>

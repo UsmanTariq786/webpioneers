@@ -38,30 +38,30 @@ export default function Home() {
       {/* <Header /> */}
       <section>
   <div className="w-full flex">
-    <div className="w-[5%] md:w-[10%] border-r border-b border-[#373737]"></div>
-    <div className="w-[89.95%] md:w-[79.95%] ">
+    <div className="w-[5%] md:w-[7%] lg:w-[10%] border-r border-b border-[#373737]"></div>
+    <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%] ">
       <Hero />
     </div>
-    <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
+    <div className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%] border-l border-b border-[#373737]"></div>
   </div>
 </section>
 
 <section>
   <div className="w-full flex">
-    <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
-    <div className="w-[90.08%] md:w-[80.08%]">
+    <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%] border-b border-[#373737]"></div>
+    <div className="w-[90.08%] md:w-[86.08%] lg:w-[80.08%]">
       <RoundCornerWrapper>
         <PartnersSection />
       </RoundCornerWrapper>
     </div>
-    <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
+    <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%] border-b border-[#373737]"></div>
   </div>
 </section>
 
 <section>
   <div className="w-full flex">
-    <div className="w-[5%] md:w-[10%] border-r border-b border-[#373737]"></div>
-    <div className="w-[89.95%] md:w-[79.95%] ">
+    <div className="w-[5%] md:w-[7%] lg:w-[10%] border-r border-b border-[#373737]"></div>
+    <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%] ">
       <div className="flex justify-center items-center py-15">
        <video
          controls
@@ -74,37 +74,37 @@ export default function Home() {
        </video>
       </div>
     </div>
-    <div className="w-[5.05%] md:w-[10.05%] border-l border-b border-[#373737]"></div>
+    <div className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%] border-l border-b border-[#373737]"></div>
   </div>
 </section>
 
 <section>
   <div className="w-full flex">
-    <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
-    <div className="w-[90.08%] md:w-[80.08%]">
+    <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%] border-b border-[#373737]"></div>
+    <div className="w-[90.08%] md:w-[86.08%] lg:w-[80.08%]">
       <RoundCornerWrapper>
         <ProcessStepsSection />
       </RoundCornerWrapper>
     </div>
-    <div className="w-[4.95%] md:w-[9.95%] border-b border-[#373737]"></div>
+    <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%] border-b border-[#373737]"></div>
   </div>
 </section>
 
 
       <section>
         <div style={{ width: "100%", display: "flex" }}>
-          <div className="w-[5%] md:w-[10%]"
+          <div className="w-[5%] md:w-[7%] lg:w-[10%]"
             style={{
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[89.95%] md:w-[79.95%]"
+          <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%]"
           >
             <BrandIdentity />
           </div>
-          <div className="w-[5.05%] md:w-[10.05%]"
+          <div className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%]"
             style={{
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
@@ -115,19 +115,19 @@ export default function Home() {
       </section>
       <section>
         <div style={{ width: "100%", display: "flex" }}>
-          <div className="w-[4.95%] md:w-[9.95%]"
+          <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
             style={{
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[90.08%] md:w-[80.08%]" 
+          <div className="w-[90.08%] md:w-[86.08%] lg:w-[80.08%]" 
             >
             <RoundCornerWrapper>
               <WebsiteDesignFeature />
             </RoundCornerWrapper>
           </div>
-          <div className="w-[4.95%] md:w-[9.95%]"
+          <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
             style={{
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
@@ -137,17 +137,17 @@ export default function Home() {
       </section>
       <section>
         <div style={{ width: "100%", display: "flex" }}>
-          <div className="w-[5%] md:w-[10%]"
+          <div className="w-[5%] md:w-[7%] lg:w-[10%]"
             style={{
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[89.95%] md:w-[79.95%]">
+          <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%]">
             <WebsiteDevelopment />
           </div>
-          <div className="w-[5.05%] md:w-[10.05%]"
+          <div className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%]"
             style={{
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
@@ -159,13 +159,13 @@ export default function Home() {
 
       <section>
         <div style={{ width: "100%", display: "flex" }}>
-          <div className="w-[4.95%] md:w-[9.95%]"
+          <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
             style={{
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[90.08%] md:w-[80.08%]" >
+          <div className="w-[90.08%] md:w-[86.08%] lg:w-[80.08%]" >
             <RoundCornerWrapper>
              <div className="ml-[20px] mr-[20px] sm:ml-20 max-w-md my-14">
               <div className="w-[200px]">
@@ -180,7 +180,7 @@ export default function Home() {
 
             </RoundCornerWrapper>
           </div>
-          <div className="w-[4.95%] md:w-[9.95%]"
+          <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
             style={{
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
@@ -199,7 +199,7 @@ export default function Home() {
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[89.95%] md:w-[79.95%]" >
+          <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%]" >
            
               <WorkWeDoChips selectedChip={selectedChip} setSelectedChip={setSelectedChip} />
             
@@ -216,13 +216,13 @@ export default function Home() {
 
       {/* <section className="block md:hidden">
   <div className="w-full flex">
-    <div className="w-[4.95%] md:w-[9.95%] box-border border-b border-[#373737]"></div>
+    <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%] box-border border-b border-[#373737]"></div>
     <div className="w-[90.08%] ">
       <RoundCornerWrapper>
         <ProgressBar progress={40} />
       </RoundCornerWrapper>
     </div>
-    <div className="w-[4.95%] md:w-[9.95%] box-border border-b border-[#373737]"></div>
+    <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%] box-border border-b border-[#373737]"></div>
   </div>
 </section> */}
 
@@ -232,18 +232,18 @@ export default function Home() {
 
       <section>
         <div style={{ width: "100%", display: "flex" }}>
-          <div className="w-[4.95%] md:w-[9.95%]"
+          <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
             style={{
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[90.08%] md:w-[80.08%]" >
+          <div className="w-[90.08%] md:w-[86.08%] lg:w-[80.08%]" >
             <RoundCornerWrapper top={false}>
             <WorkSlider selectedChip={'homePage'} />
             </RoundCornerWrapper>
           </div>
-          <div className="w-[4.95%] md:w-[9.95%]"
+          <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
             style={{
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
@@ -259,19 +259,19 @@ export default function Home() {
 
        <section className="block md:hidden">
           <div style={{ width: "100%", display: "flex" }}>
-            <div className="w-[5%] md:w-[10%]"
+            <div className="w-[5%] md:w-[7%] lg:w-[10%]"
               style={{
                 boxSizing: "border-box",
                 borderRight: "1px solid #373737",
                 borderBottom: "1px solid #373737",
               }}
             ></div>
-            <div className="w-[89.95%] md:w-[79.95%]">
+            <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%]">
               {/* desktop Slider */}
               {/* <Testimonials /> */}
               <TestimonialsResponsive />
             </div>
-            <div className="w-[5.05%] md:w-[10.05%]"
+            <div className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%]"
               style={{
                 boxSizing: "border-box",
                 borderLeft: "1px solid #373737",
@@ -283,18 +283,18 @@ export default function Home() {
 
         <section className="hidden md:block">
           <div style={{ width: "100%", display: "flex" }}>
-            <div className="w-[5%] md:w-[10%]"
+            <div className="w-[5%] md:w-[7%] lg:w-[10%]"
               style={{
                 boxSizing: "border-box",
                 borderRight: "1px solid #373737",
                 borderBottom: "1px solid #373737",
               }}
             ></div>
-            <div className="w-[89.95%] md:w-[79.95%]">
+            <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%]">
               {/* desktop Slider */}
               <Testimonials />
             </div>
-            <div className="w-[5.05%] md:w-[10.05%]"
+            <div className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%]"
               style={{
                 boxSizing: "border-box",
                 borderLeft: "1px solid #373737",
@@ -307,18 +307,18 @@ export default function Home() {
 
       <section className="">
         <div style={{ width: "100%", display: "flex" }}>
-          <div className="w-[4.95%] md:w-[9.95%]"
+          <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
             style={{
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[90.08%] md:w-[80.08%]" >
+          <div className="w-[90.08%] md:w-[86.08%] lg:w-[80.08%]" >
             <RoundCornerWrapper>
                <PioneerDetail/>
             </RoundCornerWrapper>
           </div>
-          <div className="w-[4.95%] md:w-[9.95%]"
+          <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
             style={{
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
@@ -329,18 +329,18 @@ export default function Home() {
 
       {/* <section className="block md:hidden lg:hidden xl:hidden">
         <div style={{ width: "100%", display: "flex" }}>
-          <div className="w-[4.95%] md:w-[9.95%]"
+          <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
             style={{
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[90.08%] md:w-[80.08%]" >
+          <div className="w-[90.08%] md:w-[86.08%] lg:w-[80.08%]" >
             <RoundCornerWrapper>
                <PioneerDetailResponsive />
             </RoundCornerWrapper>
           </div>
-          <div className="w-[4.95%] md:w-[9.95%]"
+          <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
             style={{
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
@@ -352,18 +352,18 @@ export default function Home() {
 
        <section>
           <div style={{ width: "100%", display: "flex" }}>
-            <div className="w-[5%] md:w-[10%]"
+            <div className="w-[5%] md:w-[7%] lg:w-[10%]"
               style={{
                 boxSizing: "border-box",
                 borderRight: "1px solid #373737",
                 borderBottom: "1px solid #373737",
               }}
             ></div>
-            <div className="w-[89.95%] md:w-[79.95%]">
+            <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%]">
               {/* desktop Slider */}
                 <ServiceExcellenceGrid/>
             </div>
-            <div className="w-[5.05%] md:w-[10.05%]"
+            <div className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%]"
               style={{
                 boxSizing: "border-box",
                 borderLeft: "1px solid #373737",
@@ -377,13 +377,13 @@ export default function Home() {
 
 <section>
   <div style={{ width: "100%", display: "flex" }}>
-    <div className="w-[4.95%] md:w-[9.95%]"
+    <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
       style={{
         boxSizing: "border-box",
         borderBottom: "1px solid #373737",
       }}
     ></div>
-    <div className="w-[90.08%] md:w-[80.08%]" 
+    <div className="w-[90.08%] md:w-[86.08%] lg:w-[80.08%]" 
     >
       <RoundCornerWrapper>
         <div className="px-[20px]">
@@ -391,7 +391,7 @@ export default function Home() {
         </div>
       </RoundCornerWrapper>
     </div>
-    <div className="w-[4.95%] md:w-[9.95%]"
+    <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
       style={{
         boxSizing: "border-box",
         borderBottom: "1px solid #373737",

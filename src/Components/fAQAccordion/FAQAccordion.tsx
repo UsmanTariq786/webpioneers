@@ -56,13 +56,13 @@ export const FAQAccordion = () => {
     <div>
       <section>
         <div style={{ width: "100%", display: "flex" }}>
-          <div className="w-[4.95%] md:w-[9.95%]"
+          <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
             style={{
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[90.08%] md:w-[80.08%]">
+          <div className="w-[90.08%] md:w-[86.08%] lg:w-[80.08%]">
             <RoundCornerWrapper>
                 <div className="p-[20px] md:p-0 sm:ml-20 max-w-md my-12">
                   <div className="w-[200px]">
@@ -76,7 +76,7 @@ export const FAQAccordion = () => {
                 </div>
             </RoundCornerWrapper>
           </div>
-          <div className="w-[4.95%] md:w-[9.95%]"
+          <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
             style={{
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
@@ -87,14 +87,14 @@ export const FAQAccordion = () => {
 
       <section>
         <div style={{ width: "100%", display: "flex" }}>
-          <div className="w-[5%] md:w-[10%]"
+          <div className="w-[5%] md:w-[7%] lg:w-[10%]"
             style={{
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[89.95%] md:w-[79.95%]" >
+          <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%]" >
             <div className={`space-y-0 ${activeId === "1" ? "bg-[rgba(248,248,248,0.02)]" : ""}`}>
               {/* FAQ 1 */}
               <div className={`py-6 px-6 m:py-8  w-[100%] md:w-[91%] mx-auto`}>
@@ -145,7 +145,7 @@ export const FAQAccordion = () => {
               {/* Repeat for FAQ 3, 4, and 5 similarly... */}
             </div>
           </div>
-          <div className="w-[5.05%] md:w-[10.05%]"
+          <div className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%]"
             style={{
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
@@ -156,13 +156,13 @@ export const FAQAccordion = () => {
       </section>
        <section>
         <div style={{ width: "100%", display: "flex" }}>
-          <div className="w-[4.95%] md:w-[9.95%]"
+          <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
             style={{
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[90.08%] md:w-[80.08%]">
+          <div className="w-[90.08%] md:w-[86.08%] lg:w-[80.08%]">
             <RoundCornerWrapper>
             <div className={`space-y-0 ${activeId === "2" ? "bg-[rgba(248,248,248,0.02)]" : ""}`}>
               {/* FAQ 2 */}
@@ -213,7 +213,7 @@ export const FAQAccordion = () => {
             </div>
             </RoundCornerWrapper>
           </div>
-          <div className="w-[4.95%] md:w-[9.95%]"
+          <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
             style={{
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
@@ -226,14 +226,14 @@ export const FAQAccordion = () => {
 
         <section>
         <div style={{ width: "100%", display: "flex" }}>
-          <div className="w-[5%] md:w-[10%]"
+          <div className="w-[5%] md:w-[7%] lg:w-[10%]"
             style={{
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[89.95%] md:w-[79.95%]" >
+          <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%]" >
               <div className={`space-y-0 ${activeId === "3" ? "bg-[rgba(248,248,248,0.02)]" : ""}`}>
               {/* FAQ 3 */}
               <div className={`py-6 px-6  w-[100%] md:w-[91%] mx-auto border-b `}>
@@ -282,7 +282,7 @@ export const FAQAccordion = () => {
               {/* Repeat for FAQ 3, 4, and 5 similarly... */}
             </div>
           </div>
-          <div  className="w-[5.05%] md:w-[10.05%]"
+          <div  className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%]"
             style={{
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
@@ -295,13 +295,13 @@ export const FAQAccordion = () => {
   
    <section>
         <div style={{ width: "100%", display: "flex" }}>
-          <div className="w-[4.95%] md:w-[9.95%]"
+          <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
             style={{
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[90.08%] md:w-[80.08%]">
+          <div className="w-[90.08%] md:w-[86.08%] lg:w-[80.08%]">
             <RoundCornerWrapper>
             <div className={`space-y-0 ${activeId === "4" ? "bg-[rgba(248,248,248,0.02)]" : ""}`}>
               {/* FAQ 4 */}
@@ -350,7 +350,7 @@ export const FAQAccordion = () => {
             </div>
             </RoundCornerWrapper>
           </div>
-          <div className="w-[4.95%] md:w-[9.95%]"
+          <div className="w-[4.95%] md:w-[6.95%] lg:w-[9.95%]"
             style={{
               boxSizing: "border-box",
               borderBottom: "1px solid #373737",
@@ -361,14 +361,14 @@ export const FAQAccordion = () => {
     
       <section>
         <div style={{ width: "100%", display: "flex" }}>
-          <div className="w-[5%] md:w-[10%]"
+          <div className="w-[5%] md:w-[7%] lg:w-[10%]"
             style={{
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[89.95%] md:w-[79.95%]" 
+          <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%]" 
             >
             <div className={`space-y-0 ${activeId === "5" ? "bg-[rgba(248,248,248,0.02)]" : ""}`}>
               {/* FAQ 5 */}
@@ -416,7 +416,7 @@ export const FAQAccordion = () => {
               </div>
             </div>
           </div>
-          <div  className="w-[5.05%] md:w-[10.05%]"
+          <div  className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%]"
             style={{
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",

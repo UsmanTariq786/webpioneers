@@ -34,14 +34,14 @@ export default function ContactForm() {
       <section>
         <div style={{ width: "100%", display: "flex" }}>
           <div
-            className="w-[5%] md:w-[10%]"
+            className="w-[5%] md:w-[7%] lg:w-[10%]"
             style={{
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[89.95%] md:w-[79.95%]">
+          <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%]">
             <div className="p-[20px] md:p-0 sm:ml-20 max-w-md my-12">
               <div className="">
                 <CommonQuestion question="We’re Available for New Projects" />
@@ -54,7 +54,7 @@ export default function ContactForm() {
             </div>
           </div>
           <div
-            className="w-[5.05%] md:w-[10.05%]"
+            className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%]"
             style={{
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
@@ -67,14 +67,14 @@ export default function ContactForm() {
       <section>
         <div style={{ width: "100%", display: "flex" }}>
           <div
-            className="w-[5%] md:w-[10%]"
+            className="w-[5%] md:w-[7%] lg:w-[10%]"
             style={{
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[89.95%] md:w-[79.95%]">
+          <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%]">
             <div className="flex">
               <div
                 className={`w-[50%] ${
@@ -104,7 +104,7 @@ export default function ContactForm() {
             </div>
           </div>
           <div
-            className="w-[5.05%] md:w-[10.05%]"
+            className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%]"
             style={{
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
@@ -119,14 +119,14 @@ export default function ContactForm() {
       {tab === "book" && (
         <div style={{ width: "100%", display: "flex" }}>
           <div
-            className="w-[5%] md:w-[10%]"
+            className="w-[5%] md:w-[7%] lg:w-[10%]"
             style={{
               boxSizing: "border-box",
               borderRight: "1px solid #373737",
               borderBottom: "1px solid #373737",
             }}
           ></div>
-          <div className="w-[89.95%] md:w-[79.95%] mt-5">
+          <div className="w-[89.95%] md:w-[85.95%] lg:w-[79.95%] mt-5">
             {/* <Cal
               namespace="30min"
               calLink="justinbundt/30min"
@@ -142,7 +142,7 @@ export default function ContactForm() {
           />
           </div>
           <div
-            className="w-[5.05%] md:w-[10.05%]"
+            className="w-[5.05%] md:w-[7.05%] lg:w-[10.05%]"
             style={{
               boxSizing: "border-box",
               borderLeft: "1px solid #373737",
