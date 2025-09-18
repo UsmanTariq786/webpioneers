@@ -12,13 +12,34 @@ import { IoCloseOutline } from "react-icons/io5";
 import { HiEquals } from "react-icons/hi2";
 import { HiOutlineEquals } from "react-icons/hi2";
 
+const emailToCopy = "business@webpioneers.com";
+const whatsappNumber = "+16305502000"; // Ensure proper format without spaces
+
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const [copyStatus, setCopyStatus] = useState<string | null>(null);
   const pathname = usePathname();
   const router = useRouter();
-
   const navItems = ["/", "Work", "About", "Services"];
+
+  const handleStartChat = () => {
+    const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\D/g, "")}`;
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  };
+
+  const handleCopy = () => {
+    navigator.clipboard
+      .writeText(emailToCopy)
+      .then(() => {
+        setCopyStatus("Copied!");
+        setTimeout(() => setCopyStatus(null), 2000);
+      })
+      .catch((err) => {
+        console.error("Failed to copy:", err);
+        setCopyStatus("Failed to copy");
+      });
+  };
 
 
   return (
@@ -114,10 +135,10 @@ const Header = () => {
 
           {/* Footer Buttons */}
           <div className="flex gap-3 mt-8">
-            <button className="flex-1 bg-[#D4541D]/94 transition text-sm rounded-lg py-2 font-semibold">
+            <button onClick={handleCopy} className="flex-1 bg-[#D4541D]/94 transition text-sm rounded-lg py-2 font-semibold">
               Copy email
             </button>
-            <button className="flex-1 bg-[#D4541D]/94 transition text-sm rounded-lg py-2 font-semibold">
+            <button onClick={handleStartChat} className="flex-1 bg-[#D4541D]/94 transition text-sm rounded-lg py-2 font-semibold">
               Chat
             </button>
           </div>
