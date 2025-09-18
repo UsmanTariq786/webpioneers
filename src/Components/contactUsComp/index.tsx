@@ -24,7 +24,7 @@ const CheckedBox = () => {
 const ContactUsComp = () => {
   const [copyStatus, setCopyStatus] = useState<string | null>(null);
   const emailToCopy = "business@webpioneers.com";
-  const whatsappNumber = "+16315302666"; // Ensure proper format without spaces
+  const whatsappNumber = "+16305502000"; // Ensure proper format without spaces
 
   const handleCopy = () => {
     navigator.clipboard

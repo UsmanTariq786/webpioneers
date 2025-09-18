@@ -1,6 +1,7 @@
 import RoundCornerWrapper from "@/Components/RoundCornerWrapper";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const duoDetails = [
   {
@@ -8,6 +9,8 @@ const duoDetails = [
     name: "Justin Bundt",
     title: "Project Manager",
     image: "/aboutUs/justinImage.png",
+    instaLink: 'https://www.instagram.com/justinbundt',
+    linkedInLink:'https://www.linkedin.com/in/justinbundt',
     description:
       "Justin’s the “let’s try something wild” guy. He kicked things off with a big idea and somehow keeps everything running smoothly. He’s the one making sure we’re dreaming big, staying focused, and having a laugh along the way.",
   },
@@ -16,6 +19,8 @@ const duoDetails = [
     name: "Zoheb Hassan",
     title: "Art Direction",
     image: "/aboutUs/zohebImage.png",
+    instaLink: 'https://www.instagram.com/imagine_xaib/',
+    linkedInLink:'https://www.linkedin.com/in/uiux-zohebhassan-crodesigner/',
     description:
       "Zoheb’s the kind of guy who’ll spend 20 minutes nudging a button till it feels perfect — and somehow enjoy every second of it. Friendly, focused, and dangerously close to redesigning this page while you’re reading it.",
   },
@@ -67,7 +72,11 @@ const DuoSection = () => {
                         left={false}
                         className="!w-auto"
                       >
-                        <div className="px-7 flex justify-center items-center h-full">
+                        <Link 
+                        href={item.linkedInLink}
+                        target="_blank"
+                        rel="noopener noreferrer">
+                          <div className="px-7 flex justify-center items-center h-full">
                           <div className="!w-[30px] h-[30px]">
                             <Image
                               src="/aboutUs/LinkedIn.png"
@@ -78,6 +87,7 @@ const DuoSection = () => {
                             />
                           </div>
                         </div>
+                        </Link>
                       </RoundCornerWrapper>
                       <RoundCornerWrapper
                         bottom={false}
@@ -85,6 +95,11 @@ const DuoSection = () => {
                         right={false}
                         className="!w-auto"
                       >
+                       <Link 
+                       href={item.instaLink}
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       >
                         <div className="px-7 flex justify-center items-center h-full">
                           <div className="!w-[30px] h-[30px]">
                             <Image
@@ -93,9 +108,10 @@ const DuoSection = () => {
                               width={30}
                               height={30}
                               className="!w-[100%] !h-[100%]"
-                            />
+                              />
                           </div>
                         </div>
+                              </Link>
                       </RoundCornerWrapper>
                     </div>
                   </RoundCornerWrapper>

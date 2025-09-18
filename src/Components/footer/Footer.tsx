@@ -6,6 +6,27 @@ import Link from "next/link";
 import { Mail, Phone, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import RoundCornerWrapper from "../RoundCornerWrapper";
+const whatsappNumber = "+16305502000"; // Ensure proper format without spaces
+
+
+const socialLinks = [
+  {
+    "socialName": "LinkedIn",
+    "socialLink": "https://www.linkedin.com/company/webpioneers"
+  },
+  {
+    "socialName": "Instagram",
+    "socialLink": "https://www.instagram.com/webpioneers/"
+  },
+  {
+    "socialName": "Dribbble",
+    "socialLink": "https://dribbble.com/WebPioneers"
+  },
+  {
+    "socialName": "Behance",
+    "socialLink": "https://www.behance.net/webpioneers/"
+  },
+]
 
 const Footer = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -164,10 +185,10 @@ const Footer = () => {
                     </div>
 
                     <a
-                      href="mailto:business@webpanorama.com"
+                      href="mailto:business@webpioneers.com"
                       className="text-[#F8F8F8B3] hover:text-white transition-colors text-sm"
                     >
-                      business@webpanorama.com
+                      business@webpioneers.com
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
@@ -258,60 +279,53 @@ const Footer = () => {
 
         {isOpen && (
           <div className="flex flex-col gap-8 p-6">
-            <Link
-              href="#"
+         {socialLinks.map((social, index) => (
+              <Link
+                key={index+social.socialLink+'sc'}
+                href={social.socialLink}
+                className="text-[#F8F8F8]/70 text-lg hover:text-white transition-colors"
+                target="_blank"
+              >
+                {social.socialName}
+              </Link>
+            ))}
+        <Link
               className="text-[#F8F8F8]/70 text-lg hover:text-white transition-colors"
-            >
-              LinkedIn
-            </Link>
-            <Link
-              href="#"
-              className="text-[#F8F8F8]/70 text-lg hover:text-white transition-colors"
-            >
-              Instagram
-            </Link>
-            <Link
-              href="#"
-              className="text-[#F8F8F8]/70 text-lg hover:text-white transition-colors"
-            >
-              Dribbble
-            </Link>
-            <Link
-              href="#"
-              className="text-[#F8F8F8]/70 text-lg hover:text-white transition-color"
-            >
-              Behance
-            </Link>
-            <Link
-              href="#"
-              className="text-[#F8F8F8]/70 text-lg hover:text-white transition-colors"
+              href={`https://wa.me/${whatsappNumber.replace(/\D/g, "")}`}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               WhatsApp
             </Link>
-            <Link
-              href="#"
-              className="text-[#F8F8F8]/70 text-lg hover:text-white transition-colors"
-            >
-              Twitter
-            </Link>
+
+
+          
           </div>
    
         )}
       </div>
 
       {/* Desktop Layout (always visible) */}
-      <div className="hidden md:flex flex-row flex-wrap justify-center gap-20 px-5 py-10">
-        {["LinkedIn", "Instagram", "Dribbble", "Behance", "WhatsApp", "Twitter"].map(
+      <div className="hidden md:flex flex-row flex-wrap justify-center md:gap-20 lg:gap-30 px-5 py-10">
+        {socialLinks.map(
           (item) => (
             <Link
-              key={item}
-              href="#"
+              key={item.socialName+'blahsocial'}
+              href={item.socialLink}
               className="text-[30px] hover:text-white transition-colors leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent"
             >
-              {item}
+              {item.socialName}
             </Link>
           )
         )}
+          <Link
+               href={`https://wa.me/${whatsappNumber.replace(/\D/g, "")}`}
+               target="_blank"
+               rel="noopener noreferrer"
+              className="text-[30px] hover:text-white transition-colors leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent"
+            >
+              WhatsApp
+            </Link>
       </div>
     </>
 
