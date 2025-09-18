@@ -312,6 +312,7 @@ const Footer = () => {
             <Link
               key={item.socialName+'blahsocial'}
               href={item.socialLink}
+              target="_blank"
               className="text-[30px] hover:text-white transition-colors leading-[100%] tracking-[-0.02em] font-[Rubik] bg-gradient-to-r from-[rgba(248,248,248,0.9)] to-[rgba(248,248,248,0.5)] bg-clip-text text-transparent"
             >
               {item.socialName}
