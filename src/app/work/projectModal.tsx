@@ -1,7 +1,7 @@
-'use client'; // Mark as client component
+"use client"; // Mark as client component
 
-import Image from 'next/image';
-import React, { useRef, useEffect, useState } from 'react';
+import Image from "next/image";
+import React, { useRef, useEffect, useState } from "react";
 
 interface Project {
   id: any;
@@ -35,34 +35,34 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
     };
 
     handleResize(); // Set initial state
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
     if (isOpen) {
       const scrollY = window.scrollY; // Store scroll position
-      document.body.style.position = 'fixed'; // Lock body
+      document.body.style.position = "fixed"; // Lock body
       document.body.style.top = `-${scrollY}px`; // Preserve scroll position
-      document.body.style.width = '100%'; // Prevent width changes
-      document.documentElement.style.overflow = 'hidden';
+      document.body.style.width = "100%"; // Prevent width changes
+      document.documentElement.style.overflow = "hidden";
       if (modalContentRef.current) {
         modalContentRef.current.scrollTo(0, 0); // Scroll to top
       }
     }
     return () => {
-      const scrollY = parseInt(document.body.style.top || '0') * -1; // Restore scroll
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
-      document.documentElement.style.overflow = 'auto';
+      const scrollY = parseInt(document.body.style.top || "0") * -1; // Restore scroll
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      document.documentElement.style.overflow = "auto";
       window.scrollTo(0, scrollY); // Restore scroll position
     };
   }, [isOpen]);
 
   if (!isOpen || !selectedProjectData) return null;
 
-  console.log('selectedProjectData', selectedProjectData);
+  console.log("selectedProjectData", selectedProjectData);
 
   const handleOverlayClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
@@ -72,15 +72,17 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
   const scrollToTop = () => {
     if (modalContentRef.current) {
-      modalContentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+      modalContentRef.current.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
-  let imagesArray = isMobile ? selectedProjectData?.mobileImages : selectedProjectData?.desktopImages;
-  let device = isMobile ? 'Mobile/' : 'Desktop/';
+  let imagesArray = isMobile
+    ? selectedProjectData?.mobileImages
+    : selectedProjectData?.desktopImages;
+  let device = isMobile ? "Mobile/" : "Desktop/";
   let isHeadShot = selectedProjectData?.id === 2 ? true : false;
 
-  console.log('isHeadShot', isHeadShot);
+  console.log("isHeadShot", isHeadShot);
 
   return (
     <div
@@ -95,9 +97,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
         <div className="border-b pb-3 border-b-[#373737] bg-[#272727] sticky top-0 z-10">
           <div className="mx-15 py-3 flex justify-between items-center">
             <div>
-              <h2
-                className="text-[24px] md:text-[32px] font-normal text-[#F8F8F8]/90 leading-[56px] tracking-[-0.02em] gradien-text"
-              >
+              <h2 className="text-[24px] md:text-[32px] font-normal text-[#F8F8F8]/90 leading-[56px] tracking-[-0.02em] gradien-text">
                 {selectedProjectData.projectName}
               </h2>
               <p className="text-[#F8F8F8B2] text-[16px]">
@@ -131,7 +131,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             )}
             <div className="space-y-4 mb-6 mt-10">
               {selectedProjectData.modalDescription?.map((para, index) => (
-                <p key={index + 'descofselectedprojct'} className="text-[#F8F8F8B2] text-[16px]">
+                <p
+                  key={index + "descofselectedprojct"}
+                  className="text-[#F8F8F8B2] text-[16px]"
+                >
                   {para}
                 </p>
               ))}
@@ -141,7 +144,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             </div>
             <div className="space-y-4">
               {imagesArray?.slice(1).map((imageNum: number, index: number) => (
-                <React.Fragment key={index + 'modalImageskeyisthis'}>
+                <React.Fragment key={index + "modalImageskeyisthis"}>
                   <Image
                     src={`${selectedProjectData.modalPath}${device}${imageNum}.png`}
                     alt={`project detail image ${index + 2}`}
@@ -160,7 +163,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               <div className="space-y-4">
                 {!isHeadShot &&
                   imagesArray?.map((imageNum: number, index: number) => (
-                    <React.Fragment key={index + 'idontwnwlabt'}>
+                    <React.Fragment key={index + "idontwnwlabt"}>
                       <Image
                         src={`${selectedProjectData.modalPath}${device}${imageNum}.png`}
                         alt={`project detail image ${index + 1}`}
@@ -183,22 +186,27 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 )}
                 {isHeadShot && <VideoSectionForHeadshot />}
                 {isHeadShot &&
-                  imagesArray?.slice(1)?.map((imageNum: number, index: number) => (
-                    <React.Fragment key={index + 'idontwnwlabt'}>
-                      <Image
-                        src={`${selectedProjectData.modalPath}${device}${imageNum}.png`}
-                        alt={`project detail image ${index + 1}`}
-                        className="w-full h-auto object-cover"
-                        width={800}
-                        height={600}
-                        layout="responsive"
-                      />
-                    </React.Fragment>
-                  ))}
+                  imagesArray
+                    ?.slice(1)
+                    ?.map((imageNum: number, index: number) => (
+                      <React.Fragment key={index + "idontwnwlabt"}>
+                        <Image
+                          src={`${selectedProjectData.modalPath}${device}${imageNum}.png`}
+                          alt={`project detail image ${index + 1}`}
+                          className="w-full h-auto object-cover"
+                          width={800}
+                          height={600}
+                          layout="responsive"
+                        />
+                      </React.Fragment>
+                    ))}
               </div>
               <div className="space-y-5 px-6">
                 {selectedProjectData.modalDescription?.map((para, index) => (
-                  <p key={index + 'idontwnwlabtwhysomany'} className="text-[#F8F8F8B2] text-[16px]">
+                  <p
+                    key={index + "idontwnwlabtwhysomany"}
+                    className="text-[#F8F8F8B2] text-[16px]"
+                  >
                     {para}
                   </p>
                 ))}
@@ -225,7 +233,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 };
 
 const VideoSectionForHeadshot = () => {
-  const videoFiles = ['01', '02', '03', '04'];
+  const videoFiles = ["01", "02", "03", "04"];
 
   return (
     <div className="container mx-auto mb-5">

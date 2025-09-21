@@ -1,23 +1,26 @@
-import FolderWorkDesignComp from '@/Components/FolderWorkDesignComp';
-import React, { useState } from 'react';
-import ProjectModal from './projectModal';
+import FolderWorkDesignComp from "@/Components/FolderWorkDesignComp";
+import React, { useState } from "react";
+import ProjectModal from "./projectModal";
 import RoundCornerWrapper from "@/Components/RoundCornerWrapper";
-import projectsData from '@/app/Data/projects.json';
+import projectsData from "@/app/Data/projects.json";
 
 const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedProjectData, setSelectedProjectData] = useState<any | null>(null);
+  const [selectedProjectData, setSelectedProjectData] = useState<any | null>(
+    null
+  );
 
   // Filter projects based on selected chip (case-insensitive mapping)
   const filteredProjects = selectedChip
-    ? projectsData.filter((project) =>
-        selectedChip.toLowerCase() === "all" ||
-        project.superCategory.toLowerCase() === selectedChip.toLowerCase()
+    ? projectsData.filter(
+        (project) =>
+          selectedChip.toLowerCase() === "all" ||
+          project.superCategory.toLowerCase() === selectedChip.toLowerCase()
       )
     : projectsData;
 
   const handleOpenModal = (id: any) => {
-    let projectData = projectsData.filter(item => item.id === id);
+    let projectData = projectsData.filter((item) => item.id === id);
     setSelectedProjectData(projectData[0]);
     setIsModalOpen(true);
   };
@@ -35,11 +38,8 @@ const MapProjects = ({ selectedChip }: { selectedChip: string | null }) => {
           const isLastInRow = (index + 1) % 3 === 0;
 
           return (
-            <div key={index + 'yahayyiyaqaeym'}>
-              <RoundCornerWrapper
-                top={false}
-                className='py-5 md:py-1'
-              >
+            <div key={index + "yahayyiyaqaeym"}>
+              <RoundCornerWrapper top={false} className="py-5 md:py-1">
                 <FolderWorkDesignComp
                   keyvalue={index}
                   image1Url={project.image1}
